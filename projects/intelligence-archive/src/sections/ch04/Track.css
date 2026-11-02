@@ -1,0 +1,239 @@
+/* ============================================================
+   CH04 · 横向模型轨道
+   translateX 完全由 --p 推导：轨道长度 = 节点数 × 节点宽。
+   ============================================================ */
+
+.track {
+  --node: clamp(212px, 17.4vw, 252px);
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+}
+
+.track__strip {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 29svh;
+  height: clamp(300px, 46svh, 470px);
+  display: flex;
+  align-items: stretch;
+  padding-inline: var(--pad-x);
+  transform: translateX(
+    calc((var(--n) * var(--node) - 100vw + var(--pad-x)) * var(--p) * -1)
+  );
+}
+
+/* ---------------- 节点 ---------------- */
+
+.track__node {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 var(--node);
+  width: var(--node);
+  padding: 0 clamp(14px, 1.5vw, 20px);
+  border-left: 1px solid var(--hairline);
+}
+
+.track__node:last-child {
+  border-right: 1px solid var(--hairline);
+}
+
+.track__node-head {
+  position: relative;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--hairline);
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  color: var(--muted);
+}
+
+/* 轨道上的刻度点：模型实心，事件空心 */
+.track__node-head::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 5px;
+  height: 5px;
+  background: var(--ink);
+}
+
+.track__node--event .track__node-head::after {
+  background: var(--paper);
+  border: 1px solid var(--ink);
+  box-sizing: border-box;
+}
+
+.track__node-date {
+  color: var(--graphite);
+  font-variant-numeric: tabular-nums;
+}
+
+.track__node-body {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  padding-top: clamp(14px, 2.4vh, 24px);
+  min-height: 0;
+}
+
+.track__node-kind {
+  font-size: 8.5px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--faint);
+}
+
+.track__node-name {
+  font-size: clamp(1.0625rem, 1.45vw, 1.3125rem);
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.005em;
+  min-height: 2.4em;
+  color: var(--ink);
+}
+
+.track__node-sub {
+  font-size: 8.5px;
+  letter-spacing: 0.1em;
+  line-height: 1.5;
+  text-transform: uppercase;
+  color: var(--faint);
+}
+
+.track__node-org {
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  color: var(--muted);
+}
+
+.track__node-text {
+  margin-top: 4px;
+  font-size: 0.75rem;
+  line-height: 1.72;
+  color: var(--graphite);
+}
+
+.track__node-source {
+  margin-top: auto;
+  padding-top: 20px;
+}
+
+/* ---------------- 底部进度 ---------------- */
+
+.track__progress {
+  position: absolute;
+  left: var(--pad-x);
+  right: var(--pad-x);
+  bottom: clamp(16px, 3vh, 28px);
+  z-index: 4;
+  display: grid;
+  gap: 10px;
+}
+
+.track__progress-line {
+  position: relative;
+  height: 1px;
+  background: var(--hairline);
+}
+
+.track__progress-fill {
+  position: absolute;
+  inset: 0;
+  background: var(--ink);
+  transform-origin: left center;
+  transform: scaleX(var(--p));
+}
+
+.track__progress-meta {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  font-size: 8.5px;
+  letter-spacing: 0.18em;
+  color: var(--faint);
+}
+
+/* ---------------- 移动端 ---------------- */
+
+@media (max-width: 900px) {
+  .track {
+    --node: 208px;
+  }
+
+  .track__strip {
+    top: 28svh;
+    height: clamp(300px, 44svh, 430px);
+  }
+
+  .track__node-body {
+    padding-top: 16px;
+    padding-bottom: 6px;
+  }
+
+  .track__node-name {
+    font-size: 1.0625rem;
+  }
+
+  .track__node-text {
+    font-size: 0.71875rem;
+    line-height: 1.68;
+  }
+
+  .track__progress-meta span:nth-child(2) {
+    display: none;
+  }
+}
+
+/* ---------------- reduced motion：轨道变成竖排目录 ---------------- */
+
+@media (prefers-reduced-motion: reduce) {
+  .track {
+    position: static;
+  }
+
+  .track__strip {
+    position: static;
+    height: auto;
+    flex-direction: column;
+    gap: 0;
+    padding-block: 0 40px;
+    transform: none;
+  }
+
+  .track__node {
+    width: 100%;
+    flex: 0 0 auto;
+    border-left: 0;
+    border-top: 1px solid var(--hairline);
+    padding: 28px clamp(14px, 1.5vw, 20px);
+  }
+
+  .track__node:last-child {
+    border-right: 0;
+  }
+
+  .track__node-head {
+    border-bottom: 0;
+    padding-bottom: 6px;
+  }
+
+  .track__node-head::after {
+    display: none;
+  }
+
+  .track__node-source {
+    margin-top: 12px;
+  }
+
+  .track__progress {
+    display: none;
+  }
+}

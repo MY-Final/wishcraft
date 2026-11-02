@@ -1,0 +1,141 @@
+{
+  "generatedAt": "2026-11-02T07:52:58.925Z",
+  "base": "http://127.0.0.1:5178/",
+  "issues": [],
+  "chapters": [
+    {
+      "chapter": 0,
+      "top": 0,
+      "height": 2160,
+      "yearStart": "1950",
+      "yearEnd": "1950",
+      "label": "序章：第一个问题"
+    },
+    {
+      "chapter": 1,
+      "top": 2160,
+      "height": 2700,
+      "yearStart": "1950",
+      "yearEnd": "1979",
+      "label": "第1章：一个问题的诞生"
+    },
+    {
+      "chapter": 2,
+      "top": 4860,
+      "height": 3150,
+      "yearStart": "1980",
+      "yearEnd": "2011",
+      "label": "第2章：机器开始学习"
+    },
+    {
+      "chapter": 3,
+      "top": 8010,
+      "height": 3600,
+      "yearStart": "2012",
+      "yearEnd": "2017",
+      "label": "第三章：深度学习革命"
+    },
+    {
+      "chapter": 4,
+      "top": 11610,
+      "height": 2520,
+      "yearStart": "2018",
+      "yearEnd": "2022",
+      "label": "第四章：语言开始生成"
+    },
+    {
+      "chapter": 4,
+      "top": 14130,
+      "height": 1620,
+      "yearStart": "2022",
+      "yearEnd": "2022",
+      "label": "第四章：语言开始生成 — 对话"
+    },
+    {
+      "chapter": 5,
+      "top": 15750,
+      "height": 2160,
+      "yearStart": "2023",
+      "yearEnd": "2024",
+      "label": "第五章：全球模型竞赛"
+    },
+    {
+      "chapter": 5,
+      "top": 17910,
+      "height": 2215.328125,
+      "yearStart": "2024",
+      "yearEnd": "2024",
+      "label": "第五章续：两条路线、中国的开放权重供给与 2024 年的新轴"
+    },
+    {
+      "chapter": 6,
+      "top": 20125.328125,
+      "height": 3060,
+      "yearStart": "2025",
+      "yearEnd": "2025",
+      "label": "第六章：推理时代"
+    },
+    {
+      "chapter": 7,
+      "top": 23185.328125,
+      "height": 5220,
+      "yearStart": "2026",
+      "yearEnd": "2026",
+      "label": "第七章：行动时代"
+    },
+    {
+      "chapter": 8,
+      "top": 28405.328125,
+      "height": 2790,
+      "yearStart": "2026",
+      "yearEnd": "2026",
+      "label": "终章：问题仍在"
+    }
+  ],
+  "screenshots": [
+    "D:\\workspace\\许愿池\\projects\\intelligence-archive\\docs\\screens\\audit\\00-hero.png",
+    "D:\\workspace\\许愿池\\projects\\intelligence-archive\\docs\\screens\\audit\\ch00.png",
+    "D:\\workspace\\许愿池\\projects\\intelligence-archive\\docs\\screens\\audit\\ch01.png",
+    "D:\\workspace\\许愿池\\projects\\intelligence-archive\\docs\\screens\\audit\\ch02.png",
+    "D:\\workspace\\许愿池\\projects\\intelligence-archive\\docs\\screens\\audit\\ch03.png",
+    "D:\\workspace\\许愿池\\projects\\intelligence-archive\\docs\\screens\\audit\\ch04.png",
+    "D:\\workspace\\许愿池\\projects\\intelligence-archive\\docs\\screens\\audit\\ch04.png",
+    "D:\\workspace\\许愿池\\projects\\intelligence-archive\\docs\\screens\\audit\\ch05.png",
+    "D:\\workspace\\许愿池\\projects\\intelligence-archive\\docs\\screens\\audit\\ch05.png",
+    "D:\\workspace\\许愿池\\projects\\intelligence-archive\\docs\\screens\\audit\\ch06.png",
+    "D:\\workspace\\许愿池\\projects\\intelligence-archive\\docs\\screens\\audit\\ch07.png",
+    "D:\\workspace\\许愿池\\projects\\intelligence-archive\\docs\\screens\\audit\\ch08.png",
+    "D:\\workspace\\许愿池\\projects\\intelligence-archive\\docs\\screens\\audit\\mobile-hero.png",
+    "D:\\workspace\\许愿池\\projects\\intelligence-archive\\docs\\screens\\audit\\mobile-ch00.png",
+    "D:\\workspace\\许愿池\\projects\\intelligence-archive\\docs\\screens\\audit\\mobile-ch03.png",
+    "D:\\workspace\\许愿池\\projects\\intelligence-archive\\docs\\screens\\audit\\mobile-ch05.png",
+    "D:\\workspace\\许愿池\\projects\\intelligence-archive\\docs\\screens\\audit\\mobile-ch05.png",
+    "D:\\workspace\\许愿池\\projects\\intelligence-archive\\docs\\screens\\audit\\mobile-ch07.png",
+    "D:\\workspace\\许愿池\\projects\\intelligence-archive\\docs\\screens\\audit\\mobile-ch08.png",
+    "D:\\workspace\\许愿池\\projects\\intelligence-archive\\docs\\screens\\audit\\archive-desktop.png",
+    "D:\\workspace\\许愿池\\projects\\intelligence-archive\\docs\\screens\\audit\\archive-search.png",
+    "D:\\workspace\\许愿池\\projects\\intelligence-archive\\docs\\screens\\audit\\reduced-motion-hero.png",
+    "D:\\workspace\\许愿池\\projects\\intelligence-archive\\docs\\screens\\audit\\reduced-motion-ch03.png",
+    "D:\\workspace\\许愿池\\projects\\intelligence-archive\\docs\\screens\\audit\\no-webgl-hero.png",
+    "D:\\workspace\\许愿池\\projects\\intelligence-archive\\docs\\screens\\audit\\no-webgl-ch03.png"
+  ],
+  "performance": {
+    "chapter3": 42,
+    "chapter4": 72,
+    "chapter7": 72,
+    "heroFps": 75
+  },
+  "mobile": {
+    "overflowX": 0,
+    "chapters": 11
+  },
+  "reducedMotion": {
+    "errors": []
+  },
+  "noWebgl": {
+    "errors": []
+  },
+  "archive": {
+    "searchHits": 62
+  }
+}

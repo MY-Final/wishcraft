@@ -1,0 +1,77 @@
+.arch-tabs {
+  display: flex;
+  align-items: stretch;
+  border-bottom: 1px solid var(--hairline);
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.arch-tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.arch-tab {
+  position: relative;
+  display: inline-flex;
+  align-items: baseline;
+  gap: 10px;
+  flex: none;
+  margin-right: clamp(20px, 3vw, 44px);
+  padding: 14px 0 12px;
+  color: var(--muted);
+  transition: color var(--dur-fast) var(--ease-out);
+}
+
+.arch-tab::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 1px;
+  background: var(--ink);
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform var(--dur-fast) var(--ease-out);
+}
+
+.arch-tab:hover {
+  color: var(--ink);
+}
+
+.arch-tab.is-active {
+  color: var(--ink);
+}
+
+.arch-tab.is-active::after {
+  transform: scaleX(1);
+}
+
+.arch-tab__label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.16em;
+}
+
+.arch-tab__note {
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  color: var(--faint);
+}
+
+.arch-tab__count {
+  font-size: 9px;
+  letter-spacing: 0.06em;
+  color: var(--faint);
+}
+
+@media (max-width: 620px) {
+  .arch-tab__note {
+    display: none;
+  }
+
+  .arch-tab {
+    margin-right: 24px;
+    padding-block: 12px 10px;
+  }
+}

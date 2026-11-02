@@ -1,0 +1,378 @@
+{
+  "meta": {
+    "generatedAt": "2026-11-02T06:41:43.081Z",
+    "cutoff": "2026-11-02",
+    "description": "整合脚本隔离区：被拒绝的条目保留原始内容（未删除研究员文件），疑似重复与冲突仅作报告，不自动删除真实记录。",
+    "researchFiles": [
+      {
+        "file": "foundations.json",
+        "exists": true,
+        "parsed": true,
+        "models": 0,
+        "events": 36,
+        "organizations": 12,
+        "error": null,
+        "researcher": "research-foundations"
+      },
+      {
+        "file": "models-2018-2024.json",
+        "exists": true,
+        "parsed": true,
+        "models": 50,
+        "events": 20,
+        "organizations": 0,
+        "error": null,
+        "researcher": "research-intl-2018-24"
+      },
+      {
+        "file": "china-2018-2024.json",
+        "exists": true,
+        "parsed": true,
+        "models": 38,
+        "events": 10,
+        "organizations": 0,
+        "error": null,
+        "researcher": "research-china-2018-24"
+      },
+      {
+        "file": "frontier-2025-2026.json",
+        "exists": true,
+        "parsed": true,
+        "models": 52,
+        "events": 16,
+        "organizations": 5,
+        "error": null,
+        "researcher": "frontier-2025-2026"
+      },
+      {
+        "file": "china-2025-2026.json",
+        "exists": true,
+        "parsed": true,
+        "models": 41,
+        "events": 11,
+        "organizations": 0,
+        "error": null,
+        "researcher": "china-2025-2026"
+      }
+    ],
+    "missingFiles": [],
+    "brokenResearchFiles": [],
+    "counts": {
+      "models": 181,
+      "events": 93,
+      "organizations": 44,
+      "sources": {
+        "models": 320,
+        "events": 116,
+        "organizations": 133
+      }
+    },
+    "verification": {
+      "models": {
+        "partially-verified": 39,
+        "verified": 142
+      },
+      "events": {
+        "partially-verified": 17,
+        "verified": 76
+      },
+      "verifiedRatioModels": 0.7845,
+      "verifiedRatioEvents": 0.8172
+    },
+    "rejectedByKind": {},
+    "rejectedByReason": {},
+    "normalizations": {
+      "displayDateFixed": 0,
+      "datePrecisionFixed": 0,
+      "chapterFixed": 0,
+      "availabilityDateDropped": 0,
+      "nameMismatch": 0,
+      "textPlaceholders": 0,
+      "orgInferred": 0,
+      "orgPlaceholder": 29,
+      "sourceKindGuessed": 0,
+      "nonWhitelistOrg": 0,
+      "missingOptionalField": 0,
+      "orgProfileFilled": 55,
+      "partialDowngraded": 2,
+      "sourceReplaced": 4,
+      "sourceReplacements": [
+        {
+          "from": "https://www.whitehouse.gov/ostp/ai-bill-of-rights/",
+          "to": "https://bidenwhitehouse.archives.gov/ostp/ai-bill-of-rights/",
+          "reason": "原 whitehouse.gov 页面 404，替换为白宫官方存档页（HTTP 200）"
+        },
+        {
+          "from": "https://www.aboutamazon.com/news/aws/amazon-aws-anthropic-ai",
+          "to": "https://press.aboutamazon.com/2023/9/amazon-and-anthropic-announce-strategic-collaboration-to-advance-generative-ai",
+          "reason": "原 URL 404，替换为 Amazon 官方新闻稿（press.aboutamazon.com，HTTP 200）"
+        },
+        {
+          "from": "https://www.whitehouse.gov/briefing-room/presidential-actions/2023/10/30/executive-order-on-the-safe-secure-and-trustworthy-development-and-use-of-artificial-intelligence/",
+          "to": "https://www.federalregister.gov/documents/2023/11/01/2023-24283/safe-secure-and-trustworthy-development-and-use-of-artificial-intelligence",
+          "reason": "原 whitehouse.gov 页面 404，替换为美国联邦公报官方文本（HTTP 200）"
+        },
+        {
+          "from": "https://openai.com/index/sam-altman-returns-as-ceo/",
+          "to": "https://openai.com/index/sam-altman-returns-as-ceo-openai-has-a-new-initial-board/",
+          "reason": "原 URL 404，替换为 OpenAI 官方同主题公告页"
+        }
+      ],
+      "eventIdFixed": 1
+    },
+    "danglingReferences": [],
+    "organizationsWithoutSources": [],
+    "organizationsNonWhitelist": [],
+    "organizationsNeedingEnrichment": [
+      "china-government",
+      "uk-government",
+      "white-house"
+    ]
+  },
+  "rejected": [],
+  "conflicts": [],
+  "suspectedDuplicates": {
+    "models": [
+      {
+        "signal": "名称（去除日期/快照后缀后）相同",
+        "confidence": "中高（名称一致但日期不同，可能是同一模型的不同快照版本，需人工确认后决定是否合并）",
+        "kind": "model",
+        "ids": [
+          "claude-3-5-sonnet",
+          "claude-3-5-sonnet-20241022"
+        ],
+        "names": [
+          "Claude 3.5 Sonnet",
+          "Claude 3.5 Sonnet (new)"
+        ],
+        "dates": [
+          "2024-06-20",
+          "2024-10-22"
+        ],
+        "organizations": [
+          "anthropic"
+        ]
+      },
+      {
+        "signal": "名称（去除日期/快照后缀后）相同",
+        "confidence": "中高（名称一致但日期不同，可能是同一模型的不同快照版本，需人工确认后决定是否合并）",
+        "kind": "model",
+        "ids": [
+          "deepseek-v3",
+          "deepseek-v3-0324"
+        ],
+        "names": [
+          "DeepSeek-V3",
+          "DeepSeek-V3-0324"
+        ],
+        "dates": [
+          "2024-12-26",
+          "2025-03-24"
+        ],
+        "organizations": [
+          "deepseek"
+        ]
+      },
+      {
+        "signal": "名称（去除日期/快照后缀后）相同",
+        "confidence": "中高（名称一致但日期不同，可能是同一模型的不同快照版本，需人工确认后决定是否合并）",
+        "kind": "model",
+        "ids": [
+          "deepseek-r1",
+          "deepseek-r1-0528"
+        ],
+        "names": [
+          "DeepSeek-R1",
+          "DeepSeek-R1-0528"
+        ],
+        "dates": [
+          "2025-01-20",
+          "2025-05-28"
+        ],
+        "organizations": [
+          "deepseek"
+        ]
+      },
+      {
+        "signal": "名称（去除日期/快照后缀后）相同",
+        "confidence": "中高（名称一致但日期不同，可能是同一模型的不同快照版本，需人工确认后决定是否合并）",
+        "kind": "model",
+        "ids": [
+          "deepseek-v4-1-flash",
+          "deepseek-v4-1-flash-1017"
+        ],
+        "names": [
+          "DeepSeek-V4.1-Flash",
+          "DeepSeek-V4.1-Flash-1017"
+        ],
+        "dates": [
+          "2026-09-10",
+          "2026-10-17"
+        ],
+        "organizations": [
+          "deepseek"
+        ]
+      },
+      {
+        "signal": "名称（去除日期/快照后缀后）相同",
+        "confidence": "中高（名称一致但日期不同，可能是同一模型的不同快照版本，需人工确认后决定是否合并）",
+        "kind": "model",
+        "ids": [
+          "kimi-k2",
+          "kimi-k2-0905"
+        ],
+        "names": [
+          "Kimi K2",
+          "Kimi K2 0905"
+        ],
+        "dates": [
+          "2025-07-11",
+          "2025-09-05"
+        ],
+        "organizations": [
+          "moonshot"
+        ]
+      }
+    ],
+    "events": []
+  },
+  "normalizations": {
+    "notes": [
+      "event:anthropic-model-spec-2026-10-29: event id 修正为「openai-model-spec-2026-10-29」（该事件的 organizations / title / 来源均为 OpenAI（model-spec.openai.com），原 id 前缀误写为 anthropic）",
+      "event:ibm-watson-jeopardy-2011: 只有二手来源，verificationStatus 由 verified 降级为 partially-verified（规范要求一手来源）",
+      "event:china-genai-measures-draft-2023: 只有二手来源，verificationStatus 由 verified 降级为 partially-verified（规范要求一手来源）",
+      "model:deepseek-v3-0324: 按研究员 notes 补上跨文件 predecessor「deepseek-v3」（依据：research/china-2025-2026-notes.md §7.2）",
+      "event:turing-computing-machinery-1950: 未关联任何机构",
+      "event:perceptron-1958: 未关联任何机构",
+      "event:lighthill-1973: 未关联任何机构",
+      "event:hopfield-1982: 未关联任何机构",
+      "event:ai-winter-1987: 未关联任何机构",
+      "event:lecun-convnet-1989: 未关联任何机构",
+      "event:lstm-1997: 未关联任何机构",
+      "event:lenet5-1998: 未关联任何机构",
+      "event:vae-2013: 未关联任何机构",
+      "event:adam-optimizer-2014: 未关联任何机构"
+    ],
+    "textLengthOutliers": [
+      {
+        "kind": "model",
+        "id": "deepseek-v2-5",
+        "field": "summary",
+        "length": 141,
+        "expect": "60–140"
+      },
+      {
+        "kind": "model",
+        "id": "deepseek-v3",
+        "field": "summary",
+        "length": 154,
+        "expect": "60–140"
+      },
+      {
+        "kind": "model",
+        "id": "nano-banana",
+        "field": "summary",
+        "length": 144,
+        "expect": "60–140"
+      },
+      {
+        "kind": "model",
+        "id": "gemini-3-pro",
+        "field": "summary",
+        "length": 154,
+        "expect": "60–140"
+      },
+      {
+        "kind": "model",
+        "id": "claude-opus-4-6",
+        "field": "summary",
+        "length": 143,
+        "expect": "60–140"
+      },
+      {
+        "kind": "model",
+        "id": "claude-opus-4-7",
+        "field": "summary",
+        "length": 160,
+        "expect": "60–140"
+      },
+      {
+        "kind": "model",
+        "id": "claude-sonnet-5",
+        "field": "summary",
+        "length": 146,
+        "expect": "60–140"
+      },
+      {
+        "kind": "model",
+        "id": "claude-opus-5",
+        "field": "summary",
+        "length": 156,
+        "expect": "60–140"
+      },
+      {
+        "kind": "model",
+        "id": "claude-fable-5-1",
+        "field": "summary",
+        "length": 150,
+        "expect": "60–140"
+      },
+      {
+        "kind": "model",
+        "id": "claude-mythos-5-1",
+        "field": "summary",
+        "length": 159,
+        "expect": "60–140"
+      },
+      {
+        "kind": "model",
+        "id": "gpt-6-astra",
+        "field": "summary",
+        "length": 151,
+        "expect": "60–140"
+      },
+      {
+        "kind": "model",
+        "id": "claude-opus-5-5",
+        "field": "summary",
+        "length": 163,
+        "expect": "60–140"
+      },
+      {
+        "kind": "model",
+        "id": "gpt-6-1-terra",
+        "field": "summary",
+        "length": 147,
+        "expect": "60–140"
+      },
+      {
+        "kind": "model",
+        "id": "gpt-6-rosalind-research",
+        "field": "summary",
+        "length": 170,
+        "expect": "60–140"
+      },
+      {
+        "kind": "event",
+        "id": "openai-retire-gpt4o-2026",
+        "field": "summary",
+        "length": 153,
+        "expect": "60–140"
+      },
+      {
+        "kind": "event",
+        "id": "anthropic-project-glasswing-2026",
+        "field": "summary",
+        "length": 144,
+        "expect": "60–140"
+      },
+      {
+        "kind": "event",
+        "id": "openai-gpt6-rosalind-research-2026",
+        "field": "summary",
+        "length": 143,
+        "expect": "60–140"
+      }
+    ]
+  }
+}

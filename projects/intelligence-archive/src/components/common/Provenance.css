@@ -1,0 +1,52 @@
+.provenance {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  max-width: 100%;
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  line-height: 1.6;
+  color: var(--faint);
+  transition: color var(--dur-fast) var(--ease-out);
+}
+
+.provenance:hover,
+.provenance:focus-visible {
+  color: var(--ink);
+}
+
+.provenance__status {
+  color: var(--ink);
+  border: 1px solid currentColor;
+  padding: 1px 5px 0;
+  font-size: 8px;
+  letter-spacing: 0.14em;
+}
+
+.provenance.is-partial .provenance__status {
+  color: var(--muted);
+  border-style: dashed;
+}
+
+.provenance__date {
+  color: var(--muted);
+}
+
+.provenance__label {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 21ch;
+  border-bottom: 1px solid var(--hairline);
+}
+
+.provenance__arrow {
+  font-size: 10px;
+  transition: transform var(--dur-fast) var(--ease-out);
+}
+
+.provenance:hover .provenance__arrow {
+  transform: translate(2px, -2px);
+}

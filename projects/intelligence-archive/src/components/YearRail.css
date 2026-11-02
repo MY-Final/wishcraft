@@ -1,0 +1,136 @@
+.year-rail {
+  position: fixed;
+  right: clamp(14px, 2.4vw, 34px);
+  top: 50%;
+  z-index: 40;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 14px;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.year-rail__year {
+  font-size: clamp(1.375rem, 1.9vw, 1.875rem);
+  color: var(--ink);
+  letter-spacing: -0.04em;
+  transition: color var(--dur) var(--ease-out);
+}
+
+.year-rail__track {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 13px;
+  padding-right: 8px;
+  border-right: 1px solid var(--hairline);
+  pointer-events: auto;
+}
+
+.year-rail__fill {
+  position: absolute;
+  top: 0;
+  right: -1px;
+  width: 1px;
+  height: 100%;
+  background: var(--ink);
+  transform-origin: top center;
+  transition: transform 200ms linear;
+}
+
+.year-rail__tick {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+  padding: 2px 0;
+  color: var(--faint);
+  transition: color var(--dur-fast) var(--ease-out);
+}
+
+.year-rail__tick:hover,
+.year-rail__tick:focus-visible,
+.year-rail__tick.is-active {
+  color: var(--ink);
+}
+
+.year-rail__label {
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  opacity: 0;
+  transform: translateX(4px);
+  transition:
+    opacity var(--dur-fast) var(--ease-out),
+    transform var(--dur-fast) var(--ease-out);
+}
+
+.year-rail__tick:hover .year-rail__label,
+.year-rail__tick:focus-visible .year-rail__label,
+.year-rail__tick.is-active .year-rail__label {
+  opacity: 1;
+  transform: none;
+}
+
+.year-rail__dash {
+  display: block;
+  width: 10px;
+  height: 1px;
+  background: currentColor;
+  transition: width var(--dur-fast) var(--ease-out);
+}
+
+.year-rail__tick:hover .year-rail__dash,
+.year-rail__tick.is-active .year-rail__dash {
+  width: 22px;
+}
+
+.year-rail__tick.is-past .year-rail__dash {
+  background: var(--muted);
+}
+
+.year-rail__chapter {
+  font-size: 9px;
+  color: var(--faint);
+  letter-spacing: 0.14em;
+}
+
+/* dark tone */
+.year-rail--void {
+  --ink: var(--void-ink);
+  --muted: #8a8a88;
+  --faint: #5e5e5c;
+  --hairline: #2a2a2a;
+}
+
+.year-rail--void .year-rail__year {
+  color: var(--void-ink);
+}
+
+@media (max-width: 1100px) {
+  .year-rail__label {
+    display: none;
+  }
+}
+
+@media (max-width: 860px) {
+  .year-rail {
+    top: auto;
+    bottom: 16px;
+    right: var(--pad-x);
+    transform: none;
+    align-items: flex-end;
+    gap: 6px;
+  }
+  .year-rail__track,
+  .year-rail__chapter {
+    display: none;
+  }
+  .year-rail__year {
+    font-size: 1.25rem;
+    padding: 4px 8px;
+    background: var(--paper);
+    border: 1px solid var(--hairline);
+  }
+}

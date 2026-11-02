@@ -1,0 +1,31 @@
+.arch-event-related {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--hairline);
+}
+
+.arch-event-related__item {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  width: 100%;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--hairline);
+  font-size: 0.875rem;
+  text-align: left;
+}
+
+.arch-event-related__item span:last-child {
+  flex: none;
+  font-size: 9px;
+  letter-spacing: 0.08em;
+  color: var(--faint);
+}
+
+.arch-event-related__item:hover span:first-child,
+.arch-event-related__item:focus-visible span:first-child {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 1px;
+}

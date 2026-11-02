@@ -1,0 +1,572 @@
+/* =========================================================================
+   CH06 — THE AGE OF REASONING / 推理时代
+   版式骨架与 CH05 相反：极窄栏、垂直排版、中央推理树、左侧时间刻度线。
+   全部动画由 --p 推导（useStageProgress 写入），无 scroll setState。
+   ========================================================================= */
+
+.scene.ch06 {
+  height: 340vh;
+  background: var(--paper);
+}
+
+.ch06__stage {
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 30px 158px minmax(0, 1fr) clamp(236px, 20vw, 300px);
+  gap: clamp(10px, 1.5vw, 28px);
+  padding: clamp(74px, 9.4vh, 100px) calc(var(--pad-x) + 68px) clamp(20px, 3.6vh, 34px)
+    var(--pad-x);
+}
+
+/* ---------------- 垂直章节标 ---------------- */
+
+.ch06__rail {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  align-self: end;
+  justify-self: start;
+  margin-bottom: 4px;
+  font-size: 8.5px;
+  letter-spacing: 0.36em;
+  color: var(--faint);
+  white-space: nowrap;
+}
+
+/* ---------------- 时间刻度线 ---------------- */
+
+.ch06__ticks {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.ch06__ticks-head {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  color: var(--ink);
+}
+
+.ch06__ticks-head span {
+  font-size: 8px;
+  color: var(--faint);
+}
+
+.ch06__ticks-axis {
+  position: relative;
+  flex: 1 1 auto;
+  margin: 14px 0 10px;
+  min-height: 0;
+}
+
+.ch06__ticks-line,
+.ch06__ticks-fill {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 1px;
+  background: var(--hairline);
+}
+
+.ch06__ticks-fill {
+  background: var(--ink);
+  transform-origin: top center;
+  transform: scaleY(clamp(0, var(--p), 1));
+  opacity: 0.75;
+}
+
+.ch06__tick {
+  position: absolute;
+  left: 0;
+  top: var(--y);
+  transform: translateY(-50%);
+  display: flex;
+  align-items: baseline;
+  gap: 7px;
+  max-width: 100%;
+  padding-left: 10px;
+  opacity: clamp(0, calc((var(--p) - var(--t)) / 0.05), 1);
+}
+
+.ch06__tick::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 7px;
+  height: 1px;
+  background: var(--faint);
+}
+
+.ch06__tick-date {
+  flex: none;
+  font-size: 8px;
+  letter-spacing: 0.02em;
+  color: var(--faint);
+}
+
+.ch06__tick-name {
+  font-family: var(--font-sans);
+  font-size: 10px;
+  letter-spacing: -0.01em;
+  color: var(--graphite);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ch06__ticks-foot {
+  font-size: 8px;
+  letter-spacing: 0.08em;
+  color: var(--faint);
+}
+
+/* ---------------- 中央：问题 + 推理树 ---------------- */
+
+.ch06__center {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 0;
+}
+
+.ch06__question {
+  flex: none;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--hairline);
+}
+
+.ch06__question-meta {
+  font-size: 8.5px;
+  letter-spacing: 0.2em;
+  color: var(--faint);
+}
+
+.ch06__question-text {
+  margin-top: 8px;
+  font-size: clamp(1rem, 1.45vw, 1.3125rem);
+  line-height: 1.55;
+  letter-spacing: 0.01em;
+  color: var(--ink);
+}
+
+.ch06__tree {
+  position: relative;
+  flex: 1 1 auto;
+  min-height: 0;
+}
+
+.ch06__tree-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 24px;
+  width: 100%;
+  height: calc(100% - 24px);
+  overflow: visible;
+}
+
+.ch06__tree-caption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  font-size: 8px;
+  letter-spacing: 0.06em;
+  color: var(--faint);
+}
+
+/* 根：一个问题被拆成并行分支 */
+.ch06__root line {
+  stroke: var(--ink);
+  stroke-width: 1;
+  vector-effect: non-scaling-stroke;
+  opacity: clamp(0, calc((var(--p) - 0.05) / 0.04), 0.55);
+}
+
+.ch06__root .ch06__root-stem {
+  opacity: clamp(0, calc((var(--p) - 0.06) / 0.04), 1);
+}
+
+/* 分支：stroke-dashoffset 生长（--len 由 ReasoningTree 量出） */
+.ch06__edge {
+  fill: none;
+  stroke: var(--ink);
+  stroke-width: 1;
+  vector-effect: non-scaling-stroke;
+  stroke-dasharray: var(--len, 1000);
+  --grow: clamp(0, calc((var(--p) - var(--t)) / 0.09), 1);
+  --keep: 1;
+  stroke-dashoffset: calc(var(--len, 1000) * (1 - var(--grow)));
+  opacity: calc(0.45 * var(--grow) * var(--keep));
+}
+
+.ch06__edge.is-spine {
+  opacity: calc(0.72 * var(--grow) * var(--keep));
+}
+
+.ch06__edge.is-pruned {
+  --keep: calc(1 - 0.86 * clamp(0, calc((var(--p) - 0.54) / 0.08), 1));
+}
+
+.ch06__edge--result {
+  opacity: calc(0.9 * var(--grow));
+}
+
+/* 节点 */
+.ch06__node {
+  --grow: clamp(0, calc((var(--p) - var(--t)) / 0.05), 1);
+  --keep: 1;
+  opacity: calc(var(--grow) * var(--keep));
+}
+
+.ch06__node.is-pruned {
+  --keep: calc(1 - 0.78 * clamp(0, calc((var(--p) - 0.54) / 0.08), 1));
+}
+
+.ch06__node-mark {
+  fill: var(--paper);
+  stroke: var(--ink);
+  stroke-width: 1;
+  vector-effect: non-scaling-stroke;
+}
+
+.ch06__node.is-spine .ch06__node-mark {
+  fill: var(--ink);
+}
+
+.ch06__node-label {
+  font-family: var(--font-cn);
+  font-size: 1.85px;
+  letter-spacing: 0.02em;
+  fill: var(--muted);
+}
+
+.ch06__node.is-spine .ch06__node-label {
+  fill: var(--ink);
+}
+
+.ch06__node.is-pruned .ch06__node-label {
+  text-decoration: line-through;
+}
+
+.ch06__result-ring {
+  fill: none;
+  stroke: var(--ink);
+  stroke-width: 1;
+  vector-effect: non-scaling-stroke;
+  transform-box: fill-box;
+  transform-origin: center;
+  transform: scale(calc(0.55 + 0.45 * var(--grow)));
+}
+
+.ch06__result-dot {
+  fill: var(--ink);
+}
+
+.ch06__node.is-result {
+  --grow: clamp(0, calc((var(--p) - 0.82) / 0.05), 1);
+}
+
+.ch06__node-label.is-result-label {
+  font-family: var(--font-mono);
+  font-size: 1.7px;
+  letter-spacing: 0.16em;
+  fill: var(--ink);
+}
+
+/* ---------------- 右侧极窄栏（垂直漂移） ---------------- */
+
+.ch06__essay {
+  position: relative;
+  min-height: 0;
+  overflow: hidden;
+  mask-image: linear-gradient(180deg, transparent 0, #000 13%, #000 88%, transparent 100%);
+  -webkit-mask-image: linear-gradient(
+    180deg,
+    transparent 0,
+    #000 13%,
+    #000 88%,
+    transparent 100%
+  );
+}
+
+.ch06__essay-track {
+  --drift: clamp(0, calc((var(--p) - 0.08) / 0.78), 1);
+  display: flex;
+  flex-direction: column;
+  gap: clamp(26px, 4.2vh, 46px);
+  transform: translate3d(0, calc(var(--drift) * var(--travel, 0px)), 0);
+  will-change: transform;
+}
+
+.ch06__beat {
+  flex: none;
+  padding-top: 12px;
+  border-top: 1px solid var(--ink);
+}
+
+.ch06__beat-label {
+  font-size: 8.5px;
+  letter-spacing: 0.18em;
+  color: var(--faint);
+}
+
+.ch06__beat-head {
+  margin-top: 8px;
+  font-size: clamp(1rem, 1.3vw, 1.25rem);
+  font-weight: 500;
+  line-height: 1.04;
+  letter-spacing: -0.03em;
+  color: var(--ink);
+}
+
+.ch06__beat-body {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 10px;
+  font-family: var(--font-cn);
+  font-size: 12.5px;
+  line-height: 1.86;
+  color: var(--graphite);
+}
+
+.ch06__beat .provenance {
+  margin-top: 10px;
+}
+
+/* ---------------- 开场巨引文 ---------------- */
+
+.ch06__quote {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: clamp(14px, 2.2vh, 22px);
+  padding: 0 var(--pad-x);
+  background: var(--paper);
+  pointer-events: none;
+  opacity: calc(1 - clamp(0, calc((var(--p) - 0.035) / 0.045), 1));
+}
+
+.ch06__quote-head {
+  font-size: clamp(2.6rem, 7.2vw, 6.6rem);
+  font-weight: 500;
+  line-height: 0.86;
+  letter-spacing: -0.055em;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+
+.ch06__quote-cn {
+  font-size: clamp(1.375rem, 3vw, 2.75rem);
+  line-height: 1.34;
+  letter-spacing: 0.02em;
+  color: var(--graphite);
+}
+
+.ch06__quote-cue {
+  margin-top: clamp(10px, 2vh, 20px);
+  font-size: 8.5px;
+  letter-spacing: 0.26em;
+  color: var(--faint);
+}
+
+/* ---------------- 收束 ---------------- */
+
+.ch06__closing {
+  position: absolute;
+  inset: 0;
+  z-index: 6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: clamp(16px, 2.4vh, 26px);
+  padding: 0 var(--pad-x);
+  background: var(--paper);
+  pointer-events: none;
+  opacity: clamp(0, calc((var(--p) - 0.84) / 0.055), 1);
+}
+
+.ch06__closing-mark {
+  max-width: 20ch;
+  font-size: clamp(1.85rem, 5.4vw, 5.2rem);
+  font-weight: 500;
+  line-height: 0.9;
+  letter-spacing: -0.05em;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+
+.ch06__closing-cn {
+  max-width: 46rem;
+  font-size: 14px;
+  line-height: 1.95;
+  color: var(--graphite);
+}
+
+.ch06__closing-end {
+  font-size: 8.5px;
+  letter-spacing: 0.22em;
+  color: var(--faint);
+}
+
+/* ---------------- 响应式 ---------------- */
+
+@media (max-width: 1180px) {
+  .ch06__stage {
+    grid-template-columns: 24px 132px minmax(0, 1fr) clamp(220px, 24vw, 280px);
+  }
+  .ch06__tick-name {
+    font-size: 9.5px;
+  }
+}
+
+@media (max-width: 900px), (prefers-reduced-motion: reduce) {
+  .scene.ch06 {
+    height: auto;
+  }
+
+  .scene.ch06 .ch06__stage {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: clamp(18px, 3vh, 28px);
+    height: auto;
+    padding: 70px 20px 32px;
+    overflow: visible;
+  }
+
+  .ch06__rail {
+    display: none;
+  }
+
+  .ch06__quote {
+    order: 1;
+    position: relative;
+    inset: auto;
+    opacity: 1;
+    padding: 0;
+    background: transparent;
+  }
+
+  .ch06__quote-head {
+    font-size: clamp(2rem, 11vw, 3rem);
+    line-height: 0.94;
+  }
+
+  .ch06__quote-cn {
+    font-size: clamp(1.125rem, 5.6vw, 1.5rem);
+  }
+
+  .ch06__center {
+    order: 2;
+    height: 60vh;
+    min-height: 360px;
+  }
+
+  .ch06__question-text {
+    font-size: 1rem;
+  }
+
+  .ch06__essay {
+    order: 3;
+    overflow: visible;
+    mask-image: none;
+    -webkit-mask-image: none;
+  }
+
+  .ch06__essay-track {
+    transform: none;
+    gap: 22px;
+  }
+
+  .ch06__ticks {
+    order: 4;
+  }
+
+  .ch06__ticks-axis {
+    position: static;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0 14px;
+    margin-top: 10px;
+  }
+
+  .ch06__ticks-line,
+  .ch06__ticks-fill {
+    display: none;
+  }
+
+  .ch06__tick {
+    position: static;
+    transform: none;
+    opacity: 1;
+    padding: 5px 0;
+    border-top: 1px solid var(--hairline);
+  }
+
+  .ch06__tick::before {
+    display: none;
+  }
+
+  .ch06__closing {
+    order: 5;
+    position: static;
+    opacity: 1;
+    padding: 0;
+    background: transparent;
+    border-top: 1px solid var(--ink);
+    padding-top: 18px;
+  }
+
+  .ch06__closing-cn {
+    font-size: 13px;
+  }
+
+  /* 窄屏只留结果节点的文字，其余分支保持图形化，避免标注重叠 */
+  .ch06__node-label {
+    display: none;
+  }
+  .ch06__node-label.is-result-label {
+    display: block;
+    font-size: 2.4px;
+  }
+
+  /* 静态最终形态：直接呈现结果的形状 */
+  .ch06__edge {
+    --grow: 1;
+    --keep: 1;
+    opacity: 0.34;
+    stroke-dashoffset: 0;
+  }
+  .ch06__edge.is-spine {
+    opacity: 0.62;
+  }
+  .ch06__edge.is-pruned {
+    opacity: 0.09;
+  }
+  .ch06__node,
+  .ch06__node.is-pruned,
+  .ch06__node.is-result {
+    --grow: 1;
+    --keep: 1;
+    opacity: 1;
+  }
+  .ch06__node.is-pruned {
+    opacity: 0.32;
+  }
+  .ch06__root line {
+    opacity: 0.55;
+  }
+  .ch06__root .ch06__root-stem {
+    opacity: 1;
+  }
+}

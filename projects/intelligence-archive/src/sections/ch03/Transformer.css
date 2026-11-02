@@ -1,0 +1,365 @@
+/* ============================================================
+   CH03 · 2017 / Transformer
+   句子 → token → 注意力细线 → 收束为标题。DOM + SVG + CSS 3D。
+   细线坐标由等宽字符宽度精确推出，所以线真的落在 token 上。
+   ============================================================ */
+
+.tx {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  opacity: var(--tx-op);
+  pointer-events: none;
+}
+
+/* ---------------- 阶段编号 ---------------- */
+
+.tx__steps {
+  position: absolute;
+  left: var(--pad-x);
+  bottom: clamp(16px, 3vh, 30px);
+  display: flex;
+  gap: clamp(14px, 2.2vw, 28px);
+  font-size: 9px;
+  letter-spacing: 0.18em;
+  color: var(--faint);
+  opacity: calc(var(--tx-op) * (1 - var(--ti)));
+}
+
+.tx__step {
+  transition: color 200ms linear;
+}
+
+.tx__step--1 {
+  opacity: calc(1 - clamp(0, calc((var(--t) - 0.12) / 0.08), 1));
+}
+
+.tx__step--2 {
+  opacity: min(
+    clamp(0, calc((var(--t) - 0.14) / 0.08), 1),
+    calc(1 - clamp(0, calc((var(--t) - 0.42) / 0.08), 1))
+  );
+}
+
+.tx__step--3 {
+  opacity: clamp(0, calc((var(--t) - 0.44) / 0.08), 1);
+}
+
+/* ---------------- 透视舞台 ---------------- */
+
+.tx__field {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  perspective: 1600px;
+  perspective-origin: 50% 47%;
+}
+
+/* 地面网格：给「透视空间」一点真实的空间线索，压得很淡 */
+.tx__plane {
+  position: absolute;
+  left: 50%;
+  top: 62%;
+  width: 130vmin;
+  height: 130vmin;
+  transform: translate(-50%, -50%) rotateX(76deg) translateZ(-14em);
+  background-image:
+    repeating-linear-gradient(
+      to right,
+      rgba(242, 242, 239, 0.07) 0 1px,
+      transparent 1px 4em
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      rgba(242, 242, 239, 0.07) 0 1px,
+      transparent 1px 4em
+    );
+  mask-image: radial-gradient(closest-side, #000 8%, transparent 74%);
+  -webkit-mask-image: radial-gradient(closest-side, #000 8%, transparent 74%);
+  opacity: calc(0.85 * var(--sp) * (1 - var(--cl)));
+  pointer-events: none;
+}
+
+.tx__frame {
+  position: relative;
+  width: calc(var(--fw) * 1em);
+  height: calc(var(--fh) * 1em);
+  font-family: var(--font-mono);
+  font-size: clamp(0.94rem, 3.8vw, 3.4rem);
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0;
+  color: var(--void-ink);
+  transform: rotateX(calc(var(--sp) * 15deg)) scale(calc(1 - 0.05 * var(--cl)));
+  transform-origin: 50% 50%;
+}
+
+.tx__token {
+  position: absolute;
+  left: 0;
+  top: 0;
+  white-space: nowrap;
+  line-height: 1;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  transform: translate(
+      calc(var(--x) * 1em + var(--dx) * var(--sp) * 1em),
+      calc(var(--y) * 1em + var(--dy) * var(--sp) * 1em)
+    )
+    scale(calc(1 + (var(--s) - 1) * var(--sp)));
+  opacity: calc(var(--tok) * (1 - 0.4 * var(--ln)));
+}
+
+/* ---------------- 注意力细线 ---------------- */
+
+/* 图版边框与基准线：让 token 所在的「平面」可被看见（透视由此成立） */
+.tx__plate {
+  position: absolute;
+  inset: 0;
+  border: 1px solid rgba(242, 242, 239, 0.13);
+  opacity: calc((0.2 + 0.8 * var(--sp)) * var(--tok));
+  pointer-events: none;
+}
+
+.tx__baseline {
+  position: absolute;
+  left: 2.4em;
+  top: 9.44em;
+  width: 19.2em;
+  height: 1px;
+  background: rgba(242, 242, 239, 0.34);
+  opacity: calc((1 - 0.6 * var(--sp)) * var(--tok));
+  pointer-events: none;
+}
+
+.tx__svg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: calc(var(--fw) * 1em);
+  height: calc(var(--fh) * 1em);
+  overflow: visible;
+  color: var(--void-ink);
+}
+
+.tx__svg--sm {
+  display: none;
+}
+
+.tx__links {
+  transform-box: fill-box;
+  transform-origin: 50% 50%;
+  transform: scaleY(calc(1 - 0.968 * var(--cl)));
+  opacity: calc(var(--ln) * (1 - 0.86 * var(--ti)));
+}
+
+.tx__link {
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  vector-effect: non-scaling-stroke;
+  stroke-width: calc(0.4px + 1.1px * var(--lw));
+  opacity: calc(0.16 + 0.84 * var(--lw));
+  /* 线长以用户单位（= em）给出，避免 pathLength 在 CSS 虚线里失效 */
+  stroke-dasharray: var(--len);
+  stroke-dashoffset: calc(var(--len) * (1 - clamp(0, calc((var(--t) - var(--t0)) / 0.14), 1)));
+}
+
+/* ---------------- 收束后的巨幅结论 ---------------- */
+
+.tx__final {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  gap: clamp(16px, 3vh, 38px);
+  padding: clamp(84px, 13vh, 138px) var(--pad-x) clamp(40px, 7vh, 76px);
+  opacity: var(--ti);
+}
+
+.tx__final-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 24px;
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  color: var(--faint);
+}
+
+.tx__final-main {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+  align-items: end;
+  gap: clamp(16px, 3vw, 48px);
+  min-height: 0;
+}
+
+.tx__final-title {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-sans);
+  font-size: clamp(2.1rem, 5.6vw, 5.5rem);
+  font-weight: 500;
+  line-height: 0.9;
+  letter-spacing: -0.05em;
+  text-transform: uppercase;
+  color: var(--void-ink);
+  clip-path: inset(0 0 calc((1 - var(--ti)) * 100%) 0);
+}
+
+.tx__final-year {
+  justify-self: end;
+  font-size: clamp(3.6rem, 11.4vw, 11.5rem);
+  font-weight: 500;
+  line-height: 0.76;
+  letter-spacing: -0.06em;
+  color: var(--void-ink);
+  opacity: calc(0.2 + 0.8 * var(--ti));
+  transform: translateY(calc((1 - var(--ti)) * 24px));
+}
+
+.tx__final-foot {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.85fr);
+  gap: clamp(18px, 3vw, 56px);
+  align-items: start;
+  padding-top: clamp(14px, 2.2vh, 22px);
+  border-top: 1px solid var(--hairline);
+  opacity: var(--cn);
+}
+
+.tx__final-cn {
+  font-size: clamp(0.9375rem, 1.32vw, 1.25rem);
+  line-height: 1.8;
+  letter-spacing: 0.02em;
+  color: var(--void-ink);
+}
+
+.tx__final-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.tx__final-note {
+  font-size: 0.75rem;
+  line-height: 1.7;
+  color: var(--faint);
+}
+
+/* ---------------- 900px 以下 ---------------- */
+
+@media (max-width: 900px) {
+  .tx__frame {
+    font-size: clamp(1.02rem, 4.7vw, 1.6rem);
+  }
+
+  .tx__svg--lg {
+    display: none;
+  }
+
+  .tx__svg--sm {
+    display: block;
+  }
+
+  .tx__token {
+    transform: translate(
+        calc(var(--mx) * 1em + var(--mdx) * var(--sp) * 1em),
+        calc(var(--my) * 1em + var(--mdy) * var(--sp) * 1em)
+      )
+      scale(calc(1 + (var(--ms) - 1) * var(--sp)));
+  }
+
+  .tx__plate {
+    display: none;
+  }
+
+  .tx__baseline {
+    display: none;
+  }
+
+  .tx__final {
+    padding: calc(58px + 9vh) var(--pad-x) 12vh;
+  }
+
+  .tx__final-main {
+    grid-template-columns: minmax(0, 1fr);
+    align-content: center;
+    align-items: start;
+    gap: clamp(10px, 1.6vh, 18px);
+  }
+
+  .tx__final-title {
+    font-size: clamp(1.9rem, 9.6vw, 2.8rem);
+  }
+
+  .tx__final-year {
+    justify-self: start;
+    font-size: clamp(3.4rem, 17vw, 5rem);
+    opacity: 0.9;
+  }
+
+  .tx__final-foot {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 10px;
+  }
+
+  .tx__steps {
+    display: none;
+  }
+}
+
+/* ---------------- reduced motion ---------------- */
+
+@media (prefers-reduced-motion: reduce) {
+  .tx {
+    position: static;
+    opacity: 1;
+  }
+
+  .tx__field {
+    position: static;
+    padding: 56px 0 40px;
+  }
+
+  .tx__frame {
+    margin-inline: auto;
+    transform: none;
+  }
+
+  .tx__token {
+    transform: translate(calc(var(--x) * 1em), calc(var(--y) * 1em));
+    opacity: 1;
+  }
+
+  .tx__svg,
+  .tx__plane,
+  .tx__steps,
+  .tx__plate,
+  .tx__baseline {
+    display: none;
+  }
+
+  .tx__final {
+    position: static;
+    opacity: 1;
+    padding: 0 var(--pad-x) 80px;
+  }
+
+  .tx__final-foot {
+    opacity: 1;
+    margin-top: 32px;
+  }
+
+  .tx__final-title {
+    clip-path: none;
+  }
+
+  .tx__final-year {
+    transform: none;
+    opacity: 1;
+  }
+}

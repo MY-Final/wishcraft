@@ -1,0 +1,44 @@
+/* OWNER: three —— 仅开发预览（?threePreview=...）使用的样式 */
+.dev-preview {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: flex;
+  flex-direction: column;
+  background: var(--paper);
+}
+
+.dev-preview__bar {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 12px 20px;
+  border-bottom: 1px solid var(--hairline);
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.dev-preview__title {
+  color: var(--ink);
+}
+
+.dev-preview__stage {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+}
+
+.dev-preview__pending {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  color: var(--faint);
+}

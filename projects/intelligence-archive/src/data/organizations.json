@@ -1,0 +1,1331 @@
+[
+  {
+    "id": "01ai",
+    "name": "01.AI",
+    "nameZh": "零一万物",
+    "countryOrRegion": "CN",
+    "founded": "2023",
+    "focus": [
+      "LLM"
+    ],
+    "summary": "零一万物（01.AI）成立于 2023 年，开发 Yi 系列模型。",
+    "sources": [
+      {
+        "label": "01.AI — 相关条目来源（整合脚本补充）",
+        "url": "https://tech.cnr.cn/techph/20231106/t20231106_526476893.shtml",
+        "kind": "press"
+      },
+      {
+        "label": "01.AI — 相关条目来源（整合脚本补充）",
+        "url": "http://www.chinadevelopment.com.cn/news/cj/2024/05/1894951.shtml",
+        "kind": "press"
+      }
+    ]
+  },
+  {
+    "id": "alibaba-qwen",
+    "name": "Alibaba Qwen",
+    "nameZh": "阿里云通义千问",
+    "countryOrRegion": "CN",
+    "founded": "2023",
+    "focus": [
+      "开源权重",
+      "多模态",
+      "Agent"
+    ],
+    "summary": "阿里巴巴通义千问（Qwen）团队自 2023 年起发布 Qwen 系列模型，覆盖语言、代码、视觉与音频。",
+    "sources": [
+      {
+        "label": "Alibaba Qwen — 相关条目来源（整合脚本补充）",
+        "url": "https://www.alibabagroup.com/zh-HK/document-1582482069362049024",
+        "kind": "official"
+      },
+      {
+        "label": "Alibaba Qwen — 相关条目来源（整合脚本补充）",
+        "url": "https://qwenlm.github.io/blog/qwen1.5/",
+        "kind": "official"
+      },
+      {
+        "label": "Alibaba Qwen — 相关条目来源（整合脚本补充）",
+        "url": "https://qwenlm.github.io/blog/qwen2/",
+        "kind": "official"
+      },
+      {
+        "label": "Alibaba Qwen — 相关条目来源（整合脚本补充）",
+        "url": "https://qwenlm.github.io/blog/qwen2.5/",
+        "kind": "official"
+      },
+      {
+        "label": "Alibaba Qwen — 相关条目来源（整合脚本补充）",
+        "url": "https://qwenlm.github.io/blog/qwen2.5-coder-family/",
+        "kind": "official"
+      },
+      {
+        "label": "Alibaba Qwen — 相关条目来源（整合脚本补充）",
+        "url": "https://qwenlm.github.io/blog/qwen2-vl/",
+        "kind": "official"
+      },
+      {
+        "label": "Alibaba Qwen — 相关条目来源（整合脚本补充）",
+        "url": "https://qwenlm.github.io/blog/qwen2.5-turbo/",
+        "kind": "official"
+      },
+      {
+        "label": "Alibaba Qwen — 相关条目来源（整合脚本补充）",
+        "url": "https://qwenlm.github.io/blog/qwq-32b-preview/",
+        "kind": "official"
+      },
+      {
+        "label": "Alibaba Qwen — 相关条目来源（整合脚本补充）",
+        "url": "http://t.cj.sina.com.cn/articles/view/1686546714/6486a91a02001xs8q",
+        "kind": "press"
+      },
+      {
+        "label": "Alibaba Qwen — 相关条目来源（整合脚本补充）",
+        "url": "https://stcn.com/article/detail/1210492.html",
+        "kind": "press"
+      },
+      {
+        "label": "Alibaba Qwen — 相关条目来源（整合脚本补充）",
+        "url": "https://qwenlm.github.io/blog/qwen3/",
+        "kind": "official"
+      },
+      {
+        "label": "Alibaba Qwen — 相关条目来源（整合脚本补充）",
+        "url": "https://qwenlm.github.io/blog/qwen3-coder/",
+        "kind": "official"
+      },
+      {
+        "label": "Alibaba Qwen — 相关条目来源（整合脚本补充）",
+        "url": "https://www.alibabacloud.com/blog/qwen3-next-a-new-generation-of-ultra-efficient-model-architecture-unveiled_602536",
+        "kind": "official"
+      },
+      {
+        "label": "Alibaba Qwen — 相关条目来源（整合脚本补充）",
+        "url": "https://www.alibabacloud.com/blog/qwen3-omni-natively-omni-modal-foundation-models_602581",
+        "kind": "official"
+      },
+      {
+        "label": "Alibaba Qwen — 相关条目来源（整合脚本补充）",
+        "url": "https://www.alibabagroup.com/document-1911884625546838016",
+        "kind": "official"
+      },
+      {
+        "label": "Alibaba Qwen — 相关条目来源（整合脚本补充）",
+        "url": "https://www.alibabagroup.com/zh-HK/document-1960233590314762240",
+        "kind": "official"
+      },
+      {
+        "label": "Alibaba Qwen — 相关条目来源（整合脚本补充）",
+        "url": "https://www.alibabacloud.com/blog/qwen3-8-flash-next-a-new-architecture-towards-ultimate-cost-efficiency_603501",
+        "kind": "official"
+      },
+      {
+        "label": "Alibaba Qwen — 相关条目来源（整合脚本补充）",
+        "url": "https://www.alibabacloud.com/blog/alibaba-to-invest-rmb380-billion-in-ai-and-cloud-infrastructure-over-next-three-years_602007",
+        "kind": "official"
+      },
+      {
+        "label": "Alibaba Qwen — 相关条目来源（整合脚本补充）",
+        "url": "https://www.alibabacloud.com/blog/alibaba-qwen-wins-%E2%80%9Cneurips-2025-best-paper-award%E2%80%9D-for-breakthrough-in-attention-mechanisms_602708",
+        "kind": "official"
+      },
+      {
+        "label": "Alibaba Qwen — 相关条目来源（整合脚本补充）",
+        "url": "https://www.alibabacloud.com/blog/alibaba-launches-qwen-app-to-boost-its-consumer-ai-efforts_602672",
+        "kind": "official"
+      },
+      {
+        "label": "Alibaba Qwen — 相关条目来源（整合脚本补充）",
+        "url": "https://www.alibabacloud.com/blog/alibaba-launches-new-quark-ai-glasses-series-in-china-deeply-integrated-with-qwen_602717",
+        "kind": "official"
+      },
+      {
+        "label": "Alibaba Qwen — 相关条目来源（整合脚本补充）",
+        "url": "https://www.alibabacloud.com/blog/alibaba-unveils-baguan-seasonal-ai-model-at-un-cop30_602683",
+        "kind": "official"
+      }
+    ]
+  },
+  {
+    "id": "amazon",
+    "name": "Amazon",
+    "nameZh": "亚马逊",
+    "countryOrRegion": "US",
+    "founded": "1994",
+    "focus": [
+      "云服务",
+      "模型"
+    ],
+    "summary": "Amazon 通过 AWS 提供 AI 基础设施，并发布 Nova 等自研模型。",
+    "sources": [
+      {
+        "label": "Amazon — 相关条目来源（整合脚本补充）",
+        "url": "https://aws.amazon.com/blogs/aws/introducing-amazon-nova-frontier-intelligence-and-industry-leading-price-performance/",
+        "kind": "official"
+      },
+      {
+        "label": "Amazon — 相关条目来源（整合脚本补充）",
+        "url": "https://press.aboutamazon.com/2023/9/amazon-and-anthropic-announce-strategic-collaboration-to-advance-generative-ai",
+        "kind": "official"
+      }
+    ]
+  },
+  {
+    "id": "ant-group",
+    "name": "Ant Group",
+    "nameZh": "蚂蚁集团",
+    "countryOrRegion": "CN",
+    "founded": "2014",
+    "focus": [
+      "LLM",
+      "金融科技"
+    ],
+    "summary": "蚂蚁集团是中国金融科技公司，百灵团队发布 Ling 系列模型。",
+    "sources": [
+      {
+        "label": "Ant Group — 相关条目来源（整合脚本补充）",
+        "url": "https://huggingface.co/inclusionAI/Ling-1T",
+        "kind": "weights"
+      }
+    ]
+  },
+  {
+    "id": "anthropic",
+    "name": "Anthropic",
+    "nameZh": "Anthropic",
+    "countryOrRegion": "US",
+    "founded": "2021",
+    "focus": [
+      "前沿 LLM",
+      "AI 安全",
+      "编码 Agent",
+      "受控发布",
+      "Agent"
+    ],
+    "summary": "以 Claude 家族与分级安全政策为核心，2026 年转向按能力等级审核分发的受信任访问机制。",
+    "sources": [
+      {
+        "label": "Anthropic",
+        "url": "https://www.anthropic.com/",
+        "kind": "official"
+      }
+    ]
+  },
+  {
+    "id": "baichuan",
+    "name": "Baichuan",
+    "nameZh": "百川智能",
+    "countryOrRegion": "CN",
+    "founded": "2023",
+    "focus": [
+      "LLM",
+      "医疗"
+    ],
+    "summary": "百川智能成立于 2023 年，开发 Baichuan 系列模型并聚焦医疗等垂直方向。",
+    "sources": [
+      {
+        "label": "Baichuan — 相关条目来源（整合脚本补充）",
+        "url": "https://github.com/baichuan-inc/Baichuan-7B",
+        "kind": "official"
+      },
+      {
+        "label": "Baichuan — 相关条目来源（整合脚本补充）",
+        "url": "https://www.ncsti.gov.cn/kjdt/ztbd/rgzn/zxjz/202309/t20230908_133239.html",
+        "kind": "press"
+      },
+      {
+        "label": "Baichuan — 相关条目来源（整合脚本补充）",
+        "url": "http://t.cj.sina.com.cn/articles/view/1686546714/6486a91a02001xs8q",
+        "kind": "press"
+      }
+    ]
+  },
+  {
+    "id": "baidu",
+    "name": "Baidu",
+    "nameZh": "百度",
+    "countryOrRegion": "CN",
+    "founded": "2000",
+    "focus": [
+      "LLM",
+      "搜索"
+    ],
+    "summary": "百度是中国科技公司，开发文心（ERNIE）系列模型与搜索产品。",
+    "sources": [
+      {
+        "label": "Baidu — 相关条目来源（整合脚本补充）",
+        "url": "https://arxiv.org/abs/2112.12731",
+        "kind": "paper"
+      },
+      {
+        "label": "Baidu — 相关条目来源（整合脚本补充）",
+        "url": "https://finance.sina.com.cn/jjxw/2023-03-16/doc-imykzwvv7824758.shtml",
+        "kind": "press"
+      },
+      {
+        "label": "Baidu — 相关条目来源（整合脚本补充）",
+        "url": "https://tech.cnr.cn/techph/20231017/t20231017_526453859.shtml",
+        "kind": "press"
+      },
+      {
+        "label": "Baidu — 相关条目来源（整合脚本补充）",
+        "url": "http://t.cj.sina.com.cn/articles/view/1686546714/6486a91a02001xs8q",
+        "kind": "press"
+      },
+      {
+        "label": "Baidu — 相关条目来源（整合脚本补充）",
+        "url": "https://stcn.com/article/detail/1210492.html",
+        "kind": "press"
+      },
+      {
+        "label": "Baidu — 相关条目来源（整合脚本补充）",
+        "url": "https://huggingface.co/baidu/ERNIE-4.5-300B-A47B-PT",
+        "kind": "weights"
+      }
+    ]
+  },
+  {
+    "id": "bytedance",
+    "name": "ByteDance",
+    "nameZh": "字节跳动",
+    "countryOrRegion": "CN",
+    "founded": "2012",
+    "focus": [
+      "LLM",
+      "多模态",
+      "应用"
+    ],
+    "summary": "字节跳动是中国科技公司，旗下 Seed 团队开发豆包（Doubao）系列模型。",
+    "sources": [
+      {
+        "label": "ByteDance — 相关条目来源（整合脚本补充）",
+        "url": "https://www.stcn.com/article/detail/951137.html",
+        "kind": "press"
+      },
+      {
+        "label": "ByteDance — 相关条目来源（整合脚本补充）",
+        "url": "https://www.news.cn/tech/20240515/0cbd896c16e14a398c26f4195a360410/c.html",
+        "kind": "press"
+      },
+      {
+        "label": "ByteDance — 相关条目来源（整合脚本补充）",
+        "url": "http://t.cj.sina.com.cn/articles/view/1686546714/6486a91a02001xs8q",
+        "kind": "press"
+      },
+      {
+        "label": "ByteDance — 相关条目来源（整合脚本补充）",
+        "url": "https://stcn.com/article/detail/1210492.html",
+        "kind": "press"
+      },
+      {
+        "label": "ByteDance — 相关条目来源（整合脚本补充）",
+        "url": "https://huggingface.co/ByteDance-Seed/Seed-OSS-36B-Instruct",
+        "kind": "weights"
+      }
+    ]
+  },
+  {
+    "id": "china-government",
+    "name": "Government of China",
+    "nameZh": "中国政府",
+    "countryOrRegion": "CN",
+    "founded": "",
+    "focus": [
+      "AI 监管",
+      "政策"
+    ],
+    "summary": "中国政府通过网信办、工信部等部门发布生成式 AI 服务管理与算法备案等政策。",
+    "sources": [
+      {
+        "label": "Government of China — 相关条目来源（整合脚本补充）",
+        "url": "https://www.most.gov.cn/kjbgz/201906/t20190617_147107.html",
+        "kind": "official"
+      },
+      {
+        "label": "Government of China — 相关条目来源（整合脚本补充）",
+        "url": "https://www.szzg.gov.cn/2023/xwzx/fhzx/202304/t20230411_4598306.htm",
+        "kind": "press"
+      },
+      {
+        "label": "Government of China — 相关条目来源（整合脚本补充）",
+        "url": "https://www.cac.gov.cn/2023-07/13/c_1690898327029107.htm",
+        "kind": "official"
+      },
+      {
+        "label": "Government of China — 相关条目来源（整合脚本补充）",
+        "url": "http://t.cj.sina.com.cn/articles/view/1686546714/6486a91a02001xs8q",
+        "kind": "press"
+      },
+      {
+        "label": "Government of China — 相关条目来源（整合脚本补充）",
+        "url": "http://zw.china.com.cn/2023-10/19/content_116759358.shtml",
+        "kind": "press"
+      },
+      {
+        "label": "Government of China — 相关条目来源（整合脚本补充）",
+        "url": "https://fr.china-embassy.gov.cn/zgyw/202407/t20240704_11448196.htm",
+        "kind": "official"
+      },
+      {
+        "label": "Government of China — 相关条目来源（整合脚本补充）",
+        "url": "https://www.jswx.gov.cn:8888/fwhd/tzgg/202409/t20240914_106660.shtml",
+        "kind": "official"
+      },
+      {
+        "label": "Government of China — 相关条目来源（整合脚本补充）",
+        "url": "https://www.gov.cn/zhengce/zhengceku/202508/content_7037862.htm",
+        "kind": "official"
+      },
+      {
+        "label": "Government of China — 相关条目来源（整合脚本补充）",
+        "url": "https://business.cctv.com/2025/07/28/ARTIn90TBeIFcxRieKer7ryk250727.shtml",
+        "kind": "press"
+      },
+      {
+        "label": "Government of China — 相关条目来源（整合脚本补充）",
+        "url": "https://www.fjwx.gov.cn/yw/20260112/3021895.html",
+        "kind": "official"
+      }
+    ]
+  },
+  {
+    "id": "cmu",
+    "name": "Carnegie Mellon University",
+    "nameZh": "卡内基梅隆大学",
+    "countryOrRegion": "US",
+    "founded": "1900",
+    "focus": [
+      "符号主义 AI",
+      "专家系统",
+      "机器学习",
+      "学术研究",
+      "AI 基础"
+    ],
+    "summary": "纽厄尔与西蒙在此开创启发式搜索与认知建模，麦克德莫特在此开发 R1/XCON，该校长期是 AI 与机器人研究的核心机构。",
+    "sources": [
+      {
+        "label": "AI Magazine 5(3) — R1 Revisited: Four Years in the Trenches",
+        "url": "https://ojs.aaai.org/aimagazine/index.php/aimagazine/article/view/445",
+        "kind": "paper"
+      }
+    ]
+  },
+  {
+    "id": "cohere",
+    "name": "Cohere",
+    "nameZh": "Cohere",
+    "countryOrRegion": "CA",
+    "founded": "2019",
+    "focus": [
+      "企业 LLM",
+      "检索增强"
+    ],
+    "summary": "Cohere 成立于 2019 年，主营企业级语言模型与检索增强工具。",
+    "sources": [
+      {
+        "label": "Cohere — 相关条目来源（整合脚本补充）",
+        "url": "https://cohere.com/blog/command-r",
+        "kind": "official"
+      },
+      {
+        "label": "Cohere — 相关条目来源（整合脚本补充）",
+        "url": "https://cohere.com/blog/command-r-plus-microsoft-azure",
+        "kind": "official"
+      }
+    ]
+  },
+  {
+    "id": "dartmouth-college",
+    "name": "Dartmouth College",
+    "nameZh": "达特茅斯学院",
+    "countryOrRegion": "US",
+    "founded": "1769",
+    "focus": [
+      "早期人工智能",
+      "数学与计算机科学",
+      "学术研究",
+      "AI 起源"
+    ],
+    "summary": "麦卡锡 1955 年在此任教并提出暑期研究计划，1956 年的达特茅斯会议使「人工智能」成为学科名称，学院由此成为该领域的命名地。",
+    "sources": [
+      {
+        "label": "A Proposal for the Dartmouth Summer Research Project on Artificial Intelligence",
+        "url": "http://www-formal.stanford.edu/jmc/history/dartmouth/dartmouth.html",
+        "kind": "official"
+      }
+    ]
+  },
+  {
+    "id": "deepmind",
+    "name": "DeepMind",
+    "nameZh": "DeepMind",
+    "countryOrRegion": "UK",
+    "founded": "2010",
+    "focus": [
+      "深度强化学习",
+      "博弈",
+      "神经科学启发的方法",
+      "强化学习",
+      "科学计算",
+      "深度学习"
+    ],
+    "summary": "2010 年在伦敦成立，2014 年被 Google 收购，2016 年以 AlphaGo 震动世界。按规范，其 2014 年后的成果在事件中以 google-deepmind 记录。",
+    "sources": [
+      {
+        "label": "Google DeepMind — AlphaGo",
+        "url": "https://deepmind.google/research/alphago/",
+        "kind": "official"
+      }
+    ]
+  },
+  {
+    "id": "deepseek",
+    "name": "DeepSeek",
+    "nameZh": "深度求索",
+    "countryOrRegion": "CN",
+    "founded": "2023",
+    "focus": [
+      "前沿 LLM",
+      "MoE",
+      "开源权重"
+    ],
+    "summary": "DeepSeek（深度求索）成立于 2023 年，总部位于中国杭州，以 MoE 架构与开源权重模型著称。",
+    "sources": [
+      {
+        "label": "DeepSeek — 相关条目来源（整合脚本补充）",
+        "url": "https://github.com/deepseek-ai/DeepSeek-LLM",
+        "kind": "official"
+      },
+      {
+        "label": "DeepSeek — 相关条目来源（整合脚本补充）",
+        "url": "https://github.com/deepseek-ai/DeepSeek-Coder",
+        "kind": "official"
+      },
+      {
+        "label": "DeepSeek — 相关条目来源（整合脚本补充）",
+        "url": "https://arxiv.org/abs/2405.04434",
+        "kind": "paper"
+      },
+      {
+        "label": "DeepSeek — 相关条目来源（整合脚本补充）",
+        "url": "https://api-docs.deepseek.com/updates",
+        "kind": "docs"
+      },
+      {
+        "label": "DeepSeek — 相关条目来源（整合脚本补充）",
+        "url": "https://www.deepseek.com/news/deepseek-v3/",
+        "kind": "official"
+      },
+      {
+        "label": "DeepSeek — 相关条目来源（整合脚本补充）",
+        "url": "https://stcn.com/article/detail/1210492.html",
+        "kind": "press"
+      },
+      {
+        "label": "DeepSeek — 相关条目来源（整合脚本补充）",
+        "url": "https://api-docs.deepseek.com/news/news250120",
+        "kind": "official"
+      },
+      {
+        "label": "DeepSeek — 相关条目来源（整合脚本补充）",
+        "url": "https://api-docs.deepseek.com/news/news250821",
+        "kind": "official"
+      },
+      {
+        "label": "DeepSeek — 相关条目来源（整合脚本补充）",
+        "url": "https://api-docs.deepseek.com/news/news250929",
+        "kind": "official"
+      },
+      {
+        "label": "DeepSeek — 相关条目来源（整合脚本补充）",
+        "url": "https://api-docs.deepseek.com/news/news251201",
+        "kind": "official"
+      },
+      {
+        "label": "DeepSeek — 相关条目来源（整合脚本补充）",
+        "url": "https://api-docs.deepseek.com/news/news260424",
+        "kind": "official"
+      },
+      {
+        "label": "DeepSeek — 相关条目来源（整合脚本补充）",
+        "url": "https://api-docs.deepseek.com/news/news260910",
+        "kind": "official"
+      },
+      {
+        "label": "DeepSeek — 相关条目来源（整合脚本补充）",
+        "url": "https://api-docs.deepseek.com/news/news261017",
+        "kind": "official"
+      },
+      {
+        "label": "DeepSeek — 相关条目来源（整合脚本补充）",
+        "url": "https://k.sina.cn/article_1611935011_60142d2304001atyg.html",
+        "kind": "press"
+      }
+    ]
+  },
+  {
+    "id": "eu",
+    "name": "European Union",
+    "nameZh": "欧盟",
+    "countryOrRegion": "EU",
+    "founded": "1993",
+    "focus": [
+      "AI 监管",
+      "政策"
+    ],
+    "summary": "欧盟是欧洲政治经济联盟，其 AI Act 是全球首部综合性 AI 监管法规。",
+    "sources": [
+      {
+        "label": "European Union — 相关条目来源（整合脚本补充）",
+        "url": "https://digital-strategy.ec.europa.eu/en/library/proposal-regulation-laying-down-harmonised-rules-artificial-intelligence",
+        "kind": "official"
+      },
+      {
+        "label": "European Union — 相关条目来源（整合脚本补充）",
+        "url": "https://www.europarl.europa.eu/news/en/press-room/20240308IPR19015/artificial-intelligence-act-meps-adopt-landmark-law",
+        "kind": "official"
+      },
+      {
+        "label": "European Union — 相关条目来源（整合脚本补充）",
+        "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai",
+        "kind": "official"
+      }
+    ]
+  },
+  {
+    "id": "google-deepmind",
+    "name": "Google DeepMind",
+    "nameZh": "谷歌 DeepMind",
+    "countryOrRegion": "UK",
+    "founded": "2010",
+    "focus": [
+      "深度强化学习",
+      "大模型架构",
+      "科学应用",
+      "前沿 LLM",
+      "多模态",
+      "科学计算",
+      "生成式媒体"
+    ],
+    "summary": "收购后的 DeepMind 与 Google Brain 体系在此一并记录：AlphaGo、AlphaZero、WaveNet、Transformer、word2vec 与 TensorFlow 均归属该机构 id。",
+    "sources": [
+      {
+        "label": "arXiv:1706.03762 — Attention Is All You Need",
+        "url": "https://arxiv.org/abs/1706.03762",
+        "kind": "paper"
+      },
+      {
+        "label": "Google DeepMind",
+        "url": "https://deepmind.google/",
+        "kind": "official"
+      }
+    ]
+  },
+  {
+    "id": "huawei",
+    "name": "Huawei",
+    "nameZh": "华为",
+    "countryOrRegion": "CN",
+    "founded": "1987",
+    "focus": [
+      "AI 基础设施",
+      "模型"
+    ],
+    "summary": "华为是中国科技公司，提供昇腾 AI 算力并开发盘古等大模型。",
+    "sources": [
+      {
+        "label": "Huawei — 相关条目来源（整合脚本补充）",
+        "url": "https://arxiv.org/abs/2104.12369",
+        "kind": "paper"
+      }
+    ]
+  },
+  {
+    "id": "ibm",
+    "name": "IBM",
+    "nameZh": "国际商业机器公司",
+    "countryOrRegion": "US",
+    "founded": "1911",
+    "focus": [
+      "计算机系统",
+      "企业 AI",
+      "问答系统",
+      "系统"
+    ],
+    "summary": "从塞缪尔的跳棋程序、深蓝到 Watson，IBM 多次以公开的人机对抗把 AI 推入大众视野，也是把 AI 引入企业业务流程的最早推动者之一。",
+    "sources": [
+      {
+        "label": "IBM Heritage — Deep Blue",
+        "url": "https://www.ibm.com/history/deep-blue",
+        "kind": "official"
+      }
+    ]
+  },
+  {
+    "id": "iflytek",
+    "name": "iFlytek",
+    "nameZh": "科大讯飞",
+    "countryOrRegion": "CN",
+    "founded": "1999",
+    "focus": [
+      "语音",
+      "LLM"
+    ],
+    "summary": "科大讯飞是中国语音与 AI 公司，开发星火（Spark）系列模型。",
+    "sources": [
+      {
+        "label": "iFlytek — 相关条目来源（整合脚本补充）",
+        "url": "https://www.chinaz.com/2023/0506/1521939.shtml",
+        "kind": "press"
+      }
+    ]
+  },
+  {
+    "id": "meituan",
+    "name": "Meituan",
+    "nameZh": "美团",
+    "countryOrRegion": "CN",
+    "founded": "2010",
+    "focus": [
+      "LLM",
+      "本地生活"
+    ],
+    "summary": "美团是中国本地生活平台，其研究团队开发 LongCat 等模型。",
+    "sources": [
+      {
+        "label": "Meituan — 相关条目来源（整合脚本补充）",
+        "url": "https://huggingface.co/meituan-longcat/LongCat-Flash-Chat",
+        "kind": "weights"
+      }
+    ]
+  },
+  {
+    "id": "meta",
+    "name": "Meta",
+    "nameZh": "Meta",
+    "countryOrRegion": "US",
+    "founded": "2004",
+    "focus": [
+      "开放权重模型",
+      "多模态",
+      "推荐系统",
+      "开源权重",
+      "前沿 LLM"
+    ],
+    "summary": "以 Llama 系列推动开放权重路线，2025 年的 Llama 4 首次把原生多模态与超长上下文带入该家族。",
+    "sources": [
+      {
+        "label": "Meta AI",
+        "url": "https://ai.meta.com/",
+        "kind": "official"
+      }
+    ]
+  },
+  {
+    "id": "microsoft",
+    "name": "Microsoft",
+    "nameZh": "微软",
+    "countryOrRegion": "US",
+    "founded": "1975",
+    "focus": [
+      "计算机视觉",
+      "深层网络架构",
+      "云计算",
+      "云服务",
+      "模型",
+      "Agent"
+    ],
+    "summary": "微软亚洲研究院的何恺明团队提出残差网络 ResNet，把可训练深度推到百层以上，其结构此后被几乎所有深层模型沿用。",
+    "sources": [
+      {
+        "label": "arXiv:1512.03385 — Deep Residual Learning for Image Recognition",
+        "url": "https://arxiv.org/abs/1512.03385",
+        "kind": "paper"
+      }
+    ]
+  },
+  {
+    "id": "minimax",
+    "name": "MiniMax",
+    "nameZh": "MiniMax（稀宇科技）",
+    "countryOrRegion": "CN",
+    "founded": "2021",
+    "focus": [
+      "LLM",
+      "多模态"
+    ],
+    "summary": "MiniMax（稀宇科技）成立于 2021 年，开发 MiniMax-M 系列模型与多模态产品。",
+    "sources": [
+      {
+        "label": "MiniMax — 相关条目来源（整合脚本补充）",
+        "url": "https://www.pingwest.com/w/291914",
+        "kind": "press"
+      },
+      {
+        "label": "MiniMax — 相关条目来源（整合脚本补充）",
+        "url": "https://www.minimax.cn/news/%E9%80%9A%E7%94%A8%E5%A4%A7%E6%A8%A1%E5%9E%8Babab65%E7%B3%BB%E5%88%97",
+        "kind": "official"
+      },
+      {
+        "label": "MiniMax — 相关条目来源（整合脚本补充）",
+        "url": "http://t.cj.sina.com.cn/articles/view/1686546714/6486a91a02001xs8q",
+        "kind": "press"
+      },
+      {
+        "label": "MiniMax — 相关条目来源（整合脚本补充）",
+        "url": "https://huggingface.co/MiniMaxAI/MiniMax-M1",
+        "kind": "weights"
+      },
+      {
+        "label": "MiniMax — 相关条目来源（整合脚本补充）",
+        "url": "https://huggingface.co/MiniMaxAI/MiniMax-M2",
+        "kind": "weights"
+      },
+      {
+        "label": "MiniMax — 相关条目来源（整合脚本补充）",
+        "url": "https://huggingface.co/MiniMaxAI/MiniMax-M3",
+        "kind": "weights"
+      }
+    ]
+  },
+  {
+    "id": "mistral",
+    "name": "Mistral AI",
+    "nameZh": "Mistral AI",
+    "countryOrRegion": "FR",
+    "founded": "2023",
+    "focus": [
+      "开源权重",
+      "高效推理"
+    ],
+    "summary": "Mistral AI 成立于 2023 年，总部位于法国巴黎，发布 Mistral、Mixtral 与 Large 系列模型。",
+    "sources": [
+      {
+        "label": "Mistral AI — 相关条目来源（整合脚本补充）",
+        "url": "https://mistral.ai/news/announcing-mistral-7b/",
+        "kind": "official"
+      },
+      {
+        "label": "Mistral AI — 相关条目来源（整合脚本补充）",
+        "url": "https://mistral.ai/news/mixtral-of-experts/",
+        "kind": "official"
+      },
+      {
+        "label": "Mistral AI — 相关条目来源（整合脚本补充）",
+        "url": "https://mistral.ai/news/mistral-large",
+        "kind": "official"
+      }
+    ]
+  },
+  {
+    "id": "mit",
+    "name": "Massachusetts Institute of Technology",
+    "nameZh": "麻省理工学院",
+    "countryOrRegion": "US",
+    "founded": "1861",
+    "focus": [
+      "符号主义 AI",
+      "自然语言处理",
+      "机器人",
+      "学术研究",
+      "AI 基础"
+    ],
+    "summary": "明斯基与佩珀特在此建立 AI 实验室，魏岑鲍姆在此写出 ELIZA；1960 至 1980 年代这里与卡内基梅隆并列为符号主义 AI 的两大中心。",
+    "sources": [
+      {
+        "label": "Communications of the ACM 9(1) — ELIZA",
+        "url": "https://dl.acm.org/doi/10.1145/365153.365168",
+        "kind": "paper"
+      }
+    ]
+  },
+  {
+    "id": "montreal",
+    "name": "Université de Montréal",
+    "nameZh": "蒙特利尔大学",
+    "countryOrRegion": "CA",
+    "founded": "1878",
+    "focus": [
+      "神经网络",
+      "生成模型",
+      "表示学习",
+      "学术研究",
+      "深度学习"
+    ],
+    "summary": "本吉奥在此建立 MILA，注意力机制与生成对抗网络的早期核心工作均在此完成，该校与多伦多共同构成加拿大深度学习集群的核心。",
+    "sources": [
+      {
+        "label": "arXiv:1406.2661 — Generative Adversarial Nets",
+        "url": "https://arxiv.org/abs/1406.2661",
+        "kind": "paper"
+      }
+    ]
+  },
+  {
+    "id": "moonshot",
+    "name": "Moonshot AI",
+    "nameZh": "月之暗面",
+    "countryOrRegion": "CN",
+    "founded": "2023",
+    "focus": [
+      "长上下文",
+      "LLM"
+    ],
+    "summary": "月之暗面（Moonshot AI）成立于 2023 年，开发 Kimi 系列模型与产品。",
+    "sources": [
+      {
+        "label": "Moonshot AI — 相关条目来源（整合脚本补充）",
+        "url": "http://www.chinanews.com.cn/cj/2023/10-11/10091972.shtml",
+        "kind": "press"
+      },
+      {
+        "label": "Moonshot AI — 相关条目来源（整合脚本补充）",
+        "url": "http://ex.chinadaily.com.cn/exchange/partners/82/rss/channel/cn/columns/j3u3t6/stories/WS65f802d6a3109f7860dd5ed7.html",
+        "kind": "press"
+      },
+      {
+        "label": "Moonshot AI — 相关条目来源（整合脚本补充）",
+        "url": "https://cnfin.com/cmjj-lb/detail/20250122/4178550_1.html",
+        "kind": "press"
+      },
+      {
+        "label": "Moonshot AI — 相关条目来源（整合脚本补充）",
+        "url": "https://platform.kimi.ai/blog/posts/changelog",
+        "kind": "official"
+      },
+      {
+        "label": "Moonshot AI — 相关条目来源（整合脚本补充）",
+        "url": "https://huggingface.co/moonshotai/Kimi-K2.5",
+        "kind": "weights"
+      },
+      {
+        "label": "Moonshot AI — 相关条目来源（整合脚本补充）",
+        "url": "https://platform.kimi.com/docs/guide/kimi-k3-quickstart",
+        "kind": "docs"
+      }
+    ]
+  },
+  {
+    "id": "nist",
+    "name": "NIST",
+    "nameZh": "美国国家标准与技术研究院",
+    "countryOrRegion": "US",
+    "founded": "1901",
+    "focus": [
+      "AI 标准",
+      "评测"
+    ],
+    "summary": "NIST 是美国国家标准与技术研究院，发布 AI 风险管理框架等标准文件。",
+    "sources": [
+      {
+        "label": "NIST — 相关条目来源（整合脚本补充）",
+        "url": "https://www.nist.gov/itl/ai-risk-management-framework",
+        "kind": "official"
+      }
+    ]
+  },
+  {
+    "id": "nvidia",
+    "name": "NVIDIA",
+    "nameZh": "NVIDIA",
+    "countryOrRegion": "US",
+    "founded": "1993",
+    "focus": [
+      "GPU",
+      "AI 基础设施",
+      "模型"
+    ],
+    "summary": "NVIDIA 是美国半导体与 AI 计算公司，同时发布 Nemotron 等模型与推理硬件。",
+    "sources": [
+      {
+        "label": "NVIDIA — 相关条目来源（整合脚本补充）",
+        "url": "https://blogs.nvidia.com/blog/nemotron-4-synthetic-data-generation-llm-training/",
+        "kind": "official"
+      }
+    ]
+  },
+  {
+    "id": "openai",
+    "name": "OpenAI",
+    "nameZh": "OpenAI",
+    "countryOrRegion": "US",
+    "founded": "2015",
+    "focus": [
+      "深度学习",
+      "强化学习",
+      "通用人工智能",
+      "前沿 LLM",
+      "推理模型",
+      "Agent",
+      "多模态"
+    ],
+    "summary": "2015 年 12 月以非营利研究机构形式成立，主张以使命而非财务回报驱动研究，此后成为大模型竞赛与 AGI 公共讨论的主要参与者。",
+    "sources": [
+      {
+        "label": "OpenAI — Introducing OpenAI",
+        "url": "https://openai.com/index/introducing-openai/",
+        "kind": "official"
+      },
+      {
+        "label": "OpenAI",
+        "url": "https://openai.com/",
+        "kind": "official"
+      }
+    ]
+  },
+  {
+    "id": "princeton",
+    "name": "Princeton University",
+    "nameZh": "普林斯顿大学",
+    "countryOrRegion": "US",
+    "founded": "1746",
+    "focus": [
+      "计算机视觉",
+      "数据集建设",
+      "学术研究",
+      "AI 理论"
+    ],
+    "summary": "李飞飞在普林斯顿任教期间启动 ImageNet 的构建，该校是这一千万级图像库与后续 ILSVRC 竞赛的早期主导机构之一。",
+    "sources": [
+      {
+        "label": "CVPR 2009 — ImageNet: A Large-Scale Hierarchical Image Database",
+        "url": "https://doi.org/10.1109/CVPR.2009.5206848",
+        "kind": "paper"
+      }
+    ]
+  },
+  {
+    "id": "sensetime",
+    "name": "SenseTime",
+    "nameZh": "商汤科技",
+    "countryOrRegion": "CN",
+    "founded": "2014",
+    "focus": [
+      "视觉",
+      "多模态"
+    ],
+    "summary": "商汤科技成立于 2014 年，是中国计算机视觉与多模态 AI 公司。",
+    "sources": [
+      {
+        "label": "SenseTime — 相关条目来源（整合脚本补充）",
+        "url": "http://www.news.cn/fortune/2023-04/12/c_1212027993.htm",
+        "kind": "press"
+      },
+      {
+        "label": "SenseTime — 相关条目来源（整合脚本补充）",
+        "url": "http://t.cj.sina.com.cn/articles/view/1686546714/6486a91a02001xs8q",
+        "kind": "press"
+      }
+    ]
+  },
+  {
+    "id": "shanghai-ai-lab",
+    "name": "Shanghai AI Laboratory",
+    "nameZh": "上海人工智能实验室",
+    "countryOrRegion": "CN",
+    "founded": "2020",
+    "focus": [
+      "开源研究",
+      "多模态"
+    ],
+    "summary": "上海人工智能实验室成立于 2020 年，是从事 AI 研究的机构，发布 InternLM 等开源成果。",
+    "sources": [
+      {
+        "label": "Shanghai AI Laboratory — 相关条目来源（整合脚本补充）",
+        "url": "https://github.com/InternLM/InternLM",
+        "kind": "official"
+      },
+      {
+        "label": "Shanghai AI Laboratory — 相关条目来源（整合脚本补充）",
+        "url": "http://tech.cnr.cn/techph/20240118/t20240118_526562018.shtml",
+        "kind": "press"
+      },
+      {
+        "label": "Shanghai AI Laboratory — 相关条目来源（整合脚本补充）",
+        "url": "https://huggingface.co/internlm/Intern-S1",
+        "kind": "weights"
+      }
+    ]
+  },
+  {
+    "id": "stability-ai",
+    "name": "Stability AI",
+    "nameZh": "Stability AI",
+    "countryOrRegion": "UK",
+    "founded": "2019",
+    "focus": [
+      "图像生成",
+      "开源权重"
+    ],
+    "summary": "Stability AI 成立于 2019 年，发布 Stable Diffusion 系列开源图像生成模型。",
+    "sources": [
+      {
+        "label": "Stability AI — 相关条目来源（整合脚本补充）",
+        "url": "https://stability.ai/news/stable-diffusion-public-release",
+        "kind": "official"
+      }
+    ]
+  },
+  {
+    "id": "stanford",
+    "name": "Stanford University",
+    "nameZh": "斯坦福大学",
+    "countryOrRegion": "US",
+    "founded": "1885",
+    "focus": [
+      "专家系统",
+      "计算机视觉",
+      "数据集建设",
+      "学术研究",
+      "NLP"
+    ],
+    "summary": "费根鲍姆在此开创专家系统传统（DENDRAL），李飞飞在此主导 ImageNet，斯坦福因此同时是知识工程与数据驱动视觉两条路线的重要发源地。",
+    "sources": [
+      {
+        "label": "CVPR 2009 — ImageNet: A Large-Scale Hierarchical Image Database",
+        "url": "https://doi.org/10.1109/CVPR.2009.5206848",
+        "kind": "paper"
+      }
+    ]
+  },
+  {
+    "id": "stepfun",
+    "name": "StepFun",
+    "nameZh": "阶跃星辰",
+    "countryOrRegion": "CN",
+    "founded": "2023",
+    "focus": [
+      "多模态",
+      "LLM"
+    ],
+    "summary": "阶跃星辰（StepFun）成立于 2023 年，开发 Step 系列多模态模型。",
+    "sources": [
+      {
+        "label": "StepFun — 相关条目来源（整合脚本补充）",
+        "url": "https://www.163.com/dy/article/ITV6KJ7205198CJN.html",
+        "kind": "press"
+      },
+      {
+        "label": "StepFun — 相关条目来源（整合脚本补充）",
+        "url": "https://huggingface.co/stepfun-ai/Step-5-Preview",
+        "kind": "weights"
+      }
+    ]
+  },
+  {
+    "id": "tencent",
+    "name": "Tencent",
+    "nameZh": "腾讯",
+    "countryOrRegion": "CN",
+    "founded": "1998",
+    "focus": [
+      "LLM",
+      "多模态"
+    ],
+    "summary": "腾讯是中国科技公司，开发混元（Hunyuan）系列模型。",
+    "sources": [
+      {
+        "label": "Tencent — 相关条目来源（整合脚本补充）",
+        "url": "https://tech.cnr.cn/techph/20230907/t20230907_526411008.shtml",
+        "kind": "press"
+      }
+    ]
+  },
+  {
+    "id": "toronto",
+    "name": "University of Toronto",
+    "nameZh": "多伦多大学",
+    "countryOrRegion": "CA",
+    "founded": "1827",
+    "focus": [
+      "神经网络",
+      "深度学习",
+      "表示学习",
+      "学术研究"
+    ],
+    "summary": "辛顿长期在此任教，反向传播、深度信念网络与 AlexNet 三项关键成果均出自该团队，多伦多因此被视为现代深度学习的发源地之一。",
+    "sources": [
+      {
+        "label": "Nature 323(6088) — Learning representations by back-propagating errors",
+        "url": "https://www.nature.com/articles/323533a0",
+        "kind": "paper"
+      }
+    ]
+  },
+  {
+    "id": "uk-government",
+    "name": "UK Government",
+    "nameZh": "英国政府",
+    "countryOrRegion": "UK",
+    "founded": "",
+    "focus": [
+      "AI 监管",
+      "政策"
+    ],
+    "summary": "英国政府发布 AI 安全与监管相关政策，并主办 AI Safety Summit 等会议。",
+    "sources": [
+      {
+        "label": "UK Government — 相关条目来源（整合脚本补充）",
+        "url": "https://www.gov.uk/government/publications/ai-safety-summit-2023-the-bletchley-declaration",
+        "kind": "official"
+      }
+    ]
+  },
+  {
+    "id": "united-nations",
+    "name": "United Nations",
+    "nameZh": "联合国",
+    "countryOrRegion": "INT",
+    "founded": "1945",
+    "focus": [
+      "AI 治理",
+      "政策"
+    ],
+    "summary": "联合国是国际组织，其框架下设有 AI 治理相关机制与咨询机构。",
+    "sources": [
+      {
+        "label": "United Nations — 相关条目来源（整合脚本补充）",
+        "url": "https://fr.china-embassy.gov.cn/zgyw/202407/t20240704_11448196.htm",
+        "kind": "official"
+      }
+    ]
+  },
+  {
+    "id": "white-house",
+    "name": "The White House",
+    "nameZh": "白宫",
+    "countryOrRegion": "US",
+    "founded": "",
+    "focus": [
+      "AI 政策",
+      "行政令"
+    ],
+    "summary": "美国白宫通过行政令与政策文件影响美国 AI 研发、安全与出口管制。",
+    "sources": [
+      {
+        "label": "The White House — 相关条目来源（整合脚本补充）",
+        "url": "https://bidenwhitehouse.archives.gov/ostp/ai-bill-of-rights/",
+        "kind": "official"
+      },
+      {
+        "label": "The White House — 相关条目来源（整合脚本补充）",
+        "url": "https://www.federalregister.gov/documents/2023/11/01/2023-24283/safe-secure-and-trustworthy-development-and-use-of-artificial-intelligence",
+        "kind": "official"
+      }
+    ]
+  },
+  {
+    "id": "xai",
+    "name": "xAI",
+    "nameZh": "xAI",
+    "countryOrRegion": "US",
+    "founded": "2023",
+    "focus": [
+      "前沿 LLM",
+      "实时检索",
+      "推理"
+    ],
+    "summary": "以 Grok 系列参与前沿竞争，依托大规模算力集群与 X 平台实时信息流形成差异化能力。",
+    "sources": [
+      {
+        "label": "xAI",
+        "url": "https://x.ai/",
+        "kind": "official"
+      }
+    ]
+  },
+  {
+    "id": "xiaomi",
+    "name": "Xiaomi",
+    "nameZh": "小米",
+    "countryOrRegion": "CN",
+    "founded": "2010",
+    "focus": [
+      "端侧模型",
+      "多模态"
+    ],
+    "summary": "小米是中国消费电子公司，开发 MiMo 等自研大模型。",
+    "sources": [
+      {
+        "label": "Xiaomi — 相关条目来源（整合脚本补充）",
+        "url": "https://huggingface.co/XiaomiMiMo/MiMo-7B-RL",
+        "kind": "weights"
+      }
+    ]
+  },
+  {
+    "id": "zhipu",
+    "name": "Zhipu AI",
+    "nameZh": "智谱",
+    "countryOrRegion": "CN",
+    "founded": "2019",
+    "focus": [
+      "LLM",
+      "Agent"
+    ],
+    "summary": "智谱（Zhipu AI）成立于 2019 年，源自清华大学技术团队，开发 GLM 系列模型。",
+    "sources": [
+      {
+        "label": "Zhipu AI — 相关条目来源（整合脚本补充）",
+        "url": "https://arxiv.org/abs/2210.02414",
+        "kind": "paper"
+      },
+      {
+        "label": "Zhipu AI — 相关条目来源（整合脚本补充）",
+        "url": "https://github.com/THUDM/ChatGLM-6B",
+        "kind": "official"
+      },
+      {
+        "label": "Zhipu AI — 相关条目来源（整合脚本补充）",
+        "url": "https://github.com/THUDM/ChatGLM2-6B",
+        "kind": "official"
+      },
+      {
+        "label": "Zhipu AI — 相关条目来源（整合脚本补充）",
+        "url": "https://github.com/THUDM/ChatGLM3",
+        "kind": "official"
+      },
+      {
+        "label": "Zhipu AI — 相关条目来源（整合脚本补充）",
+        "url": "http://www.xinhuanet.com/tech/20240116/19d92dc316544dfba1cdc8bbba6b566f/c.html",
+        "kind": "press"
+      },
+      {
+        "label": "Zhipu AI — 相关条目来源（整合脚本补充）",
+        "url": "https://m.ithome.com/html/792135.htm",
+        "kind": "press"
+      },
+      {
+        "label": "Zhipu AI — 相关条目来源（整合脚本补充）",
+        "url": "http://t.cj.sina.com.cn/articles/view/1686546714/6486a91a02001xs8q",
+        "kind": "press"
+      },
+      {
+        "label": "Zhipu AI — 相关条目来源（整合脚本补充）",
+        "url": "https://stcn.com/article/detail/1210492.html",
+        "kind": "press"
+      },
+      {
+        "label": "Zhipu AI — 相关条目来源（整合脚本补充）",
+        "url": "https://z.ai/blog/glm-4.5",
+        "kind": "official"
+      },
+      {
+        "label": "Zhipu AI — 相关条目来源（整合脚本补充）",
+        "url": "https://huggingface.co/zai-org/GLM-4.5V",
+        "kind": "weights"
+      },
+      {
+        "label": "Zhipu AI — 相关条目来源（整合脚本补充）",
+        "url": "https://huggingface.co/zai-org/GLM-4.6",
+        "kind": "weights"
+      },
+      {
+        "label": "Zhipu AI — 相关条目来源（整合脚本补充）",
+        "url": "https://huggingface.co/zai-org/GLM-5",
+        "kind": "weights"
+      }
+    ]
+  }
+]

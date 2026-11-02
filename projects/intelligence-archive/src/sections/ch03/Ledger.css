@@ -1,0 +1,287 @@
+/* ============================================================
+   CH03 · 五条记录（纵向台账）
+   每一板沿 --lp 平移，窗口取中心最亮 —— 年份像里程表一样滚过。
+   ============================================================ */
+
+.ledger {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  opacity: var(--ledger-op);
+}
+
+.ledger__stream {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    #000 15%,
+    #000 74%,
+    transparent 95%
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    #000 15%,
+    #000 74%,
+    transparent 95%
+  );
+}
+
+.ledger__plate {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  gap: clamp(24px, 4vw, 80px);
+  align-items: center;
+  width: min(100%, var(--max-width));
+  height: var(--plate-gap);
+  padding-inline: var(--pad-x);
+  border-top: 1px solid var(--hairline);
+  transform: translate(
+    -50%,
+    calc(-50% + (var(--i) - var(--lp) * var(--k)) * var(--plate-gap))
+  );
+}
+
+/* ---------- 左栏：年份 ---------- */
+
+.ledger__year-col {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 0;
+}
+
+.ledger__no {
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  color: var(--muted);
+}
+
+.ledger__year {
+  font-size: clamp(2.8rem, 8vw, 7.4rem);
+  font-weight: 500;
+  letter-spacing: -0.055em;
+  line-height: 0.8;
+  color: var(--void-ink);
+  font-variant-numeric: tabular-nums;
+}
+
+.ledger__orgs {
+  padding-top: 12px;
+  border-top: 1px solid var(--hairline);
+  font-size: 9px;
+  letter-spacing: 0.16em;
+  line-height: 1.9;
+  color: var(--faint);
+}
+
+/* ---------- 右栏：记录 ---------- */
+
+.ledger__body {
+  min-width: 0;
+  max-width: 46ch;
+}
+
+.ledger__mark {
+  font-size: 9.5px;
+  letter-spacing: 0.34em;
+  color: var(--muted);
+}
+
+.ledger__title {
+  margin-top: 12px;
+  font-size: clamp(1.15rem, 1.85vw, 1.7rem);
+  font-weight: 400;
+  line-height: 1.35;
+  letter-spacing: 0.01em;
+  color: var(--void-ink);
+}
+
+.ledger__title-en {
+  margin-top: 10px;
+  font-size: 9.5px;
+  letter-spacing: 0.14em;
+  line-height: 1.65;
+  text-transform: uppercase;
+  color: var(--faint);
+}
+
+.ledger__facts {
+  display: grid;
+  grid-template-columns: 92px minmax(0, 1fr);
+  gap: 8px 18px;
+  margin: clamp(16px, 2.4vh, 26px) 0 0;
+  padding-top: clamp(14px, 2.2vh, 22px);
+  border-top: 1px solid var(--hairline);
+}
+
+.ledger__facts dt {
+  padding-top: 3px;
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.16em;
+  color: var(--muted);
+}
+
+.ledger__facts dd {
+  margin: 0;
+  font-size: 0.8125rem;
+  line-height: 1.78;
+  color: var(--void-ink);
+}
+
+.ledger__summary {
+  color: var(--muted);
+}
+
+.ledger__source {
+  margin-top: clamp(14px, 2vh, 22px);
+}
+
+/* ---------- 底部索引（不参与平移，只做顺序与高亮） ---------- */
+
+.ledger__index {
+  position: absolute;
+  left: var(--pad-x);
+  bottom: clamp(14px, 2.8vh, 28px);
+  z-index: 4;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  pointer-events: none;
+}
+
+.ledger__index-head {
+  font-size: 8.5px;
+  letter-spacing: 0.2em;
+  color: var(--faint);
+}
+
+.ledger__index-list {
+  display: flex;
+  gap: clamp(14px, 2.2vw, 34px);
+}
+
+.ledger__index-item {
+  display: flex;
+  align-items: baseline;
+  gap: 7px;
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  color: var(--void-ink);
+  opacity: calc(
+    0.18 +
+      0.82 *
+        min(
+          clamp(0, calc((var(--lp) - var(--w)) / 0.12), 1),
+          clamp(0, calc((var(--w2) - var(--lp)) / 0.12), 1)
+        )
+  );
+}
+
+.ledger__index-no {
+  color: var(--faint);
+}
+
+/* ---------- 移动端 ---------- */
+
+@media (max-width: 900px) {
+  .ledger__plate {
+    grid-template-columns: minmax(0, 1fr);
+    gap: clamp(14px, 2.4vh, 22px);
+    align-content: center;
+    padding-inline: var(--pad-x);
+  }
+
+  .ledger__year-col {
+    flex-direction: row;
+    align-items: baseline;
+    gap: 14px;
+  }
+
+  .ledger__year {
+    font-size: clamp(2.6rem, 13vw, 4rem);
+  }
+
+  .ledger__orgs {
+    flex: 1;
+    padding-top: 0;
+    border-top: 0;
+    font-size: 8px;
+  }
+
+  .ledger__no {
+    display: none;
+  }
+
+  .ledger__body {
+    max-width: 100%;
+  }
+
+  .ledger__title {
+    font-size: 1.0625rem;
+  }
+
+  .ledger__facts {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 4px;
+  }
+
+  .ledger__facts dt {
+    margin-top: 8px;
+    font-size: 8px;
+  }
+
+  .ledger__facts dd {
+    font-size: 0.75rem;
+    line-height: 1.72;
+  }
+
+  .ledger__index {
+    gap: 8px;
+  }
+
+  .ledger__index-list {
+    gap: 12px;
+  }
+
+  .ledger__index-mark {
+    display: none;
+  }
+}
+
+/* ---------- reduced motion：记录变成普通条目 ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+  .ledger {
+    position: static;
+    opacity: 1;
+  }
+
+  .ledger__stream {
+    position: static;
+    overflow: visible;
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+
+  .ledger__plate {
+    position: static;
+    transform: none;
+    opacity: 1;
+    width: 100%;
+    height: auto;
+    padding-block: 40px;
+    border-top: 1px solid var(--hairline);
+  }
+
+  .ledger__index {
+    display: none;
+  }
+}

@@ -1,0 +1,129 @@
+.arch-dialog {
+  position: fixed;
+  inset: 0;
+  z-index: 120;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(12px, 3vw, 40px);
+}
+
+.arch-dialog__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(22, 22, 22, 0.32);
+  animation: arch-dialog-fade 240ms var(--ease-out);
+}
+
+.arch-dialog__panel {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: min(100%, 1000px);
+  max-height: min(88vh, 1080px);
+  overflow: hidden;
+  background: var(--white);
+  border: 1px solid var(--ink);
+  animation: arch-dialog-in 320ms var(--ease-out);
+}
+
+.arch-dialog__panel:focus {
+  outline: none;
+}
+
+.arch-dialog__panel:focus-visible {
+  outline: 1px solid var(--ink);
+  outline-offset: 2px;
+}
+
+.arch-dialog__bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 12px clamp(20px, 3vw, 40px);
+  border-bottom: 1px solid var(--ink);
+  background: var(--paper);
+}
+
+.arch-dialog__kicker {
+  font-size: 9px;
+  letter-spacing: 0.16em;
+  color: var(--muted);
+}
+
+.arch-dialog__close {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 6px 10px;
+  border: 1px solid var(--hairline);
+  transition:
+    background-color var(--dur-fast) var(--ease-out),
+    border-color var(--dur-fast) var(--ease-out),
+    color var(--dur-fast) var(--ease-out);
+}
+
+.arch-dialog__close:hover,
+.arch-dialog__close:focus-visible {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: var(--paper);
+}
+
+.arch-dialog__scroll {
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: clamp(22px, 4vw, 44px) clamp(20px, 3.4vw, 48px) clamp(28px, 4vw, 52px);
+}
+
+@keyframes arch-dialog-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes arch-dialog-in {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (max-width: 720px) {
+  .arch-dialog {
+    padding: 0;
+  }
+
+  .arch-dialog__panel {
+    width: 100%;
+    height: 100%;
+    max-height: none;
+    border: 0;
+  }
+
+  .arch-dialog__bar {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    padding: 12px 20px;
+  }
+
+  .arch-dialog__scroll {
+    padding-inline: 20px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .arch-dialog__panel,
+  .arch-dialog__backdrop {
+    animation: none;
+  }
+}

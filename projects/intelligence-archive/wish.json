@@ -1,0 +1,22 @@
+{
+  "id": "intelligence-archive",
+  "order": 1,
+  "featured": true,
+  "title": "THE INTELLIGENCE ARCHIVE",
+  "titleZh": "智能编年史",
+  "year": "2026",
+  "kind": "INTERACTIVE DOCUMENTARY",
+  "kindZh": "交互式纪录片",
+  "status": "COMPLETE",
+  "tagline": "从图灵的第一个问题，到能够自主执行任务的人工智能。",
+  "description": "1950—2026 的人工智能史，由滚动叙事、三维智能纪念碑、全球模型星图与可检索档案组成。181 个模型、93 条历史事件，全部标注官方来源与核实等级；终点不是一个结论，而是一个新的问题。",
+  "meta": ["1950 — 2026", "181 MODELS", "9 CHAPTERS"],
+  "preview": "projects/intelligence-archive/",
+  "cover": "assets/covers/intelligence-archive.jpg",
+  "build": {
+    "manager": "pnpm",
+    "install": "pnpm install --frozen-lockfile",
+    "command": "pnpm build",
+    "output": "dist"
+  }
+}

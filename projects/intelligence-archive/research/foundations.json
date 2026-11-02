@@ -1,0 +1,1353 @@
+{
+  "models": [],
+  "events": [
+    {
+      "id": "turing-computing-machinery-1950",
+      "date": "1950-10",
+      "displayDate": "1950.10",
+      "datePrecision": "month",
+      "dateType": "paper",
+      "title": "图灵《计算机器与智能》",
+      "titleEn": "Computing Machinery and Intelligence",
+      "category": "theory",
+      "summary": "图灵在《Mind》发表论文，用「模仿游戏」替换「机器能否思考」这一无法实证的提问：若人类评审仅凭文字对话分辨不出机器与人，就可认为机器具备智能。文章逐条反驳九种反对意见，并提出以儿童式教育替代直接编程的设想。",
+      "significance": "为人工智能确立了可操作的行为主义判据，把「智能」从哲学争论转成可设计的实验目标，此后七十年的对话系统评价方式都由此发端。",
+      "organizations": [],
+      "people": [
+        "Alan Turing"
+      ],
+      "relatedModels": [],
+      "chapter": 1,
+      "sources": [
+        {
+          "label": "Mind, Vol. LIX, No. 236, pp. 433–460 — Computing Machinery and Intelligence",
+          "url": "https://academic.oup.com/mind/article/LIX/236/433/986238",
+          "kind": "paper"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": "Crossref 记录该期出版日为 1950-10-01。出版社页面有 Cloudflare 反爬，自动化抓取返回 403，浏览器可正常访问。"
+    },
+    {
+      "id": "logic-theorist-1956",
+      "date": "1956",
+      "displayDate": "1956",
+      "datePrecision": "year",
+      "dateType": "paper",
+      "title": "Logic Theorist：第一个自动定理证明程序",
+      "titleEn": "The Logic Theory Machine: A Complex Information Processing System",
+      "category": "breakthrough",
+      "summary": "纽厄尔、西蒙与肖在兰德公司技术报告中描述 Logic Theorist：把数学证明编码为启发式搜索，以手段—目的分析在推理空间中寻路，可证明《数学原理》第二章的多条定理，其中一条的证明比原书更简短。",
+      "significance": "第一次证明「思维过程本身可以被程序化」，把启发式搜索确立为 AI 的核心方法，符号主义由此成为此后二十年的主流范式。",
+      "organizations": [
+        "cmu"
+      ],
+      "people": [
+        "Allen Newell",
+        "Herbert A. Simon",
+        "Cliff Shaw"
+      ],
+      "relatedModels": [],
+      "chapter": 1,
+      "sources": [
+        {
+          "label": "RAND — P-868 The Logic Theory Machine",
+          "url": "https://www.rand.org/pubs/papers/P868.html",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "partially-verified",
+      "notes": "RAND 页面受 CloudFront 反爬拦截，未能直接读取正文；年份按报告书目记录取 1956，月次无可靠记载，故用年精度。"
+    },
+    {
+      "id": "dartmouth-1956",
+      "date": "1956-08",
+      "displayDate": "1956.08",
+      "datePrecision": "month",
+      "dateType": "conference",
+      "title": "达特茅斯暑期研究计划",
+      "titleEn": "The Dartmouth Summer Research Project on Artificial Intelligence",
+      "category": "organization",
+      "summary": "麦卡锡、明斯基、香农与罗切斯特于 1955 年 8 月 31 日联名提议，在 1956 年夏于达特茅斯学院进行为期两个月、十人规模的研究，基于「智能的任何方面都可被精确描述到足以由机器模拟」的猜想。会议实际以断续讨论为主，未产出统一报告。",
+      "significance": "「人工智能」一词在此被正式提出并成为学科名称，会议聚拢了此后二十年的核心研究者，被公认为 AI 作为独立学科的起点。",
+      "organizations": [
+        "dartmouth-college"
+      ],
+      "people": [
+        "John McCarthy",
+        "Marvin Minsky",
+        "Claude Shannon",
+        "Nathaniel Rochester"
+      ],
+      "relatedModels": [],
+      "chapter": 1,
+      "sources": [
+        {
+          "label": "A Proposal for the Dartmouth Summer Research Project on Artificial Intelligence (McCarthy et al., 1955-08-31)",
+          "url": "http://www-formal.stanford.edu/jmc/history/dartmouth/dartmouth.html",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": "会议于 1956 年夏举行，无官方日程记录，故日期精度取到月；提案文本本身署 1955-08-31。"
+    },
+    {
+      "id": "perceptron-1958",
+      "date": "1958",
+      "displayDate": "1958",
+      "datePrecision": "year",
+      "dateType": "paper",
+      "title": "罗森布拉特提出感知机",
+      "titleEn": "The Perceptron: A Probabilistic Model for Information Storage and Organization in the Brain",
+      "category": "theory",
+      "summary": "罗森布拉特在《心理学评论》提出感知机：由阈值单元组成、依靠误差修正规则调整权重的学习机器，并给出概率型学习定理，说明在模式线性可分时训练过程必然收敛。其后有 Mark I 硬件实现用于图像识别。",
+      "significance": "首次把「从数据中学习权重」变成有收敛性证明的算法，是神经网络及今日深度学习中权重学习的直接源头。",
+      "organizations": [],
+      "people": [
+        "Frank Rosenblatt"
+      ],
+      "relatedModels": [],
+      "chapter": 1,
+      "sources": [
+        {
+          "label": "Psychological Review 65(6): 386–408 — The perceptron",
+          "url": "https://doi.apa.org/doi/10.1037/h0042519",
+          "kind": "paper"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": "Crossref 记录卷期 65(6)、页码 386–408，出版日期仅记录到 1958 年，未载月份，故取年精度。"
+    },
+    {
+      "id": "samuel-checkers-1959",
+      "date": "1959-07",
+      "displayDate": "1959.07",
+      "datePrecision": "month",
+      "dateType": "paper",
+      "title": "塞缪尔的跳棋程序与「机器学习」命名",
+      "titleEn": "Some Studies in Machine Learning Using the Game of Checkers",
+      "category": "breakthrough",
+      "summary": "塞缪尔在《IBM 研究与发展杂志》总结其跳棋程序：以启发式评估函数搜索棋局，并通过与自己对弈、以胜负为反馈调整权重，程序最终达到可击败作者的业余水平。文中首次使用「机器学习」一词描述这一过程。",
+      "significance": "确立「程序可通过自博弈的经验自我改进」这一范式，是强化学习与自我博弈的早期原型，也让「机器学习」成为固定术语。",
+      "organizations": [
+        "ibm"
+      ],
+      "people": [
+        "Arthur L. Samuel"
+      ],
+      "relatedModels": [],
+      "chapter": 1,
+      "sources": [
+        {
+          "label": "IBM Journal of Research and Development 3(3): 210–229 — Some Studies in Machine Learning Using the Game of Checkers",
+          "url": "https://doi.org/10.1147/rd.33.0210",
+          "kind": "paper"
+        },
+        {
+          "label": "Crossref — 该文 1988 年选集重印记录（10.1007/978-1-4613-8716-9_14）",
+          "url": "https://api.crossref.org/works/10.1007/978-1-4613-8716-9_14",
+          "kind": "paper"
+        }
+      ],
+      "verificationStatus": "partially-verified",
+      "notes": "原刊 IBM Journal 3(3): 210–229 于 1959 年 7 月出版，Crossref 未收录该原刊 DOI；仅收录 1988 年 Computer Games I 选集重印。月次依据通行书目记录。"
+    },
+    {
+      "id": "dendral-1965",
+      "date": "1965",
+      "displayDate": "1965",
+      "datePrecision": "year",
+      "dateType": "announcement",
+      "title": "DENDRAL 专家系统启动",
+      "titleEn": "The DENDRAL Project",
+      "category": "system",
+      "summary": "斯坦福大学于 1965 年启动 DENDRAL 项目，把质谱数据与化学家的经验规则结合，用于推断有机分子结构。它明确区分「通用推理」与「领域知识」，由专家提供启发式规则，程序在特定问题上达到专业水准。",
+      "significance": "第一个专家系统，用实践说明 AI 的突破来自领域知识而非通用推理，直接催生了此后二十年的知识工程与专家系统产业。",
+      "organizations": [
+        "stanford"
+      ],
+      "people": [
+        "Edward Feigenbaum",
+        "Joshua Lederberg",
+        "Bruce Buchanan"
+      ],
+      "relatedModels": [],
+      "chapter": 1,
+      "sources": [
+        {
+          "label": "U.S. National Library of Medicine — DENDRAL: a case study of the first expert system for scientific hypothesis formation",
+          "url": "https://collections.nlm.nih.gov/pdf/nlm:nlmuid-101584906X1027-doc",
+          "kind": "paper"
+        }
+      ],
+      "verificationStatus": "partially-verified",
+      "notes": "项目启动无单一官方公告，1965 年是多数学术史采用的起始年；所引 NLM 馆藏为 1993 年 DENDRAL 回顾论文（PDF），未能逐页读取正文。"
+    },
+    {
+      "id": "eliza-1966",
+      "date": "1966-01",
+      "displayDate": "1966.01",
+      "datePrecision": "month",
+      "dateType": "paper",
+      "title": "ELIZA：第一个对话程序",
+      "titleEn": "ELIZA — A Computer Program for the Study of Natural Language Communication Between Man and Machine",
+      "category": "system",
+      "summary": "魏岑鲍姆在《ACM 通讯》描述 ELIZA：以关键词触发分解规则，再由重组规则生成回复，用「罗杰式心理治疗」脚本模拟对话。它并不理解语义，却足以让人产生被理解的错觉，即后来所称的 ELIZA 效应。",
+      "significance": "最早揭示人机语言交互的社会心理效应，奠定聊天机器人的形态，并提出「流畅表达不等于理解」这一至今有效的判断标准。",
+      "organizations": [
+        "mit"
+      ],
+      "people": [
+        "Joseph Weizenbaum"
+      ],
+      "relatedModels": [],
+      "chapter": 1,
+      "sources": [
+        {
+          "label": "Communications of the ACM 9(1): 36–45 — ELIZA",
+          "url": "https://dl.acm.org/doi/10.1145/365153.365168",
+          "kind": "paper"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": "Crossref 记录出版日 1966-01-01。ACM 数字图书馆对自动抓取返回 403，浏览器可正常访问。"
+    },
+    {
+      "id": "perceptrons-book-1969",
+      "date": "1969",
+      "displayDate": "1969",
+      "datePrecision": "year",
+      "dateType": "paper",
+      "title": "《感知机》：单层网络的局限被形式化",
+      "titleEn": "Perceptrons: An Introduction to Computational Geometry",
+      "category": "theory",
+      "summary": "明斯基与佩珀特以几何方法分析感知机的能力边界，证明单层感知机无法计算异或这类非线性可分函数，并指出多层网络缺少可行的训练算法。书中结论被广泛解读为对联结主义路线的判决。",
+      "significance": "把神经网络研究的经费与注意力压向低谷近十五年，符号主义由此独大；直到反向传播普及，该书划定的边界才被系统性突破。",
+      "organizations": [
+        "mit"
+      ],
+      "people": [
+        "Marvin Minsky",
+        "Seymour Papert"
+      ],
+      "relatedModels": [],
+      "chapter": 1,
+      "sources": [
+        {
+          "label": "MIT Press — Perceptrons（该书 MIT Press 电子版）",
+          "url": "https://doi.org/10.7551/mitpress/11301.001.0001",
+          "kind": "paper"
+        }
+      ],
+      "verificationStatus": "partially-verified",
+      "notes": "1969 年由 MIT Press 初版，1971 年扩版，1988 年再版。Crossref 仅收录 MIT Press 现行电子版（记录日期 2017-09-22），年份按通行书目记为 1969，故标为部分核实。"
+    },
+    {
+      "id": "lighthill-1973",
+      "date": "1973",
+      "displayDate": "1973",
+      "datePrecision": "year",
+      "dateType": "policy",
+      "title": "莱特希尔报告与第一次 AI 寒冬",
+      "titleEn": "Artificial Intelligence: A General Survey (The Lighthill Report)",
+      "category": "policy",
+      "summary": "英国科学资助机构委托莱特希尔评估人工智能。报告按自动机、机器人、语言处理分类检视成果，认为除少数「玩具」问题外均未兑现承诺，主张削减通用 AI 经费、只支持专用方向。英国随后大幅收缩投入，美国 DARPA 亦在同期收紧项目。",
+      "significance": "第一次由官方评估触发的研究经费崩塌，确立「过度承诺—经费紧缩」的周期模式，此后每次 AI 低谷都以它为参照。",
+      "organizations": [],
+      "people": [
+        "James Lighthill"
+      ],
+      "relatedModels": [],
+      "chapter": 1,
+      "sources": [
+        {
+          "label": "UKRI / Chilton Computing — The Lighthill Report: Artificial Intelligence: a paper symposium (1973)",
+          "url": "https://www.chilton-computing.org.uk/inf/literature/reports/lighthill_report/contents.htm",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": "报告本身未标注具体月份，故取年精度；1974 年前后的经费收缩通常与本报告合并叙述，未单列事件。"
+    },
+    {
+      "id": "xcon-1980",
+      "date": "1980",
+      "displayDate": "1980",
+      "datePrecision": "year",
+      "dateType": "product",
+      "title": "XCON/R1 在 DEC 投产",
+      "titleEn": "XCON (R1): A Rule-Based Configurer of Computer Systems",
+      "category": "system",
+      "summary": "卡内基梅隆为 DEC 开发的规则型系统 R1（后称 XCON）自 1980 年起用于配置 VAX-11 整机订单。数以千计的产生式规则替代人工核对选件兼容性；据 1984 年的回顾，其知识库与业务效用在此后四年持续扩张。",
+      "significance": "首个大规模商用专家系统，证明规则系统能承担真实业务流程并节省成本，直接引爆 1980 年代专家系统产业与知识工程职业。",
+      "organizations": [
+        "cmu"
+      ],
+      "people": [
+        "John McDermott",
+        "Judith Bachant"
+      ],
+      "relatedModels": [],
+      "chapter": 2,
+      "sources": [
+        {
+          "label": "AI Magazine 5(3), 1984 — R1 Revisited: Four Years in the Trenches",
+          "url": "https://ojs.aaai.org/aimagazine/index.php/aimagazine/article/view/445",
+          "kind": "paper"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": "原文摘要明确记载 DEC 自 1980 年起使用 R1/XCON 配置 VAX-11；具体投产月份无公开记录，故取年精度。"
+    },
+    {
+      "id": "hopfield-1982",
+      "date": "1982",
+      "displayDate": "1982",
+      "datePrecision": "year",
+      "dateType": "paper",
+      "title": "霍普菲尔德网络：用能量函数描述联想记忆",
+      "titleEn": "Neural networks and physical systems with emergent collective computational abilities",
+      "category": "theory",
+      "summary": "霍普菲尔德在《美国科学院院刊》把对称连接的网络视为自旋系统，引入「能量」函数解释网络如何收敛到稳定状态，并指出这种动力学可实现内容可寻址的联想记忆，也可用于求解组合优化问题。",
+      "significance": "用物理学语言为神经网络提供可分析的理论框架，把沉寂多年的联结主义重新带回主流，是 1980 年代神经网络复兴的起点。",
+      "organizations": [],
+      "people": [
+        "John J. Hopfield"
+      ],
+      "relatedModels": [],
+      "chapter": 2,
+      "sources": [
+        {
+          "label": "PNAS 79(8): 2554–2558 — Neural networks and physical systems with emergent collective computational abilities",
+          "url": "https://www.pnas.org/doi/10.1073/pnas.79.8.2554",
+          "kind": "paper"
+        }
+      ],
+      "verificationStatus": "partially-verified",
+      "notes": "该文收录于 PNAS 79(8)，1982 年 4 月。Crossref 对该 DOI 的接口多次返回异常，未能取到结构化日期；PNAS 页面有 Cloudflare 反爬，故取年精度并标为部分核实。"
+    },
+    {
+      "id": "backprop-1986",
+      "date": "1986-10",
+      "displayDate": "1986.10",
+      "datePrecision": "month",
+      "dateType": "paper",
+      "title": "反向传播：多层网络的通用训练方法",
+      "titleEn": "Learning representations by back-propagating errors",
+      "category": "breakthrough",
+      "summary": "鲁梅尔哈特、辛顿与威廉姆斯在《自然》给出反向传播的清晰表述：用链式法则把输出误差逐层回传，据此调整多层网络的内部权重，使网络自行学出有用的中间表示。文中以家族关系推理与编码任务作演示。",
+      "significance": "解决多层网络「无法训练」的核心障碍，使 1969 年划定的能力边界失去意义，为此后三十年的深度学习提供唯一的通用训练算法。",
+      "organizations": [
+        "toronto"
+      ],
+      "people": [
+        "David E. Rumelhart",
+        "Geoffrey E. Hinton",
+        "Ronald J. Williams"
+      ],
+      "relatedModels": [],
+      "chapter": 2,
+      "sources": [
+        {
+          "label": "Nature 323(6088): 533–536 — Learning representations by back-propagating errors",
+          "url": "https://www.nature.com/articles/323533a0",
+          "kind": "paper"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": "Crossref 记录卷 323、期 6088、页码 533–536、纸本出版 1986 年 10 月。Nature 站点对自动抓取重定向至身份验证，浏览器可正常访问。"
+    },
+    {
+      "id": "ai-winter-1987",
+      "date": "1987",
+      "displayDate": "1987",
+      "datePrecision": "year",
+      "dateType": "policy",
+      "title": "LISP 机器市场崩塌与第二次 AI 寒冬",
+      "titleEn": "The Second AI Winter",
+      "category": "policy",
+      "summary": "1987 年专用 LISP 机器市场迅速瓦解，通用工作站以更低成本提供同等算力，专营 AI 硬件的公司接连退出。同期专家系统维护成本高、知识获取困难的问题暴露，企业与军方经费收缩，「AI」一词在商业文档中被刻意回避。",
+      "significance": "第二次由硬件与商业泡沫共同触发的退潮，迫使研究者从通用推理转向统计学习，为 1990 年代数据驱动方法的兴起留出空间。",
+      "organizations": [],
+      "people": [],
+      "relatedModels": [],
+      "chapter": 2,
+      "sources": [
+        {
+          "label": "Nils J. Nilsson — The Quest for Artificial Intelligence（Cambridge University Press, 2010，公开 PDF）",
+          "url": "https://groups.inf.ed.ac.uk/vision/DATASETS/ROBOTICS/FREDDY/Barrow/Documents/nilsson_qai-01-12-09.pdf",
+          "kind": "paper"
+        }
+      ],
+      "verificationStatus": "partially-verified",
+      "notes": "该事件是史学概括而非单一公告，触发点与月份存在多种叙述（1987 年硬件市场崩塌为主流说法）。所引为权威 AI 史著作的公开 PDF，未能以工具逐页读取。"
+    },
+    {
+      "id": "lecun-convnet-1989",
+      "date": "1989-12",
+      "displayDate": "1989.12",
+      "datePrecision": "month",
+      "dateType": "paper",
+      "title": "卷积网络首次用于手写邮政编码识别",
+      "titleEn": "Backpropagation Applied to Handwritten Zip Code Recognition",
+      "category": "breakthrough",
+      "summary": "勒昆等人在《神经计算》把局部感受野、权重共享与下采样组合成卷积结构，用反向传播训练，从像素直接识别美国邮政的手写邮政编码。任务约束被写进网络结构本身，而不是靠人工设计特征。",
+      "significance": "确立「把先验知识编码为网络结构」的思路，卷积网络由此定型，成为此后计算机视觉与工业字符识别的标准架构。",
+      "organizations": [],
+      "people": [
+        "Yann LeCun",
+        "Bernard Boser",
+        "John S. Denker",
+        "Lawrence D. Jackel"
+      ],
+      "relatedModels": [],
+      "chapter": 2,
+      "sources": [
+        {
+          "label": "Neural Computation 1(4): 541–551 — Backpropagation Applied to Handwritten Zip Code Recognition",
+          "url": "https://doi.org/10.1162/neco.1989.1.4.541",
+          "kind": "paper"
+        },
+        {
+          "label": "Yann LeCun — LeNet-5 与相关论文书目页",
+          "url": "http://yann.lecun.com/exdb/lenet/",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": "Crossref 记录 1989 年 12 月、卷 1 期 4；作者本人书目页亦记为 Winter 1989。"
+    },
+    {
+      "id": "deep-blue-1997",
+      "date": "1997-05",
+      "displayDate": "1997.05",
+      "datePrecision": "month",
+      "dateType": "announcement",
+      "title": "深蓝击败卡斯帕罗夫",
+      "titleEn": "Deep Blue vs Garry Kasparov, 1997 Rematch",
+      "category": "system",
+      "summary": "IBM 深蓝在纽约与卡斯帕罗夫进行六局复赛。它用 32 个处理器并行搜索，每秒评估约两亿个局面，配合人工调校的评估函数，最终以 3.5 比 2.5 取胜，成为首个在标准比赛时限下击败在位世界冠军的计算机系统。",
+      "significance": "以工程暴力兑现「机器在人类智力象征项目上取胜」的公开承诺，把 AI 从学术议题推成大众议题，同时暴露专用搜索方法的边界。",
+      "organizations": [
+        "ibm"
+      ],
+      "people": [
+        "Garry Kasparov",
+        "Feng-hsiung Hsu",
+        "Murray Campbell"
+      ],
+      "relatedModels": [],
+      "chapter": 2,
+      "sources": [
+        {
+          "label": "IBM Heritage — Deep Blue",
+          "url": "https://www.ibm.com/history/deep-blue",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": "六局赛于 1997 年 5 月在纽约进行并结束；IBM 官方史页只给出月份与比分，故取月精度。"
+    },
+    {
+      "id": "lstm-1997",
+      "date": "1997-11",
+      "displayDate": "1997.11",
+      "datePrecision": "month",
+      "dateType": "paper",
+      "title": "长短期记忆网络（LSTM）",
+      "titleEn": "Long Short-Term Memory",
+      "category": "breakthrough",
+      "summary": "霍赫赖特与施密德胡伯针对循环网络梯度衰减问题提出 LSTM：以恒定误差流与门控单元构成记忆块，输入门与输出门控制信息读写，可在超过一千步的时滞上保持梯度。实验显示其显著优于当时的循环网络训练方法。",
+      "significance": "使神经网络首次能稳定处理长序列，成为此后二十年语音识别、机器翻译与文本建模的主力结构，直至被注意力机制取代。",
+      "organizations": [],
+      "people": [
+        "Sepp Hochreiter",
+        "Jürgen Schmidhuber"
+      ],
+      "relatedModels": [],
+      "chapter": 2,
+      "sources": [
+        {
+          "label": "Neural Computation 9(8): 1735–1780 — Long Short-Term Memory",
+          "url": "https://doi.org/10.1162/neco.1997.9.8.1735",
+          "kind": "paper"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": "Crossref 记录出版日 1997-11-01。"
+    },
+    {
+      "id": "lenet5-1998",
+      "date": "1998-11",
+      "displayDate": "1998.11",
+      "datePrecision": "month",
+      "dateType": "paper",
+      "title": "LeNet-5：端到端训练的文档识别系统",
+      "titleEn": "Gradient-Based Learning Applied to Document Recognition",
+      "category": "breakthrough",
+      "summary": "勒昆等在《IEEE 会刊》系统阐述 LeNet-5：把卷积层、下采样层与全连接层组成七层网络，用梯度法整体训练，从像素直接输出字符类别，并配合图变换网络处理整行文本。该架构曾用于银行支票识别。",
+      "significance": "给出卷积网络完整的工程范式——端到端训练、权重共享、层级特征——被后来的 AlexNet 直接继承，是深度视觉的前身模板。",
+      "organizations": [],
+      "people": [
+        "Yann LeCun",
+        "Léon Bottou",
+        "Yoshua Bengio",
+        "Patrick Haffner"
+      ],
+      "relatedModels": [],
+      "chapter": 2,
+      "sources": [
+        {
+          "label": "Proceedings of the IEEE 86(11): 2278–2324 — Gradient-Based Learning Applied to Document Recognition",
+          "url": "https://doi.org/10.1109/5.726791",
+          "kind": "paper"
+        },
+        {
+          "label": "Yann LeCun — LeNet-5 页面（标注 november 1998）",
+          "url": "http://yann.lecun.com/exdb/lenet/",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": "Crossref 仅记录到 1998 年，月次依据作者本人书目页所载 november 1998。"
+    },
+    {
+      "id": "hinton-dbn-2006",
+      "date": "2006-07-28",
+      "displayDate": "2006.07.28",
+      "datePrecision": "day",
+      "dateType": "paper",
+      "title": "深度信念网络与逐层预训练",
+      "titleEn": "Reducing the Dimensionality of Data with Neural Networks",
+      "category": "breakthrough",
+      "summary": "辛顿与萨拉胡特迪诺夫在《科学》提出用逐层无监督预训练初始化深层网络，再用反向传播微调：每层受限玻尔兹曼机先学数据的分布结构，深层自编码器由此得到远优于主成分分析的降维与重建效果。",
+      "significance": "证明深网络可以被有效训练，重启了 1990 年代后期陷入低谷的神经网络研究，「深度学习」由此成为一个可推进的研究议程。",
+      "organizations": [
+        "toronto"
+      ],
+      "people": [
+        "Geoffrey E. Hinton",
+        "Ruslan R. Salakhutdinov"
+      ],
+      "relatedModels": [],
+      "chapter": 2,
+      "sources": [
+        {
+          "label": "Science 313(5786): 504–507 — Reducing the Dimensionality of Data with Neural Networks",
+          "url": "https://doi.org/10.1126/science.1127647",
+          "kind": "paper"
+        },
+        {
+          "label": "Neural Computation 18(7): 1527–1554 — A fast learning algorithm for deep belief nets",
+          "url": "https://doi.org/10.1162/neco.2006.18.7.1527",
+          "kind": "paper"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": "Crossref 记录 Science 该文出版日 2006-07-28。同期的深度信念网络专论为 Hinton, Osindero & Teh，Neural Computation 18(7)，同年。"
+    },
+    {
+      "id": "imagenet-2009",
+      "date": "2009-06",
+      "displayDate": "2009.06",
+      "datePrecision": "month",
+      "dateType": "paper",
+      "title": "ImageNet 数据集发布",
+      "titleEn": "ImageNet: A Large-Scale Hierarchical Image Database",
+      "category": "science",
+      "summary": "李飞飞等在 CVPR 公布 ImageNet：按 WordNet 语义层级组织、经众包清洗的千万级标注图像库，规模与类别细度远超此前数据集，并配套举办 ILSVRC 竞赛，为视觉算法提供统一评测基准。",
+      "significance": "把 AI 的竞争从单纯算法设计转向数据与算力规模，为 2012 年深度卷积网络的突破提供必要土壤，也确立「基准竞赛」这一研究组织方式。",
+      "organizations": [
+        "stanford",
+        "princeton"
+      ],
+      "people": [
+        "Fei-Fei Li",
+        "Jia Deng",
+        "Kai Li",
+        "Olga Russakovsky"
+      ],
+      "relatedModels": [],
+      "chapter": 2,
+      "sources": [
+        {
+          "label": "CVPR 2009, pp. 248–255 — ImageNet: A Large-Scale Hierarchical Image Database",
+          "url": "https://doi.org/10.1109/CVPR.2009.5206848",
+          "kind": "paper"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": "Crossref 记录会议论文集为 2009 IEEE Conference on Computer Vision and Pattern Recognition，出版日期 2009 年 6 月。"
+    },
+    {
+      "id": "ibm-watson-jeopardy-2011",
+      "date": "2011-02-16",
+      "displayDate": "2011.02.16",
+      "datePrecision": "day",
+      "dateType": "announcement",
+      "title": "IBM Watson 赢得《危险边缘》",
+      "titleEn": "IBM Watson Wins Jeopardy!",
+      "category": "system",
+      "summary": "IBM Watson 在《危险边缘》三轮比赛中击败两位人类冠军。系统以问题分析、候选答案生成与证据打分为流水线，在无联网条件下检索海量文本并对答案置信度排序，最终以明显优势取胜。",
+      "significance": "把开放域问答推到公众面前，证明统计与知识结合的系统能处理歧义与常识，并引出 AI 进入医疗等专业领域的商业化尝试。",
+      "organizations": [
+        "ibm"
+      ],
+      "people": [
+        "David Ferrucci"
+      ],
+      "relatedModels": [],
+      "chapter": 2,
+      "sources": [
+        {
+          "label": "IBM Newsroom（法文站，2011-02-21）— Watson 赢得 Jeopardy! 并转向医疗领域",
+          "url": "https://fr.newsroom.ibm.com/2011-02-21-Watson-lordinateur-dIBM-qui-vient-de-gagner-Jeopardy-conquiert-le-monde-de-la-sante",
+          "kind": "press"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": "比赛于 2011 年 2 月 14–16 日播出，16 日决出胜负。IBM 英文新闻稿原页已不可访问，现可读取的官方通告为 2011-02-21 的后续新闻稿，其中确认 Watson 已在三轮中获胜。"
+    },
+    {
+      "id": "alexnet-2012",
+      "date": "2012",
+      "displayDate": "2012",
+      "datePrecision": "year",
+      "dateType": "paper",
+      "title": "AlexNet 在 ImageNet 上大幅降低错误率",
+      "titleEn": "ImageNet Classification with Deep Convolutional Neural Networks",
+      "category": "breakthrough",
+      "summary": "克里热夫斯基等用两块 GPU 训练含六千万参数的八层卷积网络，在 ILSVRC-2010 数据上取得 39.7% 的 top-1 与 18.9% 的 top-5 错误率，显著优于此前方法。ReLU、Dropout 与高效 GPU 实现是三个关键工程选择。",
+      "significance": "深度卷积网络自此取代手工特征成为视觉主流，GPU 训练成为标准做法，业界普遍把 2012 年视为深度学习浪潮的实际起点。",
+      "organizations": [
+        "toronto"
+      ],
+      "people": [
+        "Alex Krizhevsky",
+        "Ilya Sutskever",
+        "Geoffrey E. Hinton"
+      ],
+      "relatedModels": [],
+      "chapter": 3,
+      "sources": [
+        {
+          "label": "NIPS 2012 (Advances in Neural Information Processing Systems 25) — ImageNet Classification with Deep Convolutional Neural Networks",
+          "url": "https://papers.nips.cc/paper_files/paper/2012/hash/c399862d3b9d6b76c8436e924a68c45b-Abstract.html",
+          "kind": "paper"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": "ILSVRC 2012 结果于 2012 年秋公布，论文收录于 NIPS 2012 论文集；无精确到日的公开记录，故取年精度。"
+    },
+    {
+      "id": "word2vec-2013",
+      "date": "2013-01-16",
+      "displayDate": "2013.01.16",
+      "datePrecision": "day",
+      "dateType": "paper",
+      "title": "word2vec：词向量的高效学习",
+      "titleEn": "Efficient Estimation of Word Representations in Vector Space",
+      "category": "breakthrough",
+      "summary": "米科洛夫等提出 CBOW 与 Skip-gram 两种结构，用简化后的浅层网络在十几亿词规模语料上于一天内学出词向量，并在词相似度与语义类比任务上取得当时最佳成绩。",
+      "significance": "让「语义可由向量空间的几何关系表示」成为可廉价复现的事实，直接催生此后所有嵌入方法与「向量语义」的通用直觉。",
+      "organizations": [
+        "google-deepmind"
+      ],
+      "people": [
+        "Tomas Mikolov",
+        "Kai Chen",
+        "Greg Corrado",
+        "Jeffrey Dean"
+      ],
+      "relatedModels": [],
+      "chapter": 3,
+      "sources": [
+        {
+          "label": "arXiv:1301.3781 — Efficient Estimation of Word Representations in Vector Space",
+          "url": "https://arxiv.org/abs/1301.3781",
+          "kind": "paper"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": "arXiv 元数据记录 v1 提交时间为 2013-01-16。作者当时属 Google（Google Brain），按规范归入 google-deepmind。"
+    },
+    {
+      "id": "vae-2013",
+      "date": "2013-12-20",
+      "displayDate": "2013.12.20",
+      "datePrecision": "day",
+      "dateType": "paper",
+      "title": "变分自编码器",
+      "titleEn": "Auto-Encoding Variational Bayes",
+      "category": "theory",
+      "summary": "金马与韦林提出重参数化技巧，把变分下界改写为可用随机梯度直接优化的目标，使含连续隐变量的深层生成模型能在大数据上训练，推断网络与生成网络可联合学习。",
+      "significance": "为深度生成模型提供可规模化的变分推断框架，与同期的 GAN 一起把「生成」确立为与判别并列的独立研究方向。",
+      "organizations": [],
+      "people": [
+        "Diederik P. Kingma",
+        "Max Welling"
+      ],
+      "relatedModels": [],
+      "chapter": 3,
+      "sources": [
+        {
+          "label": "arXiv:1312.6114 — Auto-Encoding Variational Bayes",
+          "url": "https://arxiv.org/abs/1312.6114",
+          "kind": "paper"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": "arXiv 元数据记录 v1 提交时间为 2013-12-20。"
+    },
+    {
+      "id": "gan-2014",
+      "date": "2014-06-10",
+      "displayDate": "2014.06.10",
+      "datePrecision": "day",
+      "dateType": "paper",
+      "title": "生成对抗网络",
+      "titleEn": "Generative Adversarial Nets",
+      "category": "breakthrough",
+      "summary": "古德费洛等提出让生成器与判别器互相对抗：判别器学习区分真实与生成样本，生成器据此改进，二者构成极小极大博弈，理论最优处生成分布与真实分布一致，且无需马尔可夫链或近似推断网络。",
+      "significance": "用博弈替代显式似然估计，使高质量图像生成首次成为可行目标，开启此后十年的生成模型竞赛与合成媒体议题。",
+      "organizations": [
+        "montreal"
+      ],
+      "people": [
+        "Ian J. Goodfellow",
+        "Jean Pouget-Abadie",
+        "Yoshua Bengio"
+      ],
+      "relatedModels": [],
+      "chapter": 3,
+      "sources": [
+        {
+          "label": "arXiv:1406.2661 — Generative Adversarial Nets",
+          "url": "https://arxiv.org/abs/1406.2661",
+          "kind": "paper"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": "arXiv 元数据记录 v1 提交时间为 2014-06-10。"
+    },
+    {
+      "id": "seq2seq-2014",
+      "date": "2014-09-10",
+      "displayDate": "2014.09.10",
+      "datePrecision": "day",
+      "dateType": "paper",
+      "title": "序列到序列学习",
+      "titleEn": "Sequence to Sequence Learning with Neural Networks",
+      "category": "breakthrough",
+      "summary": "苏茨克维等用多层 LSTM 把输入序列编码为定长向量，再由另一 LSTM 解码输出，在 WMT'14 英法翻译上取得 34.8 BLEU，超过当时基于短语的统计机器翻译系统；反转源句词序可显著改善效果。",
+      "significance": "证明单一神经网络可端到端完成变长序列转换，机器翻译由此从特征工程流水线转向神经方法，也为注意力与 Transformer 铺路。",
+      "organizations": [
+        "google-deepmind"
+      ],
+      "people": [
+        "Ilya Sutskever",
+        "Oriol Vinyals",
+        "Quoc V. Le"
+      ],
+      "relatedModels": [],
+      "chapter": 3,
+      "sources": [
+        {
+          "label": "arXiv:1409.3215 — Sequence to Sequence Learning with Neural Networks",
+          "url": "https://arxiv.org/abs/1409.3215",
+          "kind": "paper"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": "arXiv 元数据记录 v1 提交时间为 2014-09-10。"
+    },
+    {
+      "id": "bahdanau-attention-2014",
+      "date": "2014-09-01",
+      "displayDate": "2014.09.01",
+      "datePrecision": "day",
+      "dateType": "paper",
+      "title": "注意力机制：让解码器回看源句",
+      "titleEn": "Neural Machine Translation by Jointly Learning to Align and Translate",
+      "category": "breakthrough",
+      "summary": "巴赫达瑙等指出编码器把整句压成定长向量是瓶颈，改为在解码的每一步对源句各位置计算软对齐权重，让模型自行决定当前词该看哪些输入。英法翻译效果与当时最好的短语系统相当，对齐结果也符合直觉。",
+      "significance": "注意力由此成为可独立复用的构件，解除了定长瓶颈，并直接演化出 Transformer 的自注意力架构，是 2017 年变革的技术前身。",
+      "organizations": [
+        "montreal"
+      ],
+      "people": [
+        "Dzmitry Bahdanau",
+        "Kyunghyun Cho",
+        "Yoshua Bengio"
+      ],
+      "relatedModels": [],
+      "chapter": 3,
+      "sources": [
+        {
+          "label": "arXiv:1409.0473 — Neural Machine Translation by Jointly Learning to Align and Translate",
+          "url": "https://arxiv.org/abs/1409.0473",
+          "kind": "paper"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": "arXiv 元数据记录 v1 提交时间为 2014-09-01；该文为 ICLR 2015 口头报告。"
+    },
+    {
+      "id": "neural-turing-machine-2014",
+      "date": "2014-10-20",
+      "displayDate": "2014.10.20",
+      "datePrecision": "day",
+      "dateType": "paper",
+      "title": "神经图灵机",
+      "titleEn": "Neural Turing Machines",
+      "category": "theory",
+      "summary": "格雷夫斯等把神经网络与外部记忆矩阵耦合，通过可微的读写注意力与记忆交互，整个系统可端到端用梯度训练。实验表明它可从输入输出样例中归纳复制、排序与联想回忆等简单算法。",
+      "significance": "首次明确把「记忆」与「计算」分离同时保持可微，是记忆增强网络与后续外部记忆、检索增强思路的共同起点。",
+      "organizations": [
+        "google-deepmind"
+      ],
+      "people": [
+        "Alex Graves",
+        "Greg Wayne",
+        "Ivo Danihelka"
+      ],
+      "relatedModels": [],
+      "chapter": 3,
+      "sources": [
+        {
+          "label": "arXiv:1410.5401 — Neural Turing Machines",
+          "url": "https://arxiv.org/abs/1410.5401",
+          "kind": "paper"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": "arXiv 元数据记录 v1 提交时间为 2014-10-20。"
+    },
+    {
+      "id": "adam-optimizer-2014",
+      "date": "2014-12-22",
+      "displayDate": "2014.12.22",
+      "datePrecision": "day",
+      "dateType": "paper",
+      "title": "Adam 优化器",
+      "titleEn": "Adam: A Method for Stochastic Optimization",
+      "category": "theory",
+      "summary": "金马与巴提出 Adam：用梯度一阶矩与二阶矩的指数移动平均自适应调整每个参数的学习率，并做偏差校正。方法实现简单、内存开销小，对稀疏梯度与非平稳目标均适用，并给出收敛遗憾界分析。",
+      "significance": "成为深度学习最常用的默认优化器，使训练深层网络不再高度依赖手工调参，是 2010 年代模型规模扩张的隐形基础设施。",
+      "organizations": [],
+      "people": [
+        "Diederik P. Kingma",
+        "Jimmy Ba"
+      ],
+      "relatedModels": [],
+      "chapter": 3,
+      "sources": [
+        {
+          "label": "arXiv:1412.6980 — Adam: A Method for Stochastic Optimization",
+          "url": "https://arxiv.org/abs/1412.6980",
+          "kind": "paper"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": "arXiv 元数据记录 v1 提交时间为 2014-12-22；后作为 ICLR 2015 会议论文发表。"
+    },
+    {
+      "id": "tensorflow-open-source-2015",
+      "date": "2015-11-09",
+      "displayDate": "2015.11.09",
+      "datePrecision": "day",
+      "dateType": "product",
+      "title": "TensorFlow 开源",
+      "titleEn": "TensorFlow: Google's Latest Machine Learning System, Open Sourced for Everyone",
+      "category": "system",
+      "summary": "Google 把内部第二代分布式机器学习系统 DistBelief 重写并开源为 TensorFlow：以数据流图描述计算，同一套代码可在单机多卡到大规模集群上运行，支持自动微分与多平台部署。",
+      "significance": "把工业级深度学习基础设施免费交给研究社区，大幅降低深度学习的工程门槛，与同期开源框架共同奠定此后十年的研发生态。",
+      "organizations": [
+        "google-deepmind"
+      ],
+      "people": [
+        "Jeff Dean",
+        "Sanjay Ghemawat"
+      ],
+      "relatedModels": [],
+      "chapter": 3,
+      "sources": [
+        {
+          "label": "Google Research Blog — TensorFlow: Google's latest machine learning system, open sourced for everyone",
+          "url": "https://research.google/blog/tensorflow-googles-latest-machine-learning-system-open-sourced-for-everyone/",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "partially-verified",
+      "notes": "开源发布日为 2015-11-09，为该博客文章与 TensorFlow 官方发布记录所载；该页在自动抓取时连接失败，未能读取正文，故标为部分核实。"
+    },
+    {
+      "id": "resnet-2015",
+      "date": "2015-12-10",
+      "displayDate": "2015.12.10",
+      "datePrecision": "day",
+      "dateType": "paper",
+      "title": "残差网络 ResNet",
+      "titleEn": "Deep Residual Learning for Image Recognition",
+      "category": "breakthrough",
+      "summary": "何恺明等提出把每层改为学习相对输入的残差映射，配合恒等捷径连接，使 152 层网络可稳定训练。该结构在 ILSVRC 2015 分类任务夺冠，集成模型 top-5 错误率 3.57%，并同时赢下检测、定位与分割任务。",
+      "significance": "解决深度增加反而退化的矛盾，把网络深度从十几层推到上百层，残差连接此后成为几乎所有深层模型的默认组件。",
+      "organizations": [
+        "microsoft"
+      ],
+      "people": [
+        "Kaiming He",
+        "Xiangyu Zhang",
+        "Shaoqing Ren",
+        "Jian Sun"
+      ],
+      "relatedModels": [],
+      "chapter": 3,
+      "sources": [
+        {
+          "label": "arXiv:1512.03385 — Deep Residual Learning for Image Recognition",
+          "url": "https://arxiv.org/abs/1512.03385",
+          "kind": "paper"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": "arXiv 元数据记录 v1 提交时间为 2015-12-10；后发表于 CVPR 2016。"
+    },
+    {
+      "id": "openai-founded-2015",
+      "date": "2015-12-11",
+      "displayDate": "2015.12.11",
+      "datePrecision": "day",
+      "dateType": "announcement",
+      "title": "OpenAI 成立",
+      "titleEn": "Introducing OpenAI",
+      "category": "organization",
+      "summary": "OpenAI 以非营利研究机构的形式公开成立，声明目标是推进数字智能并以最可能造福全人类的方式进行，不受财务回报约束。初始资金来自多位科技界人士的捐赠承诺，研究议程聚焦深度学习与强化学习。",
+      "significance": "一种以使命而非产品为核心的组织形态进入 AI 领域，此后成为推动大模型竞赛与「通用人工智能」公共讨论的主要力量之一。",
+      "organizations": [
+        "openai"
+      ],
+      "people": [
+        "Sam Altman",
+        "Elon Musk",
+        "Ilya Sutskever",
+        "Greg Brockman"
+      ],
+      "relatedModels": [],
+      "chapter": 3,
+      "sources": [
+        {
+          "label": "OpenAI — Introducing OpenAI（2015-12-11）",
+          "url": "https://openai.com/index/introducing-openai/",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": "官方页面标注日期 December 11, 2015。"
+    },
+    {
+      "id": "alphago-nature-2016",
+      "date": "2016-01-27",
+      "displayDate": "2016.01.27",
+      "datePrecision": "day",
+      "dateType": "paper",
+      "title": "AlphaGo：深度网络与树搜索结合征服围棋",
+      "titleEn": "Mastering the game of Go with deep neural networks and tree search",
+      "category": "breakthrough",
+      "summary": "DeepMind 在《自然》描述 AlphaGo：策略网络收窄搜索宽度，价值网络评估局面，二者与蒙特卡洛树搜索结合；系统先用人类棋谱做监督学习，再以自我对弈强化。论文公布其以 5 比 0 击败欧洲冠军樊麾。",
+      "significance": "围棋长期被视为暴力搜索无法攻克的领域，AlphaGo 证明「学习得到的直觉加搜索」可超越人类，成为深度学习能力最有说服力的公开证据。",
+      "organizations": [
+        "google-deepmind"
+      ],
+      "people": [
+        "David Silver",
+        "Aja Huang",
+        "Demis Hassabis"
+      ],
+      "relatedModels": [],
+      "chapter": 3,
+      "sources": [
+        {
+          "label": "Nature 529(7587): 484–489 — Mastering the game of Go with deep neural networks and tree search",
+          "url": "https://www.nature.com/articles/nature16961",
+          "kind": "paper"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": "Crossref 记录在线首发 2016-01-27、纸本期 2016-01-28，故取 2016-01-27。与樊麾的对局实际于 2015 年 10 月进行，由论文首次公开。"
+    },
+    {
+      "id": "alphago-lee-sedol-2016",
+      "date": "2016-03",
+      "displayDate": "2016.03",
+      "datePrecision": "month",
+      "dateType": "announcement",
+      "title": "AlphaGo 与李世石对局",
+      "titleEn": "AlphaGo versus Lee Sedol",
+      "category": "system",
+      "summary": "2016 年 3 月 9 日至 15 日，AlphaGo 在首尔与九段李世石进行五番棋，以 4 比 1 获胜。第二局第 37 手被广泛讨论为超出人类定式的招式；第四局李世石取胜，是全程唯一一败。",
+      "significance": "全球数亿人围观的对局把 AI 从技术新闻变成公共事件，各国随即加大 AI 投入，2016 年由此成为政策与资本转向的年份。",
+      "organizations": [
+        "google-deepmind"
+      ],
+      "people": [
+        "Lee Sedol",
+        "David Silver",
+        "Demis Hassabis"
+      ],
+      "relatedModels": [],
+      "chapter": 3,
+      "sources": [
+        {
+          "label": "Google DeepMind — AlphaGo（官方项目页，含 The matches 分节）",
+          "url": "https://deepmind.google/research/alphago/",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "partially-verified",
+      "notes": "对局跨 3 月 9–15 日，无单一日可代表，故取月精度。官方页面在抓取时被截断，未能逐字读取比分段落，比分与日期依据该页 The matches 分节及当时的公开赛程记录。"
+    },
+    {
+      "id": "wavenet-2016",
+      "date": "2016-09-12",
+      "displayDate": "2016.09.12",
+      "datePrecision": "day",
+      "dateType": "paper",
+      "title": "WaveNet：直接生成原始音频波形",
+      "titleEn": "WaveNet: A Generative Model for Raw Audio",
+      "category": "breakthrough",
+      "summary": "DeepMind 提出以扩张因果卷积逐样本自回归建模原始波形，无需声码器与特征工程即可在数万赫兹采样率上训练。用于文本转语音时，听感自然度显著优于当时最好的参数化与拼接式系统，并可切换说话人。",
+      "significance": "把语音合成从拼接与参数化流水线推向端到端神经生成，也证明自回归深度模型可处理高采样率时序信号，为此后音频生成定下范式。",
+      "organizations": [
+        "google-deepmind"
+      ],
+      "people": [
+        "Aaron van den Oord",
+        "Sander Dieleman",
+        "Karen Simonyan",
+        "Koray Kavukcuoglu"
+      ],
+      "relatedModels": [],
+      "chapter": 3,
+      "sources": [
+        {
+          "label": "arXiv:1609.03499 — WaveNet: A Generative Model for Raw Audio",
+          "url": "https://arxiv.org/abs/1609.03499",
+          "kind": "paper"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": "arXiv 元数据记录 v1 提交时间为 2016-09-12。"
+    },
+    {
+      "id": "transformer-2017",
+      "date": "2017-06-12",
+      "displayDate": "2017.06.12",
+      "datePrecision": "day",
+      "dateType": "paper",
+      "title": "《Attention Is All You Need》：Transformer 架构",
+      "titleEn": "Attention Is All You Need",
+      "category": "breakthrough",
+      "summary": "Google 团队提出完全基于注意力的 Transformer，用多头自注意力与位置编码取代循环与卷积。WMT 2014 英德任务取得 28.4 BLEU，英法单模型 41.8 BLEU，训练仅用八块 GPU 三天，且可并行处理整句。",
+      "significance": "去掉了序列建模的顺序依赖，使训练可以大规模并行，成为此后所有大语言模型的基础架构，是 1950–2017 年最重要的技术分水岭。",
+      "organizations": [
+        "google-deepmind"
+      ],
+      "people": [
+        "Ashish Vaswani",
+        "Noam Shazeer",
+        "Jakob Uszkoreit",
+        "Llion Jones",
+        "Illia Polosukhin"
+      ],
+      "relatedModels": [],
+      "chapter": 3,
+      "sources": [
+        {
+          "label": "arXiv:1706.03762 — Attention Is All You Need",
+          "url": "https://arxiv.org/abs/1706.03762",
+          "kind": "paper"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": "arXiv 元数据记录 v1 提交时间为 2017-06-12。作者当时属 Google Brain / Google Research，按规范归入 google-deepmind。"
+    },
+    {
+      "id": "alphazero-2017",
+      "date": "2017-12-05",
+      "displayDate": "2017.12.05",
+      "datePrecision": "day",
+      "dateType": "paper",
+      "title": "AlphaZero：不依赖人类棋谱的通用自我博弈",
+      "titleEn": "Mastering Chess and Shogi by Self-Play with a General Reinforcement Learning Algorithm",
+      "category": "breakthrough",
+      "summary": "论文把 AlphaGo Zero 的方法推广为单一算法 AlphaZero：只给定规则，从随机下棋开始自我对弈，用同一套网络与搜索，在 24 小时内于国际象棋、将棋与围棋中均达到超人水平，并击败各项目的世界冠军程序。",
+      "significance": "证明通用学习算法可在不依赖人类知识的情况下自行发现高水平策略，「经验而非示范」成为强化学习的重要路线，也重塑了 AI 与人类知识关系的讨论。",
+      "organizations": [
+        "google-deepmind"
+      ],
+      "people": [
+        "David Silver",
+        "Thomas Hubert",
+        "Julian Schrittwieser",
+        "Demis Hassabis"
+      ],
+      "relatedModels": [],
+      "chapter": 3,
+      "sources": [
+        {
+          "label": "arXiv:1712.01815 — Mastering Chess and Shogi by Self-Play with a General Reinforcement Learning Algorithm",
+          "url": "https://arxiv.org/abs/1712.01815",
+          "kind": "paper"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": "arXiv 元数据记录 v1 提交时间为 2017-12-05。其前身 AlphaGo Zero 的结果以 Mastering the game of Go without human knowledge 为题发表于 Nature，2017 年 10 月。"
+    }
+  ],
+  "organizations": [
+    {
+      "id": "dartmouth-college",
+      "name": "Dartmouth College",
+      "nameZh": "达特茅斯学院",
+      "countryOrRegion": "US",
+      "founded": "1769",
+      "focus": [
+        "早期人工智能",
+        "数学与计算机科学"
+      ],
+      "summary": "麦卡锡 1955 年在此任教并提出暑期研究计划，1956 年的达特茅斯会议使「人工智能」成为学科名称，学院由此成为该领域的命名地。",
+      "sources": [
+        {
+          "label": "A Proposal for the Dartmouth Summer Research Project on Artificial Intelligence",
+          "url": "http://www-formal.stanford.edu/jmc/history/dartmouth/dartmouth.html",
+          "kind": "official"
+        }
+      ]
+    },
+    {
+      "id": "ibm",
+      "name": "IBM",
+      "nameZh": "国际商业机器公司",
+      "countryOrRegion": "US",
+      "founded": "1911",
+      "focus": [
+        "计算机系统",
+        "企业 AI",
+        "问答系统"
+      ],
+      "summary": "从塞缪尔的跳棋程序、深蓝到 Watson，IBM 多次以公开的人机对抗把 AI 推入大众视野，也是把 AI 引入企业业务流程的最早推动者之一。",
+      "sources": [
+        {
+          "label": "IBM Heritage — Deep Blue",
+          "url": "https://www.ibm.com/history/deep-blue",
+          "kind": "official"
+        }
+      ]
+    },
+    {
+      "id": "mit",
+      "name": "Massachusetts Institute of Technology",
+      "nameZh": "麻省理工学院",
+      "countryOrRegion": "US",
+      "founded": "1861",
+      "focus": [
+        "符号主义 AI",
+        "自然语言处理",
+        "机器人"
+      ],
+      "summary": "明斯基与佩珀特在此建立 AI 实验室，魏岑鲍姆在此写出 ELIZA；1960 至 1980 年代这里与卡内基梅隆并列为符号主义 AI 的两大中心。",
+      "sources": [
+        {
+          "label": "Communications of the ACM 9(1) — ELIZA",
+          "url": "https://dl.acm.org/doi/10.1145/365153.365168",
+          "kind": "paper"
+        }
+      ]
+    },
+    {
+      "id": "stanford",
+      "name": "Stanford University",
+      "nameZh": "斯坦福大学",
+      "countryOrRegion": "US",
+      "founded": "1885",
+      "focus": [
+        "专家系统",
+        "计算机视觉",
+        "数据集建设"
+      ],
+      "summary": "费根鲍姆在此开创专家系统传统（DENDRAL），李飞飞在此主导 ImageNet，斯坦福因此同时是知识工程与数据驱动视觉两条路线的重要发源地。",
+      "sources": [
+        {
+          "label": "CVPR 2009 — ImageNet: A Large-Scale Hierarchical Image Database",
+          "url": "https://doi.org/10.1109/CVPR.2009.5206848",
+          "kind": "paper"
+        }
+      ]
+    },
+    {
+      "id": "cmu",
+      "name": "Carnegie Mellon University",
+      "nameZh": "卡内基梅隆大学",
+      "countryOrRegion": "US",
+      "founded": "1900",
+      "focus": [
+        "符号主义 AI",
+        "专家系统",
+        "机器学习"
+      ],
+      "summary": "纽厄尔与西蒙在此开创启发式搜索与认知建模，麦克德莫特在此开发 R1/XCON，该校长期是 AI 与机器人研究的核心机构。",
+      "sources": [
+        {
+          "label": "AI Magazine 5(3) — R1 Revisited: Four Years in the Trenches",
+          "url": "https://ojs.aaai.org/aimagazine/index.php/aimagazine/article/view/445",
+          "kind": "paper"
+        }
+      ]
+    },
+    {
+      "id": "princeton",
+      "name": "Princeton University",
+      "nameZh": "普林斯顿大学",
+      "countryOrRegion": "US",
+      "founded": "1746",
+      "focus": [
+        "计算机视觉",
+        "数据集建设"
+      ],
+      "summary": "李飞飞在普林斯顿任教期间启动 ImageNet 的构建，该校是这一千万级图像库与后续 ILSVRC 竞赛的早期主导机构之一。",
+      "sources": [
+        {
+          "label": "CVPR 2009 — ImageNet: A Large-Scale Hierarchical Image Database",
+          "url": "https://doi.org/10.1109/CVPR.2009.5206848",
+          "kind": "paper"
+        }
+      ]
+    },
+    {
+      "id": "toronto",
+      "name": "University of Toronto",
+      "nameZh": "多伦多大学",
+      "countryOrRegion": "CA",
+      "founded": "1827",
+      "focus": [
+        "神经网络",
+        "深度学习",
+        "表示学习"
+      ],
+      "summary": "辛顿长期在此任教，反向传播、深度信念网络与 AlexNet 三项关键成果均出自该团队，多伦多因此被视为现代深度学习的发源地之一。",
+      "sources": [
+        {
+          "label": "Nature 323(6088) — Learning representations by back-propagating errors",
+          "url": "https://www.nature.com/articles/323533a0",
+          "kind": "paper"
+        }
+      ]
+    },
+    {
+      "id": "montreal",
+      "name": "Université de Montréal",
+      "nameZh": "蒙特利尔大学",
+      "countryOrRegion": "CA",
+      "founded": "1878",
+      "focus": [
+        "神经网络",
+        "生成模型",
+        "表示学习"
+      ],
+      "summary": "本吉奥在此建立 MILA，注意力机制与生成对抗网络的早期核心工作均在此完成，该校与多伦多共同构成加拿大深度学习集群的核心。",
+      "sources": [
+        {
+          "label": "arXiv:1406.2661 — Generative Adversarial Nets",
+          "url": "https://arxiv.org/abs/1406.2661",
+          "kind": "paper"
+        }
+      ]
+    },
+    {
+      "id": "microsoft",
+      "name": "Microsoft",
+      "nameZh": "微软",
+      "countryOrRegion": "US",
+      "founded": "1975",
+      "focus": [
+        "计算机视觉",
+        "深层网络架构",
+        "云计算"
+      ],
+      "summary": "微软亚洲研究院的何恺明团队提出残差网络 ResNet，把可训练深度推到百层以上，其结构此后被几乎所有深层模型沿用。",
+      "sources": [
+        {
+          "label": "arXiv:1512.03385 — Deep Residual Learning for Image Recognition",
+          "url": "https://arxiv.org/abs/1512.03385",
+          "kind": "paper"
+        }
+      ]
+    },
+    {
+      "id": "deepmind",
+      "name": "DeepMind",
+      "nameZh": "DeepMind",
+      "countryOrRegion": "UK",
+      "founded": "2010",
+      "focus": [
+        "深度强化学习",
+        "博弈",
+        "神经科学启发的方法"
+      ],
+      "summary": "2010 年在伦敦成立，2014 年被 Google 收购，2016 年以 AlphaGo 震动世界。按规范，其 2014 年后的成果在事件中以 google-deepmind 记录。",
+      "sources": [
+        {
+          "label": "Google DeepMind — AlphaGo",
+          "url": "https://deepmind.google/research/alphago/",
+          "kind": "official"
+        }
+      ]
+    },
+    {
+      "id": "google-deepmind",
+      "name": "Google DeepMind",
+      "nameZh": "谷歌 DeepMind",
+      "countryOrRegion": "UK",
+      "founded": "2010",
+      "focus": [
+        "深度强化学习",
+        "大模型架构",
+        "科学应用"
+      ],
+      "summary": "收购后的 DeepMind 与 Google Brain 体系在此一并记录：AlphaGo、AlphaZero、WaveNet、Transformer、word2vec 与 TensorFlow 均归属该机构 id。",
+      "sources": [
+        {
+          "label": "arXiv:1706.03762 — Attention Is All You Need",
+          "url": "https://arxiv.org/abs/1706.03762",
+          "kind": "paper"
+        }
+      ]
+    },
+    {
+      "id": "openai",
+      "name": "OpenAI",
+      "nameZh": "OpenAI",
+      "countryOrRegion": "US",
+      "founded": "2015",
+      "focus": [
+        "深度学习",
+        "强化学习",
+        "通用人工智能"
+      ],
+      "summary": "2015 年 12 月以非营利研究机构形式成立，主张以使命而非财务回报驱动研究，此后成为大模型竞赛与 AGI 公共讨论的主要参与者。",
+      "sources": [
+        {
+          "label": "OpenAI — Introducing OpenAI",
+          "url": "https://openai.com/index/introducing-openai/",
+          "kind": "official"
+        }
+      ]
+    }
+  ],
+  "meta": {
+    "researcher": "research-foundations",
+    "generatedAt": "2026-11-02",
+    "cutoff": "2026-11-02"
+  }
+}

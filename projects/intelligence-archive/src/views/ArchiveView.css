@@ -1,0 +1,89 @@
+.archive-view {
+  position: relative;
+  padding-top: 58px;
+  min-height: 100vh;
+  background: var(--paper);
+}
+
+/* ---------- sticky bar (tabs + search only, keeps the page light) ---------- */
+
+.arch-sticky {
+  position: sticky;
+  top: 58px;
+  z-index: 30;
+  background: var(--paper);
+  border-top: 1px solid var(--ink);
+  border-bottom: 1px solid var(--hairline);
+}
+
+.arch-sticky__toolbar {
+  padding-block: 10px 12px;
+}
+
+/* ---------- filter bar (scrolls with the page) ---------- */
+
+.arch-filterbar {
+  padding-top: 14px;
+}
+
+.arch-filterbar .arch-count__num {
+  font-size: 1.25rem;
+}
+
+.arch-toolbar__count {
+  padding-block: 4px 2px;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+}
+
+/* ---------- results ---------- */
+
+.arch-results {
+  padding-block: clamp(18px, 3vh, 30px) clamp(64px, 9vh, 120px);
+  min-height: 46vh;
+}
+
+.arch-results:focus-visible {
+  outline: 1px solid var(--hairline);
+  outline-offset: 8px;
+}
+
+/* ---------- footer ---------- */
+
+.arch-footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 14px 40px;
+  padding-block: 28px 72px;
+  border-top: 1px solid var(--hairline);
+}
+
+.arch-footer .u-link {
+  margin-left: auto;
+}
+
+@media (max-width: 860px) {
+  .archive-view {
+    padding-top: 52px;
+  }
+
+  .arch-sticky {
+    position: static;
+  }
+
+  .arch-filterbar {
+    padding-top: 10px;
+  }
+
+  .arch-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-bottom: 56px;
+  }
+
+  .arch-footer .u-link {
+    margin-left: 0;
+  }
+}

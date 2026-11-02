@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#FAFAF8" />
+    <title>WISHCRAFT · 许愿池 — wishes, built into worlds</title>
+    <meta
+      name="description"
+      content="THE INTELLIGENCE ARCHIVE · 智能编年史：1950—2026 的人工智能史，交互式纪录片、三维纪念碑、模型星图与可检索档案。"
+    />
+    <meta property="og:title" content="WISHCRAFT · THE INTELLIGENCE ARCHIVE" />
+    <meta
+      property="og:description"
+      content="从图灵的第一个问题，到能够自主执行任务的人工智能。一份可打开、走动、验证的智能史档案。"
+    />
+    <meta property="og:type" content="website" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23FAFAF8'/%3E%3Ccircle cx='16' cy='16' r='5' fill='%23B1382A'/%3E%3C/svg%3E"
+    />
+    <link
+      rel="preload"
+      href="./fonts/inter-tight-400-600.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <a class="skip" href="#index">跳到作品索引</a>
+
+    <header class="topbar">
+      <a class="brand" href="#/" aria-label="WISHCRAFT 许愿池，返回首页">
+        <span class="brand__mark" aria-hidden="true"></span>
+        <span class="brand__en">WISHCRAFT</span>
+        <span class="brand__cn">许愿池</span>
+      </a>
+      <nav class="topnav" aria-label="主导航">
+        <a href="#/" data-nav="index">INDEX</a>
+        <a href="#method" data-nav="method">METHOD</a>
+        <a href="https://github.com/MY-Final/wishcraft" target="_blank" rel="noopener noreferrer">
+          GITHUB <span aria-hidden="true">↗</span>
+        </a>
+      </nav>
+      <p class="topbar__meta mono" aria-hidden="true">A PRIVATE INDEX · 2026</p>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <p class="eyebrow mono">A WORKING INDEX OF WISHES · EST. 2026</p>
+        <h1 id="hero-title" class="hero__title">
+          <span class="hero__line"><span>WISH</span></span>
+          <span class="hero__line hero__line--indent"
+            ><span class="hero__word">CRAFT<i class="wish-dot" aria-hidden="true"></i></span
+          ></span>
+        </h1>
+        <div class="hero__foot">
+          <p class="hero__lede">
+            <span class="hero__lede-en">Every wish becomes a world.</span>
+            <span class="hero__lede-cn"
+              >许愿池不是收藏夹。每一个愿望都被做成一个可以打开、走动、验证的世界。</span
+            >
+          </p>
+          <dl class="hero__stats mono" id="hero-stats">
+            <div><dt>WORKS</dt><dd>—</dd></div>
+            <div><dt>SINCE</dt><dd>2026</dd></div>
+            <div><dt>REPOSITORY</dt><dd>01</dd></div>
+          </dl>
+        </div>
+        <p class="hero__cue mono" aria-hidden="true"><span>SCROLL TO THE INDEX</span><i></i></p>
+      </section>
+
+      <section class="index" id="index" aria-labelledby="index-title">
+        <div class="section-head">
+          <p class="eyebrow mono">01 / INDEX</p>
+          <h2 id="index-title" class="section-title">作品索引<span class="section-title__en">SELECTED WORKS</span></h2>
+          <p class="section-count mono" id="work-count">— WORKS</p>
+        </div>
+
+        <div class="index__grid">
+          <div class="index__list" id="work-list" aria-live="polite">
+            <p class="loading mono">LOADING THE ARCHIVE…</p>
+          </div>
+
+          <aside class="preview" id="preview" aria-hidden="true">
+            <div class="preview__frame">
+              <div class="preview__media">
+                <img id="preview-img" alt="" src="" />
+                <span class="preview__fallback" id="preview-fallback"></span>
+              </div>
+              <span class="preview__tick" aria-hidden="true"></span>
+            </div>
+            <div class="preview__caption">
+              <span class="mono" id="preview-index">01 / 04</span>
+              <span class="mono" id="preview-label">—</span>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="method" id="method" aria-labelledby="method-title">
+        <div class="method__head">
+          <p class="eyebrow mono eyebrow--light">02 / METHOD</p>
+          <h2 id="method-title" class="method__title">
+            HOW A WISH<br />
+            BECOMES A WORLD.
+          </h2>
+          <p class="method__lede">
+            这个仓库同时是作品集和制作流程。每一个项目都是一个可独立构建的文件夹；根目录的脚本把它们组装成一个可导航的站点，GitHub Actions
+            再把站点发布到 Pages。
+          </p>
+        </div>
+
+        <ol class="steps">
+          <li class="step">
+            <p class="step__num mono">01</p>
+            <h3 class="step__title">CLONE</h3>
+            <p class="step__en mono">git clone</p>
+            <p class="step__body">把整个许愿池下载到本地。所有项目、数据、字体与构建脚本都在里面，不依赖外部服务。</p>
+            <pre class="code"><code>git clone https://github.com/MY-Final/wishcraft
+cd wishcraft</code></pre>
+          </li>
+          <li class="step">
+            <p class="step__num mono">02</p>
+            <h3 class="step__title">MAKE A WISH</h3>
+            <p class="step__en mono">projects/&lt;your-wish&gt;/</p>
+            <p class="step__body">在 <code>projects/</code> 下新建一个目录，放入任何可构建的网页工程：Vite、React、Three.js，或者一个单文件 HTML。</p>
+          </li>
+          <li class="step">
+            <p class="step__num mono">03</p>
+            <h3 class="step__title">DECLARE IT</h3>
+            <p class="step__en mono">wish.json</p>
+            <p class="step__body">写一个 <code>wish.json</code>，告诉构建脚本标题、年份、封面、构建命令和产物位置。作品集会读取它。</p>
+            <pre class="code"><code>{
+  "id": "my-wish",
+  "title": "MY WISH",
+  "titleZh": "我的愿望",
+  "year": "2026",
+  "kind": "INTERACTIVE",
+  "status": "WIP",
+  "preview": "projects/my-wish/",
+  "cover": "assets/covers/my-wish.jpg",
+  "build": {
+    "manager": "pnpm",
+    "command": "pnpm build",
+    "output": "dist"
+  }
+}</code></pre>
+          </li>
+          <li class="step">
+            <p class="step__num mono">04</p>
+            <h3 class="step__title">PUSH</h3>
+            <p class="step__en mono">main → Pages</p>
+            <p class="step__body">推送到 <code>main</code>。Actions 会依次构建每个项目、生成作品集并发布。刷新导航，新的世界就已经在里面。</p>
+            <pre class="code"><code>git add .
+git commit -m "wish: my-wish"
+git push</code></pre>
+          </li>
+        </ol>
+
+        <div class="method__foot">
+          <p>
+            构建脚本：<code>scripts/build-site.mjs</code> · 部署：<code>.github/workflows/pages.yml</code> ·
+            本地预览：<code>node scripts/build-site.mjs --skip-install &amp;&amp; node scripts/serve-site.mjs</code>
+          </p>
+          <a class="link-arrow mono" href="https://github.com/MY-Final/wishcraft" target="_blank" rel="noopener noreferrer"
+            >VIEW THE REPOSITORY <span aria-hidden="true">↗</span></a
+          >
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__brand">
+        <span class="brand__mark" aria-hidden="true"></span>
+        <span>WISHCRAFT · 许愿池</span>
+      </div>
+      <p class="footer__note">A pool of wishes, each built into a world. 1950 — 2026.</p>
+      <div class="footer__meta mono">
+        <span>STATIC ARCHIVE</span>
+        <span>PAGES / <span id="footer-year">2026</span></span>
+        <a href="https://github.com/MY-Final/wishcraft" target="_blank" rel="noopener noreferrer">GITHUB ↗</a>
+      </div>
+    </footer>
+
+    <section class="detail" id="detail" role="dialog" aria-modal="true" aria-labelledby="detail-title" hidden>
+      <div class="detail__bar">
+        <a class="detail__back mono" href="#/">← INDEX</a>
+        <span class="detail__bar-meta mono" id="detail-meta">WORK</span>
+        <button class="detail__close" id="detail-close" type="button" aria-label="关闭作品详情">CLOSE ×</button>
+      </div>
+      <div class="detail__scroll" id="detail-scroll">
+        <div class="detail__inner">
+          <div class="detail__head">
+            <p class="eyebrow mono" id="detail-kicker">—</p>
+            <h2 class="detail__title" id="detail-title">—</h2>
+            <p class="detail__zh" id="detail-zh">—</p>
+            <p class="detail__tagline" id="detail-tagline">—</p>
+          </div>
+          <figure class="detail__cover">
+            <div class="detail__media">
+              <img id="detail-img" alt="" src="" />
+              <span class="detail__fallback" id="detail-fallback"></span>
+            </div>
+            <figcaption class="mono" id="detail-caption">—</figcaption>
+          </figure>
+          <div class="detail__body">
+            <p class="detail__desc" id="detail-desc">—</p>
+            <dl class="detail__facts" id="detail-facts"></dl>
+          </div>
+          <div class="detail__actions">
+            <a class="btn btn--solid" id="detail-enter" href="#">进入作品 <span aria-hidden="true">↗</span></a>
+            <a class="btn" id="detail-newtab" href="#" target="_blank" rel="noopener noreferrer"
+              >新标签打开 <span aria-hidden="true">↗</span></a
+            >
+            <a class="link-arrow mono" id="detail-source" href="https://github.com/MY-Final/wishcraft" target="_blank" rel="noopener noreferrer"
+              >SOURCE <span aria-hidden="true">↗</span></a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="error" id="error" hidden>
+      <p class="mono">THE INDEX COULD NOT BE LOADED.</p>
+      <p>请通过本地服务器打开：<code>node scripts/serve-site.mjs</code>，或等待 GitHub Pages 部署完成。</p>
+    </div>
+
+    <noscript>
+      <div class="noscript">
+        <p>本作品集需要 JavaScript 才能读取作品索引。你也可以直接访问仓库：</p>
+        <p><a href="https://github.com/MY-Final/wishcraft">github.com/MY-Final/wishcraft</a></p>
+      </div>
+    </noscript>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>

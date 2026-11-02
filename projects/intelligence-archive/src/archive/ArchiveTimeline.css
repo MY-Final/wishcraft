@@ -1,0 +1,227 @@
+.arch-timeline {
+  position: relative;
+}
+
+.arch-timeline__year {
+  display: grid;
+  grid-template-columns: clamp(88px, 11vw, 168px) minmax(0, 1fr);
+  gap: clamp(18px, 4vw, 56px);
+  padding-block: clamp(22px, 3vh, 36px);
+  border-top: 1px solid var(--hairline);
+}
+
+.arch-timeline__year:first-child {
+  border-top: 0;
+}
+
+.arch-timeline__marker {
+  position: sticky;
+  top: 192px;
+  align-self: start;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.arch-timeline__year-num {
+  font-size: clamp(1.875rem, 3.2vw, 2.875rem);
+  letter-spacing: -0.055em;
+  line-height: 0.9;
+  color: var(--ink);
+}
+
+.arch-timeline__year-count {
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  color: var(--faint);
+}
+
+.arch-timeline__list {
+  display: flex;
+  flex-direction: column;
+  border-left: 1px solid var(--hairline);
+  padding-left: clamp(14px, 2vw, 28px);
+}
+
+.arch-timeline__item {
+  border-bottom: 1px solid var(--hairline);
+}
+
+.arch-timeline__item:last-child {
+  border-bottom: 0;
+}
+
+/* ---------- regular row ---------- */
+
+.arch-tl-row {
+  display: grid;
+  grid-template-columns: 94px minmax(0, 1fr);
+  gap: 18px;
+  width: 100%;
+  padding: 17px 0;
+  text-align: left;
+  align-items: start;
+}
+
+.arch-tl-row__date {
+  padding-top: 3px;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+}
+
+.arch-tl-row__body {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.arch-tl-row__head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.arch-tl-row__name {
+  font-size: 1.0625rem;
+  font-weight: 500;
+  letter-spacing: -0.025em;
+  border-bottom: 1px solid transparent;
+  transition: border-color var(--dur-fast) var(--ease-out);
+}
+
+.arch-tl-row:hover .arch-tl-row__name {
+  border-bottom-color: var(--ink);
+}
+
+.arch-tl-row__meta {
+  font-size: 9px;
+  letter-spacing: 0.08em;
+  color: var(--faint);
+}
+
+.arch-tl-row__advance {
+  max-width: 44rem;
+  font-size: 0.8125rem;
+  line-height: 1.65;
+  color: var(--graphite);
+}
+
+/* ---------- 2026 archive row ---------- */
+
+.arch-row-2026 {
+  display: grid;
+  grid-template-columns: clamp(104px, 11vw, 148px) minmax(0, 1fr);
+  gap: clamp(16px, 3vw, 32px);
+  width: 100%;
+  padding: clamp(18px, 2.6vh, 28px) 0;
+  text-align: left;
+  align-items: start;
+}
+
+.arch-row-2026__date {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.arch-row-2026__year {
+  font-size: clamp(1.75rem, 2.6vw, 2.375rem);
+  letter-spacing: -0.05em;
+  line-height: 0.92;
+  color: var(--ink);
+}
+
+.arch-row-2026__rest {
+  font-size: 0.8125rem;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+}
+
+.arch-row-2026__slash {
+  color: var(--faint);
+}
+
+.arch-row-2026__body {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.arch-row-2026__head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+}
+
+.arch-row-2026__name {
+  font-size: clamp(1.25rem, 1.7vw, 1.5rem);
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  border-bottom: 1px solid transparent;
+  transition: border-color var(--dur-fast) var(--ease-out);
+}
+
+.arch-row-2026:hover .arch-row-2026__name,
+.arch-row-2026:focus-visible .arch-row-2026__name {
+  border-bottom-color: var(--ink);
+}
+
+.arch-row-2026__meta {
+  font-size: 9px;
+  letter-spacing: 0.08em;
+  color: var(--faint);
+}
+
+.arch-row-2026__advance {
+  max-width: 46rem;
+  font-size: 0.9375rem;
+  line-height: 1.7;
+  color: var(--graphite);
+}
+
+@media (max-width: 860px) {
+  .arch-timeline__year {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .arch-timeline__marker {
+    position: static;
+    flex-direction: row;
+    align-items: baseline;
+    gap: 12px;
+  }
+
+  .arch-timeline__list {
+    border-left: 0;
+    padding-left: 0;
+  }
+
+  .arch-tl-row {
+    grid-template-columns: 1fr;
+    gap: 6px;
+    padding: 15px 0;
+  }
+
+  .arch-tl-row__date {
+    padding-top: 0;
+  }
+
+  .arch-row-2026 {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .arch-row-2026__date {
+    flex-direction: row;
+    align-items: baseline;
+    gap: 10px;
+  }
+
+  .arch-row-2026__year {
+    font-size: 1.625rem;
+  }
+}

@@ -1,0 +1,42 @@
+:root {
+  /* palette */
+  --paper: #fafaf8;
+  --white: #ffffff;
+  --ink: #161616;
+  --graphite: #2a2a2a;
+  --muted: #747474;
+  --faint: #a8a8a4;
+  --hairline: #e6e6e3;
+  --void: #111111;
+  --void-ink: #f2f2ef;
+
+  /* type */
+  --font-sans: 'Inter Tight', 'Helvetica Neue', Helvetica, Arial, 'PingFang SC', 'Hiragino Sans GB',
+    'Microsoft YaHei', sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace;
+  --font-cn: 'PingFang SC', 'Hiragino Sans GB', 'Noto Sans SC', 'Microsoft YaHei', sans-serif;
+
+  --text-mega: clamp(6rem, 20vw, 23rem);
+  --text-display: clamp(3rem, 8.2vw, 8.5rem);
+  --text-h1: clamp(2rem, 4.4vw, 4.25rem);
+  --text-h2: clamp(1.375rem, 2.2vw, 2rem);
+  --text-h3: clamp(1.0625rem, 1.35vw, 1.25rem);
+  --text-body: clamp(1rem, 1.02vw, 1.125rem);
+  --text-small: 0.875rem;
+  --text-meta: 0.6875rem;
+
+  /* layout */
+  --pad-x: clamp(20px, 4.6vw, 88px);
+  --max-width: 1560px;
+  --measure: 42rem;
+  --rail-width: 5.5rem;
+
+  /* motion */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-fast: 320ms;
+  --dur: 760ms;
+  --dur-slow: 1400ms;
+
+  color-scheme: light;
+}

@@ -1,0 +1,458 @@
+/* ==========================================================================
+   EPILOGUE · THE QUESTION REMAINS
+   Pure paper, one silent mirror. --p drives the sequence:
+   fog 0–0.10 · question 0.10–0.22 · work 0.26–0.39 · next 0.43–0.55
+   question 0.55–0.73 · mirror 0.70–0.75 · signature 0.78 · entries 0.83
+   ========================================================================== */
+
+.scene--finale {
+  height: 310vh;
+}
+
+.scene--finale .finale__stage {
+  overflow: clip;
+}
+
+/* ---- fading index of years & model names -------------------------------- */
+
+.finale__fog {
+  --fog: clamp(0, calc(var(--p) / 0.15), 1);
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(24px, 4.2vh, 40px);
+  padding: 64px max(var(--pad-x), calc((100% - 1120px) / 2));
+  opacity: calc(1 - var(--fog));
+  transform: translate3d(0, calc(var(--fog) * -5vh), 0);
+  mask-image: radial-gradient(ellipse at 50% 50%, #000 32%, transparent 78%);
+  -webkit-mask-image: radial-gradient(ellipse at 50% 50%, #000 32%, transparent 78%);
+}
+
+.finale__fog-years,
+.finale__fog-names {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  width: 100%;
+  text-align: center;
+}
+
+.finale__fog-years {
+  gap: clamp(12px, 2.2vh, 22px) 0;
+}
+
+.finale__fog-names {
+  gap: clamp(10px, 1.8vh, 18px) 12px;
+}
+
+.finale__fog-years span {
+  font-size: 12px;
+  letter-spacing: 0.2em;
+  color: rgba(22, 22, 22, 0.24);
+}
+
+.finale__fog-names span {
+  overflow: hidden;
+  font-size: 10.5px;
+  letter-spacing: 0.06em;
+  color: rgba(22, 22, 22, 0.19);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* ---- three statements --------------------------------------------------- */
+
+.finale__beats {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+/* 只有当前段落接受指针，避免淡出层（含出处链接）在屏幕外吞掉点击。 */
+.finale__beat,
+.finale__question,
+.finale__end {
+  pointer-events: none;
+}
+
+.finale__beat.is-active,
+.finale__question.is-active,
+.finale__end.is-active {
+  pointer-events: auto;
+}
+
+.finale__beat {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(16px, 2.4vh, 24px);
+  padding: 64px var(--pad-x);
+  text-align: center;
+  opacity: calc(
+    clamp(0, calc((var(--p) - var(--at)) / 0.045), 1) *
+      (1 - clamp(0, calc((var(--p) - var(--at) - 0.115) / 0.045), 1))
+  );
+  transform: translate3d(
+    0,
+    calc((1 - clamp(0, calc((var(--p) - var(--at)) / 0.06), 1)) * 16px),
+    0
+  );
+}
+
+.finale__beat-kicker {
+  font-size: 8px;
+  letter-spacing: 0.34em;
+  color: var(--faint);
+}
+
+.finale__beat-text {
+  max-width: 22em;
+  font-size: clamp(1.2rem, 2.35vw, 2.1rem);
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  line-height: 1.65;
+  color: var(--ink);
+}
+
+.finale__beat-year {
+  letter-spacing: 0.02em;
+  font-variant-numeric: tabular-nums;
+}
+
+.finale__beat .provenance {
+  opacity: 0.9;
+}
+
+/* ---- the question ------------------------------------------------------- */
+
+.finale__question {
+  --qin: clamp(0, calc((var(--p) - 0.555) / 0.05), 1);
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(16px, 2.4vh, 28px);
+  padding: 64px var(--pad-x);
+  text-align: center;
+  opacity: calc(var(--qin) - clamp(0, calc((var(--p) - 0.685) / 0.045), 1));
+  transform: translate3d(0, calc((1 - var(--qin)) * 22px), 0);
+}
+
+.finale__question-kicker {
+  font-size: 8px;
+  letter-spacing: 0.34em;
+  color: var(--faint);
+}
+
+.finale__question-en {
+  font-family: var(--font-sans);
+  font-size: clamp(2.35rem, 6.1vw, 6rem);
+  font-weight: 500;
+  letter-spacing: -0.045em;
+  line-height: 0.98;
+  color: var(--ink);
+  text-wrap: balance;
+}
+
+.finale__question-cn {
+  max-width: 30em;
+  font-size: clamp(1rem, 1.2vw, 1.125rem);
+  letter-spacing: 0.05em;
+  line-height: 1.9;
+  color: var(--muted);
+}
+
+/* ---- the mirror --------------------------------------------------------- */
+
+.finale__end {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 72px var(--pad-x) 60px;
+}
+
+.finale__axis {
+  width: 1px;
+  height: clamp(56px, 14vh, 140px);
+  background: var(--ink);
+  opacity: calc(clamp(0, calc((var(--p) - 0.675) / 0.05), 1) * 0.32);
+  transform: scaleY(clamp(0, calc((var(--p) - 0.675) / 0.06), 1));
+  transform-origin: top center;
+}
+
+.finale__mirror {
+  position: relative;
+  flex: 0 0 auto;
+  width: min(42vw, 520px);
+  height: clamp(160px, 27vh, 250px);
+  margin-top: 0;
+  background: var(--void);
+  opacity: clamp(0, calc((var(--p) - 0.705) / 0.05), 1);
+  transform: scale(calc(0.965 + clamp(0, calc((var(--p) - 0.705) / 0.09), 1) * 0.035));
+}
+
+.finale__mirror::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 9%;
+  right: 9%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.34) 50%, transparent);
+}
+
+.finale__mirror::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.05), transparent 38%);
+  pointer-events: none;
+}
+
+.finale__signature {
+  margin-top: clamp(18px, 2.6vh, 30px);
+  text-align: center;
+  opacity: clamp(0, calc((var(--p) - 0.775) / 0.04), 1);
+  transform: translate3d(
+    0,
+    calc((1 - clamp(0, calc((var(--p) - 0.775) / 0.05), 1)) * 10px),
+    0
+  );
+}
+
+.finale__signature-line {
+  font-size: 10px;
+  letter-spacing: 0.34em;
+  color: var(--ink);
+}
+
+.finale__signature-range {
+  margin-top: 7px;
+  font-size: 9px;
+  letter-spacing: 0.32em;
+  color: var(--muted);
+}
+
+.finale__signature-continued {
+  margin-top: 10px;
+  font-size: 11px;
+  letter-spacing: 0.4em;
+  color: var(--ink);
+}
+
+.finale__links {
+  display: flex;
+  align-items: stretch;
+  gap: 10px;
+  margin-top: clamp(22px, 3.4vh, 38px);
+  opacity: clamp(0, calc((var(--p) - 0.825) / 0.04), 1);
+}
+
+.finale__links .btn {
+  gap: clamp(1.1rem, 1.8vw, 2.2rem);
+  min-width: 208px;
+}
+
+.finale__colophon {
+  position: absolute;
+  left: var(--pad-x);
+  right: var(--pad-x);
+  bottom: clamp(16px, 2.4vh, 24px);
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  font-size: 8px;
+  letter-spacing: 0.2em;
+  color: var(--faint);
+  opacity: clamp(0, calc((var(--p) - 0.845) / 0.04), 1);
+}
+
+/* ==========================================================================
+   RESPONSIVE
+   ========================================================================== */
+
+@media (max-width: 900px) {
+  .finale__fog {
+    padding: 64px var(--pad-x);
+    gap: 26px;
+  }
+
+  .finale__fog-years,
+  .finale__fog-names {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .finale__fog-years span {
+    font-size: 10px;
+    letter-spacing: 0.14em;
+  }
+
+  .finale__fog-names span {
+    font-size: 9px;
+  }
+
+  .finale__beat {
+    gap: 18px;
+    padding: 64px var(--pad-x) 72px;
+  }
+
+  .finale__beat-text {
+    max-width: 16em;
+    font-size: 1.1875rem;
+    line-height: 1.8;
+  }
+
+  .finale__question {
+    gap: 18px;
+    padding: 64px var(--pad-x) 80px;
+  }
+
+  .finale__question-en {
+    font-size: clamp(1.9rem, 8.6vw, 2.75rem);
+    line-height: 1.04;
+  }
+
+  .finale__question-cn {
+    max-width: none;
+    font-size: 0.875rem;
+    line-height: 1.9;
+  }
+
+  .finale__end {
+    padding: 64px var(--pad-x) 76px;
+  }
+
+  .finale__mirror {
+    width: 74vw;
+    height: clamp(130px, 22vh, 200px);
+  }
+
+  .finale__signature-line,
+  .finale__signature-range,
+  .finale__signature-continued {
+    letter-spacing: 0.24em;
+  }
+
+  .finale__links {
+    flex-direction: column;
+    width: 100%;
+    max-width: 320px;
+    gap: 8px;
+  }
+
+  .finale__links .btn {
+    width: 100%;
+  }
+
+  .finale__colophon {
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    font-size: 7px;
+    letter-spacing: 0.14em;
+    text-align: center;
+  }
+}
+
+/* ==========================================================================
+   REDUCED MOTION — read as a static page
+   ========================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .scene--finale {
+    height: auto;
+  }
+
+  .scene--finale .finale__stage {
+    position: relative;
+    height: auto;
+    overflow: visible;
+    padding: 96px var(--pad-x) 64px;
+  }
+
+  .finale__fog,
+  .finale__beats,
+  .finale__question,
+  .finale__end {
+    position: static;
+    inset: auto;
+    opacity: 1 !important;
+    transform: none !important;
+    padding: 0;
+    mask-image: none;
+    -webkit-mask-image: none;
+  }
+
+  .finale__fog {
+    gap: 22px;
+    margin-bottom: 80px;
+  }
+
+  .finale__fog-years,
+  .finale__fog-names {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .finale__beats {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(48px, 8vh, 80px);
+  }
+
+  .finale__beat {
+    position: static;
+    inset: auto;
+    width: 100%;
+    opacity: 1 !important;
+    transform: none !important;
+    padding: 0;
+  }
+
+  .finale__beat-text {
+    max-width: none;
+    font-size: clamp(1.25rem, 2.2vw, 1.75rem);
+  }
+
+  .finale__question {
+    margin: clamp(64px, 10vh, 110px) 0;
+    opacity: 1 !important;
+  }
+
+  .finale__end {
+    margin-top: 24px;
+  }
+
+  .finale__axis {
+    height: 96px;
+    opacity: 0.32;
+    transform: none;
+  }
+
+  .finale__mirror {
+    opacity: 1;
+    transform: none;
+  }
+
+  .finale__signature,
+  .finale__links,
+  .finale__colophon {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .finale__colophon {
+    position: static;
+    width: 100%;
+    margin-top: 64px;
+  }
+}

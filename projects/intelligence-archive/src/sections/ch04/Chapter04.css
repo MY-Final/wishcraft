@@ -1,0 +1,169 @@
+/* ============================================================
+   CH04 — LANGUAGE BECOMES GENERATIVE / 语言开始生成
+   纸白。上半段是横向模型轨道，下半段是 ChatGPT 的静场。
+   ============================================================ */
+
+.scene--ch04-track {
+  height: 280vh;
+  background: var(--paper);
+}
+
+.scene--ch04-chat {
+  height: 180vh;
+  background: var(--white);
+}
+
+.ch04__stage {
+  /* 3D 文字隧道保留为极淡背景：纸色半透明纱，保证卡片文字可读 */
+  background: rgba(250, 250, 248, 0.86);
+}
+
+/* 两端渐隐：轨道向两侧延伸，也让固定年份轨道保持可读 */
+.ch04__stage::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 3;
+  width: clamp(56px, 8vw, 118px);
+  background: linear-gradient(to right, rgba(250, 250, 248, 0), var(--paper) 78%);
+  pointer-events: none;
+}
+
+.ch04__stage::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 3;
+  width: clamp(20px, 2.6vw, 44px);
+  background: linear-gradient(to left, rgba(250, 250, 248, 0), var(--paper) 80%);
+  pointer-events: none;
+}
+
+.ch04__chat-stage {
+  background: var(--white);
+}
+
+/* ---------------- 章节抬头 ---------------- */
+
+.ch04__header {
+  position: absolute;
+  top: calc(58px + 3.6vh);
+  left: var(--pad-x);
+  right: var(--pad-x);
+  z-index: 4;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: clamp(20px, 4vw, 64px);
+}
+
+.ch04__kicker {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: clamp(12px, 1.8vh, 18px);
+  font-size: 9.5px;
+  letter-spacing: 0.2em;
+  color: var(--muted);
+}
+
+.ch04__kicker-sep {
+  width: 36px;
+  height: 1px;
+  background: var(--hairline);
+}
+
+.ch04__title {
+  max-width: 20ch;
+  font-family: var(--font-sans);
+  font-size: clamp(1.5rem, 3.35vw, 2.7rem);
+  font-weight: 500;
+  line-height: 0.94;
+  letter-spacing: -0.045em;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+
+.ch04__header-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 5px;
+  padding-right: clamp(0px, 6vw, 78px);
+  text-align: right;
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.18em;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.ch04__header-meta .u-cn {
+  font-size: 0.8125rem;
+  letter-spacing: 0.04em;
+  color: var(--graphite);
+  font-family: var(--font-cn);
+}
+
+/* ---------------- 移动端 ---------------- */
+
+@media (max-width: 900px) {
+  .scene--ch04-track {
+    height: 280vh;
+  }
+
+  .scene--ch04-chat {
+    height: 190vh;
+  }
+
+  .ch04__header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    top: calc(52px + 3vh);
+  }
+
+  .ch04__title {
+    max-width: 12ch;
+    font-size: clamp(1.35rem, 7vw, 2rem);
+  }
+
+  .ch04__header-meta {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .ch04__header-meta .u-cn:last-child {
+    display: none;
+  }
+}
+
+/* ---------------- reduced motion：章节退化为文档流 ---------------- */
+
+@media (prefers-reduced-motion: reduce) {
+  .scene--ch04-track,
+  .scene--ch04-chat {
+    height: auto;
+  }
+
+  .scene--ch04-track .scene__stage,
+  .scene--ch04-chat .scene__stage {
+    position: static;
+    height: auto;
+    overflow: visible;
+  }
+
+  .scene--ch04-track .scene__content,
+  .scene--ch04-chat .scene__content {
+    height: auto;
+  }
+
+  .ch04__header {
+    position: static;
+    padding-block: 120px 32px;
+  }
+}

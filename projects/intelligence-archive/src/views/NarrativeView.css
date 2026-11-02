@@ -1,0 +1,13 @@
+.narrative-view {
+  position: relative;
+}
+
+.narrative {
+  position: relative;
+  padding-top: 0;
+}
+
+.narrative-view > canvas,
+.narrative-view .webgl-layer {
+  pointer-events: none;
+}

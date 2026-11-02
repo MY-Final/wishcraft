@@ -1,0 +1,251 @@
+/* ============================================================
+   CH03 — THE DEEP LEARNING REVOLUTION / 深度学习革命
+   深色高潮章：五条记录 → 2017 Transformer。
+   所有运动都从 --p 推导，React 不在滚动中重渲染。
+   ============================================================ */
+
+.scene--ch03 {
+  height: 400vh;
+  background: var(--void);
+}
+
+.ch03__stage {
+  /* ---- 幕次进度：由章节 --p 推导 ---- */
+  --open: calc(1 - clamp(0, calc((var(--p) - 0.018) / 0.055), 1));
+  --lp: clamp(0, calc((var(--p) - 0.075) / 0.45), 1);
+  --ledger-op: min(
+    clamp(0, calc((var(--p) - 0.062) / 0.02), 1),
+    calc(1 - clamp(0, calc((var(--p) - 0.53) / 0.025), 1))
+  );
+  --t: clamp(0, calc((var(--p) - 0.555) / 0.425), 1);
+  --sp: clamp(0, calc((var(--t) - 0.15) / 0.19), 1);
+  --ln: clamp(0, calc((var(--t) - 0.35) / 0.15), 1);
+  --cl: clamp(0, calc((var(--t) - 0.53) / 0.12), 1);
+  --ti: clamp(0, calc((var(--t) - 0.6) / 0.14), 1);
+  --cn: clamp(0, calc((var(--t) - 0.75) / 0.12), 1);
+  --tok: calc(1 - clamp(0, calc((var(--t) - 0.55) / 0.12), 1));
+  --tx-op: clamp(0, calc((var(--p) - 0.552) / 0.02), 1);
+  --plate-gap: 52svh;
+  overflow: hidden;
+}
+
+.ch03__content {
+  position: relative;
+  z-index: 2;
+}
+
+/* 3D 背景层在章节背景之上，这里压一层墨色，保证小字仍然可读 */
+.ch03__scrim {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: rgba(17, 17, 17, 0.62);
+}
+
+/* 12 列竖向细线：档案馆的底板，不发光 */
+.ch03__grid {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background-image: repeating-linear-gradient(
+    to right,
+    rgba(242, 242, 239, 0.055) 0 1px,
+    transparent 1px calc(100% / 12)
+  );
+  opacity: calc(0.35 + 0.65 * var(--ti));
+}
+
+/* 四角登记号 */
+.ch03__rmark {
+  position: absolute;
+  z-index: 6;
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  color: var(--faint);
+  pointer-events: none;
+}
+
+.ch03__rmark--tl {
+  top: calc(58px + 20px);
+  left: var(--pad-x);
+}
+
+.ch03__rmark--tr {
+  top: calc(58px + 20px);
+  right: var(--pad-x);
+  text-align: right;
+}
+
+/* ---------------- 章节封面 ---------------- */
+
+.ch03__opener {
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: calc(58px + 7vh) var(--pad-x) 12vh;
+  opacity: var(--open);
+  transform: translateY(calc((1 - var(--open)) * -5vh));
+  pointer-events: none;
+}
+
+.ch03__kicker {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: clamp(20px, 3.4vh, 34px);
+  font-size: 9.5px;
+  letter-spacing: 0.2em;
+  color: var(--muted);
+}
+
+.ch03__kicker-sep {
+  width: 36px;
+  height: 1px;
+  background: var(--hairline);
+}
+
+.ch03__title {
+  max-width: 17ch;
+  font-family: var(--font-sans);
+  font-size: clamp(2.4rem, 7.4vw, 7rem);
+  font-weight: 500;
+  line-height: 0.9;
+  letter-spacing: -0.05em;
+  text-transform: uppercase;
+  color: var(--void-ink);
+}
+
+.ch03__opener-foot {
+  display: flex;
+  align-items: baseline;
+  gap: clamp(16px, 2vw, 28px);
+  max-width: 640px;
+  margin-top: clamp(22px, 3.6vh, 40px);
+  padding-top: 18px;
+  border-top: 1px solid var(--hairline);
+}
+
+.ch03__title-zh {
+  font-size: clamp(1.05rem, 1.5vw, 1.4rem);
+  letter-spacing: 0.14em;
+  color: var(--void-ink);
+  white-space: nowrap;
+}
+
+.ch03__theme {
+  font-size: clamp(0.8125rem, 0.95vw, 0.9375rem);
+  line-height: 1.7;
+  color: var(--muted);
+}
+
+.ch03__opener-year {
+  position: absolute;
+  right: var(--pad-x);
+  bottom: clamp(36px, 7vh, 92px);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+  opacity: 0.92;
+}
+
+.ch03__opener-year-end {
+  font-size: 10px;
+  letter-spacing: 0.24em;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.ch03__opener-year-start {
+  font-size: clamp(3.6rem, 14vw, 13.5rem);
+  font-weight: 500;
+  line-height: 0.78;
+  letter-spacing: -0.06em;
+  color: var(--void-ink);
+}
+
+/* ---------------- 移动端 ---------------- */
+
+@media (max-width: 900px) {
+  .scene--ch03 {
+    height: 380vh;
+  }
+
+  .ch03__stage {
+    --plate-gap: 68svh;
+  }
+
+  .ch03__title {
+    max-width: 12ch;
+    font-size: clamp(2.1rem, 10.5vw, 3.4rem);
+  }
+
+  .ch03__opener {
+    justify-content: flex-start;
+    padding-top: calc(58px + 12vh);
+  }
+
+  .ch03__opener-foot {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    max-width: 100%;
+  }
+
+  .ch03__opener-year {
+    right: var(--pad-x);
+    bottom: clamp(28px, 6vh, 56px);
+  }
+
+  .ch03__opener-year-start {
+    font-size: clamp(3.2rem, 19vw, 5.4rem);
+  }
+
+  .ch03__rmark--tr {
+    display: none;
+  }
+}
+
+/* ---------------- reduced motion：退化为普通文档流 ---------------- */
+
+@media (prefers-reduced-motion: reduce) {
+  .scene--ch03 {
+    height: auto;
+  }
+
+  .scene--ch03 .scene__stage {
+    position: static;
+    height: auto;
+    overflow: visible;
+  }
+
+  .scene--ch03 .scene__content {
+    height: auto;
+  }
+
+  .ch03__grid {
+    display: none;
+  }
+
+  .ch03__opener {
+    position: static;
+    padding-block: calc(58px + 10vh) 8vh;
+    opacity: 1;
+    transform: none;
+  }
+
+  .ch03__opener-year {
+    position: static;
+    margin-top: 40px;
+    align-items: flex-start;
+  }
+
+  .ch03__opener-year-start {
+    font-size: clamp(3rem, 12vw, 7rem);
+  }
+}

@@ -1,0 +1,20 @@
+# dependencies
+node_modules/
+.pnpm-store/
+
+# build output
+dist/
+_site/
+.vite/
+*.tmp
+
+# screenshots that are not part of the published site
+projects/intelligence-archive/docs/screens/
+docs/site-preview/
+site-preview-*.png
+site-subpath*.png
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.log

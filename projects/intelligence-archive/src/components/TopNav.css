@@ -1,0 +1,233 @@
+.nav {
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: 60;
+  background: var(--paper);
+  border-bottom: 1px solid var(--hairline);
+  transition:
+    background-color var(--dur) var(--ease-out),
+    border-color var(--dur) var(--ease-out),
+    color var(--dur) var(--ease-out);
+}
+
+.nav--void {
+  background: var(--void);
+  border-color: #262626;
+  color: var(--void-ink);
+}
+
+.nav__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  height: 58px;
+  padding-inline: var(--pad-x);
+}
+
+.nav__brand {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  min-width: 0;
+}
+
+.nav__brand-en {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  white-space: nowrap;
+}
+
+.nav__brand-cn {
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.nav--void .nav__brand-cn {
+  color: #8a8a88;
+}
+
+.nav__links {
+  display: flex;
+  align-items: center;
+  gap: clamp(18px, 2.4vw, 36px);
+}
+
+.nav__link {
+  position: relative;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  color: var(--muted);
+  padding-block: 6px;
+  transition: color var(--dur-fast) var(--ease-out);
+}
+
+.nav__link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform var(--dur-fast) var(--ease-out);
+}
+
+.nav__link:hover,
+.nav__link.is-active {
+  color: var(--ink);
+}
+
+.nav--void .nav__link {
+  color: #8a8a88;
+}
+.nav--void .nav__link:hover,
+.nav--void .nav__link.is-active {
+  color: var(--void-ink);
+}
+
+.nav__link.is-active::after,
+.nav__link:hover::after {
+  transform: scaleX(1);
+}
+
+.nav__year {
+  min-width: 4ch;
+  text-align: right;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  color: var(--ink);
+  border-left: 1px solid var(--hairline);
+  padding-left: clamp(18px, 2.4vw, 36px);
+}
+
+.nav--void .nav__year {
+  color: var(--void-ink);
+  border-color: #2a2a2a;
+}
+
+.nav__menu-toggle {
+  display: none;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav__menu-label {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.16em;
+}
+
+.nav__menu-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+  width: 16px;
+  height: 16px;
+}
+
+.nav__menu-icon i {
+  display: block;
+  height: 1px;
+  background: currentColor;
+  transition: transform var(--dur-fast) var(--ease-out);
+}
+
+.nav--open .nav__menu-icon i:first-child {
+  transform: translateY(2.5px) rotate(45deg);
+}
+.nav--open .nav__menu-icon i:last-child {
+  transform: translateY(-2.5px) rotate(-45deg);
+}
+
+.nav__overlay[hidden] {
+  display: none;
+}
+
+.nav__overlay {
+  position: fixed;
+  inset: 58px 0 0 0;
+  z-index: 55;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: clamp(32px, 8vh, 72px) var(--pad-x) 32px;
+  background: var(--paper);
+}
+
+.nav--void .nav__overlay {
+  background: var(--void);
+  color: var(--void-ink);
+}
+
+.nav__overlay-links {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.nav__overlay-link {
+  display: flex;
+  align-items: baseline;
+  gap: 18px;
+  font-family: var(--font-sans);
+  font-size: clamp(2rem, 9vw, 3.25rem);
+  font-weight: 500;
+  letter-spacing: -0.04em;
+  line-height: 1.14;
+  border-bottom: 1px solid var(--hairline);
+  padding-block: 12px;
+}
+
+.nav--void .nav__overlay-link {
+  border-color: #2a2a2a;
+}
+
+.nav__overlay-link.is-active {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 8px;
+}
+
+.nav__overlay-index {
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  color: var(--muted);
+}
+
+.nav__overlay-meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  padding-top: 24px;
+  border-top: 1px solid var(--hairline);
+}
+
+@media (max-width: 860px) {
+  .nav__inner {
+    height: 52px;
+  }
+  .nav__brand-en {
+    font-size: 9px;
+    letter-spacing: 0.14em;
+  }
+  .nav__brand-cn {
+    display: none;
+  }
+  .nav__links {
+    display: none;
+  }
+  .nav__menu-toggle {
+    display: inline-flex;
+  }
+  .nav__overlay {
+    inset: 52px 0 0 0;
+  }
+}

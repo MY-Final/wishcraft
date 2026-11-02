@@ -1,0 +1,2417 @@
+{
+  "models": [
+    {
+      "id": "deepseek-v3-0324",
+      "name": "DeepSeek-V3-0324",
+      "organization": "deepseek",
+      "countryOrRegion": "CN",
+      "family": "DeepSeek-V",
+      "generation": "V3",
+      "announcementDate": "2025-03-24",
+      "availabilityDate": "2025-03-24",
+      "displayDate": "2025.03.24",
+      "datePrecision": "day",
+      "dateType": "weights",
+      "category": "language",
+      "tags": [
+        "MoE",
+        "开源权重",
+        "非推理模式"
+      ],
+      "openWeights": true,
+      "architecture": "MoE（延续 DeepSeek-V3 架构）",
+      "parameters": null,
+      "contextWindow": null,
+      "capabilities": [
+        "通用对话",
+        "代码生成",
+        "中文写作",
+        "函数调用"
+      ],
+      "summary": "DeepSeek 将 deepseek-chat 升级为 V3-0324 并开源权重。官方披露推理提升明显：MMLU-Pro 由 75.9 升至 81.2，AIME 由 39.6 升至 59.4，LiveCodeBench 由 39.2 升至 49.2。",
+      "keyAdvancement": "在 V3 基座上进行后训练强化，数学与代码基准整体上一个台阶，并显著降低函数调用错误率，中文写作向 R1 风格对齐。",
+      "significance": "以开源权重交付了接近同期闭源中档模型的推理水平，巩固「开源权重加低价 API」路线，也成为后续 V3.1 与 R1 蒸馏体系的直接基座。",
+      "predecessors": [],
+      "successors": [
+        "deepseek-v3-1"
+      ],
+      "sources": [
+        {
+          "label": "DeepSeek API Docs — Change Log（2025-03-24 条目）",
+          "url": "https://api-docs.deepseek.com/updates",
+          "kind": "docs"
+        },
+        {
+          "label": "Hugging Face — deepseek-ai/DeepSeek-V3-0324",
+          "url": "https://huggingface.co/deepseek-ai/DeepSeek-V3-0324",
+          "kind": "weights"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": null
+    },
+    {
+      "id": "deepseek-r1",
+      "name": "DeepSeek-R1",
+      "organization": "deepseek",
+      "countryOrRegion": "CN",
+      "family": "DeepSeek-R",
+      "generation": "R1",
+      "announcementDate": "2025-01-20",
+      "availabilityDate": "2025-01-20",
+      "displayDate": "2025.01.20",
+      "datePrecision": "day",
+      "dateType": "announcement",
+      "category": "reasoning",
+      "tags": [
+        "推理模型",
+        "MIT 许可",
+        "开源权重",
+        "强化学习"
+      ],
+      "openWeights": true,
+      "architecture": "MoE + 大规模强化学习后训练",
+      "parameters": null,
+      "contextWindow": null,
+      "capabilities": [
+        "长链思维推理",
+        "数学与代码",
+        "可蒸馏",
+        "商业可用"
+      ],
+      "summary": "DeepSeek 发布推理模型 R1，官方称数学、代码与推理任务与 OpenAI o1 同级，并以 MIT 许可开源权重与技术报告，允许蒸馏商用；同时开源 6 个 R1 蒸馏小模型，32B 与 70B 版达到 o1-mini 水平。",
+      "keyAdvancement": "首次以开源权重和 MIT 许可公开具备长链思维链的推理模型，用极少量标注数据的大规模强化学习后训练达到 o1 级表现。",
+      "significance": "把测试时推理从闭源专属能力变成可下载、可蒸馏、可商用的公共品，直接触发 2025 年全球推理模型竞赛与开源复现浪潮。",
+      "predecessors": [],
+      "successors": [
+        "deepseek-r1-0528"
+      ],
+      "sources": [
+        {
+          "label": "DeepSeek — DeepSeek-R1 Release",
+          "url": "https://api-docs.deepseek.com/news/news250120",
+          "kind": "official"
+        },
+        {
+          "label": "Hugging Face — deepseek-ai/DeepSeek-R1",
+          "url": "https://huggingface.co/deepseek-ai/DeepSeek-R1",
+          "kind": "weights"
+        },
+        {
+          "label": "GitHub — deepseek-ai/DeepSeek-R1（仓库创建于 2025-01-20）",
+          "url": "https://github.com/deepseek-ai/DeepSeek-R1",
+          "kind": "weights"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": null
+    },
+    {
+      "id": "deepseek-r1-0528",
+      "name": "DeepSeek-R1-0528",
+      "organization": "deepseek",
+      "countryOrRegion": "CN",
+      "family": "DeepSeek-R",
+      "generation": "R1",
+      "announcementDate": "2025-05-28",
+      "availabilityDate": "2025-05-28",
+      "displayDate": "2025.05.28",
+      "datePrecision": "day",
+      "dateType": "announcement",
+      "category": "reasoning",
+      "tags": [
+        "推理模型",
+        "开源权重",
+        "小版本升级"
+      ],
+      "openWeights": true,
+      "architecture": "MoE + 强化学习后训练（R1 迭代）",
+      "parameters": null,
+      "contextWindow": null,
+      "capabilities": [
+        "长链推理",
+        "函数调用",
+        "JSON 输出",
+        "前端生成"
+      ],
+      "summary": "DeepSeek 将 deepseek-reasoner 升级为 R1-0528。官方 Pass@1 变化为 AIME 2025 由 70.0 升至 87.5、LiveCodeBench 由 63.5 升至 73.3，并补上 JSON 输出与函数调用。",
+      "keyAdvancement": "以增加思考 token 为代价换取推理大幅提升，并首次为 R1 系列补齐函数调用与 JSON 结构化输出，使推理模型可直接进入工具链。",
+      "significance": "把开源推理模型从「能做难题」推进到「能接入工程系统」，是 2025 年推理模型落地 Agent 与代码流水线的关键一版。",
+      "predecessors": [
+        "deepseek-r1"
+      ],
+      "successors": [
+        "deepseek-v3-1"
+      ],
+      "sources": [
+        {
+          "label": "DeepSeek API Docs — Change Log（2025-05-28 条目）",
+          "url": "https://api-docs.deepseek.com/updates",
+          "kind": "docs"
+        },
+        {
+          "label": "Hugging Face — deepseek-ai/DeepSeek-R1-0528",
+          "url": "https://huggingface.co/deepseek-ai/DeepSeek-R1-0528",
+          "kind": "weights"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": "官方提示：复杂推理任务消耗 token 较旧版更多。"
+    },
+    {
+      "id": "deepseek-v3-1",
+      "name": "DeepSeek-V3.1",
+      "organization": "deepseek",
+      "countryOrRegion": "CN",
+      "family": "DeepSeek-V",
+      "generation": "V3.1",
+      "announcementDate": "2025-08-21",
+      "availabilityDate": "2025-08-21",
+      "displayDate": "2025.08.21",
+      "datePrecision": "day",
+      "dateType": "announcement",
+      "category": "agent",
+      "tags": [
+        "混合推理",
+        "Agent",
+        "开源权重",
+        "128K 上下文"
+      ],
+      "openWeights": true,
+      "architecture": "MoE（V3 基座 + 840B token 长上下文继续预训练）",
+      "parameters": null,
+      "contextWindow": "128K tokens",
+      "capabilities": [
+        "思考与非思考双模式",
+        "工具调用",
+        "代码智能体",
+        "搜索智能体"
+      ],
+      "summary": "DeepSeek 发布 V3.1，用一个模型同时支持思考与非思考模式，取代 chat 与 reasoner 双模型路线。官方称 V3.1-Think 比 R1-0528 用更少时间给答案，后训练强化工具使用，SWE-bench Verified 达 66.0。",
+      "keyAdvancement": "首个把思考与非思考合并进同一模型并原生支持 Anthropic API 格式的 DeepSeek 模型，上下文扩展到 128K。",
+      "significance": "标志着 DeepSeek 从「模型即聊天接口」转向「模型即 Agent 后端」，混合推理 + 工具调用成为此后中国开源模型的通用范式。",
+      "predecessors": [
+        "deepseek-v3-0324",
+        "deepseek-r1-0528"
+      ],
+      "successors": [
+        "deepseek-v3-1-terminus",
+        "deepseek-v3-2-exp"
+      ],
+      "sources": [
+        {
+          "label": "DeepSeek — DeepSeek-V3.1 Release",
+          "url": "https://api-docs.deepseek.com/news/news250821",
+          "kind": "official"
+        },
+        {
+          "label": "Hugging Face — deepseek-ai/DeepSeek-V3.1",
+          "url": "https://huggingface.co/deepseek-ai/DeepSeek-V3.1",
+          "kind": "weights"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": null
+    },
+    {
+      "id": "deepseek-v3-1-terminus",
+      "name": "DeepSeek-V3.1-Terminus",
+      "organization": "deepseek",
+      "countryOrRegion": "CN",
+      "family": "DeepSeek-V",
+      "generation": "V3.1",
+      "announcementDate": "2025-09-22",
+      "availabilityDate": "2025-09-22",
+      "displayDate": "2025.09.22",
+      "datePrecision": "day",
+      "dateType": "announcement",
+      "category": "agent",
+      "tags": [
+        "缺陷修复",
+        "Agent",
+        "开源权重"
+      ],
+      "openWeights": true,
+      "architecture": "MoE（V3.1 架构，重做后训练）",
+      "parameters": null,
+      "contextWindow": "128K tokens",
+      "capabilities": [
+        "语言一致性",
+        "代码智能体",
+        "搜索智能体"
+      ],
+      "summary": "DeepSeek 将接口升级为 V3.1-Terminus，官方定位为保持原有能力、修复用户反馈问题的维护版：减少中英文混输与偶发异常字符，并进一步优化代码智能体与搜索智能体的表现。该版本随后成为 V3.2-Exp 的直接基座。",
+      "keyAdvancement": "不改架构而重做后训练，集中修复语言一致性与 Agent 流程中的实际缺陷，是 V3.1 到 V3.2 之间的稳定化台阶。",
+      "significance": "说明中国头部实验室已把「版本收敛与缺陷修复」纳入常规发布节奏，为随后的稀疏注意力架构切换提供了可比对基线。",
+      "predecessors": [
+        "deepseek-v3-1"
+      ],
+      "successors": [
+        "deepseek-v3-2-exp"
+      ],
+      "sources": [
+        {
+          "label": "DeepSeek API Docs — Change Log（2025-09-22 条目）",
+          "url": "https://api-docs.deepseek.com/updates",
+          "kind": "docs"
+        },
+        {
+          "label": "Hugging Face — deepseek-ai/DeepSeek-V3.1-Terminus",
+          "url": "https://huggingface.co/deepseek-ai/DeepSeek-V3.1-Terminus",
+          "kind": "weights"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": null
+    },
+    {
+      "id": "deepseek-v3-2-exp",
+      "name": "DeepSeek-V3.2-Exp",
+      "organization": "deepseek",
+      "countryOrRegion": "CN",
+      "family": "DeepSeek-V",
+      "generation": "V3.2",
+      "announcementDate": "2025-09-29",
+      "availabilityDate": "2025-09-29",
+      "displayDate": "2025.09.29",
+      "datePrecision": "day",
+      "dateType": "announcement",
+      "category": "reasoning",
+      "tags": [
+        "DSA 稀疏注意力",
+        "长上下文",
+        "降价",
+        "开源权重"
+      ],
+      "openWeights": true,
+      "architecture": "MoE + DeepSeek Sparse Attention（DSA）",
+      "parameters": null,
+      "contextWindow": null,
+      "capabilities": [
+        "长上下文推理",
+        "效率优化",
+        "开源内核"
+      ],
+      "summary": "DeepSeek 推出实验版 V3.2-Exp，首次引入 DeepSeek Sparse Attention，在几乎不损质量的前提下降低长上下文训练与推理成本；官方称基准与 V3.1-Terminus 持平，API 降价逾 50%，权重、技术报告与内核一并开源。",
+      "keyAdvancement": "用细粒度稀疏注意力替换全注意力，把长上下文成本压到可长期低价供应的水平，并公开底层内核而非只放权重。",
+      "significance": "稀疏注意力成为中国开源模型降本主线，DSA 随后被 GLM-5 等同行直接采用，形成跨机构的技术外溢。",
+      "predecessors": [
+        "deepseek-v3-1-terminus"
+      ],
+      "successors": [
+        "deepseek-v3-2"
+      ],
+      "sources": [
+        {
+          "label": "DeepSeek — Introducing DeepSeek-V3.2-Exp",
+          "url": "https://api-docs.deepseek.com/news/news250929",
+          "kind": "official"
+        },
+        {
+          "label": "Hugging Face — deepseek-ai/DeepSeek-V3.2-Exp",
+          "url": "https://huggingface.co/deepseek-ai/DeepSeek-V3.2-Exp",
+          "kind": "weights"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": "V3.1-Terminus 通过临时 API 保留至 2025-10-15 15:59 UTC，供对比测试。"
+    },
+    {
+      "id": "deepseek-v3-2",
+      "name": "DeepSeek-V3.2",
+      "organization": "deepseek",
+      "countryOrRegion": "CN",
+      "family": "DeepSeek-V",
+      "generation": "V3.2",
+      "announcementDate": "2025-12-01",
+      "availabilityDate": "2025-12-01",
+      "displayDate": "2025.12.01",
+      "datePrecision": "day",
+      "dateType": "announcement",
+      "category": "agent",
+      "tags": [
+        "Thinking in Tool-Use",
+        "Agent",
+        "开源权重"
+      ],
+      "openWeights": true,
+      "architecture": "MoE + DSA",
+      "parameters": null,
+      "contextWindow": null,
+      "capabilities": [
+        "边思考边调工具",
+        "多环境 Agent",
+        "推理与长度平衡"
+      ],
+      "summary": "DeepSeek 发布 V3.2 作为 V3.2-Exp 正式后继，主打推理与输出长度的平衡；它是首个把思考直接嵌入工具调用的 DeepSeek 模型，两种模式均可调用工具，训练用覆盖 1800 多环境、8.5 万条指令的 Agent 数据合成法。",
+      "keyAdvancement": "把推理链与工具调用在同一生成过程中交织，取代「先想完再动手」的两段式流程，并给出可复现的大规模 Agent 环境合成方案。",
+      "significance": "确立「推理即 Agent 内核」的工程范式，使开源模型在长程任务上接近闭源前沿，也把环境规模变成新的竞争维度。",
+      "predecessors": [
+        "deepseek-v3-2-exp"
+      ],
+      "successors": [
+        "deepseek-v4-pro",
+        "deepseek-v4-flash"
+      ],
+      "sources": [
+        {
+          "label": "DeepSeek — DeepSeek-V3.2 Release",
+          "url": "https://api-docs.deepseek.com/news/news251201",
+          "kind": "official"
+        },
+        {
+          "label": "Hugging Face — deepseek-ai/DeepSeek-V3.2",
+          "url": "https://huggingface.co/deepseek-ai/DeepSeek-V3.2",
+          "kind": "weights"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": null
+    },
+    {
+      "id": "deepseek-v3-2-speciale",
+      "name": "DeepSeek-V3.2-Speciale",
+      "organization": "deepseek",
+      "countryOrRegion": "CN",
+      "family": "DeepSeek-V",
+      "generation": "V3.2",
+      "announcementDate": "2025-12-01",
+      "availabilityDate": "2025-12-01",
+      "displayDate": "2025.12.01",
+      "datePrecision": "day",
+      "dateType": "announcement",
+      "category": "reasoning",
+      "tags": [
+        "极限推理",
+        "竞赛数学",
+        "开源权重",
+        "仅 API"
+      ],
+      "openWeights": true,
+      "architecture": "MoE + DSA（推理强化版）",
+      "parameters": null,
+      "contextWindow": null,
+      "capabilities": [
+        "竞赛级数学",
+        "长思考推理",
+        "无工具调用"
+      ],
+      "summary": "DeepSeek 随 V3.2 发布推理强化版 Speciale，官方称其在 IMO、CMO、ICPC 世界总决赛与 IOI 2025 达金牌级水平，并对标 Gemini-3.0-Pro；该版本仅经临时 API 提供、不支持工具调用，权重随后开源。",
+      "keyAdvancement": "用极高的思考 token 预算把开源模型推到竞赛金牌区间，明确以「无工具、纯推理」形态对标闭源推理旗舰。",
+      "significance": "为开源推理能力提供了可验证的竞赛级上限证据，也让「同权重、不同推理预算」成为模型家族的标准分层方式。",
+      "predecessors": [
+        "deepseek-v3-2"
+      ],
+      "successors": [],
+      "sources": [
+        {
+          "label": "DeepSeek — DeepSeek-V3.2 Release",
+          "url": "https://api-docs.deepseek.com/news/news251201",
+          "kind": "official"
+        },
+        {
+          "label": "Hugging Face — deepseek-ai/DeepSeek-V3.2-Speciale",
+          "url": "https://huggingface.co/deepseek-ai/DeepSeek-V3.2-Speciale",
+          "kind": "weights"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": "官方说明其复杂度高、token 消耗大；HF 仓库创建于 2025-11-28，公告日为 2025-12-01。"
+    },
+    {
+      "id": "deepseek-v4-pro",
+      "name": "DeepSeek-V4-Pro",
+      "organization": "deepseek",
+      "countryOrRegion": "CN",
+      "family": "DeepSeek-V",
+      "generation": "V4",
+      "announcementDate": "2026-04-24",
+      "availabilityDate": "2026-04-24",
+      "displayDate": "2026.04.24",
+      "datePrecision": "day",
+      "dateType": "announcement",
+      "category": "agent",
+      "tags": [
+        "1M 上下文",
+        "DSA",
+        "开源权重",
+        "Agentic Coding"
+      ],
+      "openWeights": true,
+      "architecture": "MoE + 词元压缩与 DSA 稀疏注意力",
+      "parameters": "1.6T total / 49B active",
+      "contextWindow": "1M tokens",
+      "capabilities": [
+        "Agentic Coding",
+        "世界知识",
+        "数学与 STEM",
+        "长上下文"
+      ],
+      "summary": "DeepSeek 发布 V4 预览版并开源权重，旗舰 V4-Pro 为 1.6 万亿总参数、490 亿激活，全系默认 1M 上下文，用词元级压缩加 DSA 稀疏注意力降低长上下文成本。8 月 13 日转正式版，新增三档思考强度。",
+      "keyAdvancement": "把 1M 上下文做成默认能力而非可选扩展，并以词元压缩加稀疏注意力在万亿级 MoE 上控制单位推理成本。",
+      "significance": "中国开源旗舰首次把上下文规模与 Agent 工作流同时拉到与闭源前沿同档，也让「长上下文默认化」成为 2026 年的行业基线。",
+      "predecessors": [
+        "deepseek-v3-2"
+      ],
+      "successors": [
+        "deepseek-v4-1-flash"
+      ],
+      "sources": [
+        {
+          "label": "DeepSeek — DeepSeek V4 Preview Release",
+          "url": "https://api-docs.deepseek.com/news/news260424",
+          "kind": "official"
+        },
+        {
+          "label": "DeepSeek — DeepSeek-V4-Pro GA Release",
+          "url": "https://api-docs.deepseek.com/news/news260813.md",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": "2026-08-13 正式版将 deepseek-v4-pro 标为 GA；2026-09-10 起 V4-Pro 请求被路由至 V4.1-Flash，官方称待 V4.1-Pro 发布。"
+    },
+    {
+      "id": "deepseek-v4-flash",
+      "name": "DeepSeek-V4-Flash",
+      "organization": "deepseek",
+      "countryOrRegion": "CN",
+      "family": "DeepSeek-V",
+      "generation": "V4",
+      "announcementDate": "2026-04-24",
+      "availabilityDate": "2026-04-24",
+      "displayDate": "2026.04.24",
+      "datePrecision": "day",
+      "dateType": "announcement",
+      "category": "language",
+      "tags": [
+        "小参数 MoE",
+        "1M 上下文",
+        "高吞吐",
+        "开源权重"
+      ],
+      "openWeights": true,
+      "architecture": "MoE + DSA",
+      "parameters": "284B total / 13B active",
+      "contextWindow": "1M tokens",
+      "capabilities": [
+        "高效推理",
+        "简单 Agent 任务",
+        "双模式"
+      ],
+      "summary": "V4-Flash 与 V4-Pro 同日发布，为 2840 亿总参数、130 亿激活的小尺寸 MoE，官方称推理能力接近 V4-Pro、在简单 Agent 任务上与之持平，响应更快、价格更低，同样默认 1M 上下文并支持双模式。",
+      "keyAdvancement": "在 1M 上下文的同一代架构下提供 13B 激活的小尺寸版本，把长上下文能力下放到低成本、高并发场景。",
+      "significance": "延续「旗舰加轻量」的双线策略，使开源权重模型能以更低单位成本承接大规模 Agent 调用，压缩闭源中端模型的价格空间。",
+      "predecessors": [
+        "deepseek-v3-2"
+      ],
+      "successors": [
+        "deepseek-v4-1-flash"
+      ],
+      "sources": [
+        {
+          "label": "DeepSeek — DeepSeek V4 Preview Release",
+          "url": "https://api-docs.deepseek.com/news/news260424",
+          "kind": "official"
+        },
+        {
+          "label": "DeepSeek API Docs — Change Log（2026-07-31 V4-Flash Update）",
+          "url": "https://api-docs.deepseek.com/updates",
+          "kind": "docs"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": "2026-07-31 官方发布 V4-Flash-0731，称架构与尺寸不变、仅重做后训练；2026-09-10 起该型号退役并由 V4.1-Flash 承接。"
+    },
+    {
+      "id": "deepseek-v4-flash-vision-exp",
+      "name": "DeepSeek-V4-Flash-Vision-Exp",
+      "organization": "deepseek",
+      "countryOrRegion": "CN",
+      "family": "DeepSeek-V",
+      "generation": "V4",
+      "announcementDate": "2026-08-21",
+      "availabilityDate": "2026-08-21",
+      "displayDate": "2026.08.21",
+      "datePrecision": "day",
+      "dateType": "api",
+      "category": "multimodal",
+      "tags": [
+        "视觉理解",
+        "实验版本",
+        "Agent"
+      ],
+      "openWeights": null,
+      "architecture": "未公开（实验版本，基于 V4-Flash）",
+      "parameters": null,
+      "contextWindow": null,
+      "capabilities": [
+        "视觉理解",
+        "多模态 Agent",
+        "图表与文档问答"
+      ],
+      "summary": "DeepSeek 上线实验性视觉模型 V4-Flash-Vision-Exp，官方称其纯文本能力与 V4-Flash 持平，在需要视觉理解的 Agent 基准上明显提升，Terminal Bench 2.1 得 83.9、DSBench-Hard 63.6。",
+      "keyAdvancement": "在 V4-Flash 的文本能力之上补齐视觉输入，把多模态能力接入代码与终端类 Agent 评测体系。",
+      "significance": "标志 DeepSeek 从纯文本模型向原生多模态扩展的过渡步骤，为随后的 V4.1-Flash 原生多模态架构铺路。",
+      "predecessors": [
+        "deepseek-v4-flash"
+      ],
+      "successors": [
+        "deepseek-v4-1-flash"
+      ],
+      "sources": [
+        {
+          "label": "DeepSeek API Docs — Change Log（2026-08-21 条目）",
+          "url": "https://api-docs.deepseek.com/updates",
+          "kind": "docs"
+        },
+        {
+          "label": "Hugging Face — deepseek-ai/DeepSeek-V4-Flash-Vision-Exp",
+          "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-Vision-Exp",
+          "kind": "weights"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": "官方称其为实验模型；HF 仓库创建于 2026-08-31。"
+    },
+    {
+      "id": "deepseek-v4-1-flash",
+      "name": "DeepSeek-V4.1-Flash",
+      "organization": "deepseek",
+      "countryOrRegion": "CN",
+      "family": "DeepSeek-V",
+      "generation": "V4.1",
+      "announcementDate": "2026-09-10",
+      "availabilityDate": "2026-09-10",
+      "displayDate": "2026.09.10",
+      "datePrecision": "day",
+      "dateType": "announcement",
+      "category": "multimodal",
+      "tags": [
+        "非对称架构",
+        "原生多模态",
+        "KV 缓存压缩",
+        "开源权重"
+      ],
+      "openWeights": true,
+      "architecture": "Causal Encoder–Decoder MoE（输入 8B / 输出 16B 激活）",
+      "parameters": "552B total / 8B 输入激活、16B 输出激活",
+      "contextWindow": null,
+      "capabilities": [
+        "原生视觉理解",
+        "Agentic Coding",
+        "低成本高吞吐"
+      ],
+      "summary": "DeepSeek 发布新架构最小成员 V4.1-Flash：5520 亿参数 MoE，用因果编码器—解码器结构，输入侧激活 80 亿、输出侧 160 亿参数，原生支持视觉理解；KV 缓存仅需前代四分之一 HBM 存储，权重同步开源。",
+      "keyAdvancement": "以非对称编码器—解码器把输入与输出计算解耦，配合缓存压缩，在小于 V4-Pro 的成本下取得超过上一代旗舰的评测成绩。",
+      "significance": "是中国实验室首次在旗舰级全面改用非 Transformer 等价的非对称架构，并把成本优势直接转化为 API 降价与旧型号退役。",
+      "predecessors": [
+        "deepseek-v4-flash",
+        "deepseek-v4-flash-vision-exp"
+      ],
+      "successors": [
+        "deepseek-v4-1-flash-1017"
+      ],
+      "sources": [
+        {
+          "label": "DeepSeek — DeepSeek-V4.1-Flash: Smarter, Faster, More Efficient",
+          "url": "https://api-docs.deepseek.com/news/news260910",
+          "kind": "official"
+        },
+        {
+          "label": "DeepSeek API Docs — Change Log（2026-09-10 条目）",
+          "url": "https://api-docs.deepseek.com/updates",
+          "kind": "docs"
+        },
+        {
+          "label": "Hugging Face — deepseek-ai/DeepSeek-V4.1-Flash",
+          "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash",
+          "kind": "weights"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": "官方称自 2026-09-14 04:00 UTC 起所有 deepseek-v4-pro 请求按 V4.1-Flash 计费路由，直至 V4.1-Pro 发布；V4-Flash 与 V4-Flash-Vision-Exp 退役。"
+    },
+    {
+      "id": "deepseek-v4-1-flash-1017",
+      "name": "DeepSeek-V4.1-Flash-1017",
+      "organization": "deepseek",
+      "countryOrRegion": "CN",
+      "family": "DeepSeek-V",
+      "generation": "V4.1",
+      "announcementDate": "2026-10-17",
+      "availabilityDate": "2026-10-17",
+      "displayDate": "2026.10.17",
+      "datePrecision": "day",
+      "dateType": "announcement",
+      "category": "agent",
+      "tags": [
+        "强化学习",
+        "端到端项目开发",
+        "开源权重",
+        "Pareto 优化"
+      ],
+      "openWeights": true,
+      "architecture": "Causal Encoder–Decoder MoE（V4.1-Flash 迭代）",
+      "parameters": null,
+      "contextWindow": null,
+      "capabilities": [
+        "长程编程",
+        "3D 与游戏工程",
+        "工具调用",
+        "搜索与抓取"
+      ],
+      "summary": "DeepSeek 将 deepseek-flash 升级为 V4.1-Flash-1017，官方定位性能与成本的帕累托改进：基准提升、任务完成更快、输出更短，权重同步开源；同日开放自研搜索引擎支持的搜索与抓取 API，每千次调用 0.75 美元。",
+      "keyAdvancement": "用带自反馈的强化学习提升端到端项目开发能力，并把「更短输出加更快收敛」作为与前代区分的核心指标。",
+      "significance": "把开放权重模型的优化目标从单项基准分数转向真实任务的总成本，同时以自研搜索基础设施减少对外部检索服务的依赖。",
+      "predecessors": [
+        "deepseek-v4-1-flash"
+      ],
+      "successors": [],
+      "sources": [
+        {
+          "label": "DeepSeek — DeepSeek-V4.1-Flash-1017: Wish-Driven Programming Made Real",
+          "url": "https://api-docs.deepseek.com/news/news261017",
+          "kind": "official"
+        },
+        {
+          "label": "Hugging Face — deepseek-ai/DeepSeek-V4.1-Flash-1017",
+          "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017",
+          "kind": "weights"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": null
+    },
+    {
+      "id": "qwen3-235b-a22b",
+      "name": "Qwen3",
+      "organization": "alibaba-qwen",
+      "countryOrRegion": "CN",
+      "family": "Qwen",
+      "generation": "3",
+      "announcementDate": "2025-04-29",
+      "availabilityDate": "2025-04-29",
+      "displayDate": "2025.04.29",
+      "datePrecision": "day",
+      "dateType": "weights",
+      "category": "reasoning",
+      "tags": [
+        "MoE",
+        "混合推理",
+        "Apache 2.0",
+        "开源权重"
+      ],
+      "openWeights": true,
+      "architecture": "MoE（235B total / 22B active）与 dense 系列",
+      "parameters": "235B total / 22B active（旗舰 MoE）",
+      "contextWindow": "128K tokens",
+      "capabilities": [
+        "思考预算控制",
+        "多语言",
+        "Agent 与工具调用",
+        "代码"
+      ],
+      "summary": "阿里发布 Qwen3，开源旗舰为 235B-A22B 与 30B-A3B 两个 MoE，另有 6 款 0.6B 到 32B 的 dense 模型，均为 Apache 2.0。同一权重支持思考与非思考模式，可逐轮切换，覆盖 119 种语言，预训练约 36 万亿 token。",
+      "keyAdvancement": "把可调的思考预算与双模式融合做成同权重能力，并用 36 万亿 token、119 语言语料把开源多语言基座推到新规模。",
+      "significance": "Qwen3 成为中国开源模型生态的分水岭：Apache 2.0 加全尺寸矩阵使衍生模型数量迅速膨胀，长期占据 Hugging Face 衍生模型榜首。",
+      "predecessors": [],
+      "successors": [
+        "qwen3-next",
+        "qwen3-5"
+      ],
+      "sources": [
+        {
+          "label": "Qwen — Qwen3: Think Deeper, Act Faster",
+          "url": "https://qwenlm.github.io/blog/qwen3/",
+          "kind": "official"
+        },
+        {
+          "label": "Hugging Face — Qwen/Qwen3-235B-A22B",
+          "url": "https://huggingface.co/Qwen/Qwen3-235B-A22B",
+          "kind": "weights"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": "HF 仓库创建于 2025-04-27，官方博客日期为 2025-04-29。"
+    },
+    {
+      "id": "qwen3-coder",
+      "name": "Qwen3-Coder",
+      "organization": "alibaba-qwen",
+      "countryOrRegion": "CN",
+      "family": "Qwen",
+      "generation": "3",
+      "announcementDate": "2025-07-22",
+      "availabilityDate": "2025-07-22",
+      "displayDate": "2025.07.22",
+      "datePrecision": "day",
+      "dateType": "weights",
+      "category": "coding",
+      "tags": [
+        "Agentic Coding",
+        "长上下文",
+        "代码 RL",
+        "开源权重"
+      ],
+      "openWeights": true,
+      "architecture": "MoE（480B total / 35B active）",
+      "parameters": "480B total / 35B active",
+      "contextWindow": "256K 原生，可扩展至 1M",
+      "capabilities": [
+        "仓库级代码修改",
+        "终端与工具调用",
+        "浏览器操作"
+      ],
+      "summary": "阿里发布 Qwen3-Coder，主推 480B-A35B：4800 亿总参数、350 亿激活，原生 256K 上下文可扩至 1M。预训练 7.5 万亿 token、代码占 70%，后训练引入执行驱动的代码 RL 与长程 Agent RL，可并行运行两万个环境。",
+      "keyAdvancement": "以执行反馈驱动的代码强化学习替代竞赛题导向训练，并用两万级并行环境支撑长程 Agent RL。",
+      "significance": "让开源代码模型首次在 SWE-bench 类真实工程基准上接近闭源一线，也推动 CLI 形态的编码智能体在中国生态普及。",
+      "predecessors": [
+        "qwen3-235b-a22b"
+      ],
+      "successors": [],
+      "sources": [
+        {
+          "label": "Qwen — Qwen3-Coder: Agentic Coding in the World",
+          "url": "https://qwenlm.github.io/blog/qwen3-coder/",
+          "kind": "official"
+        },
+        {
+          "label": "Hugging Face — Qwen/Qwen3-Coder-480B-A35B-Instruct",
+          "url": "https://huggingface.co/Qwen/Qwen3-Coder-480B-A35B-Instruct",
+          "kind": "weights"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": null
+    },
+    {
+      "id": "qwen3-next",
+      "name": "Qwen3-Next",
+      "organization": "alibaba-qwen",
+      "countryOrRegion": "CN",
+      "family": "Qwen",
+      "generation": "3",
+      "announcementDate": "2025-09-12",
+      "availabilityDate": "2025-09-12",
+      "displayDate": "2025.09.12",
+      "datePrecision": "day",
+      "dateType": "weights",
+      "category": "language",
+      "tags": [
+        "混合注意力",
+        "超稀疏 MoE",
+        "MTP",
+        "开源权重"
+      ],
+      "openWeights": true,
+      "architecture": "Gated DeltaNet + Gated Attention 混合注意力 MoE",
+      "parameters": "80B total / 3B active",
+      "contextWindow": "256K 原生，可扩展至 1M",
+      "capabilities": [
+        "超长上下文",
+        "高效推理",
+        "思考模式"
+      ],
+      "summary": "阿里发布 Qwen3-Next 新架构，首个模型 80B-A3B 仅激活 30 亿参数。用 Gated DeltaNet 与 Gated Attention 组成混合注意力，配超稀疏 MoE 与多 token 预测，32K 以上吞吐较 Qwen3-32B 高一个数量级。",
+      "keyAdvancement": "以线性注意力与门控注意力的混合替代标准注意力，配合 3.7% 激活率的超稀疏 MoE，把长上下文的训练与推理成本同时压低。",
+      "significance": "该架构被 Qwen3.5 系列整体继承，是中国开源模型在注意力机制层面最具外溢效应的一次原创设计，并获 NeurIPS 2025 最佳论文。",
+      "predecessors": [
+        "qwen3-235b-a22b"
+      ],
+      "successors": [
+        "qwen3-5"
+      ],
+      "sources": [
+        {
+          "label": "Alibaba Cloud — Qwen3-Next: A New Generation of Ultra-Efficient Model Architecture Unveiled",
+          "url": "https://www.alibabacloud.com/blog/qwen3-next-a-new-generation-of-ultra-efficient-model-architecture-unveiled_602536",
+          "kind": "official"
+        },
+        {
+          "label": "Hugging Face — Qwen/Qwen3-Next-80B-A3B-Instruct",
+          "url": "https://huggingface.co/Qwen/Qwen3-Next-80B-A3B-Instruct",
+          "kind": "weights"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": "HF 仓库创建于 2025-09-09。"
+    },
+    {
+      "id": "qwen3-omni",
+      "name": "Qwen3-Omni",
+      "organization": "alibaba-qwen",
+      "countryOrRegion": "CN",
+      "family": "Qwen",
+      "generation": "3",
+      "announcementDate": "2025-09",
+      "availabilityDate": "2025-09",
+      "displayDate": "2025.09",
+      "datePrecision": "month",
+      "dateType": "weights",
+      "category": "multimodal",
+      "tags": [
+        "全模态",
+        "语音生成",
+        "Thinker-Talker",
+        "开源权重"
+      ],
+      "openWeights": true,
+      "architecture": "Thinker-Talker 双 MoE 架构 + AuT 音频编码器",
+      "parameters": "30B total / 3B active（Qwen3-Omni-30B-A3B）",
+      "contextWindow": null,
+      "capabilities": [
+        "文本图像音频视频输入",
+        "实时语音输出",
+        "30 分钟音频理解",
+        "工具调用"
+      ],
+      "summary": "阿里发布原生端到端全模态模型 Qwen3-Omni，可处理文本、图像、音频与视频并实时输出文本与语音。架构用 Thinker-Talker 分工：Thinker 生成文本，Talker 接收其高层表示并自回归生成多码本语音，纯音频延迟低至 211 毫秒。",
+      "keyAdvancement": "用 Thinker-Talker 拆分理解与发声，并把多码本语音生成塞进同一自回归流程，实现低延迟的全模态实时交互。",
+      "significance": "把语音作为一等输出模态引入开源全模态模型，为智能座舱、眼镜与手机等端侧交互场景提供了可自部署的底座。",
+      "predecessors": [],
+      "successors": [],
+      "sources": [
+        {
+          "label": "Alibaba Cloud — Qwen3-Omni: Natively Omni-Modal Foundation Models",
+          "url": "https://www.alibabacloud.com/blog/qwen3-omni-natively-omni-modal-foundation-models_602581",
+          "kind": "official"
+        },
+        {
+          "label": "Alibaba Group — 2025 年云栖大会：阿里云发布下一代 AI 创新策略路线图",
+          "url": "https://www.alibabagroup.com/document-1911884625546838016",
+          "kind": "official"
+        },
+        {
+          "label": "Hugging Face — Qwen/Qwen3-Omni-30B-A3B-Instruct",
+          "url": "https://huggingface.co/Qwen/Qwen3-Omni-30B-A3B-Instruct",
+          "kind": "weights"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": "HF 仓库创建于 2025-09-20，官方博客译文发布于 2025-10-14；本条按云栖大会（2025-09）节点取月份精度。"
+    },
+    {
+      "id": "qwen3-vl",
+      "name": "Qwen3-VL",
+      "organization": "alibaba-qwen",
+      "countryOrRegion": "CN",
+      "family": "Qwen",
+      "generation": "3",
+      "announcementDate": "2025-09",
+      "availabilityDate": "2025-09",
+      "displayDate": "2025.09",
+      "datePrecision": "month",
+      "dateType": "weights",
+      "category": "multimodal",
+      "tags": [
+        "视觉语言",
+        "GUI 操作",
+        "视觉编程",
+        "开源权重"
+      ],
+      "openWeights": true,
+      "architecture": "MoE（Qwen3-VL-235B-A22B 等尺寸）",
+      "parameters": "235B total / 22B active（235B-A22B 版）",
+      "contextWindow": null,
+      "capabilities": [
+        "界面操作智能体",
+        "图像直接生成代码",
+        "3D 空间定位"
+      ],
+      "summary": "阿里发布 Qwen3-VL 视觉语言系列，旗舰 235B-A22B 提供指令型与推理型两版，MoE 架构可覆盖边缘到云端。官方强调其能操作电脑与手机界面、由图像或视频直接生成代码，并支持 3D 空间定位。",
+      "keyAdvancement": "把视觉能力从「看图答题」推进到「操作界面并产出代码」，让视觉模型直接进入 GUI 自动化与前端生成流程。",
+      "significance": "为中国生态提供了可自部署的视觉智能体基座，也是后续 Qwen3.5 原生多模态融合的直接前代。",
+      "predecessors": [],
+      "successors": [
+        "qwen3-5"
+      ],
+      "sources": [
+        {
+          "label": "Alibaba Group — 2025 年云栖大会：阿里云发布下一代 AI 创新策略路线图",
+          "url": "https://www.alibabagroup.com/document-1911884625546838016",
+          "kind": "official"
+        },
+        {
+          "label": "Hugging Face — Qwen/Qwen3-VL-235B-A22B-Instruct",
+          "url": "https://huggingface.co/Qwen/Qwen3-VL-235B-A22B-Instruct",
+          "kind": "weights"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": "HF 仓库创建于 2025-09-22；官方仅在云栖大会与产品页公布，未见独立英文公告页，故取月份精度。"
+    },
+    {
+      "id": "qwen3-max",
+      "name": "Qwen3-Max",
+      "organization": "alibaba-qwen",
+      "countryOrRegion": "CN",
+      "family": "Qwen",
+      "generation": "3",
+      "announcementDate": "2025-09",
+      "availabilityDate": "2025-09",
+      "displayDate": "2025.09",
+      "datePrecision": "month",
+      "dateType": "announcement",
+      "category": "language",
+      "tags": [
+        "万亿参数",
+        "闭源",
+        "Agent",
+        "代码"
+      ],
+      "openWeights": false,
+      "architecture": "未公开（闭源，官方称参数超 1 万亿）",
+      "parameters": "超过 1 万亿（官方表述）",
+      "contextWindow": null,
+      "capabilities": [
+        "复杂编码",
+        "智能体任务",
+        "指令跟随",
+        "多语言"
+      ],
+      "summary": "阿里在云栖大会发布 Qwen3-Max，参数超 1 万亿，分指令与推理两版，闭源并通过百炼平台提供 API。官方给出的指标包括指令模式 SWE-Bench 69.6 分与 Tau2-Bench 工具使用表现；此前以 Max-Preview 形式先行上线。",
+      "keyAdvancement": "把 Qwen 家族首次带入万亿参数级闭源旗舰档，并以代码与对话智能体基准作为对外主指标。",
+      "significance": "形成「开源 Qwen3 加闭源 Qwen3-Max」的双轨格局：开源侧换取生态，闭源侧对标国际旗舰，此后成为中国头部厂商的通用打法。",
+      "predecessors": [],
+      "successors": [
+        "qwen3-5"
+      ],
+      "sources": [
+        {
+          "label": "Alibaba Group — 2025 年云栖大会：阿里云发布下一代 AI 创新策略路线图",
+          "url": "https://www.alibabagroup.com/document-1911884625546838016",
+          "kind": "official"
+        },
+        {
+          "label": "Alibaba Cloud — Qwen3-Next 公告（含 Qwen3-Max Preview 说明）",
+          "url": "https://www.alibabacloud.com/blog/qwen3-next-a-new-generation-of-ultra-efficient-model-architecture-unveiled_602536",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": "预览版于 2025-09 上旬上线，正式版在云栖大会发布；官方未给出精确到日的英文公告，故取月份精度。"
+    },
+    {
+      "id": "qwen3-5",
+      "name": "Qwen3.5",
+      "organization": "alibaba-qwen",
+      "countryOrRegion": "CN",
+      "family": "Qwen",
+      "generation": "3.5",
+      "announcementDate": "2026-02-16",
+      "availabilityDate": "2026-02-16",
+      "displayDate": "2026.02.16",
+      "datePrecision": "day",
+      "dateType": "weights",
+      "category": "multimodal",
+      "tags": [
+        "原生多模态",
+        "混合线性注意力",
+        "超稀疏 MoE",
+        "开源权重"
+      ],
+      "openWeights": true,
+      "architecture": "Gated DeltaNet + Gated Attention 混合注意力 MoE",
+      "parameters": "397B total / 17B active",
+      "contextWindow": "262,144 原生，可扩展至约 1.01M",
+      "capabilities": [
+        "图像视频理解",
+        "视觉智能体",
+        "201 种语言",
+        "两小时长视频"
+      ],
+      "summary": "阿里发布 Qwen3.5 并开源首款 Qwen3.5-397B-A17B。模型为原生多模态基座，沿用 Qwen3-Next 的混合注意力与超稀疏 MoE，512 个专家中激活 10 个路由加 1 个共享专家；支持 201 种语言、两小时视频与视觉智能体操作。",
+      "keyAdvancement": "把混合线性注意力与超稀疏 MoE 推到 397B 规模，官方称 32K 上下文解码吞吐为 Qwen3-Max 的 8.6 倍，部署成本大幅下降。",
+      "significance": "完成从「文本模型加视觉插件」到原生多模态基座的切换，并把语言覆盖从 119 种扩至 201 种，进一步扩大开源多语言的领先幅度。",
+      "predecessors": [
+        "qwen3-next",
+        "qwen3-vl",
+        "qwen3-max"
+      ],
+      "successors": [
+        "qwen3-8-flash-next"
+      ],
+      "sources": [
+        {
+          "label": "阿里巴巴集团 — Qwen3.5：为效率而生的原生多模态模型",
+          "url": "https://www.alibabagroup.com/zh-HK/document-1960233590314762240",
+          "kind": "official"
+        },
+        {
+          "label": "Hugging Face — Qwen/Qwen3.5-397B-A17B",
+          "url": "https://huggingface.co/Qwen/Qwen3.5-397B-A17B",
+          "kind": "weights"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": "官方中文新闻稿标注 2026 年 2 月 16 日；HF 仓库同日创建。"
+    },
+    {
+      "id": "qwen3-8-flash-next",
+      "name": "Qwen3.8-Flash-Next",
+      "organization": "alibaba-qwen",
+      "countryOrRegion": "CN",
+      "family": "Qwen",
+      "generation": "3.8",
+      "announcementDate": "2026-08-27",
+      "availabilityDate": "2026-08-27",
+      "displayDate": "2026.08.27",
+      "datePrecision": "day",
+      "dateType": "weights",
+      "category": "coding",
+      "tags": [
+        "Qwen Sparse Attention",
+        "N-gram Embedding",
+        "Muon 优化器",
+        "开源权重"
+      ],
+      "openWeights": true,
+      "architecture": "GDN + QSA 混合注意力 MoE + N-gram 嵌入",
+      "parameters": "125B 主模型 + 51B N-gram 嵌入，6B 激活",
+      "contextWindow": "262,144 原生，可扩展至 1M",
+      "capabilities": [
+        "长上下文",
+        "编码与办公任务",
+        "低成本推理",
+        "视觉理解"
+      ],
+      "summary": "阿里开源 Qwen3.8-Flash-Next，官方称它是 Qwen4 所用架构的早期预览。注意力用 Gated DeltaNet 与 Qwen Sparse Attention 混合，四层中三层以 GDN 压缩历史、一层精确检索；并以门控残差拓宽通路。",
+      "keyAdvancement": "提出微块级稀疏注意力 QSA，在 1M 上下文下把注意力核的预填充与解码分别加速至 7.6 倍与 4.9 倍，训练成本约为前代的九分之一。",
+      "significance": "以「先放架构、后出全家桶」的方式预告 Qwen4，标志中国头部实验室开始把架构设计本身当作独立发布物运营。",
+      "predecessors": [
+        "qwen3-5"
+      ],
+      "successors": [],
+      "sources": [
+        {
+          "label": "Alibaba Cloud — Qwen3.8-Flash-Next: A New Architecture, Towards Ultimate Cost-Efficiency",
+          "url": "https://www.alibabacloud.com/blog/qwen3-8-flash-next-a-new-architecture-towards-ultimate-cost-efficiency_603501",
+          "kind": "official"
+        },
+        {
+          "label": "Hugging Face — Qwen/Qwen3.8-Flash-Next",
+          "url": "https://huggingface.co/Qwen/Qwen3.8-Flash-Next",
+          "kind": "weights"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": "官方称 Qwen4 尚未发布，本条为架构预览版；HF 仓库创建于 2026-08-24。"
+    },
+    {
+      "id": "glm-4-5",
+      "name": "GLM-4.5",
+      "organization": "zhipu",
+      "countryOrRegion": "CN",
+      "family": "GLM",
+      "generation": "4.5",
+      "announcementDate": "2025-07",
+      "availabilityDate": "2025-07",
+      "displayDate": "2025.07",
+      "datePrecision": "month",
+      "dateType": "weights",
+      "category": "agent",
+      "tags": [
+        "MoE",
+        "Agent",
+        "思考模式",
+        "开源权重"
+      ],
+      "openWeights": true,
+      "architecture": "MoE（355B total / 32B active）",
+      "parameters": "355B total / 32B active；Air 版 106B / 12B",
+      "contextWindow": "128K tokens",
+      "capabilities": [
+        "推理与编码统一",
+        "函数调用",
+        "智能体工作流",
+        "单机可部署小版本"
+      ],
+      "summary": "智谱发布 GLM-4.5 系列开源模型，把推理、编码与智能体能力收进同一基座：主模型 3550 亿总参数、320 亿激活，另有 1060 亿总参数、120 亿激活的 Air 版，同时提供 BF16 与 FP8 权重，128K 上下文可运行完整长度。",
+      "keyAdvancement": "用同一 MoE 基座同时承载思考与非思考两种用法，并以 Air 版给出可在有限算力下单机部署的 1060 亿参数档位。",
+      "significance": "与 DeepSeek、Qwen 共同构成中国开源模型的三极，也确立智谱以 Agent 为主线的产品方向，GLM-4.5 成为后续 4.6 与 5 系列的共同基线。",
+      "predecessors": [],
+      "successors": [
+        "glm-4-6",
+        "glm-5"
+      ],
+      "sources": [
+        {
+          "label": "Z.ai — GLM-4.5 发布博客",
+          "url": "https://z.ai/blog/glm-4.5",
+          "kind": "official"
+        },
+        {
+          "label": "Hugging Face — zai-org/GLM-4.5（模型卡含参数与 128K 上下文）",
+          "url": "https://huggingface.co/zai-org/GLM-4.5",
+          "kind": "weights"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": "官方博客为动态渲染，正文日期不可直接抓取；本条日期依据官方 HF/GitHub 仓库创建时间（2025-07-20）与同期发布节点，取月份精度。"
+    },
+    {
+      "id": "glm-4-5v",
+      "name": "GLM-4.5V",
+      "organization": "zhipu",
+      "countryOrRegion": "CN",
+      "family": "GLM",
+      "generation": "4.5",
+      "announcementDate": "2025-08",
+      "availabilityDate": "2025-08",
+      "displayDate": "2025.08",
+      "datePrecision": "month",
+      "dateType": "weights",
+      "category": "multimodal",
+      "tags": [
+        "视觉语言",
+        "多模态推理",
+        "开源权重"
+      ],
+      "openWeights": true,
+      "architecture": "MoE（视觉语言版本，参数量官方未在仓库公布）",
+      "parameters": null,
+      "contextWindow": null,
+      "capabilities": [
+        "图文理解",
+        "多模态推理",
+        "开源可部署"
+      ],
+      "summary": "智谱推出 GLM-4.5 家族的视觉版本 GLM-4.5V，官方定位为面向多模态推理的视觉语言模型，权重在 Hugging Face 与 ModelScope 同步开源，与 GLM-4.5 文本模型共用同一发布节奏。该版本把图像理解接入 GLM-4.5 的思考与工具调用框架。",
+      "keyAdvancement": "补齐 GLM-4.5 家族的视觉输入能力，使同一代模型可在图文混合任务中复用思考与工具调用流程。",
+      "significance": "为国产开源生态补上一款可自部署的视觉推理模型，也是中国实验室把「文本模型加视觉版本」作为标配发布组合的又一例证。",
+      "predecessors": [
+        "glm-4-5"
+      ],
+      "successors": [],
+      "sources": [
+        {
+          "label": "Hugging Face — zai-org/GLM-4.5V",
+          "url": "https://huggingface.co/zai-org/GLM-4.5V",
+          "kind": "weights"
+        },
+        {
+          "label": "北京市科委 — 智谱推出开源视觉推理模型 GLM-4.5V（2025-08-25 一周企业动态）",
+          "url": "https://kw.beijing.gov.cn/xwdt/kcyx/xwdtyqqy/202508/t20250825_4182521.html",
+          "kind": "press"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": "官方仓库创建于 2025-08-10；本条未采信任何未核实的参数或评测数值。"
+    },
+    {
+      "id": "glm-4-6",
+      "name": "GLM-4.6",
+      "organization": "zhipu",
+      "countryOrRegion": "CN",
+      "family": "GLM",
+      "generation": "4.6",
+      "announcementDate": "2025-09",
+      "availabilityDate": "2025-09",
+      "displayDate": "2025.09",
+      "datePrecision": "month",
+      "dateType": "weights",
+      "category": "coding",
+      "tags": [
+        "编码",
+        "Agent",
+        "开源权重",
+        "迭代版"
+      ],
+      "openWeights": true,
+      "architecture": "MoE（沿用 GLM-4.5 架构）",
+      "parameters": null,
+      "contextWindow": null,
+      "capabilities": [
+        "编码",
+        "工具调用",
+        "长程任务"
+      ],
+      "summary": "智谱在 GLM-4.5 之后发布 GLM-4.6，继续以开源权重的编码与智能体模型定位、架构沿用 4.5 代 MoE。该版本秋季起成为开源对照基线：MiniMax 在 M2 模型卡中把 GLM-4.6 与 Kimi K2 0905、DeepSeek-V3.2 并列竞品。",
+      "keyAdvancement": "在 GLM-4.5 基座上侧重编码与工具调用的后训练强化，官方未同步公布架构层面的改动。",
+      "significance": "与同期发布的 DeepSeek-V3.2、Kimi K2 形成密集的版本竞赛，使 2025 年秋季的开源编码模型评测表几乎按月刷新。",
+      "predecessors": [
+        "glm-4-5"
+      ],
+      "successors": [
+        "glm-5"
+      ],
+      "sources": [
+        {
+          "label": "Hugging Face — zai-org/GLM-4.6",
+          "url": "https://huggingface.co/zai-org/GLM-4.6",
+          "kind": "weights"
+        },
+        {
+          "label": "Hugging Face — MiniMaxAI/MiniMax-M2 模型卡（将 GLM-4.6 列为对照基线）",
+          "url": "https://huggingface.co/MiniMaxAI/MiniMax-M2",
+          "kind": "weights"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": "官方仓库创建于 2025-09-29，故取 2025-09 月份精度；参数与上下文长度官方未在该仓库公布，按规范留空。"
+    },
+    {
+      "id": "glm-5",
+      "name": "GLM-5",
+      "organization": "zhipu",
+      "countryOrRegion": "CN",
+      "family": "GLM",
+      "generation": "5",
+      "announcementDate": "2026-02",
+      "availabilityDate": "2026-02",
+      "displayDate": "2026.02",
+      "datePrecision": "month",
+      "dateType": "weights",
+      "category": "agent",
+      "tags": [
+        "744B MoE",
+        "DSA 稀疏注意力",
+        "长程 Agent",
+        "开源权重"
+      ],
+      "openWeights": true,
+      "architecture": "MoE + DeepSeek Sparse Attention（DSA）",
+      "parameters": "744B total / 40B active",
+      "contextWindow": null,
+      "capabilities": [
+        "复杂系统工程",
+        "长程智能体",
+        "代码",
+        "工具调用"
+      ],
+      "summary": "智谱发布 GLM-5，定位复杂系统工程与长程智能体。官方模型卡显示：相比 GLM-4.5 的 3550 亿总参数、320 亿激活，GLM-5 扩至 7440 亿总参数、400 亿激活，预训练数据由 23T 增至 28.5T token，并引入 DeepSeek 的稀疏注意力。",
+      "keyAdvancement": "规模较 GLM-4.5 翻倍并首次在自研旗舰中集成跨机构提出的 DSA 稀疏注意力，把长上下文部署成本压到可商用水平。",
+      "significance": "中国开源模型由此进入 700B 参数级，同时说明稀疏注意力已从单一实验室的技术选择变成行业公共基础设施。",
+      "predecessors": [
+        "glm-4-6"
+      ],
+      "successors": [],
+      "sources": [
+        {
+          "label": "Hugging Face — zai-org/GLM-5（模型卡含 744B/40B 与 28.5T token 说明）",
+          "url": "https://huggingface.co/zai-org/GLM-5",
+          "kind": "weights"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": "官方仓库创建于 2026-02-11；官方博客为动态渲染，故按 2026-02 月份精度记录。评测使用 200K 上下文窗口（模型卡说明），官方未公布原生上下文上限。"
+    },
+    {
+      "id": "kimi-k1-5",
+      "name": "Kimi k1.5",
+      "organization": "moonshot",
+      "countryOrRegion": "CN",
+      "family": "Kimi",
+      "generation": "k1.5",
+      "announcementDate": "2025-01",
+      "availabilityDate": null,
+      "displayDate": "2025.01",
+      "datePrecision": "month",
+      "dateType": "announcement",
+      "category": "reasoning",
+      "tags": [
+        "多模态思考",
+        "长上下文 RL",
+        "闭源",
+        "技术报告"
+      ],
+      "openWeights": false,
+      "architecture": "未公开（闭源）",
+      "parameters": null,
+      "contextWindow": null,
+      "capabilities": [
+        "多模态推理",
+        "数学与代码",
+        "长上下文思考"
+      ],
+      "summary": "月之暗面发布多模态思考模型 Kimi k1.5，主打以强化学习获得长链推理能力，并公布了降低训练成本的方法；发布时与 DeepSeek-R1 同日，但未开放权重，仅通过 Kimi 产品与开放平台提供。同期媒体报道将其训练成本控制列为关注点。",
+      "keyAdvancement": "在同一时间窗口内给出与 R1 不同的技术选择：以多模态输入和长上下文强化学习为主线，而非单纯扩展纯文本思维链。",
+      "significance": "2025 年 1 月中国同时出现两款对标 o1 的思考模型，K1.5 的闭源路线与 R1 的开源路线形成分野，预示了此后一年「开放权重对闭源 API」的两条产业路径。",
+      "predecessors": [],
+      "successors": [
+        "kimi-k2"
+      ],
+      "sources": [
+        {
+          "label": "中国金融信息网 — 月之暗面发布多模态思考模型 K1.5（2025-01-22）",
+          "url": "https://cnfin.com/cmjj-lb/detail/20250122/4178550_1.html",
+          "kind": "press"
+        }
+      ],
+      "verificationStatus": "partially-verified",
+      "notes": "官方博客为动态渲染、本次未能取得含日期的可访问官网页，故以同期权威媒体报道为准，日期精度取 2025-01；未开放权重。"
+    },
+    {
+      "id": "kimi-k2",
+      "name": "Kimi K2",
+      "organization": "moonshot",
+      "countryOrRegion": "CN",
+      "family": "Kimi",
+      "generation": "K2",
+      "announcementDate": "2025-07-11",
+      "availabilityDate": "2025-07-11",
+      "displayDate": "2025.07.11",
+      "datePrecision": "day",
+      "dateType": "announcement",
+      "category": "agent",
+      "tags": [
+        "1T MoE",
+        "MLA",
+        "MuonClip",
+        "开源权重"
+      ],
+      "openWeights": true,
+      "architecture": "MoE + MLA（384 专家，每 token 选 8 + 1 共享）",
+      "parameters": "1T total / 32B active",
+      "contextWindow": "128K tokens",
+      "capabilities": [
+        "工具调用",
+        "代码",
+        "世界知识",
+        "智能体"
+      ],
+      "summary": "月之暗面发布 Kimi K2：1 万亿总参数、320 亿激活的 MoE，61 层、384 专家、每 token 选 8 个加 1 个共享专家，注意力沿用 MLA，上下文 128K。训练用 Muon 优化器并在 15.5 万亿 token 上实现零训练不稳定。",
+      "keyAdvancement": "把 Muon 优化器推到万亿参数并配套 MuonClip 稳定化技术，在 15.5T token 上无损失尖峰完成训练。",
+      "significance": "与 DeepSeek、Qwen 并列 2025 年开源权重三极，把开源模型的能力上限抬到万亿参数级，也让「面向工具调用训练」成为开源旗舰的默认目标。",
+      "predecessors": [
+        "kimi-k1-5"
+      ],
+      "successors": [
+        "kimi-k2-0905",
+        "kimi-k2-thinking"
+      ],
+      "sources": [
+        {
+          "label": "Kimi 开放平台 — 功能发布日志（2025-07-11 发布 kimi-k2-0711-preview）",
+          "url": "https://platform.kimi.ai/blog/posts/changelog",
+          "kind": "official"
+        },
+        {
+          "label": "Hugging Face — moonshotai/Kimi-K2-Instruct（模型卡含完整架构表）",
+          "url": "https://huggingface.co/moonshotai/Kimi-K2-Instruct",
+          "kind": "weights"
+        },
+        {
+          "label": "GitHub — MoonshotAI/Kimi-K2",
+          "url": "https://github.com/MoonshotAI/Kimi-K2",
+          "kind": "weights"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": "技术报告 arXiv:2507.20534 见仓库引用信息。"
+    },
+    {
+      "id": "kimi-k2-0905",
+      "name": "Kimi K2 0905",
+      "organization": "moonshot",
+      "countryOrRegion": "CN",
+      "family": "Kimi",
+      "generation": "K2",
+      "announcementDate": "2025-09-05",
+      "availabilityDate": "2025-09-05",
+      "displayDate": "2025.09.05",
+      "datePrecision": "day",
+      "dateType": "api",
+      "category": "coding",
+      "tags": [
+        "迭代版",
+        "编码",
+        "API 发布"
+      ],
+      "openWeights": true,
+      "architecture": "MoE + MLA（K2 架构迭代）",
+      "parameters": null,
+      "contextWindow": null,
+      "capabilities": [
+        "编码",
+        "工具调用",
+        "智能体"
+      ],
+      "summary": "Kimi 开放平台在发布日志中记录推出 kimi-k2-0905-preview，作为 K2 的秋季迭代版本。该版本随后成为开源模型对比中的常用基线，MiniMax 在 M2 官方模型卡里即以 Kimi K2 0905 作为主要对照项之一。",
+      "keyAdvancement": "在不改架构的前提下对 K2 做后训练更新，使其在编码与工具调用上成为当季开源对照基准。",
+      "significance": "反映中国开源模型已形成「月级小步快跑」的迭代节奏，也说明第三方评测开始把中文开源模型当作默认比较对象。",
+      "predecessors": [
+        "kimi-k2"
+      ],
+      "successors": [
+        "kimi-k2-thinking"
+      ],
+      "sources": [
+        {
+          "label": "Kimi 开放平台 — 功能发布日志（2025-09-05 条目）",
+          "url": "https://platform.kimi.ai/blog/posts/changelog",
+          "kind": "official"
+        },
+        {
+          "label": "Hugging Face — moonshotai/Kimi-K2-Instruct-0905",
+          "url": "https://huggingface.co/moonshotai/Kimi-K2-Instruct-0905",
+          "kind": "weights"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": null
+    },
+    {
+      "id": "kimi-k2-thinking",
+      "name": "Kimi K2 Thinking",
+      "organization": "moonshot",
+      "countryOrRegion": "CN",
+      "family": "Kimi",
+      "generation": "K2",
+      "announcementDate": "2025-11-06",
+      "availabilityDate": "2025-11-06",
+      "displayDate": "2025.11.06",
+      "datePrecision": "day",
+      "dateType": "api",
+      "category": "reasoning",
+      "tags": [
+        "思考模型",
+        "工具调用",
+        "开源权重",
+        "turbo 版"
+      ],
+      "openWeights": true,
+      "architecture": "MoE + MLA（K2 思考强化版）",
+      "parameters": null,
+      "contextWindow": null,
+      "capabilities": [
+        "交错思考",
+        "长程工具链",
+        "推理"
+      ],
+      "summary": "Kimi 开放平台发布日志记录正式上线 Kimi K2 Think 及 turbo 版本，同期下调 turbo 价格并上调各档默认 TPM。该模型属 K2 家族思考强化分支，权重在 Hugging Face 以 Kimi-K2-Thinking 名称开源。",
+      "keyAdvancement": "把思考模式从独立模型并入 K2 主线，并提供 turbo 高速版本，使推理模型可直接用于生产级 Agent 调用。",
+      "significance": "与 DeepSeek-V3.2、GLM-4.6、MiniMax-M2 在 2025 年末密集同期发布，构成中国开源推理模型集中爆发的窗口期。",
+      "predecessors": [
+        "kimi-k2-0905"
+      ],
+      "successors": [
+        "kimi-k2-5"
+      ],
+      "sources": [
+        {
+          "label": "Kimi 开放平台 — 功能发布日志（2025-11-06 条目）",
+          "url": "https://platform.kimi.ai/blog/posts/changelog",
+          "kind": "official"
+        },
+        {
+          "label": "Hugging Face — moonshotai/Kimi-K2-Thinking",
+          "url": "https://huggingface.co/moonshotai/Kimi-K2-Thinking",
+          "kind": "weights"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": "HF 仓库创建于 2025-11-04，官方发布日志记为 2025-11-06。"
+    },
+    {
+      "id": "kimi-k2-5",
+      "name": "Kimi K2.5",
+      "organization": "moonshot",
+      "countryOrRegion": "CN",
+      "family": "Kimi",
+      "generation": "K2.5",
+      "announcementDate": "2026-01",
+      "availabilityDate": "2026-01",
+      "displayDate": "2026.01",
+      "datePrecision": "month",
+      "dateType": "weights",
+      "category": "multimodal",
+      "tags": [
+        "视觉输入",
+        "256K 上下文",
+        "1T MoE",
+        "开源权重"
+      ],
+      "openWeights": true,
+      "architecture": "MoE + MLA + 4 亿参数视觉编码器",
+      "parameters": "1T total / 32B active",
+      "contextWindow": "256K tokens",
+      "capabilities": [
+        "视觉理解",
+        "工具调用",
+        "长上下文",
+        "编码"
+      ],
+      "summary": "月之暗面发布 Kimi K2.5，在 K2 的 1 万亿总参数、320 亿激活 MoE 骨架上增加一个 4 亿参数的视觉编码器，上下文由 K2 的 128K 扩展到 256K，专家配置仍为 384 选 8 加 1 个共享专家。这是 Kimi 主体系列首次原生支持图像输入。",
+      "keyAdvancement": "在保持 K2 稀疏 MoE 与 MLA 骨架的前提下接入视觉编码器并把上下文翻倍至 256K，从纯文本 Agent 转向多模态 Agent。",
+      "significance": "补齐 Kimi 在多模态输入上的短板，使中国开源阵营在 2026 年初同时出现原生多模态旗舰（Qwen3.5、K2.5、MiniMax-M3）。",
+      "predecessors": [
+        "kimi-k2-thinking"
+      ],
+      "successors": [
+        "kimi-k3"
+      ],
+      "sources": [
+        {
+          "label": "Hugging Face — moonshotai/Kimi-K2.5（模型卡含参数表与 256K 上下文）",
+          "url": "https://huggingface.co/moonshotai/Kimi-K2.5",
+          "kind": "weights"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": "官方仓库创建于 2026-01-01；模型卡更新记录中出现 2026.1.29 条目。官方博客未取得，故取 2026-01 月份精度。"
+    },
+    {
+      "id": "kimi-k3",
+      "name": "Kimi K3",
+      "organization": "moonshot",
+      "countryOrRegion": "CN",
+      "family": "Kimi",
+      "generation": "K3",
+      "announcementDate": "2026-07",
+      "availabilityDate": "2026-07",
+      "displayDate": "2026.07",
+      "datePrecision": "month",
+      "dateType": "weights",
+      "category": "agent",
+      "tags": [
+        "2.8T 参数",
+        "KDA 线性注意力",
+        "Stable LatentMoE",
+        "开源权重"
+      ],
+      "openWeights": true,
+      "architecture": "Kimi Delta Attention + Attention Residuals 混合线性注意力 MoE",
+      "parameters": "2.8T total（896 专家中激活 16）",
+      "contextWindow": "1M tokens",
+      "capabilities": [
+        "长程编程",
+        "知识工作",
+        "视觉理解",
+        "深度推理"
+      ],
+      "summary": "月之暗面发布 Kimi K3，官方文档称其为 2.8 万亿参数，基于 Kimi Delta Attention 混合线性注意力与注意力残差构建，支持 100 万 token 上下文。MoE 在 896 个专家中激活 16 个，官方称扩展效率相对 K2 提升约 2.5 倍。",
+      "keyAdvancement": "以线性注意力 KDA 加注意力残差支撑 2.8 万亿参数与 1M 上下文，并进一步把 MoE 稀疏度提到 896 选 16。",
+      "significance": "把开源权重模型的参数规模推到三万 亿级，标志中国实验室在「规模换智能」这条路上继续押注，同时以线性注意力缓解长上下文成本。",
+      "predecessors": [
+        "kimi-k2-5"
+      ],
+      "successors": [],
+      "sources": [
+        {
+          "label": "Kimi API 开放平台 — Kimi K3 快速开始（含 2.8T、KDA、1M 上下文说明）",
+          "url": "https://platform.kimi.com/docs/guide/kimi-k3-quickstart",
+          "kind": "docs"
+        },
+        {
+          "label": "Hugging Face — moonshotai/Kimi-K3",
+          "url": "https://huggingface.co/moonshotai/Kimi-K3",
+          "kind": "weights"
+        }
+      ],
+      "verificationStatus": "partially-verified",
+      "notes": "官方 Kimi K3 文档未标注发布日期；科技日报 2026-07-21、新华网 2026-07-22 报道「近日发布」，并引述 7 月 19 日公告；官方文档窗口写作 2025/07–2026/07。Hugging Face 仓库创建时间不能作为页面可见日期证据。按月份精度记录。"
+    },
+    {
+      "id": "minimax-m1",
+      "name": "MiniMax-M1",
+      "organization": "minimax",
+      "countryOrRegion": "CN",
+      "family": "MiniMax-M",
+      "generation": "M1",
+      "announcementDate": "2025-06",
+      "availabilityDate": "2025-06",
+      "displayDate": "2025.06",
+      "datePrecision": "month",
+      "dateType": "weights",
+      "category": "reasoning",
+      "tags": [
+        "混合线性注意力",
+        "MoE",
+        "百万上下文",
+        "开源权重"
+      ],
+      "openWeights": true,
+      "architecture": "MoE + Lightning Attention 混合注意力",
+      "parameters": "456B total / 45.9B active",
+      "contextWindow": "1M tokens（另提供 40K/80K 推理版本）",
+      "capabilities": [
+        "长上下文推理",
+        "测试时算力扩展",
+        "数学与软件工程"
+      ],
+      "summary": "MiniMax 开源推理模型 M1：混合专家加 lightning attention 架构，4560 亿总参数、每 token 激活 459 亿，原生支持 100 万 token 上下文。官方称 10 万 token 生成长度下只需 DeepSeek-R1 约 25% 算力。",
+      "keyAdvancement": "用线性注意力混合架构把百万级上下文的推理成本压到极低，并把效率优势直接换算成可负担的测试时算力扩展。",
+      "significance": "在 2025 年 6 月就给出「开源推理模型加百万上下文」的组合，比同期主流推理模型上下文长一个数量级，也预告了线性注意力在中国的扩散。",
+      "predecessors": [],
+      "successors": [
+        "minimax-m2"
+      ],
+      "sources": [
+        {
+          "label": "Hugging Face — MiniMaxAI/MiniMax-M1（模型卡含 456B/45.9B 与 1M 上下文）",
+          "url": "https://huggingface.co/MiniMaxAI/MiniMax-M1",
+          "kind": "weights"
+        },
+        {
+          "label": "GitHub — MiniMax-AI/MiniMax-M1",
+          "url": "https://github.com/MiniMax-AI/MiniMax-M1",
+          "kind": "weights"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": "官方仓库创建于 2025-06（HF 2025-06-05、GitHub 2025-06-14），取月份精度。"
+    },
+    {
+      "id": "minimax-m2",
+      "name": "MiniMax-M2",
+      "organization": "minimax",
+      "countryOrRegion": "CN",
+      "family": "MiniMax-M",
+      "generation": "M2",
+      "announcementDate": "2025-10",
+      "availabilityDate": "2025-10",
+      "displayDate": "2025.10",
+      "datePrecision": "month",
+      "dateType": "weights",
+      "category": "agent",
+      "tags": [
+        "10B 激活",
+        "MIT 许可",
+        "交错思考",
+        "编码 Agent"
+      ],
+      "openWeights": true,
+      "architecture": "MoE（230B total / 10B active）",
+      "parameters": "230B total / 10B active",
+      "contextWindow": null,
+      "capabilities": [
+        "端到端编码",
+        "长程工具链",
+        "浏览与研究",
+        "交错思考"
+      ],
+      "summary": "MiniMax 发布并开源 M2：2300 亿总参数、100 亿激活的紧凑 MoE，以 MIT 许可发布，主打编码与智能体。官方对照数据含 SWE-bench Verified 69.4、Terminal-Bench 46.3，交错思考内容需原样回传。",
+      "keyAdvancement": "把激活参数压到 100 亿，同时以端到端工具链与交错思考设计在编码、浏览、检索任务上对标数百 B 级模型，单位成本显著下降。",
+      "significance": "证明「小激活 + 高质量 Agent 数据」可以替代参数堆叠，成为 2025 年末开源 Agent 模型的主流工程答案，并以 MIT 许可降低商用门槛。",
+      "predecessors": [
+        "minimax-m1"
+      ],
+      "successors": [
+        "minimax-m3"
+      ],
+      "sources": [
+        {
+          "label": "Hugging Face — MiniMaxAI/MiniMax-M2（模型卡含完整基准表与许可）",
+          "url": "https://huggingface.co/MiniMaxAI/MiniMax-M2",
+          "kind": "weights"
+        },
+        {
+          "label": "GitHub — MiniMax-AI/MiniMax-M2",
+          "url": "https://github.com/MiniMax-AI/MiniMax-M2",
+          "kind": "weights"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": "官方仓库创建于 2025-10（HF 2025-10-22、GitHub 2025-10-25），取月份精度。"
+    },
+    {
+      "id": "minimax-m3",
+      "name": "MiniMax-M3",
+      "organization": "minimax",
+      "countryOrRegion": "CN",
+      "family": "MiniMax-M",
+      "generation": "M3",
+      "announcementDate": "2026-06",
+      "availabilityDate": "2026-06",
+      "displayDate": "2026.06",
+      "datePrecision": "month",
+      "dateType": "weights",
+      "category": "multimodal",
+      "tags": [
+        "原生多模态",
+        "MSA 稀疏注意力",
+        "1M 上下文",
+        "开源权重"
+      ],
+      "openWeights": true,
+      "architecture": "MoE + MiniMax Sparse Attention（MSA）",
+      "parameters": "约 428B total / 约 23B active",
+      "contextWindow": "1M tokens",
+      "capabilities": [
+        "原生多模态",
+        "三档思考模式",
+        "百万上下文",
+        "长程 Agent"
+      ],
+      "summary": "MiniMax 发布 M3，官方模型卡称其为原生多模态模型、具备 100 万 token 上下文，约 4280 亿总参数、约 230 亿激活。核心是自研 MiniMax Sparse Attention：100 万上下文下相较 M2 取得约 9 倍预填充与 15 倍解码加速。",
+      "keyAdvancement": "以稀疏注意力算子 MSA 同时解决长上下文的计算与显存瓶颈，并把多模态输入与可调推理档位整合进同一开源模型。",
+      "significance": "与 Qwen3.5、Kimi K2.5/K3 一起把「原生多模态加百万上下文」变成 2026 年中国开源旗舰的标准配置，稀疏注意力成为共同技术底座。",
+      "predecessors": [
+        "minimax-m2"
+      ],
+      "successors": [],
+      "sources": [
+        {
+          "label": "Hugging Face — MiniMaxAI/MiniMax-M3（模型卡含 MSA 与参数说明）",
+          "url": "https://huggingface.co/MiniMaxAI/MiniMax-M3",
+          "kind": "weights"
+        },
+        {
+          "label": "GitHub — MiniMax-AI/MSA（稀疏注意力算子）",
+          "url": "https://github.com/MiniMax-AI/MSA",
+          "kind": "weights"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": "官方仓库创建于 2026-06-02，取月份精度。"
+    },
+    {
+      "id": "seed-oss-36b",
+      "name": "Seed-OSS-36B",
+      "organization": "bytedance",
+      "countryOrRegion": "CN",
+      "family": "Seed-OSS",
+      "generation": "36B",
+      "announcementDate": "2025-08-20",
+      "availabilityDate": "2025-08-20",
+      "displayDate": "2025.08.20",
+      "datePrecision": "day",
+      "dateType": "weights",
+      "category": "language",
+      "tags": [
+        "36B dense",
+        "512K 上下文",
+        "开源权重",
+        "长上下文"
+      ],
+      "openWeights": true,
+      "architecture": "decoder-only Transformer（RoPE + GQA + RMSNorm + SwiGLU）",
+      "parameters": "36B（dense）",
+      "contextWindow": "512K tokens（原生）",
+      "capabilities": [
+        "长上下文",
+        "推理",
+        "智能体",
+        "通用对话"
+      ],
+      "summary": "字节 Seed 团队开源 Seed-OSS-36B 系列，含 Base 与 Instruct，模型卡记录发布日期为 2025-08-20。模型为 36B 稠密因果语言模型，原生支持最长 512K 上下文，而训练仅使用 12 万亿 token。",
+      "keyAdvancement": "以 12T token 的训练预算把 36B 稠密模型的原生上下文做到 512K，并在同尺寸下兼顾推理、智能体与通用能力。",
+      "significance": "字节在闭源豆包之外首次以开源权重参与竞争，用长上下文稠密模型填补国内 30B 级开源空档，也让「长上下文」成为国产开源模型的新比较维度。",
+      "predecessors": [],
+      "successors": [],
+      "sources": [
+        {
+          "label": "Hugging Face — ByteDance-Seed/Seed-OSS-36B-Instruct（模型卡含 2025-08-20 发布记录与 512K 上下文）",
+          "url": "https://huggingface.co/ByteDance-Seed/Seed-OSS-36B-Instruct",
+          "kind": "weights"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": "字节的闭源豆包系列（豆包 1.5、豆包 2.0）未取得含日期的官方页面，未写入本文件，见 notes.md。"
+    },
+    {
+      "id": "ernie-4-5-300b-a47b",
+      "name": "ERNIE-4.5-300B-A47B",
+      "organization": "baidu",
+      "countryOrRegion": "CN",
+      "family": "ERNIE",
+      "generation": "4.5",
+      "announcementDate": "2025-06",
+      "availabilityDate": "2025-06",
+      "displayDate": "2025.06",
+      "datePrecision": "month",
+      "dateType": "weights",
+      "category": "language",
+      "tags": [
+        "异构多模态 MoE",
+        "300B MoE",
+        "FP8 训练",
+        "开源权重"
+      ],
+      "openWeights": true,
+      "architecture": "异构 MoE（文本与视觉专家分离路由）",
+      "parameters": "300B total / 47B active",
+      "contextWindow": "131,072 tokens",
+      "capabilities": [
+        "中英文生成",
+        "多模态异构预训练",
+        "4bit/2bit 量化部署",
+        "思考与非思考双模式"
+      ],
+      "summary": "百度开源 ERNIE-4.5-300B-A47B：3000 亿总参数、470 亿激活的文本 MoE，文本专家 64 选 8，上下文 131072。技术要点是多模态异构 MoE 预训练，用模态隔离路由与多模态 token 均衡损失让文本与视觉互不干扰。",
+      "keyAdvancement": "以异构专家与模态隔离路由实现文本与视觉的联合预训练而不相互拖累，并把 FP8 训练与低比特无损量化做成完整工程栈。",
+      "significance": "百度首次把主力旗舰以开源权重交付并公开训练与推理工程细节，标志其从纯闭源 API 转向「闭源服务加开源权重」双轨。",
+      "predecessors": [],
+      "successors": [],
+      "sources": [
+        {
+          "label": "Hugging Face — baidu/ERNIE-4.5-300B-A47B-PT（模型卡含 300B/47B、131072 上下文与训练技术说明）",
+          "url": "https://huggingface.co/baidu/ERNIE-4.5-300B-A47B-PT",
+          "kind": "weights"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": "官方仓库创建于 2025-06-28；闭源的 ERNIE 5.0 与 ERNIE 4.5 首发公告未取得可核验官方页面，见 notes.md。"
+    },
+    {
+      "id": "intern-s1",
+      "name": "Intern-S1",
+      "organization": "shanghai-ai-lab",
+      "countryOrRegion": "CN",
+      "family": "Intern",
+      "generation": "S1",
+      "announcementDate": "2025-07",
+      "availabilityDate": "2025-07",
+      "displayDate": "2025.07",
+      "datePrecision": "month",
+      "dateType": "weights",
+      "category": "science",
+      "tags": [
+        "科学多模态",
+        "235B MoE",
+        "科研助手",
+        "开源权重"
+      ],
+      "openWeights": true,
+      "architecture": "235B MoE 语言模型 + 6B InternViT 视觉编码器",
+      "parameters": "235B（语言 MoE）+ 6B（视觉编码器）",
+      "contextWindow": null,
+      "capabilities": [
+        "化学结构解析",
+        "蛋白序列理解",
+        "合成路线规划",
+        "通用多模态"
+      ],
+      "summary": "上海人工智能实验室开源科学多模态模型 Intern-S1：以 235B 的 MoE 语言模型加 6B 的 InternViT 视觉编码器为骨架，在 5 万亿 token 多模态数据上继续预训练，其中科学数据超 2.5 万亿、占比过半，面向化学与蛋白等科研任务。",
+      "keyAdvancement": "用超过一半的科学语料继续预训练通用多模态模型，把化学、蛋白与材料等科研任务做成原生能力而非事后微调目标。",
+      "significance": "中国出现面向科研的开源多模态基座，把「AI for Science」从闭源平台能力变成可下载、可微调的公共模型，也支撑了上海 AI 实验室后续的科学模型序列。",
+      "predecessors": [],
+      "successors": [],
+      "sources": [
+        {
+          "label": "Hugging Face — internlm/Intern-S1（模型卡含 5T 多模态 token 与科学数据占比）",
+          "url": "https://huggingface.co/internlm/Intern-S1",
+          "kind": "weights"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": "官方仓库创建于 2025-07-24，取月份精度。"
+    },
+    {
+      "id": "step-5-preview",
+      "name": "Step-5-Preview",
+      "organization": "stepfun",
+      "countryOrRegion": "CN",
+      "family": "Step",
+      "generation": "5",
+      "announcementDate": "2026-09",
+      "availabilityDate": "2026-09",
+      "displayDate": "2026.09",
+      "datePrecision": "month",
+      "dateType": "weights",
+      "category": "agent",
+      "tags": [
+        "600B MoE",
+        "1M 上下文",
+        "视觉输入",
+        "开源权重"
+      ],
+      "openWeights": true,
+      "architecture": "稀疏 MoE",
+      "parameters": "600B total / 27B active",
+      "contextWindow": "1M tokens",
+      "capabilities": [
+        "长程工具调用",
+        "执行-验证-修正循环",
+        "文本图像视频输入",
+        "持续推理"
+      ],
+      "summary": "阶跃星辰开源 Step 5 Preview：稀疏 MoE，6000 亿总参数、270 亿激活，上下文最长 100 万 token，接受文本、图像与视频输入。官方强调其可在反复调用工具、执行、验证与修正的任务中维持长程推理，仓库给出部署配置。",
+      "keyAdvancement": "把百万上下文与完整 Agent 循环（调用、执行、验证、修正）作为一体设计，而非单纯拉长上下文窗口。",
+      "significance": "阶跃以 600B 稀疏 MoE 进入开源第一梯队，说明中国二线实验室已能在有限算力下交付万卡级可部署的开源旗舰模型。",
+      "predecessors": [],
+      "successors": [],
+      "sources": [
+        {
+          "label": "Hugging Face — stepfun-ai/Step-5-Preview（模型卡含 600B/27B、1M 上下文与部署配置）",
+          "url": "https://huggingface.co/stepfun-ai/Step-5-Preview",
+          "kind": "weights"
+        },
+        {
+          "label": "StepFun — Step 5 Preview 模型页",
+          "url": "https://www.stepfun.com/step-5-preview",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": "官方仓库创建于 2026-09-20，取月份精度。"
+    },
+    {
+      "id": "ling-1t",
+      "name": "Ling-1T",
+      "organization": "ant-group",
+      "countryOrRegion": "CN",
+      "family": "Ling",
+      "generation": "1T",
+      "announcementDate": "2025-10",
+      "availabilityDate": "2025-10",
+      "displayDate": "2025.10",
+      "datePrecision": "month",
+      "dateType": "weights",
+      "category": "reasoning",
+      "tags": [
+        "1T MoE",
+        "非思考模型",
+        "Evo-CoT",
+        "开源权重"
+      ],
+      "openWeights": true,
+      "architecture": "MoE（1/32 激活比，无辅助损失 sigmoid 路由）",
+      "parameters": "1T total / 约 50B active",
+      "contextWindow": "128K tokens",
+      "capabilities": [
+        "竞赛数学",
+        "代码生成",
+        "逻辑推理",
+        "前端生成"
+      ],
+      "summary": "蚂蚁开源 Ling-1T，为 Ling 2.0 系列首款旗舰非思考模型：1 万亿总参数、每 token 约 500 亿激活（1/32 激活比），在 20 万亿以上语料上预训练，支持 128K 上下文。架构采用无辅助损失的 sigmoid 专家路由，并引入演化式思维链。",
+      "keyAdvancement": "以 1/32 的极稀疏激活比训练万亿参数非思考模型，并用演化式思维链在不依赖长思考输出的前提下提升推理稳定性。",
+      "significance": "蚂蚁以万亿级开源模型进入第一梯队，同时把「非思考模型同样能做强推理」这条被低估的路线重新摆上台面，与思考模型形成互补。",
+      "predecessors": [],
+      "successors": [],
+      "sources": [
+        {
+          "label": "Hugging Face — inclusionAI/Ling-1T（模型卡含 1T/50B、1/32 激活比与 Evo-CoT）",
+          "url": "https://huggingface.co/inclusionAI/Ling-1T",
+          "kind": "weights"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": "官方仓库创建于 2025-10-02，取月份精度。"
+    },
+    {
+      "id": "longcat-flash",
+      "name": "LongCat-Flash",
+      "organization": "meituan",
+      "countryOrRegion": "CN",
+      "family": "LongCat",
+      "generation": "Flash",
+      "announcementDate": "2025-08",
+      "availabilityDate": "2025-08",
+      "displayDate": "2025.08",
+      "datePrecision": "month",
+      "dateType": "weights",
+      "category": "language",
+      "tags": [
+        "动态激活 MoE",
+        "ScMoE",
+        "高吞吐",
+        "开源权重"
+      ],
+      "openWeights": true,
+      "architecture": "MoE（零计算专家 + 快捷连接 ScMoE）",
+      "parameters": "560B total / 激活 18.6B–31.3B（均值约 27B）",
+      "contextWindow": "128K tokens（智能体后训练阶段扩展）",
+      "capabilities": [
+        "动态算力分配",
+        "高吞吐推理",
+        "智能体任务",
+        "稳定训练"
+      ],
+      "summary": "美团开源 LongCat-Flash：5600 亿总参数 MoE，用零计算专家按上下文动态分配算力，每 token 激活 186 亿至 313 亿参数，并以 PID 控制器调节专家偏置稳定负载。训练用快捷连接 ScMoE 扩大计算通信重叠，推理吞吐超 100 token/秒。",
+      "keyAdvancement": "让 MoE 的激活参数量随 token 难度浮动（18.6B–31.3B），把按需计算落到路由层，并以确定性计算保证万卡级训练可复现。",
+      "significance": "美团以动态激活 MoE 进入开源第一梯队，其负载均衡与训练稳定性工程对超大规模 MoE 训练具有普适参考价值，也显示中国外卖与本地生活公司正把 AI 基础设施内化。",
+      "predecessors": [],
+      "successors": [],
+      "sources": [
+        {
+          "label": "Hugging Face — meituan-longcat/LongCat-Flash-Chat（模型卡含动态激活与 ScMoE 说明）",
+          "url": "https://huggingface.co/meituan-longcat/LongCat-Flash-Chat",
+          "kind": "weights"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": "官方仓库创建于 2025-08-29，取月份精度。"
+    },
+    {
+      "id": "mimo-7b-rl",
+      "name": "MiMo-7B-RL",
+      "organization": "xiaomi",
+      "countryOrRegion": "CN",
+      "family": "MiMo",
+      "generation": "7B",
+      "announcementDate": "2025-04",
+      "availabilityDate": "2025-04",
+      "displayDate": "2025.04",
+      "datePrecision": "month",
+      "dateType": "weights",
+      "category": "reasoning",
+      "tags": [
+        "7B 小模型",
+        "强化学习",
+        "数学推理",
+        "开源权重"
+      ],
+      "openWeights": true,
+      "architecture": "decoder-only Transformer（7B）",
+      "parameters": "7B",
+      "contextWindow": null,
+      "capabilities": [
+        "数学推理",
+        "代码",
+        "强化学习后训练"
+      ],
+      "summary": "小米开源 MiMo-7B 系列，MiMo-7B-RL 以强化学习后训练为主，模型卡给出 AIME 2025 Pass@1 为 55.4。2025-05-30 更新把 SFT 数据由约 50 万条扩至 600 万条、强化学习窗口从 32K 扩到 48K，推出 RL-0530。",
+      "keyAdvancement": "在 7B 量级上以纯强化学习配合数据与窗口扩展追平更大模型的数学推理，证明小模型存在独立于参数规模的推理提升路径。",
+      "significance": "小米由此进入基础模型研发序列，也向行业证明「小参数加强强化学习」是算力受限团队的现实路线，为端侧与车载场景储备了技术。",
+      "predecessors": [],
+      "successors": [],
+      "sources": [
+        {
+          "label": "Hugging Face — XiaomiMiMo/MiMo-7B-RL（模型卡含基准与 2025-05-30 更新记录）",
+          "url": "https://huggingface.co/XiaomiMiMo/MiMo-7B-RL",
+          "kind": "weights"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": "官方仓库创建于 2025-04-29，取月份精度。"
+    }
+  ],
+  "events": [
+    {
+      "id": "china-ai-plus-action-plan",
+      "date": "2025-08-26",
+      "displayDate": "2025.08.26",
+      "datePrecision": "day",
+      "dateType": "policy",
+      "title": "国务院印发「人工智能+」行动意见",
+      "titleEn": "State Council Opinions on Deepening the AI Plus Initiative",
+      "category": "policy",
+      "summary": "国务院印发《关于深入实施“人工智能+”行动的意见》（国发〔2025〕11号），提出到 2027 年智能终端与智能体应用普及率超 70%、2030 年超 90%，并围绕科学技术、产业发展、消费提质、民生福祉、治理能力、全球合作部署六大行动。",
+      "significance": "首次把智能体与智能终端的普及率写成量化目标，并把开源生态、算力统筹与安全备案并列写入国家行动，为 2025 至 2026 年中国模型开源与算力建设提供了政策依据。",
+      "organizations": [
+        "china-government"
+      ],
+      "people": [],
+      "relatedModels": [],
+      "chapter": 6,
+      "sources": [
+        {
+          "label": "中国政府网 — 国务院关于深入实施“人工智能+”行动的意见（成文 2025-08-21，发布 2025-08-26）",
+          "url": "https://www.gov.cn/zhengce/zhengceku/202508/content_7037862.htm",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": "文件成文日期为 2025-08-21，公开发布日期为 2025-08-26，本条取发布日期。"
+    },
+    {
+      "id": "deepseek-r1-nature-cover",
+      "date": "2025-09",
+      "displayDate": "2025.09",
+      "datePrecision": "month",
+      "dateType": "paper",
+      "title": "DeepSeek-R1 论文登上《自然》封面",
+      "titleEn": "DeepSeek-R1 paper featured on the cover of Nature",
+      "category": "science",
+      "summary": "《自然》以封面文章形式发表 DeepSeek-R1 论文，梁文锋为通讯作者。论文披露 R1 以强化学习为主的训练方法、数据构成与评测细节，并讨论其推理行为与安全边界，是少数以完整同行评审形式进入顶级期刊的前沿大模型研究之一。",
+      "significance": "把大模型的技术披露从预印本与博客推进到同行评审，为开源权重模型的可复现性提供学术背书，也抬高了模型发布时的证据标准。",
+      "organizations": [
+        "deepseek"
+      ],
+      "people": [
+        "梁文锋"
+      ],
+      "relatedModels": [
+        "deepseek-r1"
+      ],
+      "chapter": 6,
+      "sources": [
+        {
+          "label": "新浪科技 — 梁文锋团队 DeepSeek-R1 论文登 Nature 封面",
+          "url": "https://k.sina.cn/article_1611935011_60142d2304001atyg.html",
+          "kind": "press"
+        }
+      ],
+      "verificationStatus": "partially-verified",
+      "notes": "nature.com 对自动抓取跳转至身份验证页，本次未能直接读取 DOI 页面，故以同期权威媒体报道为准并只给到月份精度；条目正式入库前建议补一次 nature.com 直连核验。"
+    },
+    {
+      "id": "alibaba-rmb380b-ai-infrastructure",
+      "date": "2025-02",
+      "displayDate": "2025.02",
+      "datePrecision": "month",
+      "dateType": "announcement",
+      "title": "阿里巴巴宣布三年 3800 亿元 AI 与云基建投入",
+      "titleEn": "Alibaba pledges RMB 380 billion for AI and cloud infrastructure",
+      "category": "hardware",
+      "summary": "阿里巴巴宣布未来三年投入 3800 亿元人民币（约 530 亿美元）用于云与 AI 基础设施建设，并在同年 9 月云栖大会上重申该承诺，作为其全栈 AI 战略的算力底座。这一规模超过当时中国互联网公司公开的同类投资计划。",
+      "significance": "以三年超 500 亿美元级别的资本开支为国产大模型训练与推理提供算力基础，开启 2025 年中国 AI 基础设施投资竞赛，也解释了同期国产模型密集放量的物质条件。",
+      "organizations": [
+        "alibaba-qwen"
+      ],
+      "people": [],
+      "relatedModels": [],
+      "chapter": 6,
+      "sources": [
+        {
+          "label": "Alibaba Cloud — Alibaba to invest RMB 380 billion in AI and cloud infrastructure",
+          "url": "https://www.alibabacloud.com/blog/alibaba-to-invest-rmb380-billion-in-ai-and-cloud-infrastructure-over-next-three-years_602007",
+          "kind": "official"
+        },
+        {
+          "label": "Alibaba Cloud — From Models to Momentum（2025 年回顾，确认 2 月宣布及金额）",
+          "url": "https://www.alibabacloud.com/blog/from-models-to-momentum-how-alibaba-turned-artificial-intelligence-into-a-real-world-utility-in-2025_602797",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": "官方回顾文给出「RMB 380 billion (US$53 billion)」且说明于 2025 年 2 月宣布，官方仅给到月份。"
+    },
+    {
+      "id": "apsara-conference-2025",
+      "date": "2025-09",
+      "displayDate": "2025.09",
+      "datePrecision": "month",
+      "dateType": "conference",
+      "title": "2025 云栖大会：阿里云集中发布模型与全栈 AI 基础设施",
+      "titleEn": "Apsara Conference 2025: Alibaba Cloud unveils models and full-stack AI infrastructure",
+      "category": "organization",
+      "summary": "阿里云在 2025 年云栖大会集中发布新一代模型与基础设施：超万亿参数的闭源旗舰 Qwen3-Max、视觉模型 Qwen3-VL、全模态模型 Qwen3-Omni，预览 Wan2.5 视频生成模型，并升级智能体开发框架与网络、存储、数据库等 AI 基础设施。",
+      "significance": "把模型、智能体平台与算力基础设施一次性打包发布，确立「全栈 AI 云」这一中国云厂商的主导叙事，也让模型发布与算力投资在对外沟通中绑定为同一件事。",
+      "organizations": [
+        "alibaba-qwen"
+      ],
+      "people": [
+        "吴泳铭"
+      ],
+      "relatedModels": [
+        "qwen3-max",
+        "qwen3-vl",
+        "qwen3-omni"
+      ],
+      "chapter": 6,
+      "sources": [
+        {
+          "label": "阿里巴巴集团 — 2025 年云栖大会：阿里云发布下一代 AI 创新策略路线图",
+          "url": "https://www.alibabagroup.com/document-1911884625546838016",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": "官方新闻稿发布于 2025-09-29，会议于 9 月下旬举行，故取月份精度。"
+    },
+    {
+      "id": "qwen-neurips-2025-best-paper",
+      "date": "2025-12",
+      "displayDate": "2025.12",
+      "datePrecision": "month",
+      "dateType": "paper",
+      "title": "Qwen 团队获 NeurIPS 2025 最佳论文奖",
+      "titleEn": "Qwen team wins NeurIPS 2025 Best Paper Award",
+      "category": "theory",
+      "summary": "Qwen 团队凭注意力机制研究获 NeurIPS 2025 最佳论文奖。官方称相关成果已用于 Qwen3-Next 架构，形成 Gated DeltaNet 与 Gated Attention 的混合注意力，并延伸到后续 Qwen3.5 与 Qwen3.8 系列。",
+      "significance": "中国团队在顶级机器学习会议以基础架构研究获奖，并迅速把论文转化为量产开源模型，说明从研究到产品的闭环正在缩短，架构原创性开始成为中国实验室的核心竞争力。",
+      "organizations": [
+        "alibaba-qwen"
+      ],
+      "people": [],
+      "relatedModels": [
+        "qwen3-next"
+      ],
+      "chapter": 6,
+      "sources": [
+        {
+          "label": "Alibaba Cloud — Alibaba Qwen Wins NeurIPS 2025 Best Paper Award",
+          "url": "https://www.alibabacloud.com/blog/alibaba-qwen-wins-%E2%80%9Cneurips-2025-best-paper-award%E2%80%9D-for-breakthrough-in-attention-mechanisms_602708",
+          "kind": "official"
+        },
+        {
+          "label": "Alibaba Cloud — From Models to Momentum（确认最佳论文与 Qwen3-Next 的承接关系）",
+          "url": "https://www.alibabacloud.com/blog/from-models-to-momentum-how-alibaba-turned-artificial-intelligence-into-a-real-world-utility-in-2025_602797",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": "官方仅给出会议与年份，本条按 NeurIPS 2025 会期取 2025-12 月份精度。"
+    },
+    {
+      "id": "qwen-app-launch",
+      "date": "2025-11",
+      "displayDate": "2025.11",
+      "datePrecision": "month",
+      "dateType": "product",
+      "title": "阿里推出千问 App，定位可执行任务的助手",
+      "titleEn": "Alibaba launches the Qwen App as a task-executing assistant",
+      "category": "product",
+      "summary": "阿里推出千问 App，定位为能规划和完成任务的助手，而非单纯对话界面：通过接入导航、出行预订与电商等服务打通阿里生态。官方称该应用上线 23 天内月活跃用户达到 3000 万。",
+      "significance": "标志中国大模型竞争从模型能力延伸到消费级入口，Agent 化应用成为拉新主要卖点，模型公司开始直接经营终端用户而非只做 API 供应商。",
+      "organizations": [
+        "alibaba-qwen"
+      ],
+      "people": [],
+      "relatedModels": [],
+      "chapter": 6,
+      "sources": [
+        {
+          "label": "Alibaba Cloud — Alibaba Launches Qwen App to Boost Its Consumer AI Efforts",
+          "url": "https://www.alibabacloud.com/blog/alibaba-launches-qwen-app-to-boost-its-consumer-ai-efforts_602672",
+          "kind": "official"
+        },
+        {
+          "label": "Alibaba Cloud — From Models to Momentum（确认 2025 年 11 月上线与 23 天 3000 万月活）",
+          "url": "https://www.alibabacloud.com/blog/from-models-to-momentum-how-alibaba-turned-artificial-intelligence-into-a-real-world-utility-in-2025_602797",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": "官方给出月份与 23 天、3000 万月活数据，未给出具体上线日。"
+    },
+    {
+      "id": "quark-ai-glasses",
+      "date": "2025-11",
+      "displayDate": "2025.11",
+      "datePrecision": "month",
+      "dateType": "product",
+      "title": "阿里发布夸克 AI 眼镜",
+      "titleEn": "Alibaba launches Quark AI Glasses",
+      "category": "product",
+      "summary": "阿里发布夸克 AI 眼镜系列，与千问模型深度集成，支持近眼导航、实时翻译等功能，把模型能力从手机延伸到可穿戴设备，并尝试免提交互的形态。",
+      "significance": "中国厂商开始把大模型作为硬件卖点而非仅云端服务，端侧与可穿戴成为 Agent 的新载体，也带动国内 AI 眼镜供应链的形成。",
+      "organizations": [
+        "alibaba-qwen"
+      ],
+      "people": [],
+      "relatedModels": [],
+      "chapter": 6,
+      "sources": [
+        {
+          "label": "Alibaba Cloud — Alibaba Launches New Quark AI Glasses Series in China, Deeply Integrated with Qwen",
+          "url": "https://www.alibabacloud.com/blog/alibaba-launches-new-quark-ai-glasses-series-in-china-deeply-integrated-with-qwen_602717",
+          "kind": "official"
+        },
+        {
+          "label": "Alibaba Cloud — From Models to Momentum（确认产品发布与定位）",
+          "url": "https://www.alibabacloud.com/blog/from-models-to-momentum-how-alibaba-turned-artificial-intelligence-into-a-real-world-utility-in-2025_602797",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": "官方仅给出发布月份。"
+    },
+    {
+      "id": "baguan-seasonal-cop30",
+      "date": "2025-11",
+      "displayDate": "2025.11",
+      "datePrecision": "month",
+      "dateType": "announcement",
+      "title": "阿里发布八观季节性气候模型 Baguan-Seasonal",
+      "titleEn": "Alibaba unveils Baguan-Seasonal climate model at COP30",
+      "category": "science",
+      "summary": "阿里在《联合国气候变化框架公约》第三十次缔约方大会（COP30）中国角发布八观季节性气候模型 Baguan-Seasonal，可对未来 12 个月的气候条件进行预报，用于气候韧性规划与农业决策。",
+      "significance": "把大模型能力延伸到地球科学，说明中国 AI 实验室正把气象与气候预报作为科学智能的重点落地场景，而非仅停留在论文演示。",
+      "organizations": [
+        "alibaba-qwen"
+      ],
+      "people": [],
+      "relatedModels": [],
+      "chapter": 6,
+      "sources": [
+        {
+          "label": "Alibaba Cloud — Alibaba Unveils Baguan-Seasonal AI Model at UN COP30",
+          "url": "https://www.alibabacloud.com/blog/alibaba-unveils-baguan-seasonal-ai-model-at-un-cop30_602683",
+          "kind": "official"
+        },
+        {
+          "label": "Alibaba Cloud — From Models to Momentum（确认 COP30 发布与 12 个月预报能力）",
+          "url": "https://www.alibabacloud.com/blog/from-models-to-momentum-how-alibaba-turned-artificial-intelligence-into-a-real-world-utility-in-2025_602797",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": "官方仅给出发布月份与会议场次。"
+    },
+    {
+      "id": "waic-2025",
+      "date": "2025-07",
+      "displayDate": "2025.07",
+      "datePrecision": "month",
+      "dateType": "conference",
+      "title": "2025 世界人工智能大会在上海举行",
+      "titleEn": "World Artificial Intelligence Conference 2025",
+      "category": "organization",
+      "summary": "2025 世界人工智能大会在上海举行，集中展示中国大模型、具身智能与算力成果，多家厂商在会期发布或预览新模型与智能体产品，首日即出现成果集中发布的现象。",
+      "significance": "作为中国规模最大的 AI 行业展会，WAIC 成为国产模型集中发布的窗口，也是观察政策风向、算力叙事与产业热度的年度指标。",
+      "organizations": [
+        "china-government"
+      ],
+      "people": [],
+      "relatedModels": [],
+      "chapter": 6,
+      "sources": [
+        {
+          "label": "央视网 — WAIC 2025 首日成果报道（2025-07-28）",
+          "url": "https://business.cctv.com/2025/07/28/ARTIn90TBeIFcxRieKer7ryk250727.shtml",
+          "kind": "press"
+        }
+      ],
+      "verificationStatus": "partially-verified",
+      "notes": "官方大会网站未取得含日期的可抓取页面，本条以主流媒体报道为准，仅给到月份精度。"
+    },
+    {
+      "id": "china-genai-service-filing-2025",
+      "date": "2026-01",
+      "displayDate": "2026.01",
+      "datePrecision": "month",
+      "dateType": "policy",
+      "title": "国家网信办发布 2025 年生成式人工智能服务已备案信息",
+      "titleEn": "CAC releases 2025 filing list for generative AI services",
+      "category": "policy",
+      "summary": "国家互联网信息办公室发布 2025 年生成式人工智能服务已备案信息公告，汇总全年按《生成式人工智能服务管理暂行办法》完成备案的服务清单，地方网信部门同步转载。备案是生成式 AI 在中国境内面向公众提供服务的前置条件。",
+      "significance": "为观察中国生成式 AI 的商业化规模提供了官方口径，也说明备案制已从临时管理手段演化为常态化准入制度，成为模型厂商合规发布的硬约束。",
+      "organizations": [
+        "china-government"
+      ],
+      "people": [],
+      "relatedModels": [],
+      "chapter": 7,
+      "sources": [
+        {
+          "label": "国家网信办公告（福建省委网信办转载，2026-01-12）",
+          "url": "https://www.fjwx.gov.cn/yw/20260112/3021895.html",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "partially-verified",
+      "notes": "本次仅取得地方政府网站的转载版本，未取得 cac.gov.cn 原始公告页，故标注为部分核实；公告正文中的具体备案数量未采集，避免二次转述误差。"
+    },
+    {
+      "id": "china-open-source-ecosystem-scale",
+      "date": "2026-02",
+      "displayDate": "2026.02",
+      "datePrecision": "month",
+      "dateType": "announcement",
+      "title": "阿里开源千问模型累计下载突破十亿次",
+      "titleEn": "Qwen open models surpass one billion cumulative downloads",
+      "category": "organization",
+      "summary": "阿里在 Qwen3.5 发布时披露：累计开源超过 400 个千问系列模型，覆盖文本、图像、音频与视频；累计下载量突破 10 亿次，全球开发者基于千问创建的衍生模型超过 20 万个，覆盖 201 种语言与方言。",
+      "significance": "以下载量与衍生模型数双指标确认中国开源模型已成为全球开发者的事实基础设施，而不仅是单点技术输出；开源由此从企业策略变成可量化的产业竞争力指标。",
+      "organizations": [
+        "alibaba-qwen"
+      ],
+      "people": [],
+      "relatedModels": [
+        "qwen3-5"
+      ],
+      "chapter": 7,
+      "sources": [
+        {
+          "label": "阿里巴巴集团 — Qwen3.5：为效率而生的原生多模态模型（含开源规模数据）",
+          "url": "https://www.alibabagroup.com/zh-HK/document-1960233590314762240",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": "官方新闻稿日期为 2026-02-16；本条的「10 亿次下载」为阿里单方披露口径。"
+    }
+  ],
+  "organizations": [],
+  "meta": {
+    "researcher": "china-2025-2026",
+    "generatedAt": "2026-11-02",
+    "cutoff": "2026-11-02"
+  }
+}

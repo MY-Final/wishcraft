@@ -1,0 +1,13 @@
+{
+  "name": "wishcraft",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "WISHCRAFT 许愿池 — a pool of wishes, each built into a world.",
+  "scripts": {
+    "site": "node scripts/build-site.mjs",
+    "site:local": "node scripts/build-site.mjs --skip-install",
+    "serve": "node scripts/serve-site.mjs",
+    "covers": "node scripts/make-covers.mjs"
+  }
+}

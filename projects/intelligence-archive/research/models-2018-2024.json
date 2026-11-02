@@ -1,0 +1,3046 @@
+{
+  "models": [
+    {
+      "id": "gpt-1",
+      "name": "GPT-1",
+      "organization": "openai",
+      "countryOrRegion": "US",
+      "family": "GPT",
+      "generation": "1",
+      "announcementDate": "2018-06-11",
+      "availabilityDate": "2018-06-11",
+      "displayDate": "2018.06.11",
+      "datePrecision": "day",
+      "dateType": "paper",
+      "category": "language",
+      "tags": [
+        "LLM",
+        "预训练",
+        "迁移学习"
+      ],
+      "openWeights": true,
+      "architecture": "decoder-only Transformer（12 层）",
+      "parameters": "117M",
+      "contextWindow": null,
+      "capabilities": [
+        "语言理解微调",
+        "文本生成",
+        "12 项 NLP 任务迁移"
+      ],
+      "summary": "OpenAI 提出生成式预训练加判别式微调的路线：先在 BooksCorpus 上无监督预训练 12 层 Transformer，再针对每个任务微调。在 12 项自然语言理解任务中 9 项刷新当时最优，首次证明通用预训练可以替代任务专用架构。",
+      "keyAdvancement": "首次系统验证「大规模无标注预训练 + 少量标注微调」可通用于多类自然语言理解任务，并公开代码与预训练权重。",
+      "significance": "确立此后所有大模型沿用的「预训练—微调」范式，是 GPT 系列与整个生成式 AI 时代的起点。",
+      "predecessors": [],
+      "successors": [
+        "gpt-2"
+      ],
+      "sources": [
+        {
+          "label": "OpenAI — Improving language understanding with unsupervised learning",
+          "url": "https://openai.com/index/language-unsupervised/",
+          "kind": "official"
+        },
+        {
+          "label": "OpenAI — finetune-transformer-lm（代码与预训练模型）",
+          "url": "https://github.com/openai/finetune-transformer-lm",
+          "kind": "weights"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": null
+    },
+    {
+      "id": "gpt-2",
+      "name": "GPT-2",
+      "organization": "openai",
+      "countryOrRegion": "US",
+      "family": "GPT",
+      "generation": "2",
+      "announcementDate": "2019-02-14",
+      "availabilityDate": "2019-11-05",
+      "displayDate": "2019.02.14",
+      "datePrecision": "day",
+      "dateType": "announcement",
+      "category": "language",
+      "tags": [
+        "LLM",
+        "零样本",
+        "分阶段发布"
+      ],
+      "openWeights": true,
+      "architecture": "decoder-only Transformer",
+      "parameters": "1.5B（最大版本）",
+      "contextWindow": "1024 tokens",
+      "capabilities": [
+        "零样本多任务",
+        "长文本续写",
+        "无监督语言建模"
+      ],
+      "summary": "GPT-2 把最大版本扩到 15 亿参数，在 800 万篇网页构成的 WebText 上训练，不做任何微调即可完成摘要、翻译与问答。因担心被用于批量生成虚假信息，OpenAI 首次采用分阶段发布，先放出小版本，2019 年 11 月才公开完整权重。",
+      "keyAdvancement": "以更大规模证明零样本多任务能力可由语言建模自然涌现，并首创「分阶段发布」的模型治理做法。",
+      "significance": "把「规模即能力」推到公众视野，也让开放权重与滥用风险之间的张力第一次成为产业级议题。",
+      "predecessors": [
+        "gpt-1"
+      ],
+      "successors": [
+        "gpt-3"
+      ],
+      "sources": [
+        {
+          "label": "OpenAI — Better language models and their implications",
+          "url": "https://openai.com/index/better-language-models/",
+          "kind": "official"
+        },
+        {
+          "label": "OpenAI — GPT-2 1.5B release",
+          "url": "https://openai.com/index/gpt-2-1-5b-release/",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": null
+    },
+    {
+      "id": "gpt-3",
+      "name": "GPT-3",
+      "organization": "openai",
+      "countryOrRegion": "US",
+      "family": "GPT",
+      "generation": "3",
+      "announcementDate": "2020-05-28",
+      "availabilityDate": "2020-06-11",
+      "displayDate": "2020.05.28",
+      "datePrecision": "day",
+      "dateType": "paper",
+      "category": "language",
+      "tags": [
+        "LLM",
+        "few-shot",
+        "上下文学习"
+      ],
+      "openWeights": false,
+      "architecture": "decoder-only Transformer（96 层）",
+      "parameters": "175B",
+      "contextWindow": "2048 tokens",
+      "capabilities": [
+        "上下文少样本学习",
+        "文本生成",
+        "简单推理与算术"
+      ],
+      "summary": "GPT-3 达到 1750 亿参数，是当时最大稠密语言模型。论文显示无需梯度更新，仅靠提示中的少量示例即可完成翻译、问答与造句等任务，同时也暴露了数据污染与偏见问题。2020 年 6 月通过 API 有限开放。",
+      "keyAdvancement": "把「规模扩展带来通用少样本能力」做成可复现结论，参数量比此前非稀疏模型高出一个数量级。",
+      "significance": "「提示词」取代微调成为使用模型的主要方式，预训练大模型由此变成可对外出租的基础设施。",
+      "predecessors": [
+        "gpt-2"
+      ],
+      "successors": [
+        "chatgpt"
+      ],
+      "sources": [
+        {
+          "label": "OpenAI — Language models are few-shot learners",
+          "url": "https://openai.com/index/language-models-are-few-shot-learners/",
+          "kind": "official"
+        },
+        {
+          "label": "arXiv:2005.14165 — Language Models are Few-Shot Learners",
+          "url": "https://arxiv.org/abs/2005.14165",
+          "kind": "paper"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": null
+    },
+    {
+      "id": "dall-e",
+      "name": "DALL·E",
+      "organization": "openai",
+      "countryOrRegion": "US",
+      "family": "DALL·E",
+      "generation": "1",
+      "announcementDate": "2021-01-05",
+      "availabilityDate": null,
+      "displayDate": "2021.01.05",
+      "datePrecision": "day",
+      "dateType": "announcement",
+      "category": "image",
+      "tags": [
+        "文本生成图像",
+        "自回归",
+        "多模态"
+      ],
+      "openWeights": false,
+      "architecture": "离散 VAE + 自回归 Transformer",
+      "parameters": "12B（最大版本）",
+      "contextWindow": null,
+      "capabilities": [
+        "文本到图像",
+        "属性组合",
+        "图像改写"
+      ],
+      "summary": "DALL·E 把图像压缩成离散 token，与文本 token 拼接后用自回归 Transformer 联合建模，最大版本约 120 亿参数。它能按自然语言描述组合不常见概念，例如「鳄梨形状的扶手椅」，并支持对已有图像做局部改写。",
+      "keyAdvancement": "首次把图像生成纳入「语言模型」范式，证明文本与图像可以共享同一套 token 建模方式。",
+      "significance": "生成式图像从此进入规模化阶段，为两年后的 DALL·E 2 与扩散模型浪潮铺路，也让视觉成为大模型的主战场。",
+      "predecessors": [],
+      "successors": [
+        "dall-e-2"
+      ],
+      "sources": [
+        {
+          "label": "OpenAI — DALL·E: Creating images from text",
+          "url": "https://openai.com/index/dall-e/",
+          "kind": "official"
+        },
+        {
+          "label": "arXiv:2102.12092 — Zero-Shot Text-to-Image Generation",
+          "url": "https://arxiv.org/abs/2102.12092",
+          "kind": "paper"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": null
+    },
+    {
+      "id": "clip",
+      "name": "CLIP",
+      "organization": "openai",
+      "countryOrRegion": "US",
+      "family": "CLIP",
+      "generation": "1",
+      "announcementDate": "2021-01-05",
+      "availabilityDate": "2021-01-05",
+      "displayDate": "2021.01.05",
+      "datePrecision": "day",
+      "dateType": "announcement",
+      "category": "multimodal",
+      "tags": [
+        "对比学习",
+        "图文对齐",
+        "开放权重"
+      ],
+      "openWeights": true,
+      "architecture": "双塔 Transformer（图像编码器 + 文本编码器）",
+      "parameters": null,
+      "contextWindow": null,
+      "capabilities": [
+        "零样本图像分类",
+        "图文检索",
+        "图像表征"
+      ],
+      "summary": "CLIP 用约 4 亿图文对做对比学习，把图像与文本映射到同一嵌入空间，从而支持零样本分类：无需训练数据，只要给出类别名称即可判别。代码与权重一并公开，图像编码器可换用 ResNet 或 ViT。",
+      "keyAdvancement": "把语言作为监督信号训练视觉模型，使视觉任务可以「用文字描述」而不是「用标注数据定义」。",
+      "significance": "成为此后文生图模型的标配文本编码器与多模态检索基础组件，也确立了开放权重的研究惯例。",
+      "predecessors": [],
+      "successors": [],
+      "sources": [
+        {
+          "label": "OpenAI — CLIP: Connecting text and images",
+          "url": "https://openai.com/index/clip/",
+          "kind": "official"
+        },
+        {
+          "label": "arXiv:2103.00020 — Learning Transferable Visual Models From Natural Language Supervision",
+          "url": "https://arxiv.org/abs/2103.00020",
+          "kind": "paper"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": null
+    },
+    {
+      "id": "codex",
+      "name": "Codex",
+      "organization": "openai",
+      "countryOrRegion": "US",
+      "family": "GPT",
+      "generation": "Codex",
+      "announcementDate": "2021-08-10",
+      "availabilityDate": "2021-08-10",
+      "displayDate": "2021.08.10",
+      "datePrecision": "day",
+      "dateType": "product",
+      "category": "coding",
+      "tags": [
+        "代码生成",
+        "Copilot",
+        "API"
+      ],
+      "openWeights": false,
+      "architecture": "基于 GPT-3 微调的 decoder-only Transformer",
+      "parameters": "12B",
+      "contextWindow": null,
+      "capabilities": [
+        "自然语言转代码",
+        "代码补全",
+        "多语言编程"
+      ],
+      "summary": "Codex 在 GitHub 公开代码上微调 GPT-3，约 120 亿参数，可从自然语言注释生成代码，也能解释与改写既有代码。它支撑了 GitHub Copilot，并通过 API 以私有测试形式开放给开发者与企业。",
+      "keyAdvancement": "把代码作为训练与产品化的主战场，证明大模型可以在高价值专业任务上直接产生生产力。",
+      "significance": "编程成为大模型第一个大规模商业化落地的场景，由此开启 AI 辅助开发的整条产品线，并重塑开发者的日常工作方式。",
+      "predecessors": [
+        "gpt-3"
+      ],
+      "successors": [],
+      "sources": [
+        {
+          "label": "OpenAI — OpenAI Codex",
+          "url": "https://openai.com/index/openai-codex/",
+          "kind": "official"
+        },
+        {
+          "label": "arXiv:2107.03374 — Evaluating Large Language Models Trained on Code",
+          "url": "https://arxiv.org/abs/2107.03374",
+          "kind": "paper"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": null
+    },
+    {
+      "id": "instructgpt",
+      "name": "InstructGPT",
+      "organization": "openai",
+      "countryOrRegion": "US",
+      "family": "GPT",
+      "generation": "InstructGPT",
+      "announcementDate": "2022-01-27",
+      "availabilityDate": null,
+      "displayDate": "2022.01.27",
+      "datePrecision": "day",
+      "dateType": "paper",
+      "category": "language",
+      "tags": [
+        "RLHF",
+        "指令微调",
+        "对齐"
+      ],
+      "openWeights": false,
+      "architecture": "GPT-3 + 监督微调 + 人类反馈强化学习（RLHF）",
+      "parameters": "175B（主实验）",
+      "contextWindow": null,
+      "capabilities": [
+        "指令遵循",
+        "减少有害输出",
+        "降低编造"
+      ],
+      "summary": "InstructGPT 用人类标注的示范做监督微调，再用偏好排序训练奖励模型，以 PPO 优化输出。结果显示 13 亿参数的指令版在人类评价中优于 1750 亿参数的原始 GPT-3，输出更符合意图、更少编造。",
+      "keyAdvancement": "把 RLHF 做成可复现的三步流程，并证明对齐训练可以用更小模型换取更好的人类评价。",
+      "significance": "RLHF 由此成为此后对话模型的标准工序，直接支撑了 ChatGPT 的形态与体验，也催生了奖励模型这一新工种。",
+      "predecessors": [
+        "gpt-3"
+      ],
+      "successors": [
+        "chatgpt"
+      ],
+      "sources": [
+        {
+          "label": "OpenAI — Aligning language models to follow instructions",
+          "url": "https://openai.com/index/instruction-following/",
+          "kind": "official"
+        },
+        {
+          "label": "arXiv:2203.02155 — Training language models to follow instructions with human feedback",
+          "url": "https://arxiv.org/abs/2203.02155",
+          "kind": "paper"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": null
+    },
+    {
+      "id": "dall-e-2",
+      "name": "DALL·E 2",
+      "organization": "openai",
+      "countryOrRegion": "US",
+      "family": "DALL·E",
+      "generation": "2",
+      "announcementDate": "2022-04-06",
+      "availabilityDate": null,
+      "displayDate": "2022.04.06",
+      "datePrecision": "day",
+      "dateType": "announcement",
+      "category": "image",
+      "tags": [
+        "扩散模型",
+        "CLIP 潜空间",
+        "文生图"
+      ],
+      "openWeights": false,
+      "architecture": "CLIP 潜空间 + diffusion 解码器（unCLIP）",
+      "parameters": null,
+      "contextWindow": null,
+      "capabilities": [
+        "高保真文生图",
+        "图像变体",
+        "图像编辑"
+      ],
+      "summary": "DALL·E 2 采用两阶段结构：先用先验模型由文本生成 CLIP 图像嵌入，再用扩散解码器还原图像，并可生成同一语义的多种变体、做局部编辑。2022 年 4 月公布，7 月起分批开放测试。",
+      "keyAdvancement": "用扩散模型替换自回归解码，在写实度与多样性上明显超越前代，并把图像编辑能力产品化。",
+      "significance": "直接把「AI 绘画」推向大众市场，同时因滥用风险采取受限访问，成为生成式图像治理的早期样本。",
+      "predecessors": [
+        "dall-e",
+        "clip"
+      ],
+      "successors": [],
+      "sources": [
+        {
+          "label": "OpenAI — DALL·E 2",
+          "url": "https://openai.com/index/dall-e-2/",
+          "kind": "official"
+        },
+        {
+          "label": "arXiv:2204.06125 — Hierarchical Text-Conditional Image Generation with CLIP Latents",
+          "url": "https://arxiv.org/abs/2204.06125",
+          "kind": "paper"
+        }
+      ],
+      "verificationStatus": "partially-verified",
+      "notes": "官方博客页面本身不显示发布日期；论文 v1 于 2022-04-13 提交，多方记载公布日为 2022-04-06，故日期结合论文与二手来源判断，标为 partially-verified。2022 年 7 月起分批开放测试，具体开放日未能从官方页面读到，availabilityDate 留空。"
+    },
+    {
+      "id": "whisper",
+      "name": "Whisper",
+      "organization": "openai",
+      "countryOrRegion": "US",
+      "family": "Whisper",
+      "generation": "1",
+      "announcementDate": "2022-09-21",
+      "availabilityDate": "2022-09-21",
+      "displayDate": "2022.09.21",
+      "datePrecision": "day",
+      "dateType": "weights",
+      "category": "audio",
+      "tags": [
+        "语音识别",
+        "开放权重",
+        "多语言"
+      ],
+      "openWeights": true,
+      "architecture": "encoder-decoder Transformer",
+      "parameters": "1550M（最大版本）",
+      "contextWindow": null,
+      "capabilities": [
+        "多语言转写",
+        "语音翻译",
+        "噪声鲁棒"
+      ],
+      "summary": "Whisper 用约 68 万小时多语言弱监督音频训练，单一模型即可完成转写、语音翻译与语种识别，在口音、背景噪声与专业术语上表现稳健。代码与各尺寸权重全部开源，可在本地运行。",
+      "keyAdvancement": "以弱监督大数据取代精细标注流水线，把识别、翻译与语种判别统一成一个序列到序列任务，显著提升噪声鲁棒性。",
+      "significance": "语音识别从专用工程栈转向通用大模型，并成为开源语音生态的基础模型，为实时转写与语音助手提供通用底座。",
+      "predecessors": [],
+      "successors": [],
+      "sources": [
+        {
+          "label": "OpenAI — Introducing Whisper",
+          "url": "https://openai.com/index/whisper/",
+          "kind": "official"
+        },
+        {
+          "label": "arXiv:2212.04356 — Robust Speech Recognition via Large-Scale Weak Supervision",
+          "url": "https://arxiv.org/abs/2212.04356",
+          "kind": "paper"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": null
+    },
+    {
+      "id": "chatgpt",
+      "name": "ChatGPT",
+      "organization": "openai",
+      "countryOrRegion": "US",
+      "family": "GPT",
+      "generation": "3.5",
+      "announcementDate": "2022-11-30",
+      "availabilityDate": "2022-11-30",
+      "displayDate": "2022.11.30",
+      "datePrecision": "day",
+      "dateType": "product",
+      "category": "language",
+      "tags": [
+        "对话助手",
+        "RLHF",
+        "消费级产品"
+      ],
+      "openWeights": false,
+      "architecture": "基于 GPT-3.5 的对话微调模型（RLHF）",
+      "parameters": null,
+      "contextWindow": null,
+      "capabilities": [
+        "多轮对话",
+        "文本创作",
+        "代码与解释"
+      ],
+      "summary": "OpenAI 以 GPT-3.5 为基础、用人类反馈强化学习训练出对话形态的 ChatGPT，以网页免费形式开放，支持多轮追问、承认错误与拒绝不当请求。上线两个月即成为增长最快的消费级应用之一。",
+      "keyAdvancement": "把前沿模型包装成零门槛对话产品，用免费策略换取规模，验证了「模型即产品」的路径。",
+      "significance": "触发全球生成式 AI 竞赛，重塑投资节奏、监管议程与教育及内容产业的预期，也让公众第一次大规模直接使用大模型。",
+      "predecessors": [
+        "gpt-3",
+        "instructgpt"
+      ],
+      "successors": [
+        "gpt-4"
+      ],
+      "sources": [
+        {
+          "label": "OpenAI — Introducing ChatGPT",
+          "url": "https://openai.com/index/chatgpt/",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": null
+    },
+    {
+      "id": "gpt-4",
+      "name": "GPT-4",
+      "organization": "openai",
+      "countryOrRegion": "US",
+      "family": "GPT",
+      "generation": "4",
+      "announcementDate": "2023-03-14",
+      "availabilityDate": "2023-03-14",
+      "displayDate": "2023.03.14",
+      "datePrecision": "day",
+      "dateType": "announcement",
+      "category": "multimodal",
+      "tags": [
+        "多模态",
+        "推理",
+        "系统卡"
+      ],
+      "openWeights": false,
+      "architecture": "未公开（闭源）",
+      "parameters": null,
+      "contextWindow": "8K / 32K tokens",
+      "capabilities": [
+        "图像输入理解",
+        "考试级推理",
+        "长文档处理"
+      ],
+      "summary": "GPT-4 可同时接受文本与图像输入，在模拟律师资格考试中进入前 10%，多项学术与专业基准超过人类水平。OpenAI 未公开参数量与训练细节，只发布技术报告与系统卡，并强调经过六个月的安全对齐与红队测试。",
+      "keyAdvancement": "把多模态理解与高难度专业推理合为一体，并以系统卡形式公开能力边界与残余风险，改变了发布惯例。",
+      "significance": "前沿模型进入能力与风险披露并行的阶段，多模态成为新一代旗舰的基线配置，也提高了外界评估模型的成本。",
+      "predecessors": [
+        "gpt-3"
+      ],
+      "successors": [
+        "gpt-4-turbo"
+      ],
+      "sources": [
+        {
+          "label": "OpenAI — GPT-4",
+          "url": "https://openai.com/index/gpt-4-research/",
+          "kind": "official"
+        },
+        {
+          "label": "arXiv:2303.08774 — GPT-4 Technical Report",
+          "url": "https://arxiv.org/abs/2303.08774",
+          "kind": "paper"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": null
+    },
+    {
+      "id": "gpt-4-turbo",
+      "name": "GPT-4 Turbo",
+      "organization": "openai",
+      "countryOrRegion": "US",
+      "family": "GPT",
+      "generation": "4",
+      "announcementDate": "2023-11-06",
+      "availabilityDate": "2023-11-06",
+      "displayDate": "2023.11.06",
+      "datePrecision": "day",
+      "dateType": "product",
+      "category": "multimodal",
+      "tags": [
+        "长上下文",
+        "降价",
+        "开发者生态"
+      ],
+      "openWeights": false,
+      "architecture": "未公开（闭源）",
+      "parameters": null,
+      "contextWindow": "128K tokens",
+      "capabilities": [
+        "12.8 万 token 上下文",
+        "视觉输入",
+        "JSON 模式"
+      ],
+      "summary": "在首届开发者大会上发布，上下文扩到 12.8 万 token，知识截止更新至 2023 年 4 月，输入价格降至原 GPT-4 的三分之一左右，并同步推出 GPTs、Assistants API 与 DALL·E 3 API。",
+      "keyAdvancement": "把超长上下文与低价同时下放，并把定制化与工具编排作为平台能力开放，开发者可自建专属助手。",
+      "significance": "竞争焦点从谁的分数高转向成本、延迟与开发者生态，应用层创业由此大规模扩张，模型开始按平台来经营。",
+      "predecessors": [
+        "gpt-4"
+      ],
+      "successors": [
+        "gpt-4o"
+      ],
+      "sources": [
+        {
+          "label": "OpenAI — New models and developer products announced at DevDay",
+          "url": "https://openai.com/index/new-models-and-developer-products-announced-at-devday/",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": null
+    },
+    {
+      "id": "sora",
+      "name": "Sora",
+      "organization": "openai",
+      "countryOrRegion": "US",
+      "family": "Sora",
+      "generation": "1",
+      "announcementDate": "2024-02-15",
+      "availabilityDate": null,
+      "displayDate": "2024.02.15",
+      "datePrecision": "day",
+      "dateType": "announcement",
+      "category": "video",
+      "tags": [
+        "文生视频",
+        "diffusion Transformer",
+        "世界模拟器"
+      ],
+      "openWeights": false,
+      "architecture": "diffusion Transformer（时空 patch）",
+      "parameters": null,
+      "contextWindow": null,
+      "capabilities": [
+        "一分钟高清视频",
+        "可变分辨率与时长",
+        "视频续写"
+      ],
+      "summary": "Sora 把视频与图像统一编码为时空 patch，用扩散 Transformer 在可变分辨率、时长与画幅上训练，可生成最长约一分钟的高清视频。技术报告强调模型对大尺度视频生成的学习，但未公开实现细节。",
+      "keyAdvancement": "用统一 patch 表征突破固定分辨率与固定时长的限制，把视频生成推向通用视觉建模。",
+      "significance": "视频生成进入世界模拟器叙事，深度伪造与内容溯源由此成为政策焦点，影视与广告的生产流程开始被重新设计。",
+      "predecessors": [],
+      "successors": [],
+      "sources": [
+        {
+          "label": "OpenAI — Video generation models as world simulators",
+          "url": "https://openai.com/index/video-generation-models-as-world-simulators/",
+          "kind": "official"
+        },
+        {
+          "label": "OpenAI — Sora: Creating video from text",
+          "url": "https://openai.com/index/sora/",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": null
+    },
+    {
+      "id": "gpt-4o",
+      "name": "GPT-4o",
+      "organization": "openai",
+      "countryOrRegion": "US",
+      "family": "GPT",
+      "generation": "4o",
+      "announcementDate": "2024-05-13",
+      "availabilityDate": "2024-05-13",
+      "displayDate": "2024.05.13",
+      "datePrecision": "day",
+      "dateType": "announcement",
+      "category": "multimodal",
+      "tags": [
+        "原生多模态",
+        "实时语音",
+        "低延迟"
+      ],
+      "openWeights": false,
+      "architecture": "未公开（闭源，端到端多模态）",
+      "parameters": null,
+      "contextWindow": "128K tokens",
+      "capabilities": [
+        "实时语音对话",
+        "视觉理解",
+        "跨模态生成"
+      ],
+      "summary": "GPT-4o 用单一模型端到端处理文本、音频与图像，语音响应延迟接近人类对话节奏，可打断、可识别语气。API 价格约为 GPT-4 Turbo 的一半，并向免费用户开放有限额度。",
+      "keyAdvancement": "把语音、视觉与文本放进同一模型而不是串联多个模块，交互方式从「打字问答」转向实时对话。",
+      "significance": "人机交互的多模态门槛大幅降低，语音助手与实时翻译类产品被重新定义，端到端多模态成为新的标准配置。",
+      "predecessors": [
+        "gpt-4-turbo"
+      ],
+      "successors": [],
+      "sources": [
+        {
+          "label": "OpenAI — Hello GPT-4o",
+          "url": "https://openai.com/index/hello-gpt-4o/",
+          "kind": "official"
+        },
+        {
+          "label": "OpenAI — GPT-4o System Card",
+          "url": "https://openai.com/index/gpt-4o-system-card/",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": null
+    },
+    {
+      "id": "o1-preview",
+      "name": "OpenAI o1-preview",
+      "organization": "openai",
+      "countryOrRegion": "US",
+      "family": "o-series",
+      "generation": "1",
+      "announcementDate": "2024-09-12",
+      "availabilityDate": "2024-09-12",
+      "displayDate": "2024.09.12",
+      "datePrecision": "day",
+      "dateType": "product",
+      "category": "reasoning",
+      "tags": [
+        "推理",
+        "思维链",
+        "强化学习"
+      ],
+      "openWeights": false,
+      "architecture": "强化学习训练的长思维链推理模型（细节未公开）",
+      "parameters": null,
+      "contextWindow": "128K tokens",
+      "capabilities": [
+        "数学竞赛题",
+        "代码竞赛",
+        "科学推理"
+      ],
+      "summary": "o1-preview 通过强化学习让模型在回答前生成较长的内部推理链，在 AIME 数学、Codeforces 编程与 GPQA 科学问答等竞赛型任务上明显超过 GPT-4o。代价是响应更慢、推理成本更高，且不公开思维链原文。",
+      "keyAdvancement": "用强化学习把「思考更久」变成可训练目标，把能力提升路径从预训练规模转向推理时计算。",
+      "significance": "开启推理模型这一新品类，此后前沿竞争的焦点转向测试时计算与推理可靠性，而不再只是堆叠预训练数据。",
+      "predecessors": [
+        "gpt-4o"
+      ],
+      "successors": [
+        "o1"
+      ],
+      "sources": [
+        {
+          "label": "OpenAI — Introducing OpenAI o1-preview",
+          "url": "https://openai.com/index/introducing-openai-o1-preview/",
+          "kind": "official"
+        },
+        {
+          "label": "OpenAI — Learning to reason with LLMs",
+          "url": "https://openai.com/index/learning-to-reason-with-llms/",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": null
+    },
+    {
+      "id": "o1",
+      "name": "OpenAI o1",
+      "organization": "openai",
+      "countryOrRegion": "US",
+      "family": "o-series",
+      "generation": "1",
+      "announcementDate": "2024-12-05",
+      "availabilityDate": "2024-12-05",
+      "displayDate": "2024.12.05",
+      "datePrecision": "day",
+      "dateType": "product",
+      "category": "reasoning",
+      "tags": [
+        "推理",
+        "思维链",
+        "系统卡"
+      ],
+      "openWeights": false,
+      "architecture": "强化学习训练的推理模型（细节未公开）",
+      "parameters": null,
+      "contextWindow": null,
+      "capabilities": [
+        "多步推理",
+        "函数调用",
+        "图像推理"
+      ],
+      "summary": "o1 正式版取代预览版，官方称同等请求的推理 token 用量平均减少约六成，支持函数调用、结构化输出与视觉输入，并随同日发布的系统卡披露安全评估；同期上线 ChatGPT Pro 订阅。",
+      "keyAdvancement": "把推理模型从预览转为生产可用，补齐工具调用、结构化输出与视觉能力，并降低推理成本。",
+      "significance": "推理模型成为前沿产品线的常设成员，商业模型从按 token 计费走向按「思考量」分层。",
+      "predecessors": [
+        "o1-preview"
+      ],
+      "successors": [],
+      "sources": [
+        {
+          "label": "OpenAI — OpenAI o1 System Card（2024-12-05 更新）",
+          "url": "https://openai.com/index/openai-o1-system-card/",
+          "kind": "official"
+        },
+        {
+          "label": "OpenAI — OpenAI o1 and new tools for developers",
+          "url": "https://openai.com/index/o1-and-new-tools-for-developers/",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": "o1 于 2024-12-05 进入 ChatGPT 并向 Pro 用户开放；开发者侧快照 o1-2024-12-17 于 12 月 17 日进入 API。"
+    },
+    {
+      "id": "claude",
+      "name": "Claude",
+      "organization": "anthropic",
+      "countryOrRegion": "US",
+      "family": "Claude",
+      "generation": "1",
+      "announcementDate": "2023-03-14",
+      "availabilityDate": "2023-03-14",
+      "displayDate": "2023.03.14",
+      "datePrecision": "day",
+      "dateType": "announcement",
+      "category": "language",
+      "tags": [
+        "对话助手",
+        "宪法 AI",
+        "API"
+      ],
+      "openWeights": false,
+      "architecture": "未公开（闭源）",
+      "parameters": null,
+      "contextWindow": null,
+      "capabilities": [
+        "长文档总结",
+        "写作与问答",
+        "可设定人格"
+      ],
+      "summary": "Anthropic 首款公开模型，按「有用、诚实、无害」目标训练，采用宪法 AI 与人类反馈，可设定语气与人格。经 Notion、Quora、DuckDuckGo 等伙伴内测后开放 API 与聊天界面，同时提供更轻量更快的 Claude Instant。",
+      "keyAdvancement": "把「安全优先」的对齐方法做成商业产品，并提供旗舰与轻量两档模型供企业按成本选择。",
+      "significance": "前沿模型市场出现第二家供应商，安全导向的实验室证明了自身可持续的商业路径，三强格局由此萌芽。",
+      "predecessors": [],
+      "successors": [
+        "claude-2"
+      ],
+      "sources": [
+        {
+          "label": "Anthropic — Introducing Claude",
+          "url": "https://www.anthropic.com/news/introducing-claude",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": null
+    },
+    {
+      "id": "claude-2",
+      "name": "Claude 2",
+      "organization": "anthropic",
+      "countryOrRegion": "US",
+      "family": "Claude",
+      "generation": "2",
+      "announcementDate": "2023-07-11",
+      "availabilityDate": "2023-07-11",
+      "displayDate": "2023.07.11",
+      "datePrecision": "day",
+      "dateType": "announcement",
+      "category": "language",
+      "tags": [
+        "长上下文",
+        "代码",
+        "公开测试"
+      ],
+      "openWeights": false,
+      "architecture": "未公开（闭源）",
+      "parameters": null,
+      "contextWindow": "100K tokens",
+      "capabilities": [
+        "10 万 token 上下文",
+        "代码生成",
+        "长文写作"
+      ],
+      "summary": "Claude 2 把输入上下文扩到 10 万 token，约相当于数百页文档；律师资格考试多选题得分从 73.0% 提升到 76.5%，HumanEval 从 56.0% 升到 71.2%，同时上线 claude.ai 公开测试站点，首次直接面向消费者。",
+      "keyAdvancement": "以超长上下文作为核心差异化，并补齐编码与推理短板，同时从 API 走向自有消费级产品。",
+      "significance": "长文档理解成为企业采购的硬指标，Anthropic 由此进入与 OpenAI 正面竞争的产品赛道。",
+      "predecessors": [
+        "claude"
+      ],
+      "successors": [
+        "claude-2-1"
+      ],
+      "sources": [
+        {
+          "label": "Anthropic — Claude 2",
+          "url": "https://www.anthropic.com/news/claude-2",
+          "kind": "official"
+        },
+        {
+          "label": "Anthropic — Claude 2 Model Card",
+          "url": "https://www-cdn.anthropic.com/bd2a28d2535bfb0494cc8e2a3bf135d2e7523226/Model-Card-Claude-2.pdf",
+          "kind": "docs"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": null
+    },
+    {
+      "id": "claude-2-1",
+      "name": "Claude 2.1",
+      "organization": "anthropic",
+      "countryOrRegion": "US",
+      "family": "Claude",
+      "generation": "2.1",
+      "announcementDate": "2023-11-21",
+      "availabilityDate": "2023-11-21",
+      "displayDate": "2023.11.21",
+      "datePrecision": "day",
+      "dateType": "product",
+      "category": "language",
+      "tags": [
+        "20 万上下文",
+        "降低幻觉",
+        "工具调用"
+      ],
+      "openWeights": false,
+      "architecture": "未公开（闭源）",
+      "parameters": null,
+      "contextWindow": "200K tokens",
+      "capabilities": [
+        "20 万 token 上下文",
+        "减少虚假陈述",
+        "工具调用 beta"
+      ],
+      "summary": "Claude 2.1 把上下文翻倍到 20 万 token，约合 500 页材料；官方称相比 Claude 2.0 虚假陈述率降低约一半，错误结论减少三成，并首次提供系统提示词与工具调用 beta，同时下调价格。",
+      "keyAdvancement": "同时提升上下文长度与事实可靠性，并把调用外部工具纳入模型能力范围，减少长文档任务中的编造。",
+      "significance": "长上下文从容量指标变成可用能力，工具调用为一年后的智能体产品埋下伏笔，企业文档场景被真正打开。",
+      "predecessors": [
+        "claude-2"
+      ],
+      "successors": [
+        "claude-3-opus"
+      ],
+      "sources": [
+        {
+          "label": "Anthropic — Introducing Claude 2.1",
+          "url": "https://www.anthropic.com/news/claude-2-1",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": null
+    },
+    {
+      "id": "claude-3-opus",
+      "name": "Claude 3 Opus",
+      "organization": "anthropic",
+      "countryOrRegion": "US",
+      "family": "Claude",
+      "generation": "3",
+      "announcementDate": "2024-03-04",
+      "availabilityDate": "2024-03-04",
+      "displayDate": "2024.03.04",
+      "datePrecision": "day",
+      "dateType": "announcement",
+      "category": "multimodal",
+      "tags": [
+        "多模态",
+        "视觉",
+        "旗舰"
+      ],
+      "openWeights": false,
+      "architecture": "未公开（闭源）",
+      "parameters": null,
+      "contextWindow": "200K tokens",
+      "capabilities": [
+        "图像理解",
+        "复杂推理",
+        "多语言"
+      ],
+      "summary": "Claude 3 家族的最强型号，在 MMLU、GPQA、GSM8K 等基准上超过同期竞品，首次为 Claude 引入图像、图表与文档截图输入，标准上下文 20 万 token，个别场景可扩展到百万级，定价为家族最高档。",
+      "keyAdvancement": "把视觉理解、长上下文与更强推理合并进旗舰模型，并显著降低不必要的拒答，整体可用性明显提升。",
+      "significance": "前沿模型形成三强竞争格局，多模态与长上下文由此成为旗舰产品的默认配置，价格分层也变得更清晰。",
+      "predecessors": [
+        "claude-2-1"
+      ],
+      "successors": [
+        "claude-3-5-sonnet"
+      ],
+      "sources": [
+        {
+          "label": "Anthropic — Introducing the next generation of Claude",
+          "url": "https://www.anthropic.com/news/claude-3-family",
+          "kind": "official"
+        },
+        {
+          "label": "Anthropic — Claude 3 Model Card",
+          "url": "https://www.anthropic.com/claude-3-model-card",
+          "kind": "docs"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": null
+    },
+    {
+      "id": "claude-3-sonnet",
+      "name": "Claude 3 Sonnet",
+      "organization": "anthropic",
+      "countryOrRegion": "US",
+      "family": "Claude",
+      "generation": "3",
+      "announcementDate": "2024-03-04",
+      "availabilityDate": "2024-03-04",
+      "displayDate": "2024.03.04",
+      "datePrecision": "day",
+      "dateType": "announcement",
+      "category": "multimodal",
+      "tags": [
+        "多模态",
+        "性价比",
+        "企业部署"
+      ],
+      "openWeights": false,
+      "architecture": "未公开（闭源）",
+      "parameters": null,
+      "contextWindow": "200K tokens",
+      "capabilities": [
+        "视觉理解",
+        "低成本",
+        "大规模部署"
+      ],
+      "summary": "Claude 3 家族的中档型号，速度约为 Claude 2 与 2.1 的两倍，智能水平更高，输入与输出价格为每百万 token 3 美元与 15 美元。它是 claude.ai 免费版的主力，并同步上线 Amazon Bedrock 与 Google Vertex AI。",
+      "keyAdvancement": "在成本、速度与能力之间建立新的平衡点，把够用就好的中档模型做成企业批量部署的主力。",
+      "significance": "多档位产品结构成为行业惯例，云平台首发分销也成为模型公司的标准渠道策略，企业选择空间变大。",
+      "predecessors": [
+        "claude-2-1"
+      ],
+      "successors": [
+        "claude-3-5-sonnet"
+      ],
+      "sources": [
+        {
+          "label": "Anthropic — Introducing the next generation of Claude",
+          "url": "https://www.anthropic.com/news/claude-3-family",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": null
+    },
+    {
+      "id": "claude-3-haiku",
+      "name": "Claude 3 Haiku",
+      "organization": "anthropic",
+      "countryOrRegion": "US",
+      "family": "Claude",
+      "generation": "3",
+      "announcementDate": "2024-03-04",
+      "availabilityDate": null,
+      "displayDate": "2024.03.04",
+      "datePrecision": "day",
+      "dateType": "announcement",
+      "category": "multimodal",
+      "tags": [
+        "低延迟",
+        "低成本",
+        "视觉输入"
+      ],
+      "openWeights": false,
+      "architecture": "未公开（闭源）",
+      "parameters": null,
+      "contextWindow": "200K tokens",
+      "capabilities": [
+        "近即时响应",
+        "视觉输入",
+        "内容审核"
+      ],
+      "summary": "家族中最小最快的型号，官方称可在三秒内读完一篇约 1 万 token、带图表的论文。价格低至每百万 token 输入 0.25 美元，面向实时客服、翻译与内容审核等高频低成本场景，发布时晚于 Opus 与 Sonnet 上线。",
+      "keyAdvancement": "在小参数规模上保留长上下文与视觉能力，为高频调用场景提供可负担选项，输入价格低至每百万 token 0.25 美元。",
+      "significance": "推动按任务选模型的多档族谱成为标准做法，也压缩了传统小模型与规则系统的生存空间，价格带下移。",
+      "predecessors": [],
+      "successors": [
+        "claude-3-5-haiku"
+      ],
+      "sources": [
+        {
+          "label": "Anthropic — Introducing the next generation of Claude",
+          "url": "https://www.anthropic.com/news/claude-3-family",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": "2024-03-04 公布时 Haiku 尚未上线，官方称「即将推出」。"
+    },
+    {
+      "id": "claude-3-5-sonnet",
+      "name": "Claude 3.5 Sonnet",
+      "organization": "anthropic",
+      "countryOrRegion": "US",
+      "family": "Claude",
+      "generation": "3.5",
+      "announcementDate": "2024-06-20",
+      "availabilityDate": "2024-06-20",
+      "displayDate": "2024.06.20",
+      "datePrecision": "day",
+      "dateType": "announcement",
+      "category": "multimodal",
+      "tags": [
+        "编码",
+        "视觉推理",
+        "Artifacts"
+      ],
+      "openWeights": false,
+      "architecture": "未公开（闭源）",
+      "parameters": null,
+      "contextWindow": "200K tokens",
+      "capabilities": [
+        "代码与工程任务",
+        "图表理解",
+        "Artifact 工作区"
+      ],
+      "summary": "Claude 3.5 家族的首发型号，以中档价格 Sonnet 的成本超过 Claude 3 Opus 的表现，运行速度约为 Opus 的两倍，并显著提升幽默、细微语气与复杂指令的理解；同步推出 Artifacts 侧边工作区。",
+      "keyAdvancement": "以中档价位实现超越上代旗舰的能力，并把对话界面扩展为可编辑、可预览的创作工作区。",
+      "significance": "性价比曲线再次被压低，编码与前端生成成为增长最快的使用场景之一，中型模型的价值被重新定价。",
+      "predecessors": [
+        "claude-3-opus"
+      ],
+      "successors": [
+        "claude-3-5-sonnet-20241022"
+      ],
+      "sources": [
+        {
+          "label": "Anthropic — Introducing Claude 3.5 Sonnet",
+          "url": "https://www.anthropic.com/news/claude-3-5-sonnet",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": null
+    },
+    {
+      "id": "claude-3-5-sonnet-20241022",
+      "name": "Claude 3.5 Sonnet (new)",
+      "organization": "anthropic",
+      "countryOrRegion": "US",
+      "family": "Claude",
+      "generation": "3.5",
+      "announcementDate": "2024-10-22",
+      "availabilityDate": "2024-10-22",
+      "displayDate": "2024.10.22",
+      "datePrecision": "day",
+      "dateType": "announcement",
+      "category": "agent",
+      "tags": [
+        "Computer Use",
+        "Agentic Coding",
+        "工具调用"
+      ],
+      "openWeights": false,
+      "architecture": "未公开（闭源）",
+      "parameters": null,
+      "contextWindow": "200K tokens",
+      "capabilities": [
+        "操作计算机界面",
+        "SWE-bench 编码",
+        "多步工具调用"
+      ],
+      "summary": "升级版 Claude 3.5 Sonnet 在 SWE-bench Verified 上从 33.4% 提升到 49.0%，同价格同速度；同时首次以公开 beta 提供 computer use，模型可看屏幕、移动光标、点击与输入，直接操作图形界面完成任务。",
+      "keyAdvancement": "把感知—决策—操作串成闭环，让模型能使用为人设计的软件，而不是只调用为它准备的 API。",
+      "significance": "智能体从「调用接口」迈向「操作界面」，为 2025 年后的浏览器与桌面智能体产品定下范式。",
+      "predecessors": [
+        "claude-3-5-sonnet"
+      ],
+      "successors": [],
+      "sources": [
+        {
+          "label": "Anthropic — Computer use, Claude 3.5 Sonnet, and Claude 3.5 Haiku",
+          "url": "https://www.anthropic.com/news/3-5-models-and-computer-use",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": null
+    },
+    {
+      "id": "claude-3-5-haiku",
+      "name": "Claude 3.5 Haiku",
+      "organization": "anthropic",
+      "countryOrRegion": "US",
+      "family": "Claude",
+      "generation": "3.5",
+      "announcementDate": "2024-10-22",
+      "availabilityDate": null,
+      "displayDate": "2024.10.22",
+      "datePrecision": "day",
+      "dateType": "announcement",
+      "category": "language",
+      "tags": [
+        "低延迟",
+        "编码",
+        "低成本"
+      ],
+      "openWeights": false,
+      "architecture": "未公开（闭源）",
+      "parameters": null,
+      "contextWindow": "200K tokens",
+      "capabilities": [
+        "快速响应",
+        "SWE-bench 编码",
+        "工具使用"
+      ],
+      "summary": "与升级版 3.5 Sonnet 同日公布的小型模型，官方称在多项智能基准上超过上代旗舰 Claude 3 Opus，SWE-bench Verified 达 40.6%，先以纯文本形式上线，图像输入随后补齐，速度与价格接近上代 Haiku。",
+      "keyAdvancement": "小模型在编码与工具使用上逼近上一代旗舰，把高性能从高价位档位继续下移，价格却接近上代小模型。",
+      "significance": "小模型与旗舰的差距缩小，企业可以更低成本部署子智能体与批量任务，整体推理成本结构因此改变。",
+      "predecessors": [
+        "claude-3-haiku"
+      ],
+      "successors": [],
+      "sources": [
+        {
+          "label": "Anthropic — Computer use, Claude 3.5 Sonnet, and Claude 3.5 Haiku",
+          "url": "https://www.anthropic.com/news/3-5-models-and-computer-use",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": "2024-10-22 公布，官方称当月稍后上线；具体可用日期未在官方页面读取到，故 availabilityDate 留空。"
+    },
+    {
+      "id": "bert",
+      "name": "BERT",
+      "organization": "google-deepmind",
+      "countryOrRegion": "US",
+      "family": "BERT",
+      "generation": "1",
+      "announcementDate": "2018-10-11",
+      "availabilityDate": null,
+      "displayDate": "2018.10.11",
+      "datePrecision": "day",
+      "dateType": "paper",
+      "category": "language",
+      "tags": [
+        "预训练",
+        "双向编码器",
+        "开放权重"
+      ],
+      "openWeights": true,
+      "architecture": "encoder-only Transformer（双向）",
+      "parameters": "110M / 340M（Base / Large）",
+      "contextWindow": null,
+      "capabilities": [
+        "11 项 NLP 任务 SOTA",
+        "问答",
+        "句对分类"
+      ],
+      "summary": "BERT 用掩码语言模型与下一句预测做双向预训练，微调后刷新 11 项自然语言理解任务纪录：GLUE 达 80.5%，SQuAD v1.1 测试 F1 达 93.2。预训练代码与权重全部开源，成为通用的文本表征底座。",
+      "keyAdvancement": "以双向上下文预训练替代单向语言模型，证明「预训练一次、微调多任务」可大幅降低每项任务的标注成本。",
+      "significance": "确立 NLP 迁移学习的工业标准，并在一年内进入搜索等核心产品，成为研究落地的分水岭。",
+      "predecessors": [],
+      "successors": [
+        "t5"
+      ],
+      "sources": [
+        {
+          "label": "arXiv:1810.04805 — BERT: Pre-training of Deep Bidirectional Transformers",
+          "url": "https://arxiv.org/abs/1810.04805",
+          "kind": "paper"
+        },
+        {
+          "label": "Google Research — BERT 官方仓库",
+          "url": "https://github.com/google-research/bert",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": "权重与代码于 2018 年 11 月起在 Google Research 仓库开放；此处仅记录论文与开源事实，具体开源日未从官方页面读到，availabilityDate 留空。"
+    },
+    {
+      "id": "t5",
+      "name": "T5",
+      "organization": "google-deepmind",
+      "countryOrRegion": "US",
+      "family": "T5",
+      "generation": "1",
+      "announcementDate": "2019-10-23",
+      "availabilityDate": "2019-10-23",
+      "displayDate": "2019.10.23",
+      "datePrecision": "day",
+      "dateType": "paper",
+      "category": "language",
+      "tags": [
+        "统一框架",
+        "编码器-解码器",
+        "开放权重"
+      ],
+      "openWeights": true,
+      "architecture": "encoder-decoder Transformer（统一 text-to-text）",
+      "parameters": "11B（T5-11B）",
+      "capabilities": [
+        "统一文本到文本",
+        "多任务迁移",
+        "摘要与问答"
+      ],
+      "summary": "T5 把所有文本任务改写为「文本输入、文本输出」，系统对比预训练目标、架构、数据规模与微调策略，用 700GB 的 C4 语料训练，最大 110 亿参数刷新多项基准，并公开数据、模型与代码。",
+      "keyAdvancement": "用统一格式消除任务专用结构，并以大规模对照实验给出可复用的训练配方与公开语料，降低复现门槛。",
+      "significance": "统一建模与系统性消融成为此后模型论文的范式，C4 语料被广泛用于后续训练与评测，影响延续至今。",
+      "predecessors": [
+        "bert"
+      ],
+      "successors": [],
+      "sources": [
+        {
+          "label": "arXiv:1910.10683 — Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer",
+          "url": "https://arxiv.org/abs/1910.10683",
+          "kind": "paper"
+        },
+        {
+          "label": "Google Research — Text-to-Text Transfer Transformer 官方仓库",
+          "url": "https://github.com/google-research/text-to-text-transfer-transformer",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": null
+    },
+    {
+      "id": "lamda",
+      "name": "LaMDA",
+      "organization": "google-deepmind",
+      "countryOrRegion": "US",
+      "family": "LaMDA",
+      "generation": "1",
+      "announcementDate": "2021-05-18",
+      "availabilityDate": null,
+      "displayDate": "2021.05.18",
+      "datePrecision": "day",
+      "dateType": "conference",
+      "category": "language",
+      "tags": [
+        "对话",
+        "137B",
+        "安全"
+      ],
+      "openWeights": false,
+      "architecture": "decoder-only Transformer",
+      "parameters": "137B",
+      "contextWindow": null,
+      "capabilities": [
+        "开放域对话",
+        "常识推理",
+        "安全过滤"
+      ],
+      "summary": "Google 在 I/O 2021 公布的对话专用模型，1370 亿参数，训练目标同时强调合理性、具体性与安全性，用带标注的微调与安全过滤减少有害回答。论文附录还讨论了模型自称有感受所引发的伦理问题。",
+      "keyAdvancement": "把对话质量拆成合理性、具体性与安全性等可度量维度逐项优化，同时系统记录拟人化输出带来的风险。",
+      "significance": "对话 AI 的拟人化与安全争议首次公开化，也为后续 Bard 与 Gemini 的对话能力积累基础。",
+      "predecessors": [],
+      "successors": [],
+      "sources": [
+        {
+          "label": "Google — LaMDA: our breakthrough conversation technology",
+          "url": "https://blog.google/technology/ai/lamda/",
+          "kind": "official"
+        },
+        {
+          "label": "arXiv:2201.08239 — LaMDA: Language Models for Dialog Applications",
+          "url": "https://arxiv.org/abs/2201.08239",
+          "kind": "paper"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": null
+    },
+    {
+      "id": "palm",
+      "name": "PaLM",
+      "organization": "google-deepmind",
+      "countryOrRegion": "US",
+      "family": "PaLM",
+      "generation": "1",
+      "announcementDate": "2022-04-04",
+      "availabilityDate": null,
+      "displayDate": "2022.04.04",
+      "datePrecision": "day",
+      "dateType": "announcement",
+      "category": "language",
+      "tags": [
+        "540B",
+        "Pathways",
+        "少样本"
+      ],
+      "openWeights": false,
+      "architecture": "decoder-only Transformer（Pathways 训练）",
+      "parameters": "540B",
+      "contextWindow": null,
+      "capabilities": [
+        "多步推理",
+        "多语言",
+        "代码生成"
+      ],
+      "summary": "PaLM 为 5400 亿参数稠密模型，首次在 6144 块 TPU v4 上借助 Pathways 系统跨多个 Pod 训练，在数百项基准上取得少样本最佳成绩，部分多步推理任务超过当时的微调最优结果。",
+      "keyAdvancement": "验证超大规模稠密模型与跨 Pod 训练系统的可行性，并量化规模带来的不连续能力跃升。",
+      "significance": "为 Google 后续 Gemini 的工程体系打底，也把参数量竞赛推到数千亿级，并暴露偏见与毒性的规模效应。",
+      "predecessors": [],
+      "successors": [
+        "gemini-1-0"
+      ],
+      "sources": [
+        {
+          "label": "Google Research — Pathways Language Model (PaLM)",
+          "url": "https://research.google/blog/pathways-language-model-palm-scaling-to-540-billion-parameters-for-breakthrough-performance/",
+          "kind": "official"
+        },
+        {
+          "label": "arXiv:2204.02311 — PaLM: Scaling Language Modeling with Pathways",
+          "url": "https://arxiv.org/abs/2204.02311",
+          "kind": "paper"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": null
+    },
+    {
+      "id": "imagen",
+      "name": "Imagen",
+      "organization": "google-deepmind",
+      "countryOrRegion": "US",
+      "family": "Imagen",
+      "generation": "1",
+      "announcementDate": "2022-05-23",
+      "availabilityDate": null,
+      "displayDate": "2022.05.23",
+      "datePrecision": "day",
+      "dateType": "paper",
+      "category": "image",
+      "tags": [
+        "扩散模型",
+        "文生图",
+        "T5 文本编码"
+      ],
+      "openWeights": false,
+      "architecture": "级联 diffusion 模型 + 冻结 T5-XXL 文本编码器",
+      "parameters": null,
+      "contextWindow": null,
+      "capabilities": [
+        "高保真文生图",
+        "文本渲染",
+        "深度与风格控制"
+      ],
+      "summary": "Imagen 用冻结的 T5-XXL 编码文本，再由级联扩散模型逐步生成高分辨率图像，官方在 COCO 上报告的 FID 优于同期 DALL·E 2，并展示了较强的写实度与文本排版能力，但未公开模型权重。",
+      "keyAdvancement": "证明大规模语言编码器对图像生成质量的关键作用，并把级联扩散做成高分辨率生成的标准结构。",
+      "significance": "扩散路线在图像生成上确立优势，也让「语言模型 + 生成模型」的组合成为文生图主流架构。",
+      "predecessors": [
+        "t5"
+      ],
+      "successors": [],
+      "sources": [
+        {
+          "label": "arXiv:2205.11487 — Photorealistic Text-to-Image Diffusion Models with Deep Language Understanding",
+          "url": "https://arxiv.org/abs/2205.11487",
+          "kind": "paper"
+        },
+        {
+          "label": "Google Research — Imagen 项目页",
+          "url": "https://imagen.research.google/",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": null
+    },
+    {
+      "id": "gemini-1-0",
+      "name": "Gemini 1.0",
+      "organization": "google-deepmind",
+      "countryOrRegion": "US",
+      "family": "Gemini",
+      "generation": "1.0",
+      "announcementDate": "2023-12-06",
+      "availabilityDate": "2023-12-06",
+      "displayDate": "2023.12.06",
+      "datePrecision": "day",
+      "dateType": "announcement",
+      "category": "multimodal",
+      "tags": [
+        "原生多模态",
+        "Ultra/Pro/Nano",
+        "数据中心到端侧"
+      ],
+      "openWeights": false,
+      "architecture": "未公开（闭源，原生多模态）",
+      "parameters": null,
+      "contextWindow": "32K tokens",
+      "capabilities": [
+        "原生多模态理解",
+        "三档规格",
+        "设备端运行"
+      ],
+      "summary": "Google 首个原生多模态模型家族，分 Ultra、Pro、Nano 三档：Ultra 面向高复杂度任务，Pro 用于通用服务，Nano 可在手机等设备端运行。官方称 Ultra 在多模态基准上超过当时 GPT-4，Pro 先行接入 Bard。",
+      "keyAdvancement": "从设计之初就联合训练文本、图像与音频，并把同一家族覆盖数据中心到端侧的不同算力条件。",
+      "significance": "Google 把分散的模型产品线统一到 Gemini 品牌，前沿竞争从两强变为三强，端侧模型也纳入同一家族。",
+      "predecessors": [
+        "palm"
+      ],
+      "successors": [
+        "gemini-1-5"
+      ],
+      "sources": [
+        {
+          "label": "Google — Introducing Gemini: our largest and most capable AI model",
+          "url": "https://blog.google/technology/ai/google-gemini-ai/",
+          "kind": "official"
+        },
+        {
+          "label": "arXiv:2312.11805 — Gemini: A Family of Highly Capable Multimodal Models",
+          "url": "https://arxiv.org/abs/2312.11805",
+          "kind": "paper"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": null
+    },
+    {
+      "id": "gemini-1-5",
+      "name": "Gemini 1.5 Pro",
+      "organization": "google-deepmind",
+      "countryOrRegion": "US",
+      "family": "Gemini",
+      "generation": "1.5",
+      "announcementDate": "2024-02-15",
+      "availabilityDate": "2024-02-15",
+      "displayDate": "2024.02.15",
+      "datePrecision": "day",
+      "dateType": "announcement",
+      "category": "multimodal",
+      "tags": [
+        "MoE",
+        "百万上下文",
+        "视频理解"
+      ],
+      "openWeights": false,
+      "architecture": "稀疏专家混合（MoE）",
+      "parameters": null,
+      "contextWindow": "1M tokens",
+      "capabilities": [
+        "百万 token 上下文",
+        "长视频理解",
+        "跨模态检索"
+      ],
+      "summary": "Gemini 1.5 Pro 采用稀疏专家混合架构，上下文窗口提升到 100 万 token，可一次处理数小时视频、数十万行代码或整本图书，性能与上一代 Ultra 相当而计算效率更高，先向开发者与企业开放。",
+      "keyAdvancement": "以 MoE 结构换取效率，并把可用上下文推高一个数量级，使「整库理解」类任务成为可能。",
+      "significance": "长上下文竞赛进入百万级，检索增强、代码库理解与长视频分析的产品形态随之改变，评估方法也被迫更新。",
+      "predecessors": [
+        "gemini-1-0"
+      ],
+      "successors": [
+        "gemini-2-0"
+      ],
+      "sources": [
+        {
+          "label": "Google — Our next-generation model: Gemini 1.5",
+          "url": "https://blog.google/technology/ai/google-gemini-next-generation-model-february-2024/",
+          "kind": "official"
+        },
+        {
+          "label": "arXiv:2403.05530 — Gemini 1.5: Unlocking multimodal understanding across millions of tokens of context",
+          "url": "https://arxiv.org/abs/2403.05530",
+          "kind": "paper"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": null
+    },
+    {
+      "id": "gemma",
+      "name": "Gemma",
+      "organization": "google-deepmind",
+      "countryOrRegion": "US",
+      "family": "Gemma",
+      "generation": "1",
+      "announcementDate": "2024-02-21",
+      "availabilityDate": "2024-02-21",
+      "displayDate": "2024.02.21",
+      "datePrecision": "day",
+      "dateType": "weights",
+      "category": "language",
+      "tags": [
+        "开放权重",
+        "商用许可",
+        "端侧部署"
+      ],
+      "openWeights": true,
+      "architecture": "decoder-only Transformer",
+      "parameters": "2B / 7B",
+      "contextWindow": "8K tokens",
+      "capabilities": [
+        "本地部署",
+        "指令微调版",
+        "多语言"
+      ],
+      "summary": "基于 Gemini 研究推出的开放权重家族，提供 20 亿与 70 亿参数两档，各有预训练与指令微调版本，允许商用与再分发，可在笔记本或单卡上运行，并配套责任使用条款与安全过滤工具。",
+      "keyAdvancement": "把前沿实验室的架构经验以开放权重形式下放，同时给出明确的商用许可与责任规范，降低使用门槛。",
+      "significance": "Google 首次认真参与开放权重生态，改变了闭源前沿、开源跟随的固有分工，开源阵营的竞争因此升温。",
+      "predecessors": [
+        "gemini-1-0"
+      ],
+      "successors": [],
+      "sources": [
+        {
+          "label": "Google — Gemma: Introducing new state-of-the-art open models",
+          "url": "https://blog.google/technology/developers/gemma-open-models/",
+          "kind": "official"
+        },
+        {
+          "label": "Google AI for Developers — Gemma 文档",
+          "url": "https://ai.google.dev/gemma",
+          "kind": "docs"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": null
+    },
+    {
+      "id": "gemini-2-0",
+      "name": "Gemini 2.0",
+      "organization": "google-deepmind",
+      "countryOrRegion": "US",
+      "family": "Gemini",
+      "generation": "2.0",
+      "announcementDate": "2024-12-11",
+      "availabilityDate": "2024-12-11",
+      "displayDate": "2024.12.11",
+      "datePrecision": "day",
+      "dateType": "announcement",
+      "category": "agent",
+      "tags": [
+        "智能体",
+        "多模态输出",
+        "工具调用"
+      ],
+      "openWeights": false,
+      "architecture": "未公开（闭源，原生多模态 + 工具调用）",
+      "parameters": null,
+      "contextWindow": null,
+      "capabilities": [
+        "多步任务规划",
+        "原生图像与音频生成",
+        "实时工具调用"
+      ],
+      "summary": "定位为「智能体时代」的新一代模型，先发布 Flash 版本，支持原生图像与音频输出、实时工具调用与多步规划，并接入搜索、代码执行等环境，同时向开发者开放多模态实时 API。",
+      "keyAdvancement": "把工具调用与多模态输出作为模型原生能力，从回答问题转向执行任务，并接入搜索与代码执行环境。",
+      "significance": "竞争重心从回答质量转向能否自主完成任务，agent 成为 2025 年前后的产品主线。",
+      "predecessors": [
+        "gemini-1-5"
+      ],
+      "successors": [],
+      "sources": [
+        {
+          "label": "Google — Gemini 2.0: A new AI model for the agentic era",
+          "url": "https://blog.google/technology/google-deepmind/google-gemini-ai-update-december-2024/",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": null
+    },
+    {
+      "id": "llama",
+      "name": "LLaMA",
+      "organization": "meta",
+      "countryOrRegion": "US",
+      "family": "Llama",
+      "generation": "1",
+      "announcementDate": "2023-02-24",
+      "availabilityDate": "2023-02-24",
+      "displayDate": "2023.02.24",
+      "datePrecision": "day",
+      "dateType": "announcement",
+      "category": "language",
+      "tags": [
+        "开放权重",
+        "研究许可",
+        "高效训练"
+      ],
+      "openWeights": true,
+      "architecture": "decoder-only Transformer",
+      "parameters": "7B–65B",
+      "contextWindow": "2048 tokens",
+      "capabilities": [
+        "研究用开放模型",
+        "少样本推理",
+        "高效推理"
+      ],
+      "summary": "LLaMA 提供 70 亿至 650 亿参数四档模型，只用公开数据集训练：130 亿版本在多数基准上超过 1750 亿参数的 GPT-3，650 亿版本与 Chinchilla-70B、PaLM-540B 相当。权重以研究许可开放。",
+      "keyAdvancement": "证明仅用公开数据并延长训练也能达到前沿水平，把「参数效率」而非单纯规模推到前台。",
+      "significance": "开放权重生态由此被点燃，此后几乎所有开源大模型都在这条路线上生长，权重与许可成为公共议题。",
+      "predecessors": [],
+      "successors": [
+        "llama-2"
+      ],
+      "sources": [
+        {
+          "label": "Meta AI — Introducing LLaMA: A foundational, 65-billion-parameter large language model",
+          "url": "https://ai.meta.com/blog/large-language-model-llama-meta-ai/",
+          "kind": "official"
+        },
+        {
+          "label": "arXiv:2302.13971 — LLaMA: Open and Efficient Foundation Language Models",
+          "url": "https://arxiv.org/abs/2302.13971",
+          "kind": "paper"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": "官方博客公布日为 2023-02-24；arXiv 论文 v1 提交于 2023-02-27。"
+    },
+    {
+      "id": "llama-2",
+      "name": "Llama 2",
+      "organization": "meta",
+      "countryOrRegion": "US",
+      "family": "Llama",
+      "generation": "2",
+      "announcementDate": "2023-07-18",
+      "availabilityDate": "2023-07-18",
+      "displayDate": "2023.07.18",
+      "datePrecision": "day",
+      "dateType": "announcement",
+      "category": "language",
+      "tags": [
+        "开放权重",
+        "商用许可",
+        "安全对齐"
+      ],
+      "openWeights": true,
+      "architecture": "decoder-only Transformer",
+      "parameters": "7B–70B",
+      "contextWindow": "4096 tokens",
+      "capabilities": [
+        "免费商用",
+        "对话微调版",
+        "安全评估"
+      ],
+      "summary": "Llama 2 与微软合作发布，提供 70 亿至 700 亿参数及对话微调版本，上下文翻倍到 4096 token，允许免费商用（月活超 7 亿需单独授权），并配套系统卡、红队报告与安全微调说明。",
+      "keyAdvancement": "把开放权重从研究许可推进到可商用，并首次为开放模型配备较完整的安全评估与红队文档，明确授权边界。",
+      "significance": "首个可商用的强开放权重模型，催生大量微调、托管与本地部署服务，形成独立于闭源厂商的生态。",
+      "predecessors": [
+        "llama"
+      ],
+      "successors": [
+        "llama-3"
+      ],
+      "sources": [
+        {
+          "label": "Meta — Meta and Microsoft Introduce the Next Generation of Llama",
+          "url": "https://about.fb.com/news/2023/07/llama-2/",
+          "kind": "official"
+        },
+        {
+          "label": "Meta AI — Llama 2",
+          "url": "https://ai.meta.com/blog/llama-2/",
+          "kind": "official"
+        },
+        {
+          "label": "arXiv:2307.09288 — Llama 2: Open Foundation and Fine-Tuned Chat Models",
+          "url": "https://arxiv.org/abs/2307.09288",
+          "kind": "paper"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": null
+    },
+    {
+      "id": "llama-3",
+      "name": "Llama 3",
+      "organization": "meta",
+      "countryOrRegion": "US",
+      "family": "Llama",
+      "generation": "3",
+      "announcementDate": "2024-04-18",
+      "availabilityDate": "2024-04-18",
+      "displayDate": "2024.04.18",
+      "datePrecision": "day",
+      "dateType": "announcement",
+      "category": "language",
+      "tags": [
+        "开放权重",
+        "15T token",
+        "开源 SOTA"
+      ],
+      "openWeights": true,
+      "architecture": "decoder-only Transformer",
+      "parameters": "8B / 70B",
+      "contextWindow": "8K tokens",
+      "capabilities": [
+        "开放权重前沿",
+        "多语言分词",
+        "对话与代码"
+      ],
+      "summary": "Llama 3 在约 15 万亿 token 上训练，先开放 80 亿与 700 亿两档基础版和指令版，在同类开放模型中领先；分词器词表扩大到 12.8 万，多语言与代码效率提升，更大参数与多模态版本随后推出。",
+      "keyAdvancement": "以数倍于前代的数据规模与更大词表，把开放权重模型的基准表现推到接近同期闭源前沿。",
+      "significance": "开源与闭源的能力差距缩短到数月，企业开始认真评估以开放模型自建推理栈，算力与数据门槛被重估。",
+      "predecessors": [
+        "llama-2"
+      ],
+      "successors": [
+        "llama-3-1"
+      ],
+      "sources": [
+        {
+          "label": "Meta AI — Introducing Meta Llama 3",
+          "url": "https://ai.meta.com/blog/meta-llama-3/",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": null
+    },
+    {
+      "id": "llama-3-1",
+      "name": "Llama 3.1",
+      "organization": "meta",
+      "countryOrRegion": "US",
+      "family": "Llama",
+      "generation": "3.1",
+      "announcementDate": "2024-07-23",
+      "availabilityDate": "2024-07-23",
+      "displayDate": "2024.07.23",
+      "datePrecision": "day",
+      "dateType": "announcement",
+      "category": "language",
+      "tags": [
+        "405B",
+        "开放权重",
+        "工具调用"
+      ],
+      "openWeights": true,
+      "architecture": "decoder-only Transformer",
+      "parameters": "8B / 70B / 405B",
+      "contextWindow": "128K tokens",
+      "capabilities": [
+        "4050 亿开放权重",
+        "工具调用",
+        "多语言"
+      ],
+      "summary": "Llama 3.1 首次开放 4050 亿参数级模型权重，另有 80 亿与 700 亿版本；上下文扩到 12.8 万 token，支持工具调用与八种语言，并配套 Llama Guard 等安全组件与参考推理栈。",
+      "keyAdvancement": "把开放权重的规模上限抬到前沿量级，同时补齐长上下文、工具调用与配套安全工具链，降低自建门槛。",
+      "significance": "开放与闭源的能力边界被重新划定，模型权重本身开始被视为可长期持有的基础设施资产。",
+      "predecessors": [
+        "llama-3"
+      ],
+      "successors": [
+        "llama-3-2"
+      ],
+      "sources": [
+        {
+          "label": "Meta AI — Introducing Llama 3.1: Our most capable models to date",
+          "url": "https://ai.meta.com/blog/meta-llama-3-1/",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": null
+    },
+    {
+      "id": "llama-3-2",
+      "name": "Llama 3.2",
+      "organization": "meta",
+      "countryOrRegion": "US",
+      "family": "Llama",
+      "generation": "3.2",
+      "announcementDate": "2024-09-25",
+      "availabilityDate": "2024-09-25",
+      "displayDate": "2024.09.25",
+      "datePrecision": "day",
+      "dateType": "announcement",
+      "category": "multimodal",
+      "tags": [
+        "视觉理解",
+        "端侧模型",
+        "开放权重"
+      ],
+      "openWeights": true,
+      "architecture": "decoder-only Transformer（含视觉编码器）",
+      "parameters": "1B / 3B / 11B / 90B",
+      "contextWindow": "128K tokens",
+      "capabilities": [
+        "图像理解",
+        "手机端运行",
+        "多语言"
+      ],
+      "summary": "Llama 3.2 首次为 Llama 加入图像理解能力，视觉模型为 110 亿与 900 亿参数；同时推出 10 亿与 30 亿参数的端侧小模型，可在手机等设备本地推理，并配套发布跨平台分发规范 Llama Stack。",
+      "keyAdvancement": "把多模态与端侧小模型同时纳入开放家族，覆盖从手机到数据中心的完整部署谱系，许可保持统一。",
+      "significance": "开放权重生态补齐多模态与移动部署两块拼图，端侧 AI 的可行路径被明确，手机厂商开始直接接入。",
+      "predecessors": [
+        "llama-3-1"
+      ],
+      "successors": [],
+      "sources": [
+        {
+          "label": "Meta AI — Llama 3.2: Revolutionizing edge AI and vision with open, customizable models",
+          "url": "https://ai.meta.com/blog/llama-3-2-connect-2024-vision-edge-mobile-devices/",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": null
+    },
+    {
+      "id": "mistral-7b",
+      "name": "Mistral 7B",
+      "organization": "mistral",
+      "countryOrRegion": "FR",
+      "family": "Mistral",
+      "generation": "7B",
+      "announcementDate": "2023-09-27",
+      "availabilityDate": "2023-09-27",
+      "displayDate": "2023.09.27",
+      "datePrecision": "day",
+      "dateType": "weights",
+      "category": "language",
+      "tags": [
+        "开放权重",
+        "Apache 2.0",
+        "高效注意力"
+      ],
+      "openWeights": true,
+      "architecture": "decoder-only Transformer（GQA + 滑动窗口注意力）",
+      "parameters": "7.3B",
+      "contextWindow": "8K tokens",
+      "capabilities": [
+        "小模型高性能",
+        "本地部署",
+        "宽松许可"
+      ],
+      "summary": "法国初创公司 Mistral AI 的首个模型，73 亿参数，采用分组查询注意力与滑动窗口注意力降低推理开销，官方称在同规模对比中超过 Llama 2 13B，并以 Apache 2.0 许可开放下载与商用。",
+      "keyAdvancement": "以工程化的注意力优化与高质量数据，让小模型在同参数量下取得更好的性能与速度比，并开放商用。",
+      "significance": "欧洲出现有竞争力的基础模型公司，宽松许可加速了本地部署与二次开发，闭源厂商的定价权受到挑战。",
+      "predecessors": [],
+      "successors": [
+        "mixtral-8x7b"
+      ],
+      "sources": [
+        {
+          "label": "Mistral AI — Announcing Mistral 7B",
+          "url": "https://mistral.ai/news/announcing-mistral-7b/",
+          "kind": "official"
+        },
+        {
+          "label": "arXiv:2310.06825 — Mistral 7B",
+          "url": "https://arxiv.org/abs/2310.06825",
+          "kind": "paper"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": null
+    },
+    {
+      "id": "mixtral-8x7b",
+      "name": "Mixtral 8x7B",
+      "organization": "mistral",
+      "countryOrRegion": "FR",
+      "family": "Mistral",
+      "generation": "8x7B",
+      "announcementDate": "2023-12-11",
+      "availabilityDate": "2023-12-11",
+      "displayDate": "2023.12.11",
+      "datePrecision": "day",
+      "dateType": "weights",
+      "category": "language",
+      "tags": [
+        "MoE",
+        "开放权重",
+        "Apache 2.0"
+      ],
+      "openWeights": true,
+      "architecture": "稀疏专家混合（8 个专家，每 token 路由 2 个）",
+      "parameters": "46.7B total / 12.9B active",
+      "contextWindow": "32K tokens",
+      "capabilities": [
+        "高性价比推理",
+        "多语言",
+        "代码生成"
+      ],
+      "summary": "Mixtral 8x7B 由 8 个专家组成，每个 token 只路由到其中 2 个，总参数 467 亿而推理仅激活约 129 亿，官方称其表现超过 Llama 2 70B 与 GPT-3.5，并以 Apache 2.0 开放权重。",
+      "keyAdvancement": "把稀疏专家混合做成可直接下载的开放模型，用更少的激活参数换取更强能力与更低的推理成本。",
+      "significance": "MoE 从研究结构变成开放生态的主流配方，深刻影响此后模型架构与推理成本结构，硬件利用方式随之调整。",
+      "predecessors": [
+        "mistral-7b"
+      ],
+      "successors": [
+        "mistral-large"
+      ],
+      "sources": [
+        {
+          "label": "Mistral AI — Mixtral of experts",
+          "url": "https://mistral.ai/news/mixtral-of-experts/",
+          "kind": "official"
+        },
+        {
+          "label": "arXiv:2401.04088 — Mixtral of Experts",
+          "url": "https://arxiv.org/abs/2401.04088",
+          "kind": "paper"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": null
+    },
+    {
+      "id": "mistral-large",
+      "name": "Mistral Large",
+      "organization": "mistral",
+      "countryOrRegion": "FR",
+      "family": "Mistral",
+      "generation": "Large",
+      "announcementDate": "2024-02-26",
+      "availabilityDate": "2024-02-26",
+      "displayDate": "2024.02.26",
+      "datePrecision": "day",
+      "dateType": "announcement",
+      "category": "language",
+      "tags": [
+        "旗舰闭源",
+        "函数调用",
+        "多语言"
+      ],
+      "openWeights": false,
+      "architecture": "未公开（闭源，MoE）",
+      "parameters": null,
+      "contextWindow": "32K tokens",
+      "capabilities": [
+        "多语言推理",
+        "函数调用",
+        "结构化输出"
+      ],
+      "summary": "Mistral 首个旗舰闭源模型，主打多语言推理、函数调用与严格遵循输出格式，原生支持英语、法语、西班牙语、德语与意大利语，通过与微软 Azure 合作分发，并同步推出对话助手 Le Chat。",
+      "keyAdvancement": "从开放权重转向开放引流加闭源变现的双轨结构，并补齐企业级的工具调用与格式遵循能力。",
+      "significance": "欧洲公司确立了可持续的商业模式样本，模型公司开始同时经营开放与闭源两条产品线，融资更有说服力。",
+      "predecessors": [
+        "mixtral-8x7b"
+      ],
+      "successors": [],
+      "sources": [
+        {
+          "label": "Mistral AI — Mistral Large",
+          "url": "https://mistral.ai/news/mistral-large",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": null
+    },
+    {
+      "id": "grok-1",
+      "name": "Grok-1",
+      "organization": "xai",
+      "countryOrRegion": "US",
+      "family": "Grok",
+      "generation": "1",
+      "announcementDate": "2023-11",
+      "availabilityDate": null,
+      "displayDate": "2023.11",
+      "datePrecision": "month",
+      "dateType": "announcement",
+      "category": "language",
+      "tags": [
+        "实时信息",
+        "MoE",
+        "开放权重"
+      ],
+      "openWeights": true,
+      "architecture": "稀疏专家混合（MoE）",
+      "parameters": "314B（开放权重版本）",
+      "contextWindow": null,
+      "capabilities": [
+        "接入实时信息",
+        "风格化对话",
+        "X 平台集成"
+      ],
+      "summary": "xAI 的首个模型，名称取自《银河系漫游指南》，接入 X 平台的实时信息流，官方称在部分基准上接近 GPT-3.5，并刻意采用较少的拒答与更直白的语气。2024 年 3 月以开放权重形式发布基础模型。",
+      "keyAdvancement": "以社交平台的实时数据作为差异化信息源，并把模型直接嵌入自有分发渠道，缩短从发布到触达的路径。",
+      "significance": "实时信息与分发渠道成为模型竞争的新变量，也标志 xAI 进入前沿追赶者行列，社交平台开始自建模型。",
+      "predecessors": [],
+      "successors": [
+        "grok-2"
+      ],
+      "sources": [
+        {
+          "label": "xAI — Announcing Grok",
+          "url": "https://x.ai/news/grok",
+          "kind": "official"
+        },
+        {
+          "label": "xAI — grok-1 开放权重仓库",
+          "url": "https://github.com/xai-org/grok-1",
+          "kind": "weights"
+        }
+      ],
+      "verificationStatus": "partially-verified",
+      "notes": "x.ai 官方站在本研究环境无法访问，无法直接读取公告页日期；多方记载公布于 2023-11-03 至 11-05 之间，故按月份精度记录。基础模型权重于 2024-03-17 以 Apache 2.0 开放。"
+    },
+    {
+      "id": "grok-2",
+      "name": "Grok-2",
+      "organization": "xai",
+      "countryOrRegion": "US",
+      "family": "Grok",
+      "generation": "2",
+      "announcementDate": "2024-08-13",
+      "availabilityDate": "2024-08-13",
+      "displayDate": "2024.08.13",
+      "datePrecision": "day",
+      "dateType": "announcement",
+      "category": "multimodal",
+      "tags": [
+        "图像生成",
+        "实时信息",
+        "X 集成"
+      ],
+      "openWeights": false,
+      "architecture": "未公开（闭源）",
+      "parameters": null,
+      "contextWindow": null,
+      "capabilities": [
+        "图像理解与生成",
+        "实时检索",
+        "企业预览"
+      ],
+      "summary": "Grok-2 以 beta 形式在 X 平台上线，新增图像理解与生成能力（图像生成借助外部模型），官方称推理、编码与信息时效性较 Grok-1 明显提升，同时向企业开放预览版本。",
+      "keyAdvancement": "补齐多模态与实时检索能力，把社交平台的分发优势转化为产品迭代速度，企业预览版同步开放。",
+      "significance": "模型与社交平台深度绑定，内容审核与选举期的信息风险随之放大，成为多国监管机构的关注对象。",
+      "predecessors": [
+        "grok-1"
+      ],
+      "successors": [],
+      "sources": [
+        {
+          "label": "xAI — Grok-2 Beta Release",
+          "url": "https://x.ai/news/grok-2",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "partially-verified",
+      "notes": "官方页面在本研究环境不可直接读取，日期依多方一致记载；标为 partially-verified。"
+    },
+    {
+      "id": "stable-diffusion",
+      "name": "Stable Diffusion",
+      "organization": "stability-ai",
+      "countryOrRegion": "UK",
+      "family": "Stable Diffusion",
+      "generation": "1",
+      "announcementDate": "2022-08-22",
+      "availabilityDate": "2022-08-22",
+      "displayDate": "2022.08.22",
+      "datePrecision": "day",
+      "dateType": "weights",
+      "category": "image",
+      "tags": [
+        "潜空间扩散",
+        "开放权重",
+        "本地运行"
+      ],
+      "openWeights": true,
+      "architecture": "latent diffusion（潜空间扩散）+ CLIP 文本编码器",
+      "parameters": null,
+      "contextWindow": null,
+      "capabilities": [
+        "文生图",
+        "图生图",
+        "消费级显卡运行"
+      ],
+      "summary": "Stable Diffusion 在压缩后的潜空间做扩散，用 CLIP 文本编码器做条件，把文生图的算力需求降到消费级显卡可承受的范围，权重以开放许可发布，几个月内衍生出大量界面、插件与微调模型。",
+      "keyAdvancement": "以潜空间扩散大幅降低推理成本，并用开放权重把图像生成交给整个社区改造，生态在数月内成型。",
+      "significance": "生成式图像第一次大规模平民化，同时把版权、艺术劳动与深度伪造的争论推向公共政策层面。",
+      "predecessors": [
+        "clip"
+      ],
+      "successors": [],
+      "sources": [
+        {
+          "label": "Stability AI — Stable Diffusion public release",
+          "url": "https://stability.ai/news/stable-diffusion-public-release",
+          "kind": "official"
+        },
+        {
+          "label": "arXiv:2112.10752 — High-Resolution Image Synthesis with Latent Diffusion Models",
+          "url": "https://arxiv.org/abs/2112.10752",
+          "kind": "paper"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": "底层方法来自潜空间扩散论文（2021-12 预印），2022-08-22 为 Stability AI 公开发布并开放权重的日期。"
+    },
+    {
+      "id": "phi-3",
+      "name": "Phi-3",
+      "organization": "microsoft",
+      "countryOrRegion": "US",
+      "family": "Phi",
+      "generation": "3",
+      "announcementDate": "2024-04-23",
+      "availabilityDate": "2024-04-23",
+      "displayDate": "2024.04.23",
+      "datePrecision": "day",
+      "dateType": "announcement",
+      "category": "language",
+      "tags": [
+        "小模型",
+        "合成数据",
+        "开放权重"
+      ],
+      "openWeights": true,
+      "architecture": "decoder-only Transformer",
+      "parameters": "3.8B（mini）/ 7B / 14B",
+      "contextWindow": null,
+      "capabilities": [
+        "小模型推理",
+        "低成本部署",
+        "可商用"
+      ],
+      "summary": "微软小模型系列第三代，最小型号 38 亿参数，主打用经过筛选的「教科书级」高质量数据提升小模型的推理与代码能力，官方称其在多项基准上接近参数量大得多的模型，权重开放且允许商用。",
+      "keyAdvancement": "把数据质量优先于参数规模做成可复现配方，让小模型在特定任务上逼近大模型而成本更低。",
+      "significance": "小模型路线获得产业认可，端侧与低成本批量推理场景多了一条现实选择，数据工程的权重上升。",
+      "predecessors": [],
+      "successors": [],
+      "sources": [
+        {
+          "label": "Microsoft Azure — Introducing Phi-3: Redefining what's possible with SLMs",
+          "url": "https://azure.microsoft.com/en-us/blog/introducing-phi-3-redefining-whats-possible-with-slms/",
+          "kind": "official"
+        },
+        {
+          "label": "arXiv:2404.14219 — Phi-3 Technical Report",
+          "url": "https://arxiv.org/abs/2404.14219",
+          "kind": "paper"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": null
+    },
+    {
+      "id": "amazon-nova",
+      "name": "Amazon Nova",
+      "organization": "amazon",
+      "countryOrRegion": "US",
+      "family": "Nova",
+      "generation": "1",
+      "announcementDate": "2024-12-03",
+      "availabilityDate": "2024-12-03",
+      "displayDate": "2024.12.03",
+      "datePrecision": "day",
+      "dateType": "conference",
+      "category": "multimodal",
+      "tags": [
+        "云厂商自研",
+        "多模态",
+        "性价比"
+      ],
+      "openWeights": false,
+      "architecture": "未公开（闭源）",
+      "parameters": null,
+      "contextWindow": null,
+      "capabilities": [
+        "多模态理解",
+        "图像与视频生成",
+        "低成本推理"
+      ],
+      "summary": "在 AWS re:Invent 发布的自研模型家族，包含 Micro、Lite、Pro、Premier 四档文本与多模态模型，另有图像生成 Canvas 与视频生成 Reel，主打算力成本与 Bedrock 集成，官方称价格性能比优于同类。",
+      "keyAdvancement": "云厂商从分销第三方模型转为自研全栈模型，并把图像与视频生成能力直接嵌进云服务与计费体系。",
+      "significance": "基础设施公司向上游模型层延伸，模型供给格局从少数实验室扩展到云平台自研，价格竞争更直接。",
+      "predecessors": [],
+      "successors": [],
+      "sources": [
+        {
+          "label": "AWS News Blog — Introducing Amazon Nova foundation models",
+          "url": "https://aws.amazon.com/blogs/aws/introducing-amazon-nova-frontier-intelligence-and-industry-leading-price-performance/",
+          "kind": "official"
+        },
+        {
+          "label": "AWS — Amazon Nova 产品页",
+          "url": "https://aws.amazon.com/ai/generative-ai/nova/",
+          "kind": "docs"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": null
+    },
+    {
+      "id": "nemotron-4-340b",
+      "name": "NVIDIA Nemotron-4 340B",
+      "organization": "nvidia",
+      "countryOrRegion": "US",
+      "family": "Nemotron",
+      "generation": "4",
+      "announcementDate": "2024-06-14",
+      "availabilityDate": "2024-06-14",
+      "displayDate": "2024.06.14",
+      "datePrecision": "day",
+      "dateType": "weights",
+      "category": "language",
+      "tags": [
+        "合成数据",
+        "开放权重",
+        "奖励模型"
+      ],
+      "openWeights": true,
+      "architecture": "dense decoder-only Transformer",
+      "parameters": "340B",
+      "contextWindow": null,
+      "capabilities": [
+        "合成数据生成",
+        "奖励模型",
+        "指令微调"
+      ],
+      "summary": "英伟达开放的 3400 亿参数模型，包含基础版、指令版与奖励模型，官方强调其可用于生成高质量的合成训练数据，并给出用合成数据训练小模型的流程，权重以开放许可发布。",
+      "keyAdvancement": "把用强模型造数据、再用数据训小模型的合成数据流水线产品化，并公开权重供企业复现完整流程。",
+      "significance": "芯片厂商以开放模型示范训练范式，强化自家软硬件栈的生态黏性，也推动合成数据成为主流手段。",
+      "predecessors": [],
+      "successors": [],
+      "sources": [
+        {
+          "label": "NVIDIA Blog — Nemotron-4 340B",
+          "url": "https://blogs.nvidia.com/blog/nemotron-4-synthetic-data-generation-llm-training/",
+          "kind": "official"
+        },
+        {
+          "label": "Hugging Face — nvidia/Nemotron-4-340B-Instruct",
+          "url": "https://huggingface.co/nvidia/Nemotron-4-340B-Instruct",
+          "kind": "weights"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": null
+    },
+    {
+      "id": "command-r",
+      "name": "Command R",
+      "organization": "cohere",
+      "countryOrRegion": "CA",
+      "family": "Command",
+      "generation": "R",
+      "announcementDate": "2024-03-11",
+      "availabilityDate": "2024-03-11",
+      "displayDate": "2024.03.11",
+      "datePrecision": "day",
+      "dateType": "announcement",
+      "category": "language",
+      "tags": [
+        "RAG 优化",
+        "工具调用",
+        "多语言"
+      ],
+      "openWeights": true,
+      "architecture": "decoder-only Transformer",
+      "parameters": "35B",
+      "contextWindow": "128K tokens",
+      "capabilities": [
+        "检索增强生成",
+        "多步工具调用",
+        "十种语言"
+      ],
+      "summary": "Cohere 面向企业检索增强（RAG）优化的 350 亿参数模型，支持 12.8 万 token 上下文、十种语言与多步工具调用，强调「带引用的回答」以减少编造，权重开放用于研究用途。",
+      "keyAdvancement": "把检索增强与工具调用当作首要优化目标，而不是在通用基准上追求名次，回答可附引用溯源。",
+      "significance": "企业落地需求开始直接塑造模型设计，检索、引用与工具调用成为独立的产品类别，而不再是附带功能。",
+      "predecessors": [],
+      "successors": [
+        "command-r-plus"
+      ],
+      "sources": [
+        {
+          "label": "Cohere — Introducing Command R",
+          "url": "https://cohere.com/blog/command-r",
+          "kind": "official"
+        },
+        {
+          "label": "Hugging Face — CohereForAI/c4ai-command-r-v01",
+          "url": "https://huggingface.co/CohereForAI/c4ai-command-r-v01",
+          "kind": "weights"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": null
+    },
+    {
+      "id": "command-r-plus",
+      "name": "Command R+",
+      "organization": "cohere",
+      "countryOrRegion": "CA",
+      "family": "Command",
+      "generation": "R+",
+      "announcementDate": "2024-04-04",
+      "availabilityDate": "2024-04-04",
+      "displayDate": "2024.04.04",
+      "datePrecision": "day",
+      "dateType": "announcement",
+      "category": "language",
+      "tags": [
+        "企业 RAG",
+        "工具调用",
+        "多语言"
+      ],
+      "openWeights": false,
+      "architecture": "未公开（闭源）",
+      "parameters": "104B",
+      "contextWindow": "128K tokens",
+      "capabilities": [
+        "企业检索增强",
+        "多步工具调用",
+        "引用生成"
+      ],
+      "summary": "Command R 的高配版本，1040 亿参数，官方称其在 RAG、多步工具调用与企业场景上优于同期部分更大模型，并支持引用溯源，先通过 Microsoft Azure 与 Cohere 自有平台提供。",
+      "keyAdvancement": "把企业级检索、工具编排与引用能力集中到单一模型，形成与通用旗舰错位竞争的策略与定价。",
+      "significance": "垂直能力专业化成为中小模型公司的生存路径，企业采购开始按场景而非榜单选型，价格战有所缓和。",
+      "predecessors": [
+        "command-r"
+      ],
+      "successors": [],
+      "sources": [
+        {
+          "label": "Cohere — Command R+ now available on Microsoft Azure",
+          "url": "https://cohere.com/blog/command-r-plus-microsoft-azure",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": null
+    }
+  ],
+  "events": [
+    {
+      "id": "gpt-2-staged-release",
+      "date": "2019-02-14",
+      "displayDate": "2019.02.14",
+      "datePrecision": "day",
+      "dateType": "announcement",
+      "title": "GPT-2 分阶段发布与开放权重之争",
+      "titleEn": "GPT-2 Staged Release",
+      "category": "policy",
+      "summary": "OpenAI 在公布 15 亿参数 GPT-2 时，以可能被用于批量生成虚假信息为由，只先放出小版本，此后分四次逐步开放，直到 2019 年 11 月才发布完整权重。这是模型能力与滥用风险如何权衡的首个公开案例。",
+      "significance": "首次把「发布策略」本身当作安全工具，奠定此后开放权重、分阶段披露与许可限制的讨论框架。",
+      "organizations": [
+        "openai"
+      ],
+      "people": [],
+      "relatedModels": [
+        "gpt-2"
+      ],
+      "chapter": 4,
+      "sources": [
+        {
+          "label": "OpenAI — Better language models and their implications",
+          "url": "https://openai.com/index/better-language-models/",
+          "kind": "official"
+        },
+        {
+          "label": "OpenAI — GPT-2 1.5B release",
+          "url": "https://openai.com/index/gpt-2-1-5b-release/",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": null
+    },
+    {
+      "id": "bert-search-rollout",
+      "date": "2019-10-25",
+      "displayDate": "2019.10.25",
+      "datePrecision": "day",
+      "dateType": "product",
+      "title": "BERT 进入 Google 搜索排序",
+      "titleEn": "BERT Rolls Out in Google Search",
+      "category": "product",
+      "summary": "Google 宣布把 BERT 用于搜索排序，先覆盖英语查询，随后扩展到 70 多种语言。它让搜索引擎从关键词匹配转向理解介词、否定与上下文关系，官方称这项改动影响了约十分之一的英文搜索结果。",
+      "significance": "预训练模型第一次以「看不见的组件」进入数十亿人日常使用的产品，标志 NLP 研究产业化的转折点。",
+      "organizations": [
+        "google-deepmind"
+      ],
+      "people": [],
+      "relatedModels": [
+        "bert"
+      ],
+      "chapter": 4,
+      "sources": [
+        {
+          "label": "Google — Understanding searches better than ever before",
+          "url": "https://blog.google/products/search/search-language-understanding-bert/",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": null
+    },
+    {
+      "id": "scaling-laws-2020",
+      "date": "2020-01-23",
+      "displayDate": "2020.01.23",
+      "datePrecision": "day",
+      "dateType": "paper",
+      "title": "神经语言模型的缩放定律",
+      "titleEn": "Scaling Laws for Neural Language Models",
+      "category": "theory",
+      "summary": "OpenAI 发现语言模型的损失随参数量、数据量与训练算力呈幂律下降，规律跨越七个数量级仍然成立，并给出固定算力下模型规模与数据量的最优分配公式。",
+      "significance": "把模型规模从经验判断变成可计算的工程决策，直接塑造了 2020 年之后的千亿参数竞赛。",
+      "organizations": [
+        "openai"
+      ],
+      "people": [
+        "Jared Kaplan",
+        "Sam McCandlish"
+      ],
+      "relatedModels": [
+        "gpt-3"
+      ],
+      "chapter": 4,
+      "sources": [
+        {
+          "label": "arXiv:2001.08361 — Scaling Laws for Neural Language Models",
+          "url": "https://arxiv.org/abs/2001.08361",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": null
+    },
+    {
+      "id": "openai-api-launch",
+      "date": "2020-06-11",
+      "displayDate": "2020.06.11",
+      "datePrecision": "day",
+      "dateType": "product",
+      "title": "OpenAI 开放商业 API",
+      "titleEn": "OpenAI API launch",
+      "category": "product",
+      "summary": "OpenAI 推出付费 API，把 GPT-3 等模型以按 token 计费的方式开放给开发者，最初需申请等待名单。模型能力首次以云服务形式出售，围绕其构建的应用层创业潮随之出现。",
+      "significance": "确立基础模型加 API 的商业模式，此后成为整个行业的默认分发方式与收入结构，应用层估值随之抬升。",
+      "organizations": [
+        "openai"
+      ],
+      "people": [],
+      "relatedModels": [
+        "gpt-3"
+      ],
+      "chapter": 4,
+      "sources": [
+        {
+          "label": "OpenAI — OpenAI API",
+          "url": "https://openai.com/index/openai-api/",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": null
+    },
+    {
+      "id": "alphafold-2-2020",
+      "date": "2020-11-30",
+      "displayDate": "2020.11.30",
+      "datePrecision": "day",
+      "dateType": "paper",
+      "title": "AlphaFold 2 在 CASP14 取得蛋白质结构预测突破",
+      "titleEn": "AlphaFold 2 at CASP14",
+      "category": "science",
+      "summary": "在第 14 届蛋白质结构预测评估（CASP14）中，DeepMind 的 AlphaFold 2 对多数目标的中位精度接近实验测定结构，GDT 中位数约 92，显著超过其他参赛方法。2021 年 7 月方法论文发表于《自然》，并逐步公开结构与代码。",
+      "significance": "解决困扰生物学五十年的蛋白质折叠预测难题，把「AI 用于科学发现」从叙事变成可复现成果。",
+      "organizations": [
+        "google-deepmind"
+      ],
+      "people": [
+        "John Jumper",
+        "Demis Hassabis"
+      ],
+      "relatedModels": [],
+      "chapter": 4,
+      "sources": [
+        {
+          "label": "Google DeepMind — AlphaFold 项目页",
+          "url": "https://deepmind.google/science/alphafold/",
+          "kind": "official"
+        },
+        {
+          "label": "Nature — Highly accurate protein structure prediction with AlphaFold",
+          "url": "https://www.nature.com/articles/s41586-021-03819-2",
+          "kind": "paper"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": "事件日期取 CASP14 结果公布日（2020-11-30）；论文于 2021-07-15 在《自然》在线发表。"
+    },
+    {
+      "id": "eu-ai-act-proposal-2021",
+      "date": "2021-04-21",
+      "displayDate": "2021.04.21",
+      "datePrecision": "day",
+      "dateType": "policy",
+      "title": "欧盟提出《人工智能法案》草案",
+      "titleEn": "Proposal for the EU AI Act",
+      "category": "policy",
+      "summary": "欧盟委员会发布全球首部综合性 AI 监管立法提案，按不可接受、高、有限、极小四级风险设定义务，禁止社会评分等用途，并对高风险系统提出数据治理、透明度与合格评定要求。",
+      "significance": "首次以立法形式确立风险分级治理框架，成为各国 AI 监管的参照模板，也提前塑造了企业的合规预期。",
+      "organizations": [
+        "eu"
+      ],
+      "people": [],
+      "relatedModels": [],
+      "chapter": 4,
+      "sources": [
+        {
+          "label": "European Commission — Proposal for a Regulation laying down harmonised rules on AI",
+          "url": "https://digital-strategy.ec.europa.eu/en/library/proposal-regulation-laying-down-harmonised-rules-artificial-intelligence",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": null
+    },
+    {
+      "id": "chinchilla-2022",
+      "date": "2022-03-29",
+      "displayDate": "2022.03.29",
+      "datePrecision": "day",
+      "dateType": "paper",
+      "title": "Chinchilla 修正缩放定律：数据应与参数同比扩张",
+      "titleEn": "Training Compute-Optimal Large Language Models (Chinchilla)",
+      "category": "theory",
+      "summary": "DeepMind 的系统实验发现，此前大模型普遍参数过大而训练数据不足；在固定算力下，参数量与训练 token 数应大致同比例增长。按此训练的 700 亿参数 Chinchilla，以更少算力超过了 2800 亿参数的 Gopher。",
+      "significance": "改变了全行业的训练配方，此后高质量语料与数据墙取代参数量成为更稀缺的资源，数据集价值被重估。",
+      "organizations": [
+        "google-deepmind"
+      ],
+      "people": [
+        "Jordan Hoffmann",
+        "Arthur Mensch"
+      ],
+      "relatedModels": [],
+      "chapter": 4,
+      "sources": [
+        {
+          "label": "arXiv:2203.15556 — Training Compute-Optimal Large Language Models",
+          "url": "https://arxiv.org/abs/2203.15556",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": null
+    },
+    {
+      "id": "us-ai-bill-of-rights-2022",
+      "date": "2022-10-04",
+      "displayDate": "2022.10.04",
+      "datePrecision": "day",
+      "dateType": "policy",
+      "title": "美国发布《AI 权利法案》蓝图",
+      "titleEn": "Blueprint for an AI Bill of Rights",
+      "category": "policy",
+      "summary": "白宫科技政策办公室发布不具约束力的原则文件，提出免受不安全或无效系统伤害、免受算法歧视、数据隐私保护、知情权与人工替代选择等五项原则，用于指导 AI 系统的设计与部署。",
+      "significance": "美国联邦层面首次系统表述 AI 权利框架，为后续行政令与机构规则提供了话语与原则基础。",
+      "organizations": [
+        "white-house"
+      ],
+      "people": [],
+      "relatedModels": [],
+      "chapter": 4,
+      "sources": [
+        {
+          "label": "White House OSTP — Blueprint for an AI Bill of Rights",
+          "url": "https://www.whitehouse.gov/ostp/ai-bill-of-rights/",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": null
+    },
+    {
+      "id": "constitutional-ai-2022",
+      "date": "2022-12-15",
+      "displayDate": "2022.12.15",
+      "datePrecision": "day",
+      "dateType": "paper",
+      "title": "宪法 AI：用 AI 反馈替代部分人工标注",
+      "titleEn": "Constitutional AI: Harmlessness from AI Feedback",
+      "category": "theory",
+      "summary": "Anthropic 提出以一组书面原则（宪法）指导模型自我批评与修订回答，再用 AI 反馈训练偏好模型，减少对人工标注有害内容的依赖，同时让价值取向可解释、可调整。",
+      "significance": "为对齐研究提供可扩展的替代路线，也成为 Anthropic 模型安全叙事的核心技术基础。",
+      "organizations": [
+        "anthropic"
+      ],
+      "people": [
+        "Yuntao Bai",
+        "Jared Kaplan"
+      ],
+      "relatedModels": [
+        "claude"
+      ],
+      "chapter": 4,
+      "sources": [
+        {
+          "label": "Anthropic — Constitutional AI: Harmlessness from AI Feedback",
+          "url": "https://www.anthropic.com/news/constitutional-ai-harmlessness-from-ai-feedback",
+          "kind": "official"
+        },
+        {
+          "label": "arXiv:2212.08073 — Constitutional AI: Harmlessness from AI Feedback",
+          "url": "https://arxiv.org/abs/2212.08073",
+          "kind": "paper"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": null
+    },
+    {
+      "id": "microsoft-openai-expand-2023",
+      "date": "2023-01-23",
+      "displayDate": "2023.01.23",
+      "datePrecision": "day",
+      "dateType": "announcement",
+      "title": "微软与 OpenAI 扩大合作，追加数十亿美元投资",
+      "titleEn": "Microsoft and OpenAI extend partnership",
+      "category": "organization",
+      "summary": "微软宣布对 OpenAI 进行多年、数十亿美元的投资（据报道约 100 亿美元），Azure 成为其独家云平台，OpenAI 模型开始嵌入 Azure 服务与 Microsoft 产品线。",
+      "significance": "云厂商与模型公司深度绑定成型，算力、模型与产品被整合进同一商业闭环，资本成为竞争杠杆。",
+      "organizations": [
+        "microsoft",
+        "openai"
+      ],
+      "people": [
+        "Satya Nadella",
+        "Sam Altman"
+      ],
+      "relatedModels": [
+        "gpt-4"
+      ],
+      "chapter": 5,
+      "sources": [
+        {
+          "label": "OpenAI — OpenAI and Microsoft extend partnership",
+          "url": "https://openai.com/index/openai-and-microsoft-extend-partnership/",
+          "kind": "official"
+        },
+        {
+          "label": "Microsoft Blog — Microsoft and OpenAI extend partnership",
+          "url": "https://blogs.microsoft.com/blog/2023/01/23/microsoftandopenaiextendpartnership/",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": "具体投资金额官方未披露，媒体报道约 100 亿美元，故文案使用「据报道」。"
+    },
+    {
+      "id": "nist-ai-rmf-2023",
+      "date": "2023-01-26",
+      "displayDate": "2023.01.26",
+      "datePrecision": "day",
+      "dateType": "policy",
+      "title": "NIST 发布 AI 风险管理框架 1.0",
+      "titleEn": "AI Risk Management Framework 1.0",
+      "category": "policy",
+      "summary": "美国国家标准与技术研究院发布自愿性框架，围绕治理、映射、度量与管理四项职能，给出识别、评估与缓解 AI 风险的通用流程，并配套可信性特征与使用手册。",
+      "significance": "企业 AI 治理第一次有了可操作的通用模板，被广泛引入采购条款、内部政策与合规评估。",
+      "organizations": [
+        "nist"
+      ],
+      "people": [],
+      "relatedModels": [],
+      "chapter": 5,
+      "sources": [
+        {
+          "label": "NIST — AI Risk Management Framework",
+          "url": "https://www.nist.gov/itl/ai-risk-management-framework",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": null
+    },
+    {
+      "id": "google-deepmind-merger-2023",
+      "date": "2023-04-20",
+      "displayDate": "2023.04.20",
+      "datePrecision": "day",
+      "dateType": "announcement",
+      "title": "Google Brain 与 DeepMind 合并为 Google DeepMind",
+      "titleEn": "Announcing Google DeepMind",
+      "category": "organization",
+      "summary": "Google 将 Google Brain 与 DeepMind 合并为单一部门 Google DeepMind，由 Demis Hassabis 领导，集中算力、人才与工程资源推进 Gemini 等前沿模型项目。",
+      "significance": "大公司内部研究力量被整合，标志前沿模型竞赛进入集中资源打大仗的阶段，组织效率成为竞争力。",
+      "organizations": [
+        "google-deepmind"
+      ],
+      "people": [
+        "Demis Hassabis",
+        "Sundar Pichai"
+      ],
+      "relatedModels": [
+        "gemini-1-0"
+      ],
+      "chapter": 5,
+      "sources": [
+        {
+          "label": "Google DeepMind — Announcing Google DeepMind",
+          "url": "https://deepmind.google/blog/announcing-google-deepmind/",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": null
+    },
+    {
+      "id": "amazon-anthropic-2023",
+      "date": "2023-09-25",
+      "displayDate": "2023.09.25",
+      "datePrecision": "day",
+      "dateType": "announcement",
+      "title": "亚马逊向 Anthropic 投资至多 40 亿美元",
+      "titleEn": "Amazon and Anthropic strategic collaboration",
+      "category": "organization",
+      "summary": "亚马逊宣布向 Anthropic 投资至多 40 亿美元，后者将 AWS 作为主要云服务与训练伙伴，Claude 模型进入 Amazon Bedrock，双方在芯片、训练与分发上建立深度合作。",
+      "significance": "云厂商通过股权绑定模型公司，模型供应关系从客户合同变为资本联盟，算力方与模型方利益绑定。",
+      "organizations": [
+        "amazon",
+        "anthropic"
+      ],
+      "people": [
+        "Andy Jassy",
+        "Dario Amodei"
+      ],
+      "relatedModels": [
+        "claude-2"
+      ],
+      "chapter": 5,
+      "sources": [
+        {
+          "label": "About Amazon — Amazon and Anthropic announce strategic collaboration",
+          "url": "https://www.aboutamazon.com/news/aws/amazon-aws-anthropic-ai",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": null
+    },
+    {
+      "id": "us-ai-executive-order-2023",
+      "date": "2023-10-30",
+      "displayDate": "2023.10.30",
+      "datePrecision": "day",
+      "dateType": "policy",
+      "title": "美国发布首份 AI 行政令",
+      "titleEn": "Executive Order on Safe, Secure, and Trustworthy AI",
+      "category": "policy",
+      "summary": "拜登政府签署行政令，要求强大模型开发者向政府报告训练与安全测试结果、制定前沿模型安全标准，并覆盖生物安全、关键基础设施、隐私保护与版权等方向。",
+      "significance": "美国联邦首次以行政手段直接介入前沿模型治理，触发算力申报、安全评估与标准制定的一整套流程。",
+      "organizations": [
+        "white-house"
+      ],
+      "people": [
+        "Joe Biden"
+      ],
+      "relatedModels": [],
+      "chapter": 5,
+      "sources": [
+        {
+          "label": "White House — Executive Order on the Safe, Secure, and Trustworthy Development and Use of AI",
+          "url": "https://www.whitehouse.gov/briefing-room/presidential-actions/2023/10/30/executive-order-on-the-safe-secure-and-trustworthy-development-and-use-of-artificial-intelligence/",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": null
+    },
+    {
+      "id": "bletchley-declaration-2023",
+      "date": "2023-11-01",
+      "displayDate": "2023.11.01",
+      "datePrecision": "day",
+      "dateType": "policy",
+      "title": "布莱切利宣言与首届 AI 安全峰会",
+      "titleEn": "The Bletchley Declaration",
+      "category": "policy",
+      "summary": "在英国布莱切利园举行的首届 AI 安全峰会上，包括中国、美国、欧盟在内的 28 个国家和欧盟签署宣言，承认前沿 AI 的潜在灾难性风险，主张通过国际合作开展风险评估与治理。",
+      "significance": "前沿 AI 安全首次进入多边外交议程，为后续首尔峰会与各国 AI 安全研究所网络铺路，也留下执行难题。",
+      "organizations": [
+        "uk-government"
+      ],
+      "people": [
+        "Rishi Sunak"
+      ],
+      "relatedModels": [],
+      "chapter": 5,
+      "sources": [
+        {
+          "label": "GOV.UK — The Bletchley Declaration by Countries Attending the AI Safety Summit",
+          "url": "https://www.gov.uk/government/publications/ai-safety-summit-2023-the-bletchley-declaration",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": null
+    },
+    {
+      "id": "openai-board-crisis-2023",
+      "date": "2023-11-17",
+      "displayDate": "2023.11.17",
+      "datePrecision": "day",
+      "dateType": "announcement",
+      "title": "OpenAI 董事会解雇与复职风波",
+      "titleEn": "OpenAI leadership crisis",
+      "category": "organization",
+      "summary": "OpenAI 董事会以沟通不坦诚为由解雇 CEO Sam Altman，五天内经历临时 CEO 更替、员工联名与微软介入，最终 Altman 复职，董事会重组，Mira Murati 等管理层留任。",
+      "significance": "暴露非营利治理结构与商业化之间的结构性冲突，成为 AI 治理与公司控制权讨论的标志性案例。",
+      "organizations": [
+        "openai",
+        "microsoft"
+      ],
+      "people": [
+        "Sam Altman",
+        "Mira Murati",
+        "Ilya Sutskever",
+        "Greg Brockman"
+      ],
+      "relatedModels": [],
+      "chapter": 5,
+      "sources": [
+        {
+          "label": "OpenAI — OpenAI announces leadership transition",
+          "url": "https://openai.com/index/openai-announces-leadership-transition/",
+          "kind": "official"
+        },
+        {
+          "label": "OpenAI — Sam Altman returns as CEO",
+          "url": "https://openai.com/index/sam-altman-returns-as-ceo/",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": "事件起点为 2023-11-17 的解雇公告，2023-11-21 至 11-22 完成复职与董事会重组。"
+    },
+    {
+      "id": "eu-ai-act-adopted-2024",
+      "date": "2024-03-13",
+      "displayDate": "2024.03.13",
+      "datePrecision": "day",
+      "dateType": "policy",
+      "title": "欧洲议会通过《人工智能法案》",
+      "titleEn": "European Parliament adopts the AI Act",
+      "category": "policy",
+      "summary": "欧洲议会以 523 票赞成通过 AI 法案：禁止社会评分与无差别人脸抓取等用途，对通用模型分阶段设透明度与系统性风险评估义务，高风险系统须满足数据治理与合格评定；5 月获理事会批准，8 月 1 日生效。",
+      "significance": "全球首部综合性 AI 法律落地，形成「布鲁塞尔效应」，直接改变企业在欧洲的合规路径与产品设计。",
+      "organizations": [
+        "eu"
+      ],
+      "people": [],
+      "relatedModels": [],
+      "chapter": 5,
+      "sources": [
+        {
+          "label": "European Parliament — AI Act: MEPs adopt landmark law",
+          "url": "https://www.europarl.europa.eu/news/en/press-room/20240308IPR19015/artificial-intelligence-act-meps-adopt-landmark-law",
+          "kind": "official"
+        },
+        {
+          "label": "EUR-Lex — Regulation (EU) 2024/1689",
+          "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": "2024-03-13 议会通过；2024-05-21 理事会批准；2024-08-01 正式生效并分阶段适用。"
+    },
+    {
+      "id": "alphafold-3-2024",
+      "date": "2024-05-08",
+      "displayDate": "2024.05.08",
+      "datePrecision": "day",
+      "dateType": "paper",
+      "title": "AlphaFold 3 扩展到蛋白质—配体复合物",
+      "titleEn": "AlphaFold 3",
+      "category": "science",
+      "summary": "Google DeepMind 与 Isomorphic Labs 发布 AlphaFold 3，把预测范围从蛋白质扩展到蛋白质与 DNA、RNA、小分子配体、离子的复合结构，采用扩散模块提升精度，模型代码面向学术非商用开放。",
+      "significance": "结构预测从单一蛋白走向分子相互作用，为药物设计提供可规模化的通用建模工具，并重塑早期研发流程。",
+      "organizations": [
+        "google-deepmind"
+      ],
+      "people": [
+        "Demis Hassabis",
+        "John Jumper"
+      ],
+      "relatedModels": [],
+      "chapter": 5,
+      "sources": [
+        {
+          "label": "Google — AlphaFold 3 predicts the structure and interactions of all of life's molecules",
+          "url": "https://blog.google/technology/ai/google-deepmind-isomorphic-alphafold-3-ai-model/",
+          "kind": "official"
+        },
+        {
+          "label": "Nature — Accurate structure prediction of biomolecular interactions with AlphaFold 3",
+          "url": "https://www.nature.com/articles/s41586-024-07487-w",
+          "kind": "paper"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": null
+    },
+    {
+      "id": "nobel-physics-2024",
+      "date": "2024-10-08",
+      "displayDate": "2024.10.08",
+      "datePrecision": "day",
+      "dateType": "announcement",
+      "title": "2024 诺贝尔物理学奖授予霍普菲尔德与辛顿",
+      "titleEn": "Nobel Prize in Physics 2024",
+      "category": "science",
+      "summary": "瑞典皇家科学院把物理学奖授予 John Hopfield 与 Geoffrey Hinton，表彰其在人工神经网络与机器学习基础发现上的贡献，包括霍普菲尔德网络与玻尔兹曼机等可用于联想记忆与特征学习的模型。",
+      "significance": "机器学习首次以物理学名义获得最高科学荣誉，标志 AI 的方法论地位被主流科学界正式承认。",
+      "organizations": [
+        "princeton",
+        "toronto"
+      ],
+      "people": [
+        "John Hopfield",
+        "Geoffrey Hinton"
+      ],
+      "relatedModels": [],
+      "chapter": 5,
+      "sources": [
+        {
+          "label": "NobelPrize.org — Press release: The Nobel Prize in Physics 2024",
+          "url": "https://www.nobelprize.org/prizes/physics/2024/press-release/",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": null
+    },
+    {
+      "id": "nobel-chemistry-2024",
+      "date": "2024-10-09",
+      "displayDate": "2024.10.09",
+      "datePrecision": "day",
+      "dateType": "announcement",
+      "title": "2024 诺贝尔化学奖授予蛋白质设计与结构预测",
+      "titleEn": "Nobel Prize in Chemistry 2024",
+      "category": "science",
+      "summary": "化学奖一半授予 David Baker 表彰计算蛋白质设计，另一半授予 Demis Hassabis 与 John Jumper 表彰 AlphaFold 2 的蛋白质结构预测，评委会称其从根本上改变了生物化学研究方式。",
+      "significance": "AI 与生命科学的结合获得最高学术认可，产业实验室的研究者首次与学术同行共同获奖。",
+      "organizations": [
+        "stanford",
+        "google-deepmind"
+      ],
+      "people": [
+        "David Baker",
+        "Demis Hassabis",
+        "John Jumper"
+      ],
+      "relatedModels": [],
+      "chapter": 5,
+      "sources": [
+        {
+          "label": "NobelPrize.org — Press release: The Nobel Prize in Chemistry 2024",
+          "url": "https://www.nobelprize.org/prizes/chemistry/2024/press-release/",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": null
+    }
+  ],
+  "organizations": [],
+  "meta": {
+    "researcher": "research-intl-2018-24",
+    "generatedAt": "2026-11-02",
+    "cutoff": "2026-11-02"
+  }
+}

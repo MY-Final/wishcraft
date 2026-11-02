@@ -1,0 +1,182 @@
+.arch-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.arch-table thead th {
+  padding: 0 14px 10px 0;
+  border-bottom: 1px solid var(--ink);
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  color: var(--faint);
+  font-weight: 400;
+  white-space: nowrap;
+  vertical-align: bottom;
+}
+
+.arch-table tbody td,
+.arch-table tbody th {
+  padding: 16px 14px 16px 0;
+  border-bottom: 1px solid var(--hairline);
+  font-size: 0.8125rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--graphite);
+  vertical-align: top;
+}
+
+.arch-table tbody tr {
+  cursor: pointer;
+  transition: background-color var(--dur-fast) var(--ease-out);
+}
+
+.arch-table tbody tr:hover {
+  background: rgba(22, 22, 22, 0.035);
+}
+
+.arch-table tbody tr:hover .arch-table__open {
+  border-color: var(--ink);
+}
+
+.arch-table__date {
+  width: 96px;
+  white-space: nowrap;
+  color: var(--muted);
+}
+
+.arch-table__name {
+  width: 19%;
+}
+
+.arch-table__open {
+  display: inline;
+  border-bottom: 1px solid transparent;
+  color: var(--ink);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  letter-spacing: -0.015em;
+  text-align: left;
+  transition: border-color var(--dur-fast) var(--ease-out);
+}
+
+.arch-table__tags {
+  display: block;
+  margin-top: 5px;
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  color: var(--faint);
+}
+
+.arch-table__org {
+  display: block;
+}
+
+.arch-table__sub {
+  display: block;
+  margin-top: 3px;
+  font-size: 9px;
+  letter-spacing: 0.08em;
+  color: var(--faint);
+}
+
+.arch-table__category {
+  white-space: nowrap;
+  color: var(--muted);
+}
+
+.arch-table__advance {
+  max-width: 27rem;
+}
+
+.arch-table__advance span {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.arch-table__status {
+  width: 96px;
+}
+
+.arch-date-split {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.arch-date-split__year {
+  color: var(--ink);
+  font-size: 0.875rem;
+  letter-spacing: -0.01em;
+}
+
+.arch-date-split__rest {
+  color: var(--muted);
+  font-size: 0.75rem;
+}
+
+.arch-table__row.is-2026 .arch-table__open {
+  font-size: 1rem;
+}
+
+/* ---------- mobile cards ---------- */
+
+.arch-cards {
+  display: none;
+}
+
+@media (max-width: 860px) {
+  .arch-table {
+    display: none;
+  }
+
+  .arch-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    border-top: 1px solid var(--ink);
+  }
+
+  .arch-card {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    width: 100%;
+    padding: 18px 0 20px;
+    border-bottom: 1px solid var(--hairline);
+    text-align: left;
+  }
+
+  .arch-card__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  .arch-card__date {
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    color: var(--muted);
+  }
+
+  .arch-card__name {
+    font-size: 1.125rem;
+    font-weight: 500;
+    letter-spacing: -0.025em;
+    line-height: 1.2;
+  }
+
+  .arch-card__meta {
+    font-size: 9px;
+    letter-spacing: 0.08em;
+    color: var(--faint);
+  }
+
+  .arch-card__advance {
+    font-size: 0.8125rem;
+    line-height: 1.65;
+    color: var(--graphite);
+  }
+}

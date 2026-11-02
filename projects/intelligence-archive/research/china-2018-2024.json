@@ -1,0 +1,2138 @@
+{
+  "models": [
+    {
+      "id": "deepseek-llm",
+      "name": "DeepSeek LLM 67B",
+      "organization": "deepseek",
+      "countryOrRegion": "CN",
+      "family": "DeepSeek-LLM",
+      "generation": "1",
+      "announcementDate": "2023-11-29",
+      "availabilityDate": "2023-11-29",
+      "displayDate": "2023.11.29",
+      "datePrecision": "day",
+      "dateType": "weights",
+      "category": "language",
+      "tags": [
+        "LLM",
+        "开源权重",
+        "缩放定律",
+        "中文"
+      ],
+      "openWeights": true,
+      "architecture": "decoder-only Transformer",
+      "parameters": "67B（另有 7B 版本）",
+      "contextWindow": null,
+      "capabilities": [
+        "中英双语通用对话",
+        "代码与数学推理",
+        "开放权重可商用"
+      ],
+      "summary": "深度求索首个开源大模型系列，含 7B 与 67B 两个规模，基于自建约 2 万亿 token 语料训练，并在技术报告中系统给出超参数缩放律与数据缩放律；67B Chat 采用 SFT 加 DPO 对齐，在多项评测上超过同期 LLaMA-2 70B。",
+      "keyAdvancement": "以自研缩放律指导 2 万亿 token 训练，中文、代码与数学表现超过同期 LLaMA-2 70B。",
+      "significance": "用完整技术报告加开放权重公开训练细节，使中文开源基座第一次具备可复现的工程范式。",
+      "predecessors": [],
+      "successors": [
+        "deepseek-v2"
+      ],
+      "sources": [
+        {
+          "label": "GitHub — deepseek-ai/DeepSeek-LLM",
+          "url": "https://github.com/deepseek-ai/DeepSeek-LLM",
+          "kind": "official"
+        },
+        {
+          "label": "arXiv:2401.02954 — DeepSeek LLM: Scaling Open-Source Language Models with Longtermism",
+          "url": "https://arxiv.org/abs/2401.02954",
+          "kind": "paper"
+        },
+        {
+          "label": "Hugging Face — deepseek-ai/deepseek-llm-67b-chat",
+          "url": "https://huggingface.co/deepseek-ai/deepseek-llm-67b-chat",
+          "kind": "weights"
+        }
+      ],
+      "verificationStatus": "partially-verified",
+      "notes": "官方公众号原文当前不可访问。权重于 2023-11-29 上线 Hugging Face（模型仓库 createdAt 2023-11-29T03:30Z），技术报告 arXiv v1 为 2024-01-05，故发布日期按权重上线日记录。"
+    },
+    {
+      "id": "deepseek-coder",
+      "name": "DeepSeek Coder",
+      "organization": "deepseek",
+      "countryOrRegion": "CN",
+      "family": "DeepSeek-Coder",
+      "generation": "1",
+      "announcementDate": "2023-11",
+      "availabilityDate": "2023-11",
+      "displayDate": "2023.11",
+      "datePrecision": "month",
+      "dateType": "weights",
+      "category": "coding",
+      "tags": [
+        "代码模型",
+        "开源权重",
+        "跨文件补全",
+        "16K 上下文"
+      ],
+      "openWeights": true,
+      "architecture": "decoder-only Transformer",
+      "parameters": "1.3B / 6.7B / 33B",
+      "contextWindow": "16K tokens",
+      "capabilities": [
+        "代码补全",
+        "仓库级代码理解",
+        "中英代码生成"
+      ],
+      "summary": "深度求索开源代码大模型系列，覆盖 1.3B、6.7B、33B 多个规模，从零在约 2 万亿 token（87% 为代码）上预训练，支持 16K 窗口与仓库级跨文件补全；33B 版本在多项代码基准上超过同期开源模型。",
+      "keyAdvancement": "把代码语料比例推到 87%，并把仓库级跨文件上下文作为训练与评测目标，优先保证补全的可用性。",
+      "significance": "以开放权重把高精度代码补全带到本地与私有部署场景，成为 DeepSeek 后续代码能力线的起点。",
+      "predecessors": [],
+      "successors": [],
+      "sources": [
+        {
+          "label": "GitHub — deepseek-ai/DeepSeek-Coder",
+          "url": "https://github.com/deepseek-ai/DeepSeek-Coder",
+          "kind": "official"
+        },
+        {
+          "label": "arXiv:2401.14196 — DeepSeek-Coder: When the Large Language Model Meets Programming",
+          "url": "https://arxiv.org/abs/2401.14196",
+          "kind": "paper"
+        },
+        {
+          "label": "Hugging Face — deepseek-ai/deepseek-coder-33b-instruct",
+          "url": "https://huggingface.co/deepseek-ai/deepseek-coder-33b-instruct",
+          "kind": "weights"
+        }
+      ],
+      "verificationStatus": "partially-verified",
+      "notes": "官方公告原文不可访问；GitHub 仓库创建于 2023-10-20，33B 权重于 2023-11-01 上线 Hugging Face，媒体多记 11 月 2 日。日期精度只取到月。"
+    },
+    {
+      "id": "deepseek-v2",
+      "name": "DeepSeek-V2",
+      "organization": "deepseek",
+      "countryOrRegion": "CN",
+      "family": "DeepSeek-V",
+      "generation": "V2",
+      "announcementDate": "2024-05-06",
+      "availabilityDate": "2024-05-06",
+      "displayDate": "2024.05.06",
+      "datePrecision": "day",
+      "dateType": "announcement",
+      "category": "language",
+      "tags": [
+        "MoE",
+        "MLA",
+        "开源权重",
+        "低成本推理"
+      ],
+      "openWeights": true,
+      "architecture": "MoE（DeepSeekMoE）+ 多头潜在注意力（MLA）",
+      "parameters": "236B total / 21B active",
+      "contextWindow": "128K tokens",
+      "capabilities": [
+        "长上下文",
+        "中英对话",
+        "低成本 API"
+      ],
+      "summary": "DeepSeek 第二代 MoE 基座，总参数 236B、每 token 激活 21B，提出多头潜在注意力 MLA 以压缩 KV Cache，并用细粒度专家加共享专家的 DeepSeekMoE 提升专家利用率；支持 128K 上下文，API 定价显著低于同期闭源模型。",
+      "keyAdvancement": "同时给出 MLA 与 DeepSeekMoE 两套架构，把 KV Cache 与每 token 激活计算量大幅压缩。",
+      "significance": "证明稀疏架构能把推理成本压到闭源模型的百分之一量级，直接点燃 2024 年 5 月的中国大模型 API 价格战。",
+      "predecessors": [
+        "deepseek-llm"
+      ],
+      "successors": [
+        "deepseek-v2-5"
+      ],
+      "sources": [
+        {
+          "label": "arXiv:2405.04434 — DeepSeek-V2: A Strong, Economical, and Efficient Mixture-of-Experts Language Model",
+          "url": "https://arxiv.org/abs/2405.04434",
+          "kind": "paper"
+        },
+        {
+          "label": "证券时报 — 杀疯了！阿里：降价97%！百度「王炸」：免费！",
+          "url": "https://stcn.com/article/detail/1210492.html",
+          "kind": "press"
+        }
+      ],
+      "verificationStatus": "partially-verified",
+      "notes": "官方发布页已不可访问。发布日期按多家媒体与当时 API 定价公告记为 2024-05-06，技术报告 arXiv v1 为 2024-05-07。"
+    },
+    {
+      "id": "deepseek-v2-5",
+      "name": "DeepSeek-V2.5",
+      "organization": "deepseek",
+      "countryOrRegion": "CN",
+      "family": "DeepSeek-V",
+      "generation": "V2.5",
+      "announcementDate": "2024-09-05",
+      "availabilityDate": "2024-09-05",
+      "displayDate": "2024.09.05",
+      "datePrecision": "day",
+      "dateType": "announcement",
+      "category": "language",
+      "tags": [
+        "模型合并",
+        "通用对话",
+        "代码",
+        "API"
+      ],
+      "openWeights": false,
+      "architecture": "MoE + MLA（沿用 V2 架构，具体规格未单独披露）",
+      "parameters": null,
+      "contextWindow": null,
+      "capabilities": [
+        "通用对话",
+        "代码生成",
+        "写作与指令遵循"
+      ],
+      "summary": "DeepSeek 把通用对话模型 DeepSeek-V2-Chat 与代码模型 DeepSeek-Coder-V2 合并为单一模型 DeepSeek-V2.5，API 侧两个旧接口同时指向新模型；官方称 ArenaHard 胜率、MT-Bench 与 HumanEval 均有提升。",
+      "keyAdvancement": "把对话与代码两条能力线合并进一个模型，减少两套 API 与两套对齐流程的重复维护成本。",
+      "significance": "体现 2024 年中国厂商从「按能力堆模型」转向「单模型多能力」的工程收敛，也简化了开发者的接入路径。",
+      "predecessors": [
+        "deepseek-v2"
+      ],
+      "successors": [
+        "deepseek-v3"
+      ],
+      "sources": [
+        {
+          "label": "DeepSeek API Docs — Change Log（2024-09-05）",
+          "url": "https://api-docs.deepseek.com/updates",
+          "kind": "docs"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": "2024-12-10 的 DeepSeek-V2.5-1210 为该系列最后一次更新，官方称 V2 系列收官。该版本未公开发布权重。"
+    },
+    {
+      "id": "deepseek-v3",
+      "name": "DeepSeek-V3",
+      "organization": "deepseek",
+      "countryOrRegion": "CN",
+      "family": "DeepSeek-V",
+      "generation": "V3",
+      "announcementDate": "2024-12-26",
+      "availabilityDate": "2024-12-26",
+      "displayDate": "2024.12.26",
+      "datePrecision": "day",
+      "dateType": "announcement",
+      "category": "language",
+      "tags": [
+        "MoE",
+        "FP8",
+        "开源权重",
+        "低成本训练"
+      ],
+      "openWeights": true,
+      "architecture": "MoE（MLA + DeepSeekMoE）+ 多 token 预测（MTP）",
+      "parameters": "671B total / 37B active",
+      "contextWindow": "128K tokens",
+      "capabilities": [
+        "通用对话",
+        "代码与数学",
+        "长文本",
+        "原生 FP8 权重"
+      ],
+      "summary": "DeepSeek 第三代 MoE 基座，671B 总参数、每 token 激活 37B，在 14.8 万亿 token 上预训练，采用 FP8 混合精度训练、MLA 与 DeepSeekMoE，并加入多 token 预测目标；官方同步开源原生 FP8 权重，生成速度由 20 TPS 提升至约 60 TPS。",
+      "keyAdvancement": "在 671B 稀疏模型上跑通 FP8 训练并开源原生 FP8 权重，把训练与推理成本同时压低。",
+      "significance": "以可下载权重接近同期顶尖闭源模型，改变了「开源落后闭源一代」的默认预期，并成为全球微调与蒸馏的常用基座。",
+      "predecessors": [
+        "deepseek-v2-5"
+      ],
+      "successors": [],
+      "sources": [
+        {
+          "label": "DeepSeek — DeepSeek-V3 正式发布",
+          "url": "https://www.deepseek.com/news/deepseek-v3/",
+          "kind": "official"
+        },
+        {
+          "label": "arXiv:2412.19437 — DeepSeek-V3 Technical Report",
+          "url": "https://arxiv.org/abs/2412.19437",
+          "kind": "paper"
+        },
+        {
+          "label": "Hugging Face — deepseek-ai/DeepSeek-V3-Base",
+          "url": "https://huggingface.co/deepseek-ai/DeepSeek-V3-Base",
+          "kind": "weights"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": null
+    },
+    {
+      "id": "qwen-7b",
+      "name": "通义千问 Qwen-7B",
+      "organization": "alibaba-qwen",
+      "countryOrRegion": "CN",
+      "family": "Qwen",
+      "generation": "1",
+      "announcementDate": "2023-04-11",
+      "availabilityDate": "2023-08-03",
+      "displayDate": "2023.04.11",
+      "datePrecision": "day",
+      "dateType": "announcement",
+      "category": "language",
+      "tags": [
+        "LLM",
+        "开源权重",
+        "中文",
+        "多语言"
+      ],
+      "openWeights": true,
+      "architecture": "decoder-only Transformer",
+      "parameters": "7B（后续扩展至 1.8B–72B）",
+      "contextWindow": null,
+      "capabilities": [
+        "中英对话",
+        "代码与数学",
+        "开源可商用"
+      ],
+      "summary": "阿里云 2023 年 4 月发布通义千问，同年 8 月开源 Qwen-7B 与 Qwen-7B-Chat 权重，采用 SwiGLU、RoPE 等标准解码器结构，支持中英与多语言，此后扩展出 1.8B 至 72B 多个规模，形成闭源 API 与开放权重并行的路线。",
+      "keyAdvancement": "把闭源 API 与开放权重并行推进，用同一套数据与对齐流程形成可持续迭代的中文基座序列。",
+      "significance": "开启 Qwen 开源家族，此后成为全球下载量与衍生微调模型数量最多的开源模型系列之一。",
+      "predecessors": [],
+      "successors": [
+        "qwen1-5"
+      ],
+      "sources": [
+        {
+          "label": "阿里巴巴集团 — 阿里云推出全新 AI 大模型支持企业数智化转型（2023-04-11）",
+          "url": "https://www.alibabagroup.com/zh-HK/document-1582482069362049024",
+          "kind": "official"
+        },
+        {
+          "label": "GitHub — QwenLM/Qwen",
+          "url": "https://github.com/QwenLM/Qwen",
+          "kind": "official"
+        },
+        {
+          "label": "arXiv:2309.16609 — Qwen Technical Report",
+          "url": "https://arxiv.org/abs/2309.16609",
+          "kind": "paper"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": "2023-04-11 为通义千问发布日；2023-08-03 为 Qwen-7B 权重开放日（GitHub 仓库创建于同日，Hugging Face Qwen/Qwen-7B 亦为同日）。"
+    },
+    {
+      "id": "qwen1-5",
+      "name": "Qwen1.5",
+      "organization": "alibaba-qwen",
+      "countryOrRegion": "CN",
+      "family": "Qwen",
+      "generation": "1.5",
+      "announcementDate": "2024-02-04",
+      "availabilityDate": "2024-02-04",
+      "displayDate": "2024.02.04",
+      "datePrecision": "day",
+      "dateType": "weights",
+      "category": "language",
+      "tags": [
+        "开源权重",
+        "全尺寸",
+        "GQA",
+        "32K 上下文"
+      ],
+      "openWeights": true,
+      "architecture": "decoder-only Transformer（GQA）",
+      "parameters": "0.5B–72B（后续追加 110B 与 MoE 版本）",
+      "contextWindow": "32K tokens",
+      "capabilities": [
+        "多尺寸部署",
+        "中英与多语言",
+        "代码与数学"
+      ],
+      "summary": "Qwen 首个 1.5 代系列，一次开放 0.5B 至 72B 多个尺寸的基座与对话模型，统一支持 32K 上下文，并引入分组查询注意力与更完整的对齐流程；此后追加 110B 稠密模型与 Qwen1.5-MoE 版本。",
+      "keyAdvancement": "以「全尺寸同代发布」覆盖端侧到服务器，并把 32K 上下文与 GQA 变成系列默认配置。",
+      "significance": "确立 Qwen 一次发布整个尺寸家族的范式，显著降低不同算力预算团队的选择与迁移成本。",
+      "predecessors": [
+        "qwen-7b"
+      ],
+      "successors": [
+        "qwen2"
+      ],
+      "sources": [
+        {
+          "label": "Qwen Blog — Introducing Qwen1.5（2024-02-04）",
+          "url": "https://qwenlm.github.io/blog/qwen1.5/",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": "官方博客页标注 2024-02-04，部分中文报道记为 2 月 5 日。"
+    },
+    {
+      "id": "qwen2",
+      "name": "Qwen2",
+      "organization": "alibaba-qwen",
+      "countryOrRegion": "CN",
+      "family": "Qwen",
+      "generation": "2",
+      "announcementDate": "2024-06-07",
+      "availabilityDate": "2024-06-07",
+      "displayDate": "2024.06.07",
+      "datePrecision": "day",
+      "dateType": "weights",
+      "category": "language",
+      "tags": [
+        "开源权重",
+        "Apache 2.0",
+        "MoE",
+        "多语言"
+      ],
+      "openWeights": true,
+      "architecture": "decoder-only Transformer（全尺寸 GQA，含 57B-A14B MoE）",
+      "parameters": "0.5B / 1.5B / 7B / 57B-A14B / 72B",
+      "contextWindow": "128K tokens（YaRN 外推）",
+      "capabilities": [
+        "27 种语言",
+        "代码与数学",
+        "长上下文"
+      ],
+      "summary": "Qwen2 开放 0.5B 至 72B 五个尺寸，全尺寸改用 GQA，指令模型在 32K 训练基础上通过 YaRN 与双块注意力外推到 128K，并新增 27 种语言训练；除 72B 外多数尺寸改用 Apache 2.0 许可。",
+      "keyAdvancement": "把 Apache 2.0 宽松许可与 128K 上下文同时下放到 0.5B 至 57B 的中小尺寸模型。",
+      "significance": "许可宽松化直接扩大商用与二次开发生态，Qwen2 由此成为全球微调社区的主要基座之一。",
+      "predecessors": [
+        "qwen1-5"
+      ],
+      "successors": [
+        "qwen2-5"
+      ],
+      "sources": [
+        {
+          "label": "Qwen Blog — Hello Qwen2（2024-06-07）",
+          "url": "https://qwenlm.github.io/blog/qwen2/",
+          "kind": "official"
+        },
+        {
+          "label": "arXiv:2407.10671 — Qwen2 Technical Report",
+          "url": "https://arxiv.org/abs/2407.10671",
+          "kind": "paper"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": null
+    },
+    {
+      "id": "qwen2-5",
+      "name": "Qwen2.5",
+      "organization": "alibaba-qwen",
+      "countryOrRegion": "CN",
+      "family": "Qwen",
+      "generation": "2.5",
+      "announcementDate": "2024-09-19",
+      "availabilityDate": "2024-09-19",
+      "displayDate": "2024.09.19",
+      "datePrecision": "day",
+      "dateType": "weights",
+      "category": "language",
+      "tags": [
+        "开源权重",
+        "18T tokens",
+        "结构化输出",
+        "中文"
+      ],
+      "openWeights": true,
+      "architecture": "decoder-only Transformer（GQA）",
+      "parameters": "0.5B–72B",
+      "contextWindow": "128K tokens",
+      "capabilities": [
+        "中英通用对话",
+        "结构化输出",
+        "代码与数学",
+        "长文本"
+      ],
+      "summary": "Qwen2.5 覆盖 0.5B 至 72B，预训练语料从 7 万亿扩至 18 万亿 token，知识密度、结构化输出（JSON）与长文本能力显著加强，同时开放基座与对话权重，并配套数学、代码等专用分支。",
+      "keyAdvancement": "预训练 token 数从 7 万亿提升到 18 万亿，知识密度、结构化输出与长文能力同步加强。",
+      "significance": "把「同尺寸最强开源模型」的竞争拉到 7B–72B 全区间，成为 2024 年下半年最常用的中文开源基座之一。",
+      "predecessors": [
+        "qwen2"
+      ],
+      "successors": [],
+      "sources": [
+        {
+          "label": "Qwen Blog — Qwen2.5: A Party of Foundation Models!（2024-09-19）",
+          "url": "https://qwenlm.github.io/blog/qwen2.5/",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": "官方博客页标注 2024-09-19，部分海外报道因时区记为 9 月 18 日。"
+    },
+    {
+      "id": "qwen2-5-coder",
+      "name": "Qwen2.5-Coder",
+      "organization": "alibaba-qwen",
+      "countryOrRegion": "CN",
+      "family": "Qwen",
+      "generation": "2.5-Coder",
+      "announcementDate": "2024-11-12",
+      "availabilityDate": "2024-11-12",
+      "displayDate": "2024.11.12",
+      "datePrecision": "day",
+      "dateType": "weights",
+      "category": "coding",
+      "tags": [
+        "代码模型",
+        "开源权重",
+        "仓库级",
+        "32B"
+      ],
+      "openWeights": true,
+      "architecture": "decoder-only Transformer",
+      "parameters": "0.5B / 1.5B / 3B / 7B / 14B / 32B",
+      "contextWindow": null,
+      "capabilities": [
+        "代码生成",
+        "代码修复",
+        "仓库级补全"
+      ],
+      "summary": "Qwen2.5-Coder 开源 0.5B 至 32B 六个尺寸，基于代码与文本混合的 5.5 万亿 token 训练，32B 版本在代码生成、代码修复与仓库级补全上接近同期闭源模型，每个尺寸同时提供 base 与 instruct 权重。",
+      "keyAdvancement": "把主力代码模型推到 32B 并补齐仓库级与多语言覆盖，同时保留 0.5B 起的端侧小尺寸。",
+      "significance": "为本地化代码助手提供可商用的一整套尺寸，也成为此后中国开源代码模型的主要评测基线。",
+      "predecessors": [],
+      "successors": [],
+      "sources": [
+        {
+          "label": "Qwen Blog — Qwen2.5-Coder Series: Powerful, Diverse, Practical.（2024-11-12）",
+          "url": "https://qwenlm.github.io/blog/qwen2.5-coder-family/",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": null
+    },
+    {
+      "id": "qwen2-vl",
+      "name": "Qwen2-VL",
+      "organization": "alibaba-qwen",
+      "countryOrRegion": "CN",
+      "family": "Qwen",
+      "generation": "2-VL",
+      "announcementDate": "2024-08-29",
+      "availabilityDate": "2024-08-29",
+      "displayDate": "2024.08.29",
+      "datePrecision": "day",
+      "dateType": "weights",
+      "category": "multimodal",
+      "tags": [
+        "多模态",
+        "动态分辨率",
+        "M-RoPE",
+        "开源权重"
+      ],
+      "openWeights": true,
+      "architecture": "ViT 编码器 + 动态分辨率 + 多模态旋转位置编码（M-RoPE）",
+      "parameters": "2B / 7B（后续 72B）",
+      "contextWindow": null,
+      "capabilities": [
+        "图像理解",
+        "视频理解",
+        "多语言 OCR"
+      ],
+      "summary": "Qwen2-VL 开源 2B 与 7B 两个多模态尺寸，视觉侧采用原生动态分辨率与自适应 token 压缩，位置编码改为多模态旋转位置编码，可处理任意长宽比图像与长视频，并支持多语言 OCR 与文档理解。",
+      "keyAdvancement": "以动态分辨率与 M-RoPE 把图像、视频和文本放进同一套时空位置编码体系，省去额外重采样。",
+      "significance": "把多模态能力做成与语言模型同尺寸、同许可的开源组件，推动文档解析与视觉 Agent 的本地部署。",
+      "predecessors": [],
+      "successors": [],
+      "sources": [
+        {
+          "label": "Qwen Blog — Qwen2-VL: To See the World More Clearly（2024-08-29）",
+          "url": "https://qwenlm.github.io/blog/qwen2-vl/",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": null
+    },
+    {
+      "id": "qwen2-5-turbo",
+      "name": "Qwen2.5-Turbo",
+      "organization": "alibaba-qwen",
+      "countryOrRegion": "CN",
+      "family": "Qwen",
+      "generation": "2.5-Turbo",
+      "announcementDate": "2024-11-15",
+      "availabilityDate": "2024-11-15",
+      "displayDate": "2024.11.15",
+      "datePrecision": "day",
+      "dateType": "api",
+      "category": "language",
+      "tags": [
+        "1M 上下文",
+        "API",
+        "长文本",
+        "稀疏注意力"
+      ],
+      "openWeights": false,
+      "architecture": "未公开（闭源，稀疏注意力 + 分层缓存）",
+      "parameters": null,
+      "contextWindow": "1M tokens",
+      "capabilities": [
+        "百万 token 长文",
+        "长文档问答",
+        "长代码库理解"
+      ],
+      "summary": "阿里云发布 Qwen2.5-Turbo，把商用 API 的上下文扩到 100 万 token，并用稀疏注意力与分层缓存把长文推理成本压低；官方给出在 RULER 等百万级长文评测上的结果，并同步下调长文调用价格。",
+      "keyAdvancement": "在商用 API 上把上下文推到 1M token，并用稀疏注意力与分层缓存控制长文推理的显存与延迟成本。",
+      "significance": "把百万级上下文从论文指标变成可调用的商用服务，长文档与代码库级任务开始进入产品形态。",
+      "predecessors": [
+        "qwen2-5"
+      ],
+      "successors": [],
+      "sources": [
+        {
+          "label": "Qwen Blog — Extending the Context Length to 1M Tokens!（2024-11-15）",
+          "url": "https://qwenlm.github.io/blog/qwen2.5-turbo/",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": null
+    },
+    {
+      "id": "qwq-32b-preview",
+      "name": "QwQ-32B-Preview",
+      "organization": "alibaba-qwen",
+      "countryOrRegion": "CN",
+      "family": "QwQ",
+      "generation": "32B-Preview",
+      "announcementDate": "2024-11-28",
+      "availabilityDate": "2024-11-28",
+      "displayDate": "2024.11.28",
+      "datePrecision": "day",
+      "dateType": "weights",
+      "category": "reasoning",
+      "tags": [
+        "推理模型",
+        "长链思维",
+        "开源权重",
+        "32B"
+      ],
+      "openWeights": true,
+      "architecture": "decoder-only Transformer（长链思维强化学习）",
+      "parameters": "32B",
+      "contextWindow": null,
+      "capabilities": [
+        "数学推理",
+        "代码推理",
+        "长链思维"
+      ],
+      "summary": "QwQ-32B-Preview 是 Qwen 团队开源的推理模型预览版，32B 规模，通过大规模强化学习与长链思维训练，在 AIME、MATH 与 LiveCodeBench 等推理基准上接近同期 o1-mini 水平，同时公开权重供社区研究。",
+      "keyAdvancement": "以 32B 稠密模型验证长链思维可复现，并把推理模型权重与训练细节一并公开给开源社区。",
+      "significance": "让开源社区在 2024 年底就拿到可研究、可蒸馏的推理模型，为 2025 年开源推理竞赛铺路。",
+      "predecessors": [
+        "qwen2-5"
+      ],
+      "successors": [],
+      "sources": [
+        {
+          "label": "Qwen Blog — QwQ: Reflect Deeply on the Boundaries of the Unknown（2024-11-28）",
+          "url": "https://qwenlm.github.io/blog/qwq-32b-preview/",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": null
+    },
+    {
+      "id": "glm-130b",
+      "name": "GLM-130B",
+      "organization": "zhipu",
+      "countryOrRegion": "CN",
+      "family": "GLM",
+      "generation": "130B",
+      "announcementDate": "2022-08",
+      "availabilityDate": "2022-08",
+      "displayDate": "2022.08",
+      "datePrecision": "month",
+      "dateType": "weights",
+      "category": "language",
+      "tags": [
+        "开源权重",
+        "中英双语",
+        "INT4 量化",
+        "130B"
+      ],
+      "openWeights": true,
+      "architecture": "自回归填空（GLM）+ 双向注意力混合 Transformer",
+      "parameters": "130B",
+      "contextWindow": null,
+      "capabilities": [
+        "中英双语理解与生成",
+        "低资源推理",
+        "开放权重"
+      ],
+      "summary": "智谱与清华 KEG 开源的 1300 亿参数中英双语预训练模型，采用自回归填空目标与混合注意力结构，在 2022 年以 INT4 量化实现在单台 8 卡 3090 服务器上推理，并公开训练日志与权重。",
+      "keyAdvancement": "在千亿级规模上用自回归填空目标统一理解与生成，并给出 INT4 低资源量化推理方案。",
+      "significance": "是 2022 年少数公开权重的百亿级中英双语模型，为 ChatGLM 系列奠定架构与工程基础。",
+      "predecessors": [],
+      "successors": [
+        "chatglm-6b"
+      ],
+      "sources": [
+        {
+          "label": "arXiv:2210.02414 — GLM-130B: An Open Bilingual Pre-trained Model",
+          "url": "https://arxiv.org/abs/2210.02414",
+          "kind": "paper"
+        },
+        {
+          "label": "GitHub — THUDM/GLM-130B",
+          "url": "https://github.com/THUDM/GLM-130B",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "partially-verified",
+      "notes": "权重发布集中在 2022 年 8 月（GitHub 仓库创建于 2022-08-03），论文 arXiv v1 为 2022-10-05，故按月份记录发布时间，论文日期见来源。"
+    },
+    {
+      "id": "chatglm-6b",
+      "name": "ChatGLM-6B",
+      "organization": "zhipu",
+      "countryOrRegion": "CN",
+      "family": "ChatGLM",
+      "generation": "6B",
+      "announcementDate": "2023-03-14",
+      "availabilityDate": "2023-03-14",
+      "displayDate": "2023.03.14",
+      "datePrecision": "day",
+      "dateType": "weights",
+      "category": "language",
+      "tags": [
+        "开源权重",
+        "中文",
+        "消费级显卡",
+        "对话"
+      ],
+      "openWeights": true,
+      "architecture": "decoder-only Transformer（GLM 架构，中英双语）",
+      "parameters": "6.2B",
+      "contextWindow": null,
+      "capabilities": [
+        "中英对话",
+        "单卡本地部署",
+        "二次微调"
+      ],
+      "summary": "智谱开源的中英双语对话模型，62 亿参数，经量化后可在单张消费级显卡本地运行；发布同时开放权重与技术文档，短时间内登上 Hugging Face 热门榜，成为中文社区最早上手的开源对话模型之一。",
+      "keyAdvancement": "把中文对话模型的部署门槛降到单张消费级显卡，并同时开放权重与技术文档便于二次微调。",
+      "significance": "以极低硬件门槛引爆中文开源微调生态，直接催生大量中文指令微调与本地知识库问答项目。",
+      "predecessors": [
+        "glm-130b"
+      ],
+      "successors": [
+        "chatglm2-6b"
+      ],
+      "sources": [
+        {
+          "label": "GitHub — THUDM/ChatGLM-6B",
+          "url": "https://github.com/THUDM/ChatGLM-6B",
+          "kind": "official"
+        },
+        {
+          "label": "钛媒体 — 智谱AI推出ChatGLM：单卡版模型已全面开源",
+          "url": "https://www.tmtpost.com/nictation/6448825.html",
+          "kind": "press"
+        }
+      ],
+      "verificationStatus": "partially-verified",
+      "notes": "权重于 2023-03-13 16:28 UTC 上线 Hugging Face（北京时间 3 月 14 日凌晨），媒体次日报道，故取 2023-03-14。"
+    },
+    {
+      "id": "chatglm2-6b",
+      "name": "ChatGLM2-6B",
+      "organization": "zhipu",
+      "countryOrRegion": "CN",
+      "family": "ChatGLM",
+      "generation": "2-6B",
+      "announcementDate": "2023-06-25",
+      "availabilityDate": "2023-06-25",
+      "displayDate": "2023.06.25",
+      "datePrecision": "day",
+      "dateType": "weights",
+      "category": "language",
+      "tags": [
+        "开源权重",
+        "32K 上下文",
+        "FlashAttention",
+        "本地部署"
+      ],
+      "openWeights": true,
+      "architecture": "decoder-only Transformer（GLM 架构 + 多查询注意力）",
+      "parameters": "6B",
+      "contextWindow": "32K tokens",
+      "capabilities": [
+        "长文本对话",
+        "单卡部署",
+        "中英双语"
+      ],
+      "summary": "ChatGLM2-6B 为 ChatGLM 第二代开源版本，上下文从 2K 扩到 32K，引入 FlashAttention 与多查询注意力降低显存占用，在中文与英文基准上较首代明显提升，同时保持单卡可部署。",
+      "keyAdvancement": "上下文从 2K 扩到 32K，并用 FlashAttention 与多查询注意力优化显存，使单卡长文本对话可行。",
+      "significance": "把开源中文对话模型的上下文拉到 32K，本地知识库问答第一次在消费级硬件上变得实用。",
+      "predecessors": [
+        "chatglm-6b"
+      ],
+      "successors": [
+        "chatglm3"
+      ],
+      "sources": [
+        {
+          "label": "GitHub — THUDM/ChatGLM2-6B",
+          "url": "https://github.com/THUDM/ChatGLM2-6B",
+          "kind": "official"
+        },
+        {
+          "label": "Hugging Face — THUDM/chatglm2-6b",
+          "url": "https://huggingface.co/THUDM/chatglm2-6b",
+          "kind": "weights"
+        }
+      ],
+      "verificationStatus": "partially-verified",
+      "notes": "权重于 2023-06-24 16:26 UTC 上线（北京时间 6 月 25 日），发布日期按北京时间记录。"
+    },
+    {
+      "id": "chatglm3",
+      "name": "ChatGLM3",
+      "organization": "zhipu",
+      "countryOrRegion": "CN",
+      "family": "ChatGLM",
+      "generation": "3",
+      "announcementDate": "2023-10-27",
+      "availabilityDate": "2023-10-27",
+      "displayDate": "2023.10.27",
+      "datePrecision": "day",
+      "dateType": "weights",
+      "category": "language",
+      "tags": [
+        "开源权重",
+        "工具调用",
+        "Agent",
+        "代码解释器"
+      ],
+      "openWeights": true,
+      "architecture": "decoder-only Transformer（GLM 架构）",
+      "parameters": "6B",
+      "contextWindow": "32K tokens",
+      "capabilities": [
+        "函数调用",
+        "代码解释器",
+        "多轮对话"
+      ],
+      "summary": "ChatGLM3 系列开源 6B 版本，新增工具调用、代码解释器与 Agent 能力，支持多轮对话中的函数调用与结构化输出，并提供基座、对话与 32K 长上下文三个版本。",
+      "keyAdvancement": "在 6B 规模上系统支持函数调用与代码解释器，让本地部署的模型也能承担 Agent 任务。",
+      "significance": "把「开源小模型 + 工具调用」组合带到可本地部署的规模，成为中文 Agent 实验的常用起点。",
+      "predecessors": [
+        "chatglm2-6b"
+      ],
+      "successors": [
+        "glm-4"
+      ],
+      "sources": [
+        {
+          "label": "GitHub — THUDM/ChatGLM3",
+          "url": "https://github.com/THUDM/ChatGLM3",
+          "kind": "official"
+        },
+        {
+          "label": "人民网 — 智谱AI推出第三代基座大模型 可在手机上部署",
+          "url": "http://finance.people.com.cn/n1/2023/1028/c1004-40105232.html",
+          "kind": "press"
+        }
+      ],
+      "verificationStatus": "partially-verified",
+      "notes": "智谱官方发布文档标记为 ChatGLM3（231027），Hugging Face 权重仓库创建于 2023-10-25，媒体报道为 10 月 27 日。"
+    },
+    {
+      "id": "glm-4",
+      "name": "GLM-4",
+      "organization": "zhipu",
+      "countryOrRegion": "CN",
+      "family": "GLM",
+      "generation": "4",
+      "announcementDate": "2024-01-16",
+      "availabilityDate": "2024-01-16",
+      "displayDate": "2024.01.16",
+      "datePrecision": "day",
+      "dateType": "announcement",
+      "category": "language",
+      "tags": [
+        "闭源旗舰",
+        "All Tools",
+        "128K 上下文",
+        "中文"
+      ],
+      "openWeights": false,
+      "architecture": "未公开（闭源）",
+      "parameters": null,
+      "contextWindow": "128K tokens",
+      "capabilities": [
+        "中文对话",
+        "工具调用（All Tools）",
+        "长文本",
+        "多模态理解"
+      ],
+      "summary": "智谱在首届技术开放日发布基座模型 GLM-4，官方称中文能力接近 GPT-4，支持 128K 上下文、多模态理解与 All Tools 工具调用框架，并同步开放 API 与后续的 GLM-4-9B 等开源小尺寸。",
+      "keyAdvancement": "把工具调用、代码解释器与多模态统一进 All Tools 框架，而不是把各能力单独叠加。",
+      "significance": "标志中国头部实验室的闭源旗舰进入「对标 GPT-4」阶段，也确立了智谱 MaaS 的产品形态。",
+      "predecessors": [
+        "chatglm3"
+      ],
+      "successors": [
+        "glm-4-plus"
+      ],
+      "sources": [
+        {
+          "label": "新华网 — 智谱AI发布新一代基座大模型GLM-4（2024-01-16）",
+          "url": "http://www.xinhuanet.com/tech/20240116/19d92dc316544dfba1cdc8bbba6b566f/c.html",
+          "kind": "press"
+        },
+        {
+          "label": "arXiv:2406.12793 — ChatGLM: A Family of Large Language Models from GLM-130B to GLM-4 All Tools",
+          "url": "https://arxiv.org/abs/2406.12793",
+          "kind": "paper"
+        }
+      ],
+      "verificationStatus": "partially-verified",
+      "notes": "智谱官网新闻页已改版为 Z.ai 门户，原始公告不可直接访问；日期据新华网报道与论文正文。"
+    },
+    {
+      "id": "glm-4-plus",
+      "name": "GLM-4-Plus",
+      "organization": "zhipu",
+      "countryOrRegion": "CN",
+      "family": "GLM",
+      "generation": "4-Plus",
+      "announcementDate": "2024-08-29",
+      "availabilityDate": "2024-08-29",
+      "displayDate": "2024.08.29",
+      "datePrecision": "day",
+      "dateType": "announcement",
+      "category": "language",
+      "tags": [
+        "闭源旗舰",
+        "免费小模型",
+        "视频理解",
+        "KDD 2024"
+      ],
+      "openWeights": false,
+      "architecture": "未公开（闭源）",
+      "parameters": null,
+      "contextWindow": null,
+      "capabilities": [
+        "语言理解",
+        "指令遵循",
+        "长文本处理"
+      ],
+      "summary": "GLM-4-Plus 为智谱在 KDD 2024 发布的新一代旗舰，官方称在语言理解、指令遵循与长文本处理上全面提升，同时把轻量模型 GLM-4-Flash 的 API 免费开放，并推出文生图与视频理解模型。",
+      "keyAdvancement": "以旗舰升级叠加轻量模型免费 API 的组合抢占开发者入口，把获客提前到模型选型阶段。",
+      "significance": "延续「旗舰 + 免费小模型」策略，推动中文 MaaS 竞争从卖 token 转向争夺开发者生态。",
+      "predecessors": [
+        "glm-4"
+      ],
+      "successors": [],
+      "sources": [
+        {
+          "label": "IT之家 — 智谱发布新一代基础模型（2024-08-29）",
+          "url": "https://m.ithome.com/html/792135.htm",
+          "kind": "press"
+        }
+      ],
+      "verificationStatus": "partially-verified",
+      "notes": null
+    },
+    {
+      "id": "kimi-chat",
+      "name": "Kimi Chat",
+      "organization": "moonshot",
+      "countryOrRegion": "CN",
+      "family": "Kimi",
+      "generation": "Chat",
+      "announcementDate": "2023-10",
+      "availabilityDate": "2023-10",
+      "displayDate": "2023.10",
+      "datePrecision": "month",
+      "dateType": "product",
+      "category": "language",
+      "tags": [
+        "长上下文",
+        "对话助手",
+        "闭源",
+        "20 万汉字"
+      ],
+      "openWeights": false,
+      "architecture": "未公开（闭源）",
+      "parameters": null,
+      "contextWindow": "20 万汉字",
+      "capabilities": [
+        "超长文档输入",
+        "长文问答",
+        "中文写作"
+      ],
+      "summary": "月之暗面推出的智能助手产品，首发搭载支持 20 万汉字输入的 Moonshot 模型，把长上下文作为核心卖点，可直接处理长篇文档与多份资料；产品以网页版起步，2024 年扩展到 App 与 200 万字上下文。",
+      "keyAdvancement": "以 20 万汉字输入作为唯一主线卖点，把长上下文从技术参数变成用户可直接感知的功能。",
+      "significance": "开创「长上下文即产品」的路线，并在 2024 年引发中国大模型的长文本能力竞赛与跟风。",
+      "predecessors": [],
+      "successors": [],
+      "sources": [
+        {
+          "label": "中国新闻网转北京日报 — 国内大模型实现「长文本」突破（2023-10-11）",
+          "url": "http://www.chinanews.com.cn/cj/2023/10-11/10091972.shtml",
+          "kind": "press"
+        }
+      ],
+      "verificationStatus": "partially-verified",
+      "notes": "官方未公布确切上线日；报道称「近日」推出，行业普遍记录为 2023-10-09，故日期精度只取到月。"
+    },
+    {
+      "id": "minimax-abab6",
+      "name": "abab6",
+      "organization": "minimax",
+      "countryOrRegion": "CN",
+      "family": "abab",
+      "generation": "6",
+      "announcementDate": "2024-01-16",
+      "availabilityDate": "2024-01-16",
+      "displayDate": "2024.01.16",
+      "datePrecision": "day",
+      "dateType": "announcement",
+      "category": "language",
+      "tags": [
+        "MoE",
+        "API",
+        "中文对话",
+        "稀疏模型"
+      ],
+      "openWeights": false,
+      "architecture": "MoE",
+      "parameters": null,
+      "contextWindow": null,
+      "capabilities": [
+        "复杂任务处理",
+        "中文对话",
+        "API 调用"
+      ],
+      "summary": "MiniMax 上线 abab6，官方称其为国内首个基于 MoE 架构的大语言模型，相较 abab5.5 在处理复杂任务与精细输出上有所提升，同时提高单位时间训练效率，通过 MiniMax 开放平台对外提供 API。",
+      "keyAdvancement": "以 MoE 替换稠密架构，在同等算力预算下提升复杂任务表现，并抬高单位时间内的训练效率。",
+      "significance": "把稀疏架构带到中国商用 API 市场，为后续以 MoE 为主线的 2025 年路线提供早期验证。",
+      "predecessors": [],
+      "successors": [
+        "minimax-abab6-5"
+      ],
+      "sources": [
+        {
+          "label": "品玩 — MiniMax 国内首个 MoE 大语言模型上线（2024-01-16）",
+          "url": "https://www.pingwest.com/w/291914",
+          "kind": "press"
+        },
+        {
+          "label": "MiniMax 官方新闻 — 通用大模型 abab6.5s（文中回顾 1 月发布 abab6）",
+          "url": "https://www.minimax.cn/news/%E9%80%9A%E7%94%A8%E5%A4%A7%E6%A8%A1%E5%9E%8Babab65%E7%B3%BB%E5%88%97",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "partially-verified",
+      "notes": "官方 abab6 单独发布页未找到；日期据品玩报道与 MiniMax abab6.5 官方文章中「今年 1 月发布」的回顾。"
+    },
+    {
+      "id": "minimax-abab6-5",
+      "name": "abab6.5s",
+      "organization": "minimax",
+      "countryOrRegion": "CN",
+      "family": "abab",
+      "generation": "6.5",
+      "announcementDate": "2024-04-17",
+      "availabilityDate": "2024-04-17",
+      "displayDate": "2024.04.17",
+      "datePrecision": "day",
+      "dateType": "announcement",
+      "category": "language",
+      "tags": [
+        "MoE",
+        "低延迟",
+        "多语言",
+        "API"
+      ],
+      "openWeights": false,
+      "architecture": "MoE",
+      "parameters": null,
+      "contextWindow": null,
+      "capabilities": [
+        "中文与多语言",
+        "低延迟推理",
+        "复杂指令遵循"
+      ],
+      "summary": "MiniMax 发布 abab6.5 与 abab6.5s 两个 MoE 模型，官方称在中文、英文、多语言与复杂指令遵循上较 abab6 提升，abab6.5s 主打更低延迟；同期通过开放平台提供 API，并延续长上下文能力。",
+      "keyAdvancement": "以同一代 MoE 同时提供「高性能」与「低延迟」两个变体，覆盖不同调用场景与预算档位。",
+      "significance": "是中国创业公司在稀疏架构上最早的连续迭代之一，也为 2025 年 MiniMax-01 的线性注意力路线积累工程经验。",
+      "predecessors": [
+        "minimax-abab6"
+      ],
+      "successors": [],
+      "sources": [
+        {
+          "label": "MiniMax 官方新闻 — 通用大模型 abab6.5s（2024-04-17）",
+          "url": "https://www.minimax.cn/news/%E9%80%9A%E7%94%A8%E5%A4%A7%E6%A8%A1%E5%9E%8Babab65%E7%B3%BB%E5%88%97",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": null
+    },
+    {
+      "id": "doubao",
+      "name": "豆包",
+      "organization": "bytedance",
+      "countryOrRegion": "CN",
+      "family": "Doubao",
+      "generation": "App",
+      "announcementDate": "2023-08",
+      "availabilityDate": "2023-08",
+      "displayDate": "2023.08",
+      "datePrecision": "month",
+      "dateType": "product",
+      "category": "language",
+      "tags": [
+        "AI 助手",
+        "消费级产品",
+        "免费",
+        "移动端"
+      ],
+      "openWeights": false,
+      "architecture": "未公开（闭源）",
+      "parameters": null,
+      "contextWindow": null,
+      "capabilities": [
+        "日常问答",
+        "写作辅助",
+        "移动端语音交互"
+      ],
+      "summary": "字节跳动的 AI 对话产品豆包上线，最初为小范围邀请制测试并承认「存在较多局限」，随后面向公众开放；豆包以免费、低门槛与移动端体验切入，逐步成为国内用户规模最大的 AI 助手之一。",
+      "keyAdvancement": "以消费级产品形态分发大模型能力，用免费策略换取用户规模，而不是一步到位先做 API 生意。",
+      "significance": "把大模型能力包装成消费级应用，是中国 AI 产品从技术演示转向规模化用户流量入口的标志。",
+      "predecessors": [],
+      "successors": [
+        "doubao-llm"
+      ],
+      "sources": [
+        {
+          "label": "证券时报 — 字节跳动AI对话产品「豆包」上线（2023-08-18）",
+          "url": "https://www.stcn.com/article/detail/951137.html",
+          "kind": "press"
+        }
+      ],
+      "verificationStatus": "partially-verified",
+      "notes": "官方未公布确切上线日；证券时报 8 月 18 日报道上线，行业多记为 8 月 17 日，故按月精度记录。"
+    },
+    {
+      "id": "doubao-llm",
+      "name": "豆包大模型",
+      "organization": "bytedance",
+      "countryOrRegion": "CN",
+      "family": "Doubao",
+      "generation": "1",
+      "announcementDate": "2024-05-15",
+      "availabilityDate": "2024-05-15",
+      "displayDate": "2024.05.15",
+      "datePrecision": "day",
+      "dateType": "announcement",
+      "category": "language",
+      "tags": [
+        "云 API",
+        "价格战",
+        "Pro/Lite",
+        "高吞吐"
+      ],
+      "openWeights": false,
+      "architecture": "未公开（闭源，Pro / Lite 多规格）",
+      "parameters": null,
+      "contextWindow": null,
+      "capabilities": [
+        "通用对话",
+        "高并发 API",
+        "长上下文"
+      ],
+      "summary": "字节跳动在火山引擎原动力大会发布豆包大模型家族，含 Pro 与 Lite 多个上下文规格，官方称日均处理千亿级 tokens，并把主力模型 API 价格压到每千 tokens 数厘，直接加入 2024 年 5 月的价格战。",
+      "keyAdvancement": "以云厂商身份把大模型 API 价格压到「厘时代」，并用自家产品的真实流量验证模型吞吐。",
+      "significance": "把模型能力与云分发绑定，价格与流量同时成为竞争手段，改变了中国 MaaS 的定价基线。",
+      "predecessors": [
+        "doubao"
+      ],
+      "successors": [],
+      "sources": [
+        {
+          "label": "新华网 — 字节跳动发布豆包大模型，日均处理千亿级Tokens（2024-05-15）",
+          "url": "https://www.news.cn/tech/20240515/0cbd896c16e14a398c26f4195a360410/c.html",
+          "kind": "press"
+        }
+      ],
+      "verificationStatus": "partially-verified",
+      "notes": null
+    },
+    {
+      "id": "ernie-3-0-titan",
+      "name": "ERNIE 3.0 Titan",
+      "organization": "baidu",
+      "countryOrRegion": "CN",
+      "family": "ERNIE",
+      "generation": "3.0 Titan",
+      "announcementDate": "2021-12-23",
+      "availabilityDate": null,
+      "displayDate": "2021.12.23",
+      "datePrecision": "day",
+      "dateType": "paper",
+      "category": "language",
+      "tags": [
+        "知识增强",
+        "260B",
+        "中文 NLP",
+        "预训练"
+      ],
+      "openWeights": false,
+      "architecture": "知识增强 Transformer（闭源）",
+      "parameters": "260B",
+      "contextWindow": null,
+      "capabilities": [
+        "中文语言理解",
+        "文本生成",
+        "知识增强预训练"
+      ],
+      "summary": "百度发布 ERNIE 3.0 Titan，参数规模 2600 亿，在 ERNIE 3.0 的知识增强预训练框架上扩大规模，并加入自监督对抗训练与可信计算模块，论文称在 60 余项中文 NLP 任务上取得当时最好结果。",
+      "keyAdvancement": "把知识增强预训练扩到 2600 亿参数，并引入自监督对抗训练与可信计算模块以降低有害输出。",
+      "significance": "是中国最早进入千亿参数级的预训练模型之一，为文心一言打下基座、数据与大规模训练的经验。",
+      "predecessors": [],
+      "successors": [
+        "ernie-bot"
+      ],
+      "sources": [
+        {
+          "label": "arXiv:2112.12731 — ERNIE 3.0 Titan",
+          "url": "https://arxiv.org/abs/2112.12731",
+          "kind": "paper"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": "以论文公开日为时间轴节点；模型未开放权重与公开可用入口。"
+    },
+    {
+      "id": "ernie-bot",
+      "name": "文心一言",
+      "organization": "baidu",
+      "countryOrRegion": "CN",
+      "family": "ERNIE",
+      "generation": "Bot",
+      "announcementDate": "2023-03-16",
+      "availabilityDate": "2023-03-16",
+      "displayDate": "2023.03.16",
+      "datePrecision": "day",
+      "dateType": "product",
+      "category": "language",
+      "tags": [
+        "对话产品",
+        "邀请测试",
+        "中文",
+        "闭源"
+      ],
+      "openWeights": false,
+      "architecture": "未公开（闭源）",
+      "parameters": null,
+      "contextWindow": null,
+      "capabilities": [
+        "中文对话",
+        "内容生成",
+        "多轮问答"
+      ],
+      "summary": "百度发布对话产品文心一言并开启邀请测试，是国内首个面向公众发布的大模型对话产品；发布会以录播演示为主，上线后因生成质量与可用性受到讨论，随后逐步扩大开放范围并接入百度搜索等产品。",
+      "keyAdvancement": "首个面向公众的中文对话大模型产品发布，并尝试把搜索入口与生成能力结合在同一个产品里。",
+      "significance": "中国大模型竞争从实验室走向公众视野的起点，也暴露了演示效果与真实产品化之间的差距。",
+      "predecessors": [
+        "ernie-3-0-titan"
+      ],
+      "successors": [
+        "ernie-4-0"
+      ],
+      "sources": [
+        {
+          "label": "新浪财经 — 文心一言发布会今日举行（2023-03-16）",
+          "url": "https://finance.sina.com.cn/jjxw/2023-03-16/doc-imykzwvv7824758.shtml",
+          "kind": "press"
+        }
+      ],
+      "verificationStatus": "partially-verified",
+      "notes": null
+    },
+    {
+      "id": "ernie-4-0",
+      "name": "文心大模型 4.0",
+      "organization": "baidu",
+      "countryOrRegion": "CN",
+      "family": "ERNIE",
+      "generation": "4.0",
+      "announcementDate": "2023-10-17",
+      "availabilityDate": "2023-10-17",
+      "displayDate": "2023.10.17",
+      "datePrecision": "day",
+      "dateType": "announcement",
+      "category": "language",
+      "tags": [
+        "闭源",
+        "中文",
+        "搜索接入",
+        "邀请测试"
+      ],
+      "openWeights": false,
+      "architecture": "未公开（闭源）",
+      "parameters": null,
+      "contextWindow": null,
+      "capabilities": [
+        "中文理解与生成",
+        "逻辑推理",
+        "记忆能力"
+      ],
+      "summary": "百度在百度世界 2023 发布文心大模型 4.0，官方称在理解、生成、逻辑与记忆四项能力上全面升级、综合水平对标 GPT-4，并同步把 4.0 接入文心一言与百度搜索等自有产品，先开启邀请测试。",
+      "keyAdvancement": "从 3.5 代升级到 4.0，重点补齐逻辑推理与记忆能力，并把 4.0 接入搜索等自有产品。",
+      "significance": "标志中国头部厂商公开以 GPT-4 为对标基准，模型叙事正式进入「对齐国际旗舰」阶段。",
+      "predecessors": [
+        "ernie-bot"
+      ],
+      "successors": [],
+      "sources": [
+        {
+          "label": "央广网 — 百度发布文心大模型4.0（2023-10-17）",
+          "url": "https://tech.cnr.cn/techph/20231017/t20231017_526453859.shtml",
+          "kind": "press"
+        }
+      ],
+      "verificationStatus": "partially-verified",
+      "notes": null
+    },
+    {
+      "id": "spark-desk",
+      "name": "讯飞星火认知大模型",
+      "organization": "iflytek",
+      "countryOrRegion": "CN",
+      "family": "Spark",
+      "generation": "1",
+      "announcementDate": "2023-05-06",
+      "availabilityDate": "2023-05-06",
+      "displayDate": "2023.05.06",
+      "datePrecision": "day",
+      "dateType": "announcement",
+      "category": "language",
+      "tags": [
+        "闭源",
+        "中文",
+        "行业场景",
+        "1+N"
+      ],
+      "openWeights": false,
+      "architecture": "未公开（闭源）",
+      "parameters": null,
+      "contextWindow": null,
+      "capabilities": [
+        "文本生成",
+        "逻辑推理",
+        "代码与数学",
+        "行业落地"
+      ],
+      "summary": "科大讯飞在合肥发布讯飞星火认知大模型，首批覆盖文本生成、语言理解、知识问答、逻辑推理、数学与代码能力，并以「1+N」体系接入教育、办公、汽车等既有场景，发布时官方称中文能力对标 ChatGPT。",
+      "keyAdvancement": "以教育、办公、汽车等既有产品线承接模型能力，走场景落地优先、先商用再迭代的路线。",
+      "significance": "把大模型与成熟行业渠道结合，是中国「模型 + 场景」商业化路径的早期样本之一，也为后续行业模型提供模板。",
+      "predecessors": [],
+      "successors": [],
+      "sources": [
+        {
+          "label": "站长之家 — 讯飞星火认知大模型发布（2023-05-06）",
+          "url": "https://www.chinaz.com/2023/0506/1521939.shtml",
+          "kind": "press"
+        }
+      ],
+      "verificationStatus": "partially-verified",
+      "notes": "科大讯飞官网新闻页为动态渲染，未找到可静态引用的公告页，改引当日媒体报道。"
+    },
+    {
+      "id": "hunyuan",
+      "name": "腾讯混元大模型",
+      "organization": "tencent",
+      "countryOrRegion": "CN",
+      "family": "Hunyuan",
+      "generation": "1",
+      "announcementDate": "2023-09-07",
+      "availabilityDate": "2023-09-07",
+      "displayDate": "2023.09.07",
+      "datePrecision": "day",
+      "dateType": "announcement",
+      "category": "language",
+      "tags": [
+        "闭源",
+        "千亿参数",
+        "腾讯云",
+        "内部验证"
+      ],
+      "openWeights": false,
+      "architecture": "未公开（闭源）",
+      "parameters": "超千亿（官方口径）",
+      "contextWindow": null,
+      "capabilities": [
+        "中文创作",
+        "逻辑推理",
+        "云上 API"
+      ],
+      "summary": "腾讯在 2023 全球数字生态大会发布混元大模型，官方称全链路自研、参数超千亿、预训练语料超 2 万亿 tokens，并通过腾讯云对外开放 API，优先接入腾讯云、会议与文档等内部产品。",
+      "keyAdvancement": "以腾讯会议、腾讯文档等内部产品的大规模调用作为迭代与验证渠道，再把能力对外输出。",
+      "significance": "补上腾讯在大模型上的位置，并把「先在自有产品验证、再开放云 API」的路径做成可复制的范式。",
+      "predecessors": [],
+      "successors": [],
+      "sources": [
+        {
+          "label": "央广网 — 腾讯全面拥抱大模型 腾讯混元正式亮相（2023-09-07）",
+          "url": "https://tech.cnr.cn/techph/20230907/t20230907_526411008.shtml",
+          "kind": "press"
+        }
+      ],
+      "verificationStatus": "partially-verified",
+      "notes": "腾讯混元官网为动态渲染页面，无静态公告与日期，改引当日央广网报道。"
+    },
+    {
+      "id": "internlm-7b",
+      "name": "书生·浦语 InternLM-7B",
+      "organization": "shanghai-ai-lab",
+      "countryOrRegion": "CN",
+      "family": "InternLM",
+      "generation": "1",
+      "announcementDate": "2023-07-06",
+      "availabilityDate": "2023-07-06",
+      "displayDate": "2023.07.06",
+      "datePrecision": "day",
+      "dateType": "weights",
+      "category": "language",
+      "tags": [
+        "开源权重",
+        "中文",
+        "工具链",
+        "科研开放"
+      ],
+      "openWeights": true,
+      "architecture": "decoder-only Transformer",
+      "parameters": "7B",
+      "contextWindow": "8K tokens",
+      "capabilities": [
+        "中文对话",
+        "全流程工具链",
+        "二次微调"
+      ],
+      "summary": "上海人工智能实验室开源书生·浦语 InternLM-7B，含基座与对话版本，训练数据以中文为主，并配套数据、微调、评测与部署的全流程工具链，同时提供 8K 上下文版本。",
+      "keyAdvancement": "以完整工具链而非单一权重开源，把数据、微调、评测与部署一并开放，降低二次开发门槛。",
+      "significance": "把「模型 + 工具链 + 评测」整体开放，使其成为中文开源生态中少见的基础设施型项目，被广泛二次使用。",
+      "predecessors": [],
+      "successors": [
+        "internlm2"
+      ],
+      "sources": [
+        {
+          "label": "GitHub — InternLM/InternLM",
+          "url": "https://github.com/InternLM/InternLM",
+          "kind": "official"
+        },
+        {
+          "label": "Hugging Face — internlm/internlm-7b",
+          "url": "https://huggingface.co/internlm/internlm-7b",
+          "kind": "weights"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": "GitHub 仓库与 Hugging Face 权重仓库创建日均为 2023-07-06。"
+    },
+    {
+      "id": "internlm2",
+      "name": "书生·浦语 2.0（InternLM2）",
+      "organization": "shanghai-ai-lab",
+      "countryOrRegion": "CN",
+      "family": "InternLM",
+      "generation": "2",
+      "announcementDate": "2024-01-17",
+      "availabilityDate": "2024-01-17",
+      "displayDate": "2024.01.17",
+      "datePrecision": "day",
+      "dateType": "weights",
+      "category": "language",
+      "tags": [
+        "开源权重",
+        "200K 上下文",
+        "多尺寸",
+        "语料质量"
+      ],
+      "openWeights": true,
+      "architecture": "decoder-only Transformer",
+      "parameters": "1.8B / 7B / 20B",
+      "contextWindow": "200K tokens",
+      "capabilities": [
+        "超长上下文",
+        "中文理解与生成",
+        "工具调用"
+      ],
+      "summary": "书生·浦语 2.0 开源 1.8B、7B 与 20B 三个尺寸，官方称通过提升语料质量与信息密度回归语言建模本质，支持 20 万 token 超长上下文，并同步开放微调与评测工具链。",
+      "keyAdvancement": "以语料质量与信息密度而非单纯规模提升基座能力，并把可用上下文推到 20 万 token。",
+      "significance": "把 20 万 token 上下文与多尺寸开源结合，是 2024 年初中文长上下文开源模型的代表。",
+      "predecessors": [
+        "internlm-7b"
+      ],
+      "successors": [],
+      "sources": [
+        {
+          "label": "央广网 — 书生·浦语 2.0 开源，阿里云魔搭首发（2024-01-18，文中记为 1 月 17 日发布）",
+          "url": "http://tech.cnr.cn/techph/20240118/t20240118_526562018.shtml",
+          "kind": "press"
+        },
+        {
+          "label": "上海人工智能实验室 — 书生·浦语2.0正式开源",
+          "url": "https://www.shlab.org.cn/news/5443847",
+          "kind": "official"
+        },
+        {
+          "label": "arXiv:2403.17297 — InternLM2 Technical Report",
+          "url": "https://arxiv.org/abs/2403.17297",
+          "kind": "paper"
+        }
+      ],
+      "verificationStatus": "partially-verified",
+      "notes": null
+    },
+    {
+      "id": "step-1",
+      "name": "Step-1",
+      "organization": "stepfun",
+      "countryOrRegion": "CN",
+      "family": "Step",
+      "generation": "1",
+      "announcementDate": "2024-03-23",
+      "availabilityDate": "2024-03-23",
+      "displayDate": "2024.03.23",
+      "datePrecision": "day",
+      "dateType": "announcement",
+      "category": "language",
+      "tags": [
+        "闭源",
+        "千亿参数",
+        "多模态",
+        "万亿 MoE 预览"
+      ],
+      "openWeights": false,
+      "architecture": "未公开（闭源；Step-2 预览为万亿参数 MoE）",
+      "parameters": "千亿（Step-1 / Step-1V）；Step-2 预览为万亿参数 MoE",
+      "contextWindow": null,
+      "capabilities": [
+        "中文对话",
+        "多模态理解（Step-1V）",
+        "超大稀疏模型"
+      ],
+      "summary": "阶跃星辰在 2024 全球开发者先锋大会发布 Step 系列，包括千亿参数语言模型 Step-1、千亿参数多模态模型 Step-1V 与万亿参数 MoE 语言模型 Step-2 预览版，并同步推出面向消费者的「跃问」产品。",
+      "keyAdvancement": "一次发布语言、多模态与万亿 MoE 三条产品线，把公司技术路线直接押在超大稀疏模型上。",
+      "significance": "是中国创业公司中少数在成立首年就公开万亿 MoE 路线的团队，为 2024–2025 年超大稀疏模型竞赛提供样本。",
+      "predecessors": [],
+      "successors": [],
+      "sources": [
+        {
+          "label": "网易财经转财联社 — 阶跃星辰发布万亿参数MoE大模型预览版（2024-03-23）",
+          "url": "https://www.163.com/dy/article/ITV6KJ7205198CJN.html",
+          "kind": "press"
+        }
+      ],
+      "verificationStatus": "partially-verified",
+      "notes": "阶跃星辰官网为动态渲染，无带日期的静态公告；日期据发布会当日报道。"
+    },
+    {
+      "id": "yi-34b",
+      "name": "Yi-34B",
+      "organization": "01ai",
+      "countryOrRegion": "CN",
+      "family": "Yi",
+      "generation": "34B",
+      "announcementDate": "2023-11",
+      "availabilityDate": "2023-11",
+      "displayDate": "2023.11",
+      "datePrecision": "month",
+      "dateType": "weights",
+      "category": "language",
+      "tags": [
+        "开源权重",
+        "中英双语",
+        "200K 上下文",
+        "34B"
+      ],
+      "openWeights": true,
+      "architecture": "decoder-only Transformer",
+      "parameters": "34B（另有 6B）",
+      "contextWindow": "200K tokens（Yi-34B-200K 版本）",
+      "capabilities": [
+        "中英双语",
+        "长上下文",
+        "开源可商用申请"
+      ],
+      "summary": "零一万物开源 Yi-34B 与 Yi-6B，官方称在 Hugging Face 开源模型评测中取得领先，随后追加 200K 长上下文版本与多模态版本；模型以中英双语为主，开放商用申请，并在魔搭与 Hugging Face 同步发布。",
+      "keyAdvancement": "以 34B 规模在第三方开源评测中领先，并在数月内补齐 200K 长上下文与多模态版本。",
+      "significance": "让中国创业公司的开源模型首次在第三方开源榜单上进入前列，带动中文 34B 级基座的微调潮。",
+      "predecessors": [],
+      "successors": [
+        "yi-large"
+      ],
+      "sources": [
+        {
+          "label": "央广网 — 零一万物大模型 Yi-34B 已在阿里云魔搭开源（2023-11-06）",
+          "url": "https://tech.cnr.cn/techph/20231106/t20231106_526476893.shtml",
+          "kind": "press"
+        },
+        {
+          "label": "arXiv:2403.04652 — Yi: Open Foundation Models by 01.AI",
+          "url": "https://arxiv.org/abs/2403.04652",
+          "kind": "paper"
+        }
+      ],
+      "verificationStatus": "partially-verified",
+      "notes": "权重于 2023-11-01 上线 Hugging Face（01-ai/Yi-34B 仓库 createdAt 2023-11-01T07:03Z），媒体报道的正式发布为 11 月 6 日，故日期精度取到月。"
+    },
+    {
+      "id": "yi-large",
+      "name": "Yi-Large",
+      "organization": "01ai",
+      "countryOrRegion": "CN",
+      "family": "Yi",
+      "generation": "Large",
+      "announcementDate": "2024-05-13",
+      "availabilityDate": "2024-05-13",
+      "displayDate": "2024.05.13",
+      "datePrecision": "day",
+      "dateType": "announcement",
+      "category": "language",
+      "tags": [
+        "闭源",
+        "千亿参数",
+        "API",
+        "双线策略"
+      ],
+      "openWeights": false,
+      "architecture": "未公开（闭源）",
+      "parameters": "千亿（官方口径）",
+      "contextWindow": null,
+      "capabilities": [
+        "中英对话",
+        "指令遵循",
+        "API 调用"
+      ],
+      "summary": "零一万物发布闭源千亿参数模型 Yi-Large，官方称在 AlpacaEval 2.0 等评测上进入前列，并同时推出 Yi-Large-Turbo 等 API 版本；公司策略由此转为「开源小模型 + 闭源大模型」双线。",
+      "keyAdvancement": "在开源小尺寸之外增加闭源千亿旗舰，把商业重心转向 API 与海外市场，形成双线策略。",
+      "significance": "反映中国创业公司在开源获客与闭源变现之间的路线切换，也说明开源榜单与商业收入并不直接互通。",
+      "predecessors": [
+        "yi-34b"
+      ],
+      "successors": [],
+      "sources": [
+        {
+          "label": "中国发展网 — 零一万物发布千亿参数模型 Yi-Large（2024-05-14，文中记为 5 月 13 日）",
+          "url": "http://www.chinadevelopment.com.cn/news/cj/2024/05/1894951.shtml",
+          "kind": "press"
+        }
+      ],
+      "verificationStatus": "partially-verified",
+      "notes": null
+    },
+    {
+      "id": "sensenova",
+      "name": "日日新 SenseNova",
+      "organization": "sensetime",
+      "countryOrRegion": "CN",
+      "family": "SenseNova",
+      "generation": "1",
+      "announcementDate": "2023-04-10",
+      "availabilityDate": "2023-04-10",
+      "displayDate": "2023.04.10",
+      "datePrecision": "day",
+      "dateType": "announcement",
+      "category": "multimodal",
+      "tags": [
+        "闭源",
+        "模型体系",
+        "多模态",
+        "大算力"
+      ],
+      "openWeights": false,
+      "architecture": "未公开（闭源，多模型体系）",
+      "parameters": null,
+      "contextWindow": null,
+      "capabilities": [
+        "自然语言处理",
+        "内容生成",
+        "自动化数据标注",
+        "自定义训练"
+      ],
+      "summary": "商汤发布日日新 SenseNova 大模型体系，覆盖自然语言、内容生成、自动化数据标注与自定义训练等能力，并提出「大模型 + 大算力」战略，随后在 2023 年 8 月通过首批生成式人工智能服务备案。",
+      "keyAdvancement": "把语言、生成、标注与训练能力打包成可交付的模型体系，而不是发布单一语言模型，以便按行业整体交付。",
+      "significance": "代表 AI 视觉公司转向通用大模型的路径，也说明中国厂商倾向以「模型体系 + 算力」打包对外。",
+      "predecessors": [],
+      "successors": [],
+      "sources": [
+        {
+          "label": "新华网 — 商汤科技推出「日日新SenseNova」大模型体系（2023-04-12，文中记为 4 月 10 日）",
+          "url": "http://www.news.cn/fortune/2023-04/12/c_1212027993.htm",
+          "kind": "press"
+        }
+      ],
+      "verificationStatus": "partially-verified",
+      "notes": null
+    },
+    {
+      "id": "pangu-alpha",
+      "name": "PanGu-α",
+      "organization": "huawei",
+      "countryOrRegion": "CN",
+      "family": "PanGu",
+      "generation": "α",
+      "announcementDate": "2021-04-26",
+      "availabilityDate": null,
+      "displayDate": "2021.04.26",
+      "datePrecision": "day",
+      "dateType": "paper",
+      "category": "language",
+      "tags": [
+        "千亿参数",
+        "中文",
+        "昇腾",
+        "自动并行"
+      ],
+      "openWeights": false,
+      "architecture": "自回归 Transformer（含自动并行训练框架）",
+      "parameters": "200B（PanGu-α 200B 版本）",
+      "contextWindow": null,
+      "capabilities": [
+        "中文文本生成",
+        "中文问答",
+        "小样本学习"
+      ],
+      "summary": "华为发布盘古 α 中文预训练语言模型，最大版本 2000 亿参数，提出可自动并行的训练框架与数据、知识双驱动预训练，论文称在小样本中文生成与理解任务上表现领先，训练在昇腾集群上完成。",
+      "keyAdvancement": "用自动并行框架在国产昇腾集群上完成 2000 亿参数中文模型训练，验证了国产算力栈。",
+      "significance": "是中国最早公开的千亿级中文预训练模型之一，也是国产算力栈训练大模型最早的一次验证。",
+      "predecessors": [],
+      "successors": [],
+      "sources": [
+        {
+          "label": "arXiv:2104.12369 — PanGu-α: Large-scale Autoregressive Pretrained Chinese Language Models",
+          "url": "https://arxiv.org/abs/2104.12369",
+          "kind": "paper"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": "以论文公开日为时间轴节点；模型未开放权重。"
+    },
+    {
+      "id": "baichuan-7b",
+      "name": "Baichuan-7B",
+      "organization": "baichuan",
+      "countryOrRegion": "CN",
+      "family": "Baichuan",
+      "generation": "7B",
+      "announcementDate": "2023-06",
+      "availabilityDate": "2023-06",
+      "displayDate": "2023.06",
+      "datePrecision": "month",
+      "dateType": "weights",
+      "category": "language",
+      "tags": [
+        "开源权重",
+        "免费商用",
+        "中文",
+        "7B"
+      ],
+      "openWeights": true,
+      "architecture": "decoder-only Transformer",
+      "parameters": "7B",
+      "contextWindow": null,
+      "capabilities": [
+        "中英双语",
+        "开源可商用",
+        "二次微调"
+      ],
+      "summary": "百川智能开源 Baichuan-7B，基于约 1.2 万亿 token 中英双语语料训练，采用 RoPE、SwiGLU 等结构，开源即免费商用，是 2023 年中文开源社区最早上手的 7B 基座之一。",
+      "keyAdvancement": "以免费商用许可发布中文开源基座，把合规与试错成本降到最低，抢在竞品之前建立社区。",
+      "significance": "以免费商用许可快速聚集中文微调生态，推动 2023 年中文开源模型的密集迭代与人才扩散。",
+      "predecessors": [],
+      "successors": [
+        "baichuan2"
+      ],
+      "sources": [
+        {
+          "label": "GitHub — baichuan-inc/Baichuan-7B",
+          "url": "https://github.com/baichuan-inc/Baichuan-7B",
+          "kind": "official"
+        },
+        {
+          "label": "Hugging Face — baichuan-inc/Baichuan-7B",
+          "url": "https://huggingface.co/baichuan-inc/Baichuan-7B",
+          "kind": "weights"
+        }
+      ],
+      "verificationStatus": "partially-verified",
+      "notes": "GitHub 仓库创建于 2023-06-14（UTC），Hugging Face 权重为 2023-06-13（UTC），媒体多记 6 月 15 日发布，故日期精度取到月。"
+    },
+    {
+      "id": "baichuan2",
+      "name": "Baichuan 2",
+      "organization": "baichuan",
+      "countryOrRegion": "CN",
+      "family": "Baichuan",
+      "generation": "2",
+      "announcementDate": "2023-09-06",
+      "availabilityDate": "2023-09-06",
+      "displayDate": "2023.09.06",
+      "datePrecision": "day",
+      "dateType": "weights",
+      "category": "language",
+      "tags": [
+        "开源权重",
+        "技术报告",
+        "数学与代码",
+        "中文"
+      ],
+      "openWeights": true,
+      "architecture": "decoder-only Transformer",
+      "parameters": "7B / 13B",
+      "contextWindow": null,
+      "capabilities": [
+        "中英双语",
+        "数学与代码",
+        "学术开放 + 商用申请"
+      ],
+      "summary": "百川智能开源 Baichuan2-7B 与 13B，基于 2.6 万亿 token 多语言语料训练，官方称数学能力提升 49%、代码能力提升 46%，并同步发布技术报告；学术研究完全开放，商用需申请许可。",
+      "keyAdvancement": "在 7B 与 13B 同尺寸上显著提升数学与代码能力，并以技术报告公开训练细节与数据配比。",
+      "significance": "成为 2023 年中文开源模型「对标 LLaMA 2」阶段的代表，把技术报告加可商用许可变成标准动作。",
+      "predecessors": [
+        "baichuan-7b"
+      ],
+      "successors": [],
+      "sources": [
+        {
+          "label": "北京市科委转载北京日报 — 百川智能发布新一代开源大模型（2023-09-08，文中记为 9 月 6 日）",
+          "url": "https://www.ncsti.gov.cn/kjdt/ztbd/rgzn/zxjz/202309/t20230908_133239.html",
+          "kind": "press"
+        },
+        {
+          "label": "arXiv:2309.10305 — Baichuan 2: Open Large-scale Language Models",
+          "url": "https://arxiv.org/abs/2309.10305",
+          "kind": "paper"
+        }
+      ],
+      "verificationStatus": "partially-verified",
+      "notes": null
+    }
+  ],
+  "events": [
+    {
+      "id": "china-ai-governance-principles-2019",
+      "date": "2019-06-17",
+      "displayDate": "2019.06.17",
+      "datePrecision": "day",
+      "dateType": "policy",
+      "title": "《新一代人工智能治理原则》发布",
+      "titleEn": "Principles for the Governance of Next-Generation Artificial Intelligence",
+      "category": "policy",
+      "summary": "国家新一代人工智能治理专业委员会发布《新一代人工智能治理原则——发展负责任的人工智能》，提出和谐友好、公平公正、包容共享、尊重隐私、安全可控、共担责任、开放协作、敏捷治理八项原则，为中国人工智能治理提供早期框架。",
+      "significance": "是中国第一份系统性的人工智能治理原则文件，为后续算法备案与生成式人工智能监管提供了政策语汇与思路。",
+      "organizations": [
+        "china-government"
+      ],
+      "people": [],
+      "relatedModels": [],
+      "chapter": 4,
+      "sources": [
+        {
+          "label": "科技部 — 发展负责任的人工智能：新一代人工智能治理原则发布（2019-06-17）",
+          "url": "https://www.most.gov.cn/kjbgz/201906/t20190617_147107.html",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": null
+    },
+    {
+      "id": "china-genai-measures-draft-2023",
+      "date": "2023-04-11",
+      "displayDate": "2023.04.11",
+      "datePrecision": "day",
+      "dateType": "policy",
+      "title": "《生成式人工智能服务管理办法（征求意见稿）》公开征求意见",
+      "titleEn": "Draft Measures for the Administration of Generative AI Services",
+      "category": "policy",
+      "summary": "国家互联网信息办公室公布《生成式人工智能服务管理办法（征求意见稿）》，要求生成式人工智能产品在提供服务前申报安全评估，并对训练数据、内容标识与使用者实名等作出规定，公开征求意见一个月。",
+      "significance": "首次把生成式人工智能作为独立监管对象提出规则，确立了「备案 + 安全评估」的监管雏形。",
+      "organizations": [
+        "china-government"
+      ],
+      "people": [],
+      "relatedModels": [],
+      "chapter": 5,
+      "sources": [
+        {
+          "label": "数字中国建设峰会（转人民网）— 生成式人工智能服务管理办法公开征求意见（2023-04-11）",
+          "url": "https://www.szzg.gov.cn/2023/xwzx/fhzx/202304/t20230411_4598306.htm",
+          "kind": "press"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": "网信办原始页面不可直接定位，引用当日政府网站转载页；文件由网信办于同日在其官网发布。"
+    },
+    {
+      "id": "china-genai-interim-measures-2023",
+      "date": "2023-07-13",
+      "displayDate": "2023.07.13",
+      "datePrecision": "day",
+      "dateType": "policy",
+      "title": "《生成式人工智能服务管理暂行办法》公布",
+      "titleEn": "Interim Measures for the Administration of Generative AI Services",
+      "category": "policy",
+      "summary": "国家网信办等七部门联合公布《生成式人工智能服务管理暂行办法》，共五章二十四条，明确对生成式人工智能服务实行分类分级监管、坚持发展和安全并重，要求服务提供者履行训练数据合规、内容标识与未成年人保护等义务，自 2023 年 8 月 15 日起施行。",
+      "significance": "是全球较早出台的生成式人工智能专项监管规则，确立了「备案制」而非许可制，直接影响此后中国所有大模型产品的上线节奏。",
+      "organizations": [
+        "china-government"
+      ],
+      "people": [],
+      "relatedModels": [],
+      "chapter": 5,
+      "sources": [
+        {
+          "label": "国家互联网信息办公室 — 生成式人工智能服务管理暂行办法（2023-07-13）",
+          "url": "https://www.cac.gov.cn/2023-07/13/c_1690898327029107.htm",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": "该办法于 2023 年 5 月 23 日经国家网信办审议通过，7 月 13 日公布，8 月 15 日施行；主时间轴取公布日。"
+    },
+    {
+      "id": "china-genai-measures-in-force-2023",
+      "date": "2023-08-15",
+      "displayDate": "2023.08.15",
+      "datePrecision": "day",
+      "dateType": "policy",
+      "title": "《生成式人工智能服务管理暂行办法》正式施行",
+      "titleEn": "Interim Measures for Generative AI Services Enter into Force",
+      "category": "policy",
+      "summary": "《生成式人工智能服务管理暂行办法》自 2023 年 8 月 15 日起施行，生成式人工智能服务正式进入「先备案、后上线」的运行轨道，境内外提供者向境内公众提供服务均需履行相应义务。",
+      "significance": "施行日成为中国大模型产品合规上线的时间基准，此后每一次模型发布都需同步考虑备案与安全评估流程。",
+      "organizations": [
+        "china-government"
+      ],
+      "people": [],
+      "relatedModels": [],
+      "chapter": 5,
+      "sources": [
+        {
+          "label": "国家互联网信息办公室 — 生成式人工智能服务管理暂行办法（文末载明施行日期）",
+          "url": "https://www.cac.gov.cn/2023-07/13/c_1690898327029107.htm",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": null
+    },
+    {
+      "id": "china-genai-first-filings-2023",
+      "date": "2023-08-31",
+      "displayDate": "2023.08.31",
+      "datePrecision": "day",
+      "dateType": "policy",
+      "title": "首批生成式人工智能服务通过备案并向公众开放",
+      "titleEn": "First Batch of Generative AI Services Approved for Public Release",
+      "category": "policy",
+      "summary": "首批 8 款生成式人工智能服务在 8 月 31 日起陆续通过《生成式人工智能服务管理暂行办法》备案并向全社会开放，涉及百度、抖音、商汤、智谱、百川智能、MiniMax、阿里通义千问与中科院紫东太初等产品，用户可直接下载或访问使用。",
+      "significance": "备案从纸面规则变成可执行的产品准入流程，标志着中国大模型从内测转向面向公众的规模化服务。",
+      "organizations": [
+        "china-government",
+        "baidu",
+        "bytedance",
+        "sensetime",
+        "zhipu",
+        "baichuan",
+        "minimax",
+        "alibaba-qwen"
+      ],
+      "people": [],
+      "relatedModels": [
+        "ernie-bot",
+        "chatglm-6b",
+        "baichuan2",
+        "minimax-abab6",
+        "sensenova",
+        "doubao"
+      ],
+      "chapter": 5,
+      "sources": [
+        {
+          "label": "新浪财经转财联社 — AI大模型太「卷」了！百度、抖音、商汤等获批（2023-08-31）",
+          "url": "http://t.cj.sina.com.cn/articles/view/1686546714/6486a91a02001xs8q",
+          "kind": "press"
+        }
+      ],
+      "verificationStatus": "partially-verified",
+      "notes": "网信办未公开发布统一名单页，首批名单与时间依据当日财联社报道及后续多家媒体核对；名单细节（8 款/11 家）在不同报道中略有差异。"
+    },
+    {
+      "id": "china-global-ai-governance-initiative-2023",
+      "date": "2023-10-18",
+      "displayDate": "2023.10.18",
+      "datePrecision": "day",
+      "dateType": "policy",
+      "title": "《全球人工智能治理倡议》发布",
+      "titleEn": "Global Initiative for AI Governance",
+      "category": "policy",
+      "summary": "中国在第三届「一带一路」国际合作高峰论坛期间发布《全球人工智能治理倡议》，提出以人为本、智能向善、相互尊重、平等互利等主张，反对利用人工智能干涉他国内政与技术封锁，呼吁建立广泛参与的国际治理机制。",
+      "significance": "是中国首份面向全球的人工智能治理立场文件，为 2024 年联大人工智能能力建设决议铺垫了话语基础。",
+      "organizations": [
+        "china-government"
+      ],
+      "people": [],
+      "relatedModels": [],
+      "chapter": 5,
+      "sources": [
+        {
+          "label": "中国网 — 全球人工智能治理倡议发布（2023-10-19）",
+          "url": "http://zw.china.com.cn/2023-10/19/content_116759358.shtml",
+          "kind": "press"
+        }
+      ],
+      "verificationStatus": "partially-verified",
+      "notes": "原始发布渠道为网信办官网，当前未定位到可静态访问的公告页；倡议于 2023-10-18 在高峰论坛期间发布，媒体次日报道。"
+    },
+    {
+      "id": "kimi-long-context-2024",
+      "date": "2024-03-18",
+      "displayDate": "2024.03.18",
+      "datePrecision": "day",
+      "dateType": "product",
+      "title": "Kimi 智能助手支持 200 万字无损上下文",
+      "titleEn": "Kimi Assistant Extends Context to 2 Million Chinese Characters",
+      "category": "product",
+      "summary": "月之暗面宣布 Kimi 智能助手支持 200 万字超长无损上下文，较 2023 年 10 月的 20 万字提升 10 倍，并于即日起开启产品内测；长上下文能力被直接做成面向用户的功能卖点，而非仅出现在技术报告中。",
+      "significance": "把长上下文从模型指标变成产品竞争维度，引发 2024 年中国大模型在长文本上的密集对标与跟进。",
+      "organizations": [
+        "moonshot"
+      ],
+      "people": [],
+      "relatedModels": [
+        "kimi-chat"
+      ],
+      "chapter": 5,
+      "sources": [
+        {
+          "label": "中国日报转载 — Kimi智能助手宣布支持200万字无损上下文（2024-03-18）",
+          "url": "http://ex.chinadaily.com.cn/exchange/partners/82/rss/channel/cn/columns/j3u3t6/stories/WS65f802d6a3109f7860dd5ed7.html",
+          "kind": "press"
+        }
+      ],
+      "verificationStatus": "partially-verified",
+      "notes": "月之暗面官网未提供可静态引用的公告页，引用当日媒体转载稿。"
+    },
+    {
+      "id": "china-llm-api-price-war-2024",
+      "date": "2024-05",
+      "displayDate": "2024.05",
+      "datePrecision": "month",
+      "dateType": "product",
+      "title": "中国大模型 API 价格战爆发",
+      "titleEn": "China's LLM API Price War",
+      "category": "product",
+      "summary": "2024 年 5 月，DeepSeek 以 MoE 架构的 V2 把 API 价格压到每百万输入 token 1 元量级，随后字节跳动豆包大模型、阿里云通义千问（部分模型降价 97%）、百度与智谱相继降价或免费开放轻量模型，主力模型 API 价格在数周内下降一个数量级。",
+      "significance": "价格成为模型架构效率的直接体现，稀疏架构与推理优化第一次以「每 token 价格」的形式进入公开竞争。",
+      "organizations": [
+        "deepseek",
+        "alibaba-qwen",
+        "bytedance",
+        "baidu",
+        "zhipu"
+      ],
+      "people": [],
+      "relatedModels": [
+        "deepseek-v2",
+        "doubao-llm",
+        "qwen2",
+        "glm-4-plus"
+      ],
+      "chapter": 5,
+      "sources": [
+        {
+          "label": "证券时报 — 杀疯了！阿里：降价97%！百度「王炸」：免费！（2024-05-21）",
+          "url": "https://stcn.com/article/detail/1210492.html",
+          "kind": "press"
+        },
+        {
+          "label": "中国金融信息网转证券时报 — 大模型开打价格战（2024-05-22）",
+          "url": "https://m.cnfin.com/yw-lb//zixun/20240522/4051572_1.html",
+          "kind": "press"
+        }
+      ],
+      "verificationStatus": "partially-verified",
+      "notes": "各厂商降价公告分散在各自渠道，事件日期取价格战集中爆发的 5 月，精度到月；各模型具体降幅以当日报价为准。"
+    },
+    {
+      "id": "un-ai-capacity-building-resolution-2024",
+      "date": "2024-07-01",
+      "displayDate": "2024.07.01",
+      "datePrecision": "day",
+      "dateType": "policy",
+      "title": "联大协商一致通过中国主提的人工智能能力建设决议",
+      "titleEn": "UNGA Resolution on Enhancing International Cooperation on AI Capacity-Building",
+      "category": "policy",
+      "summary": "第 78 届联合国大会协商一致通过中国主提的「加强人工智能能力建设国际合作」决议，140 多个国家参加联署；决议强调人工智能发展应坚持以人为本、智能向善，鼓励通过国际合作帮助发展中国家加强能力建设。",
+      "significance": "是中国首次主导推动联大通过的人工智能治理决议，把「能力建设」与「发展权」写入国际AI治理议程。",
+      "organizations": [
+        "united-nations",
+        "china-government"
+      ],
+      "people": [],
+      "relatedModels": [],
+      "chapter": 5,
+      "sources": [
+        {
+          "label": "中国驻法国大使馆 — 中国提议，在联合国大会一致通过！（2024-07-04）",
+          "url": "https://fr.china-embassy.gov.cn/zgyw/202407/t20240704_11448196.htm",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": null
+    },
+    {
+      "id": "china-ai-content-labeling-draft-2024",
+      "date": "2024-09-14",
+      "displayDate": "2024.09.14",
+      "datePrecision": "day",
+      "dateType": "policy",
+      "title": "《人工智能生成合成内容标识办法（征求意见稿）》公开征求意见",
+      "titleEn": "Draft Measures for Labeling AI-Generated Content",
+      "category": "policy",
+      "summary": "国家互联网信息办公室就《人工智能生成合成内容标识办法（征求意见稿）》公开征求意见，要求生成合成内容添加显式标识与隐式标识（元数据），并规定网络信息服务提供者的核验与提示义务，意见反馈截止 2024 年 10 月 14 日。",
+      "significance": "把「AI 生成内容必须可识别」推进到可执行规则层面，为此后中国平台的内容标识与溯源体系定下框架。",
+      "organizations": [
+        "china-government"
+      ],
+      "people": [],
+      "relatedModels": [],
+      "chapter": 5,
+      "sources": [
+        {
+          "label": "江苏网信网 — 国家互联网信息办公室关于《人工智能生成合成内容标识办法（征求意见稿）》公开征求意见的通知（2024-09-14）",
+          "url": "https://www.jswx.gov.cn:8888/fwhd/tzgg/202409/t20240914_106660.shtml",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": "引用省级网信办转载的网信办通知原文，页面标注日期 2024-09-14；正式稿于 2025 年发布，不在本文件范围内。"
+    }
+  ],
+  "organizations": [],
+  "meta": {
+    "researcher": "research-china-2018-24",
+    "generatedAt": "2026-11-02",
+    "cutoff": "2026-11-02"
+  }
+}

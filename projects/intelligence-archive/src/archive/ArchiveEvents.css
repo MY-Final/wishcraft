@@ -1,0 +1,126 @@
+.arch-events__group {
+  display: grid;
+  grid-template-columns: clamp(140px, 15vw, 210px) minmax(0, 1fr);
+  gap: clamp(18px, 4vw, 56px);
+  padding-block: clamp(22px, 3vh, 36px);
+  border-top: 1px solid var(--hairline);
+}
+
+.arch-events__group:first-child {
+  border-top: 0;
+}
+
+.arch-events__head {
+  position: sticky;
+  top: 192px;
+  align-self: start;
+}
+
+.arch-events__title {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: 10px;
+  font-size: 1.0625rem;
+  font-weight: 500;
+  letter-spacing: -0.025em;
+  line-height: 1.3;
+}
+
+.arch-events__range {
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  color: var(--faint);
+}
+
+.arch-events__list {
+  display: flex;
+  flex-direction: column;
+  border-left: 1px solid var(--hairline);
+  padding-left: clamp(14px, 2vw, 28px);
+}
+
+.arch-event-row {
+  display: grid;
+  grid-template-columns: 92px minmax(0, 1fr);
+  gap: 20px;
+  width: 100%;
+  padding: 15px 0;
+  text-align: left;
+  align-items: start;
+  border-bottom: 1px solid var(--hairline);
+}
+
+.arch-events__list li:last-child .arch-event-row {
+  border-bottom: 0;
+}
+
+.arch-event-row__date {
+  padding-top: 3px;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+}
+
+.arch-event-row__body {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.arch-event-row__head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.arch-event-row__title {
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  border-bottom: 1px solid transparent;
+  transition: border-color var(--dur-fast) var(--ease-out);
+}
+
+.arch-event-row:hover .arch-event-row__title {
+  border-bottom-color: var(--ink);
+}
+
+.arch-event-row__en {
+  font-size: 9px;
+  letter-spacing: 0.08em;
+  color: var(--faint);
+}
+
+.arch-event-row__meta {
+  font-size: 9px;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+}
+
+@media (max-width: 860px) {
+  .arch-events__group {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .arch-events__head {
+    position: static;
+  }
+
+  .arch-events__list {
+    border-left: 0;
+    padding-left: 0;
+  }
+
+  .arch-event-row {
+    grid-template-columns: 1fr;
+    gap: 6px;
+    padding: 14px 0;
+  }
+
+  .arch-event-row__date {
+    padding-top: 0;
+  }
+}

@@ -1,0 +1,285 @@
+/* ============================================================
+   CH04 · ChatGPT 静场
+   纯白、极简：输入框逐字打出问题，回答逐字出现，
+   然后是日期与结论，最后散开成一整面抽象窗口。
+   ============================================================ */
+
+.chat {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-inline: var(--pad-x);
+}
+
+.chat__inner {
+  position: relative;
+  z-index: 2;
+  width: min(calc(100% - var(--pad-x) * 2), 620px);
+  display: flex;
+  flex-direction: column;
+  gap: clamp(16px, 2.4vh, 26px);
+}
+
+/* ---------------- 输入框 ---------------- */
+
+.chat__ask {
+  display: flex;
+  align-items: center;
+  gap: clamp(10px, 1.4vw, 16px);
+  padding: clamp(13px, 1.9vh, 17px) clamp(15px, 1.8vw, 20px);
+  border: 1px solid var(--ink);
+  background: var(--white);
+}
+
+.chat__ask-label {
+  flex: none;
+  font-size: 8.5px;
+  letter-spacing: 0.22em;
+  color: var(--faint);
+}
+
+.chat__ask-text {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  min-height: 1.65em;
+  font-size: clamp(0.9375rem, 1.15vw, 1.0625rem);
+  line-height: 1.65;
+  color: var(--ink);
+}
+
+/* ---------------- 回答 ---------------- */
+
+.chat__reply {
+  display: flex;
+  align-items: flex-start;
+  gap: clamp(10px, 1.4vw, 16px);
+  padding-left: clamp(15px, 1.8vw, 20px);
+}
+
+.chat__reply-label {
+  flex: none;
+  padding-top: 0.42em;
+  font-size: 8.5px;
+  letter-spacing: 0.22em;
+  color: var(--faint);
+}
+
+.chat__reply-text {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  min-height: 1.65em;
+  font-size: clamp(0.9375rem, 1.15vw, 1.0625rem);
+  line-height: 1.65;
+  color: var(--graphite);
+}
+
+/* ---------------- 逐字 ---------------- */
+
+.chat__char {
+  display: inline-block;
+  opacity: 0;
+  will-change: opacity;
+}
+
+.chat.is-in .chat__char {
+  animation: chat-char 300ms var(--ease-out) both;
+  animation-delay: var(--d);
+}
+
+.chat__caret {
+  display: inline-block;
+  width: 1px;
+  height: 1.05em;
+  margin-left: 3px;
+  background: var(--ink);
+  transform: translateY(0.12em);
+  opacity: 0;
+}
+
+.chat.is-in .chat__caret {
+  animation:
+    chat-blink 900ms steps(1, end) infinite,
+    chat-caret-out 1ms linear 1500ms forwards;
+}
+
+/* ---------------- 2022.11.30 ---------------- */
+
+.chat__stamp {
+  margin-top: clamp(6px, 1.4vh, 16px);
+  padding-top: clamp(16px, 2.4vh, 24px);
+  border-top: 1px solid var(--hairline);
+  opacity: 0;
+}
+
+.chat.is-in .chat__stamp {
+  animation: chat-rise 900ms var(--ease-out) 3.1s both;
+}
+
+.chat__date {
+  font-size: 9.5px;
+  letter-spacing: 0.24em;
+  color: var(--muted);
+}
+
+.chat__headline {
+  display: flex;
+  flex-direction: column;
+  margin-top: 12px;
+  font-family: var(--font-sans);
+  font-size: clamp(1.5rem, 3.4vw, 2.75rem);
+  font-weight: 500;
+  line-height: 0.98;
+  letter-spacing: -0.038em;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+
+.chat__cn {
+  margin-top: 14px;
+  font-size: clamp(0.9375rem, 1.1vw, 1.0625rem);
+  line-height: 1.8;
+  color: var(--graphite);
+}
+
+.chat__meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px 18px;
+  margin-top: clamp(14px, 2vh, 20px);
+}
+
+.chat__note {
+  font-size: 0.75rem;
+  line-height: 1.6;
+  color: var(--faint);
+}
+
+/* ---------------- 抽象窗口（--p 渐进出现） ---------------- */
+
+.chat__windows {
+  position: absolute;
+  inset: 8vh var(--pad-x) 5vh;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-template-rows: repeat(10, minmax(0, 1fr));
+  gap: clamp(5px, 0.7vw, 10px);
+  pointer-events: none;
+  -webkit-mask-image: radial-gradient(
+    ellipse 44% 48% at 50% 47%,
+    transparent 26%,
+    #000 100%
+  );
+  mask-image: radial-gradient(ellipse 44% 48% at 50% 47%, transparent 26%, #000 100%);
+}
+
+.chat__window {
+  border: 1px solid var(--hairline);
+  background-image: linear-gradient(
+    to bottom,
+    rgba(22, 22, 22, 0.07) 0 2px,
+    transparent 2px
+  );
+  opacity: calc(clamp(0, calc((var(--p) - var(--t)) / 0.07), 1) * 0.9);
+}
+
+/* ---------------- 动画 ---------------- */
+
+@keyframes chat-char {
+  from {
+    opacity: 0;
+    filter: blur(2px);
+    transform: translateY(2px);
+  }
+  to {
+    opacity: 1;
+    filter: none;
+    transform: none;
+  }
+}
+
+@keyframes chat-rise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes chat-blink {
+  0%,
+  49% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes chat-caret-out {
+  to {
+    opacity: 0;
+  }
+}
+
+/* ---------------- 移动端 ---------------- */
+
+@media (max-width: 900px) {
+  .chat__inner {
+    width: calc(100% - var(--pad-x) * 2);
+    gap: 14px;
+  }
+
+  .chat__headline {
+    font-size: clamp(1.375rem, 6.6vw, 1.9rem);
+  }
+
+  .chat__meta {
+    justify-content: flex-start;
+  }
+
+  .chat__windows {
+    grid-template-columns: repeat(8, minmax(0, 1fr));
+    grid-template-rows: repeat(15, minmax(0, 1fr));
+    inset: 4vh var(--pad-x);
+  }
+}
+
+/* ---------------- reduced motion ---------------- */
+
+@media (prefers-reduced-motion: reduce) {
+  .chat {
+    position: static;
+    padding-block: 48px 96px;
+  }
+
+  .chat__char,
+  .chat.is-in .chat__char {
+    opacity: 1;
+    animation: none !important;
+  }
+
+  .chat__caret {
+    display: none;
+  }
+
+  .chat__stamp {
+    opacity: 1;
+    animation: none !important;
+  }
+
+  .chat__window {
+    opacity: calc(0.16 + 0.6 * clamp(0, calc((var(--p) - var(--t)) / 0.07), 1));
+  }
+}

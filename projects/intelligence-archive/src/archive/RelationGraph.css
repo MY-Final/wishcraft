@@ -1,0 +1,211 @@
+.arch-graph {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.arch-graph__links {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px 36px;
+}
+
+.arch-graph__link-label {
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  color: var(--faint);
+}
+
+.arch-graph__link-list {
+  margin-top: 8px;
+  border-top: 1px solid var(--hairline);
+}
+
+.arch-graph__link {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  width: 100%;
+  padding: 9px 0;
+  border-bottom: 1px solid var(--hairline);
+  font-size: 0.8125rem;
+  text-align: left;
+}
+
+.arch-graph__link span:first-child {
+  letter-spacing: -0.01em;
+}
+
+.arch-graph__link span:last-child {
+  flex: none;
+  font-size: 9px;
+  letter-spacing: 0.08em;
+  color: var(--faint);
+}
+
+.arch-graph__link:hover span:first-child,
+.arch-graph__link:focus-visible span:first-child {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 1px;
+}
+
+.arch-graph__none {
+  margin-top: 8px;
+  padding: 9px 0;
+  border-top: 1px solid var(--hairline);
+  font-size: 0.8125rem;
+  color: var(--faint);
+}
+
+/* ---------- svg ---------- */
+
+.arch-graph__scroll {
+  padding-block: 4px;
+  border-top: 1px solid var(--hairline);
+  border-bottom: 1px solid var(--hairline);
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+}
+
+.arch-graph__canvas {
+  display: block;
+  margin-inline: auto;
+  font-family: var(--font-mono);
+}
+
+.arch-graph__col-label {
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  fill: var(--faint);
+}
+
+.arch-graph__edge {
+  fill: none;
+  stroke: var(--faint);
+  stroke-width: 1;
+}
+
+.arch-graph__node {
+  cursor: pointer;
+}
+
+.arch-graph__node rect {
+  fill: var(--paper);
+  stroke: var(--hairline);
+  stroke-width: 1;
+  transition: stroke var(--dur-fast) var(--ease-out);
+}
+
+.arch-graph__node:hover rect {
+  stroke: var(--ink);
+}
+
+.arch-graph__node:focus-visible {
+  outline: none;
+}
+
+.arch-graph__node:focus-visible rect {
+  stroke: var(--ink);
+  stroke-width: 2;
+}
+
+.arch-graph__node.is-current {
+  cursor: default;
+}
+
+.arch-graph__node.is-current rect {
+  fill: var(--ink);
+  stroke: var(--ink);
+}
+
+.arch-graph__name {
+  font-size: 10px;
+  fill: var(--ink);
+}
+
+.arch-graph__meta {
+  font-size: 9px;
+  letter-spacing: 0.04em;
+  fill: var(--muted);
+}
+
+.arch-graph__node.is-current .arch-graph__name {
+  fill: var(--paper);
+}
+
+.arch-graph__node.is-current .arch-graph__meta {
+  fill: #b9b9b5;
+}
+
+.arch-graph__hint {
+  margin-top: 8px;
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  color: var(--faint);
+}
+
+/* ---------- empty ---------- */
+
+.arch-graph__empty {
+  padding-block: 18px;
+  border-top: 1px solid var(--hairline);
+  border-bottom: 1px solid var(--hairline);
+}
+
+.arch-graph__empty-title {
+  margin-bottom: 6px;
+  font-size: 0.9375rem;
+  letter-spacing: -0.01em;
+}
+
+.arch-graph__empty-body {
+  max-width: 40rem;
+}
+
+/* ---------- same family ---------- */
+
+.arch-graph__family {
+  padding-top: 16px;
+  border-top: 1px solid var(--hairline);
+}
+
+.arch-graph__family-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.arch-graph__family-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 10px;
+  border: 1px solid var(--hairline);
+  font-size: 9px;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  transition:
+    border-color var(--dur-fast) var(--ease-out),
+    color var(--dur-fast) var(--ease-out);
+}
+
+button.arch-graph__family-item:hover,
+button.arch-graph__family-item:focus-visible {
+  border-color: var(--ink);
+  color: var(--ink);
+}
+
+.arch-graph__family-item.is-current {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: var(--paper);
+}
+
+@media (max-width: 760px) {
+  .arch-graph__links {
+    grid-template-columns: 1fr;
+  }
+}

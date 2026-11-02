@@ -1,0 +1,2865 @@
+[
+  {
+    "id": "turing-computing-machinery-1950",
+    "date": "1950-10",
+    "displayDate": "1950.10",
+    "datePrecision": "month",
+    "dateType": "paper",
+    "title": "图灵《计算机器与智能》",
+    "titleEn": "Computing Machinery and Intelligence",
+    "category": "theory",
+    "summary": "图灵在《Mind》发表论文，用「模仿游戏」替换「机器能否思考」这一无法实证的提问：若人类评审仅凭文字对话分辨不出机器与人，就可认为机器具备智能。文章逐条反驳九种反对意见，并提出以儿童式教育替代直接编程的设想。",
+    "significance": "为人工智能确立了可操作的行为主义判据，把「智能」从哲学争论转成可设计的实验目标，此后七十年的对话系统评价方式都由此发端。",
+    "organizations": [],
+    "people": [
+      "Alan Turing"
+    ],
+    "relatedModels": [],
+    "chapter": 1,
+    "sources": [
+      {
+        "label": "Mind, Vol. LIX, No. 236, pp. 433–460 — Computing Machinery and Intelligence",
+        "url": "https://academic.oup.com/mind/article/LIX/236/433/986238",
+        "kind": "paper"
+      }
+    ],
+    "verificationStatus": "verified",
+    "notes": "Crossref 记录该期出版日为 1950-10-01。出版社页面有 Cloudflare 反爬，自动化抓取返回 403，浏览器可正常访问。"
+  },
+  {
+    "id": "logic-theorist-1956",
+    "date": "1956",
+    "displayDate": "1956",
+    "datePrecision": "year",
+    "dateType": "paper",
+    "title": "Logic Theorist：第一个自动定理证明程序",
+    "titleEn": "The Logic Theory Machine: A Complex Information Processing System",
+    "category": "breakthrough",
+    "summary": "纽厄尔、西蒙与肖在兰德公司技术报告中描述 Logic Theorist：把数学证明编码为启发式搜索，以手段—目的分析在推理空间中寻路，可证明《数学原理》第二章的多条定理，其中一条的证明比原书更简短。",
+    "significance": "第一次证明「思维过程本身可以被程序化」，把启发式搜索确立为 AI 的核心方法，符号主义由此成为此后二十年的主流范式。",
+    "organizations": [
+      "cmu"
+    ],
+    "people": [
+      "Allen Newell",
+      "Herbert A. Simon",
+      "Cliff Shaw"
+    ],
+    "relatedModels": [],
+    "chapter": 1,
+    "sources": [
+      {
+        "label": "RAND — P-868 The Logic Theory Machine",
+        "url": "https://www.rand.org/pubs/papers/P868.html",
+        "kind": "official"
+      }
+    ],
+    "verificationStatus": "partially-verified",
+    "notes": "RAND 页面受 CloudFront 反爬拦截，未能直接读取正文；年份按报告书目记录取 1956，月次无可靠记载，故用年精度。"
+  },
+  {
+    "id": "dartmouth-1956",
+    "date": "1956-08",
+    "displayDate": "1956.08",
+    "datePrecision": "month",
+    "dateType": "conference",
+    "title": "达特茅斯暑期研究计划",
+    "titleEn": "The Dartmouth Summer Research Project on Artificial Intelligence",
+    "category": "organization",
+    "summary": "麦卡锡、明斯基、香农与罗切斯特于 1955 年 8 月 31 日联名提议，在 1956 年夏于达特茅斯学院进行为期两个月、十人规模的研究，基于「智能的任何方面都可被精确描述到足以由机器模拟」的猜想。会议实际以断续讨论为主，未产出统一报告。",
+    "significance": "「人工智能」一词在此被正式提出并成为学科名称，会议聚拢了此后二十年的核心研究者，被公认为 AI 作为独立学科的起点。",
+    "organizations": [
+      "dartmouth-college"
+    ],
+    "people": [
+      "John McCarthy",
+      "Marvin Minsky",
+      "Claude Shannon",
+      "Nathaniel Rochester"
+    ],
+    "relatedModels": [],
+    "chapter": 1,
+    "sources": [
+      {
+        "label": "A Proposal for the Dartmouth Summer Research Project on Artificial Intelligence (McCarthy et al., 1955-08-31)",
+        "url": "http://www-formal.stanford.edu/jmc/history/dartmouth/dartmouth.html",
+        "kind": "official"
+      }
+    ],
+    "verificationStatus": "verified",
+    "notes": "会议于 1956 年夏举行，无官方日程记录，故日期精度取到月；提案文本本身署 1955-08-31。"
+  },
+  {
+    "id": "perceptron-1958",
+    "date": "1958",
+    "displayDate": "1958",
+    "datePrecision": "year",
+    "dateType": "paper",
+    "title": "罗森布拉特提出感知机",
+    "titleEn": "The Perceptron: A Probabilistic Model for Information Storage and Organization in the Brain",
+    "category": "theory",
+    "summary": "罗森布拉特在《心理学评论》提出感知机：由阈值单元组成、依靠误差修正规则调整权重的学习机器，并给出概率型学习定理，说明在模式线性可分时训练过程必然收敛。其后有 Mark I 硬件实现用于图像识别。",
+    "significance": "首次把「从数据中学习权重」变成有收敛性证明的算法，是神经网络及今日深度学习中权重学习的直接源头。",
+    "organizations": [],
+    "people": [
+      "Frank Rosenblatt"
+    ],
+    "relatedModels": [],
+    "chapter": 1,
+    "sources": [
+      {
+        "label": "Psychological Review 65(6): 386–408 — The perceptron",
+        "url": "https://doi.apa.org/doi/10.1037/h0042519",
+        "kind": "paper"
+      }
+    ],
+    "verificationStatus": "verified",
+    "notes": "Crossref 记录卷期 65(6)、页码 386–408，出版日期仅记录到 1958 年，未载月份，故取年精度。"
+  },
+  {
+    "id": "samuel-checkers-1959",
+    "date": "1959-07",
+    "displayDate": "1959.07",
+    "datePrecision": "month",
+    "dateType": "paper",
+    "title": "塞缪尔的跳棋程序与「机器学习」命名",
+    "titleEn": "Some Studies in Machine Learning Using the Game of Checkers",
+    "category": "breakthrough",
+    "summary": "塞缪尔在《IBM 研究与发展杂志》总结其跳棋程序：以启发式评估函数搜索棋局，并通过与自己对弈、以胜负为反馈调整权重，程序最终达到可击败作者的业余水平。文中首次使用「机器学习」一词描述这一过程。",
+    "significance": "确立「程序可通过自博弈的经验自我改进」这一范式，是强化学习与自我博弈的早期原型，也让「机器学习」成为固定术语。",
+    "organizations": [
+      "ibm"
+    ],
+    "people": [
+      "Arthur L. Samuel"
+    ],
+    "relatedModels": [],
+    "chapter": 1,
+    "sources": [
+      {
+        "label": "IBM Journal of Research and Development 3(3): 210–229 — Some Studies in Machine Learning Using the Game of Checkers",
+        "url": "https://doi.org/10.1147/rd.33.0210",
+        "kind": "paper"
+      },
+      {
+        "label": "Crossref — 该文 1988 年选集重印记录（10.1007/978-1-4613-8716-9_14）",
+        "url": "https://api.crossref.org/works/10.1007/978-1-4613-8716-9_14",
+        "kind": "paper"
+      }
+    ],
+    "verificationStatus": "partially-verified",
+    "notes": "原刊 IBM Journal 3(3): 210–229 于 1959 年 7 月出版，Crossref 未收录该原刊 DOI；仅收录 1988 年 Computer Games I 选集重印。月次依据通行书目记录。"
+  },
+  {
+    "id": "dendral-1965",
+    "date": "1965",
+    "displayDate": "1965",
+    "datePrecision": "year",
+    "dateType": "announcement",
+    "title": "DENDRAL 专家系统启动",
+    "titleEn": "The DENDRAL Project",
+    "category": "system",
+    "summary": "斯坦福大学于 1965 年启动 DENDRAL 项目，把质谱数据与化学家的经验规则结合，用于推断有机分子结构。它明确区分「通用推理」与「领域知识」，由专家提供启发式规则，程序在特定问题上达到专业水准。",
+    "significance": "第一个专家系统，用实践说明 AI 的突破来自领域知识而非通用推理，直接催生了此后二十年的知识工程与专家系统产业。",
+    "organizations": [
+      "stanford"
+    ],
+    "people": [
+      "Edward Feigenbaum",
+      "Joshua Lederberg",
+      "Bruce Buchanan"
+    ],
+    "relatedModels": [],
+    "chapter": 1,
+    "sources": [
+      {
+        "label": "U.S. National Library of Medicine — DENDRAL: a case study of the first expert system for scientific hypothesis formation",
+        "url": "https://collections.nlm.nih.gov/pdf/nlm:nlmuid-101584906X1027-doc",
+        "kind": "paper"
+      }
+    ],
+    "verificationStatus": "partially-verified",
+    "notes": "项目启动无单一官方公告，1965 年是多数学术史采用的起始年；所引 NLM 馆藏为 1993 年 DENDRAL 回顾论文（PDF），未能逐页读取正文。"
+  },
+  {
+    "id": "eliza-1966",
+    "date": "1966-01",
+    "displayDate": "1966.01",
+    "datePrecision": "month",
+    "dateType": "paper",
+    "title": "ELIZA：第一个对话程序",
+    "titleEn": "ELIZA — A Computer Program for the Study of Natural Language Communication Between Man and Machine",
+    "category": "system",
+    "summary": "魏岑鲍姆在《ACM 通讯》描述 ELIZA：以关键词触发分解规则，再由重组规则生成回复，用「罗杰式心理治疗」脚本模拟对话。它并不理解语义，却足以让人产生被理解的错觉，即后来所称的 ELIZA 效应。",
+    "significance": "最早揭示人机语言交互的社会心理效应，奠定聊天机器人的形态，并提出「流畅表达不等于理解」这一至今有效的判断标准。",
+    "organizations": [
+      "mit"
+    ],
+    "people": [
+      "Joseph Weizenbaum"
+    ],
+    "relatedModels": [],
+    "chapter": 1,
+    "sources": [
+      {
+        "label": "Communications of the ACM 9(1): 36–45 — ELIZA",
+        "url": "https://dl.acm.org/doi/10.1145/365153.365168",
+        "kind": "paper"
+      }
+    ],
+    "verificationStatus": "verified",
+    "notes": "Crossref 记录出版日 1966-01-01。ACM 数字图书馆对自动抓取返回 403，浏览器可正常访问。"
+  },
+  {
+    "id": "perceptrons-book-1969",
+    "date": "1969",
+    "displayDate": "1969",
+    "datePrecision": "year",
+    "dateType": "paper",
+    "title": "《感知机》：单层网络的局限被形式化",
+    "titleEn": "Perceptrons: An Introduction to Computational Geometry",
+    "category": "theory",
+    "summary": "明斯基与佩珀特以几何方法分析感知机的能力边界，证明单层感知机无法计算异或这类非线性可分函数，并指出多层网络缺少可行的训练算法。书中结论被广泛解读为对联结主义路线的判决。",
+    "significance": "把神经网络研究的经费与注意力压向低谷近十五年，符号主义由此独大；直到反向传播普及，该书划定的边界才被系统性突破。",
+    "organizations": [
+      "mit"
+    ],
+    "people": [
+      "Marvin Minsky",
+      "Seymour Papert"
+    ],
+    "relatedModels": [],
+    "chapter": 1,
+    "sources": [
+      {
+        "label": "MIT Press — Perceptrons（该书 MIT Press 电子版）",
+        "url": "https://doi.org/10.7551/mitpress/11301.001.0001",
+        "kind": "paper"
+      }
+    ],
+    "verificationStatus": "partially-verified",
+    "notes": "1969 年由 MIT Press 初版，1971 年扩版，1988 年再版。Crossref 仅收录 MIT Press 现行电子版（记录日期 2017-09-22），年份按通行书目记为 1969，故标为部分核实。"
+  },
+  {
+    "id": "lighthill-1973",
+    "date": "1973",
+    "displayDate": "1973",
+    "datePrecision": "year",
+    "dateType": "policy",
+    "title": "莱特希尔报告与第一次 AI 寒冬",
+    "titleEn": "Artificial Intelligence: A General Survey (The Lighthill Report)",
+    "category": "policy",
+    "summary": "英国科学资助机构委托莱特希尔评估人工智能。报告按自动机、机器人、语言处理分类检视成果，认为除少数「玩具」问题外均未兑现承诺，主张削减通用 AI 经费、只支持专用方向。英国随后大幅收缩投入，美国 DARPA 亦在同期收紧项目。",
+    "significance": "第一次由官方评估触发的研究经费崩塌，确立「过度承诺—经费紧缩」的周期模式，此后每次 AI 低谷都以它为参照。",
+    "organizations": [],
+    "people": [
+      "James Lighthill"
+    ],
+    "relatedModels": [],
+    "chapter": 1,
+    "sources": [
+      {
+        "label": "UKRI / Chilton Computing — The Lighthill Report: Artificial Intelligence: a paper symposium (1973)",
+        "url": "https://www.chilton-computing.org.uk/inf/literature/reports/lighthill_report/contents.htm",
+        "kind": "official"
+      }
+    ],
+    "verificationStatus": "verified",
+    "notes": "报告本身未标注具体月份，故取年精度；1974 年前后的经费收缩通常与本报告合并叙述，未单列事件。"
+  },
+  {
+    "id": "xcon-1980",
+    "date": "1980",
+    "displayDate": "1980",
+    "datePrecision": "year",
+    "dateType": "product",
+    "title": "XCON/R1 在 DEC 投产",
+    "titleEn": "XCON (R1): A Rule-Based Configurer of Computer Systems",
+    "category": "system",
+    "summary": "卡内基梅隆为 DEC 开发的规则型系统 R1（后称 XCON）自 1980 年起用于配置 VAX-11 整机订单。数以千计的产生式规则替代人工核对选件兼容性；据 1984 年的回顾，其知识库与业务效用在此后四年持续扩张。",
+    "significance": "首个大规模商用专家系统，证明规则系统能承担真实业务流程并节省成本，直接引爆 1980 年代专家系统产业与知识工程职业。",
+    "organizations": [
+      "cmu"
+    ],
+    "people": [
+      "John McDermott",
+      "Judith Bachant"
+    ],
+    "relatedModels": [],
+    "chapter": 2,
+    "sources": [
+      {
+        "label": "AI Magazine 5(3), 1984 — R1 Revisited: Four Years in the Trenches",
+        "url": "https://ojs.aaai.org/aimagazine/index.php/aimagazine/article/view/445",
+        "kind": "paper"
+      }
+    ],
+    "verificationStatus": "verified",
+    "notes": "原文摘要明确记载 DEC 自 1980 年起使用 R1/XCON 配置 VAX-11；具体投产月份无公开记录，故取年精度。"
+  },
+  {
+    "id": "hopfield-1982",
+    "date": "1982",
+    "displayDate": "1982",
+    "datePrecision": "year",
+    "dateType": "paper",
+    "title": "霍普菲尔德网络：用能量函数描述联想记忆",
+    "titleEn": "Neural networks and physical systems with emergent collective computational abilities",
+    "category": "theory",
+    "summary": "霍普菲尔德在《美国科学院院刊》把对称连接的网络视为自旋系统，引入「能量」函数解释网络如何收敛到稳定状态，并指出这种动力学可实现内容可寻址的联想记忆，也可用于求解组合优化问题。",
+    "significance": "用物理学语言为神经网络提供可分析的理论框架，把沉寂多年的联结主义重新带回主流，是 1980 年代神经网络复兴的起点。",
+    "organizations": [],
+    "people": [
+      "John J. Hopfield"
+    ],
+    "relatedModels": [],
+    "chapter": 2,
+    "sources": [
+      {
+        "label": "PNAS 79(8): 2554–2558 — Neural networks and physical systems with emergent collective computational abilities",
+        "url": "https://www.pnas.org/doi/10.1073/pnas.79.8.2554",
+        "kind": "paper"
+      }
+    ],
+    "verificationStatus": "partially-verified",
+    "notes": "该文收录于 PNAS 79(8)，1982 年 4 月。Crossref 对该 DOI 的接口多次返回异常，未能取到结构化日期；PNAS 页面有 Cloudflare 反爬，故取年精度并标为部分核实。"
+  },
+  {
+    "id": "backprop-1986",
+    "date": "1986-10",
+    "displayDate": "1986.10",
+    "datePrecision": "month",
+    "dateType": "paper",
+    "title": "反向传播：多层网络的通用训练方法",
+    "titleEn": "Learning representations by back-propagating errors",
+    "category": "breakthrough",
+    "summary": "鲁梅尔哈特、辛顿与威廉姆斯在《自然》给出反向传播的清晰表述：用链式法则把输出误差逐层回传，据此调整多层网络的内部权重，使网络自行学出有用的中间表示。文中以家族关系推理与编码任务作演示。",
+    "significance": "解决多层网络「无法训练」的核心障碍，使 1969 年划定的能力边界失去意义，为此后三十年的深度学习提供唯一的通用训练算法。",
+    "organizations": [
+      "toronto"
+    ],
+    "people": [
+      "David E. Rumelhart",
+      "Geoffrey E. Hinton",
+      "Ronald J. Williams"
+    ],
+    "relatedModels": [],
+    "chapter": 2,
+    "sources": [
+      {
+        "label": "Nature 323(6088): 533–536 — Learning representations by back-propagating errors",
+        "url": "https://www.nature.com/articles/323533a0",
+        "kind": "paper"
+      }
+    ],
+    "verificationStatus": "verified",
+    "notes": "Crossref 记录卷 323、期 6088、页码 533–536、纸本出版 1986 年 10 月。Nature 站点对自动抓取重定向至身份验证，浏览器可正常访问。"
+  },
+  {
+    "id": "ai-winter-1987",
+    "date": "1987",
+    "displayDate": "1987",
+    "datePrecision": "year",
+    "dateType": "policy",
+    "title": "LISP 机器市场崩塌与第二次 AI 寒冬",
+    "titleEn": "The Second AI Winter",
+    "category": "policy",
+    "summary": "1987 年专用 LISP 机器市场迅速瓦解，通用工作站以更低成本提供同等算力，专营 AI 硬件的公司接连退出。同期专家系统维护成本高、知识获取困难的问题暴露，企业与军方经费收缩，「AI」一词在商业文档中被刻意回避。",
+    "significance": "第二次由硬件与商业泡沫共同触发的退潮，迫使研究者从通用推理转向统计学习，为 1990 年代数据驱动方法的兴起留出空间。",
+    "organizations": [],
+    "people": [],
+    "relatedModels": [],
+    "chapter": 2,
+    "sources": [
+      {
+        "label": "Nils J. Nilsson — The Quest for Artificial Intelligence（Cambridge University Press, 2010，公开 PDF）",
+        "url": "https://groups.inf.ed.ac.uk/vision/DATASETS/ROBOTICS/FREDDY/Barrow/Documents/nilsson_qai-01-12-09.pdf",
+        "kind": "paper"
+      }
+    ],
+    "verificationStatus": "partially-verified",
+    "notes": "该事件是史学概括而非单一公告，触发点与月份存在多种叙述（1987 年硬件市场崩塌为主流说法）。所引为权威 AI 史著作的公开 PDF，未能以工具逐页读取。"
+  },
+  {
+    "id": "lecun-convnet-1989",
+    "date": "1989-12",
+    "displayDate": "1989.12",
+    "datePrecision": "month",
+    "dateType": "paper",
+    "title": "卷积网络首次用于手写邮政编码识别",
+    "titleEn": "Backpropagation Applied to Handwritten Zip Code Recognition",
+    "category": "breakthrough",
+    "summary": "勒昆等人在《神经计算》把局部感受野、权重共享与下采样组合成卷积结构，用反向传播训练，从像素直接识别美国邮政的手写邮政编码。任务约束被写进网络结构本身，而不是靠人工设计特征。",
+    "significance": "确立「把先验知识编码为网络结构」的思路，卷积网络由此定型，成为此后计算机视觉与工业字符识别的标准架构。",
+    "organizations": [],
+    "people": [
+      "Yann LeCun",
+      "Bernard Boser",
+      "John S. Denker",
+      "Lawrence D. Jackel"
+    ],
+    "relatedModels": [],
+    "chapter": 2,
+    "sources": [
+      {
+        "label": "Neural Computation 1(4): 541–551 — Backpropagation Applied to Handwritten Zip Code Recognition",
+        "url": "https://doi.org/10.1162/neco.1989.1.4.541",
+        "kind": "paper"
+      },
+      {
+        "label": "Yann LeCun — LeNet-5 与相关论文书目页",
+        "url": "http://yann.lecun.com/exdb/lenet/",
+        "kind": "official"
+      }
+    ],
+    "verificationStatus": "verified",
+    "notes": "Crossref 记录 1989 年 12 月、卷 1 期 4；作者本人书目页亦记为 Winter 1989。"
+  },
+  {
+    "id": "deep-blue-1997",
+    "date": "1997-05",
+    "displayDate": "1997.05",
+    "datePrecision": "month",
+    "dateType": "announcement",
+    "title": "深蓝击败卡斯帕罗夫",
+    "titleEn": "Deep Blue vs Garry Kasparov, 1997 Rematch",
+    "category": "system",
+    "summary": "IBM 深蓝在纽约与卡斯帕罗夫进行六局复赛。它用 32 个处理器并行搜索，每秒评估约两亿个局面，配合人工调校的评估函数，最终以 3.5 比 2.5 取胜，成为首个在标准比赛时限下击败在位世界冠军的计算机系统。",
+    "significance": "以工程暴力兑现「机器在人类智力象征项目上取胜」的公开承诺，把 AI 从学术议题推成大众议题，同时暴露专用搜索方法的边界。",
+    "organizations": [
+      "ibm"
+    ],
+    "people": [
+      "Garry Kasparov",
+      "Feng-hsiung Hsu",
+      "Murray Campbell"
+    ],
+    "relatedModels": [],
+    "chapter": 2,
+    "sources": [
+      {
+        "label": "IBM Heritage — Deep Blue",
+        "url": "https://www.ibm.com/history/deep-blue",
+        "kind": "official"
+      }
+    ],
+    "verificationStatus": "verified",
+    "notes": "六局赛于 1997 年 5 月在纽约进行并结束；IBM 官方史页只给出月份与比分，故取月精度。"
+  },
+  {
+    "id": "lstm-1997",
+    "date": "1997-11",
+    "displayDate": "1997.11",
+    "datePrecision": "month",
+    "dateType": "paper",
+    "title": "长短期记忆网络（LSTM）",
+    "titleEn": "Long Short-Term Memory",
+    "category": "breakthrough",
+    "summary": "霍赫赖特与施密德胡伯针对循环网络梯度衰减问题提出 LSTM：以恒定误差流与门控单元构成记忆块，输入门与输出门控制信息读写，可在超过一千步的时滞上保持梯度。实验显示其显著优于当时的循环网络训练方法。",
+    "significance": "使神经网络首次能稳定处理长序列，成为此后二十年语音识别、机器翻译与文本建模的主力结构，直至被注意力机制取代。",
+    "organizations": [],
+    "people": [
+      "Sepp Hochreiter",
+      "Jürgen Schmidhuber"
+    ],
+    "relatedModels": [],
+    "chapter": 2,
+    "sources": [
+      {
+        "label": "Neural Computation 9(8): 1735–1780 — Long Short-Term Memory",
+        "url": "https://doi.org/10.1162/neco.1997.9.8.1735",
+        "kind": "paper"
+      }
+    ],
+    "verificationStatus": "verified",
+    "notes": "Crossref 记录出版日 1997-11-01。"
+  },
+  {
+    "id": "lenet5-1998",
+    "date": "1998-11",
+    "displayDate": "1998.11",
+    "datePrecision": "month",
+    "dateType": "paper",
+    "title": "LeNet-5：端到端训练的文档识别系统",
+    "titleEn": "Gradient-Based Learning Applied to Document Recognition",
+    "category": "breakthrough",
+    "summary": "勒昆等在《IEEE 会刊》系统阐述 LeNet-5：把卷积层、下采样层与全连接层组成七层网络，用梯度法整体训练，从像素直接输出字符类别，并配合图变换网络处理整行文本。该架构曾用于银行支票识别。",
+    "significance": "给出卷积网络完整的工程范式——端到端训练、权重共享、层级特征——被后来的 AlexNet 直接继承，是深度视觉的前身模板。",
+    "organizations": [],
+    "people": [
+      "Yann LeCun",
+      "Léon Bottou",
+      "Yoshua Bengio",
+      "Patrick Haffner"
+    ],
+    "relatedModels": [],
+    "chapter": 2,
+    "sources": [
+      {
+        "label": "Proceedings of the IEEE 86(11): 2278–2324 — Gradient-Based Learning Applied to Document Recognition",
+        "url": "https://doi.org/10.1109/5.726791",
+        "kind": "paper"
+      },
+      {
+        "label": "Yann LeCun — LeNet-5 页面（标注 november 1998）",
+        "url": "http://yann.lecun.com/exdb/lenet/",
+        "kind": "official"
+      }
+    ],
+    "verificationStatus": "verified",
+    "notes": "Crossref 仅记录到 1998 年，月次依据作者本人书目页所载 november 1998。"
+  },
+  {
+    "id": "hinton-dbn-2006",
+    "date": "2006-07-28",
+    "displayDate": "2006.07.28",
+    "datePrecision": "day",
+    "dateType": "paper",
+    "title": "深度信念网络与逐层预训练",
+    "titleEn": "Reducing the Dimensionality of Data with Neural Networks",
+    "category": "breakthrough",
+    "summary": "辛顿与萨拉胡特迪诺夫在《科学》提出用逐层无监督预训练初始化深层网络，再用反向传播微调：每层受限玻尔兹曼机先学数据的分布结构，深层自编码器由此得到远优于主成分分析的降维与重建效果。",
+    "significance": "证明深网络可以被有效训练，重启了 1990 年代后期陷入低谷的神经网络研究，「深度学习」由此成为一个可推进的研究议程。",
+    "organizations": [
+      "toronto"
+    ],
+    "people": [
+      "Geoffrey E. Hinton",
+      "Ruslan R. Salakhutdinov"
+    ],
+    "relatedModels": [],
+    "chapter": 2,
+    "sources": [
+      {
+        "label": "Science 313(5786): 504–507 — Reducing the Dimensionality of Data with Neural Networks",
+        "url": "https://doi.org/10.1126/science.1127647",
+        "kind": "paper"
+      },
+      {
+        "label": "Neural Computation 18(7): 1527–1554 — A fast learning algorithm for deep belief nets",
+        "url": "https://doi.org/10.1162/neco.2006.18.7.1527",
+        "kind": "paper"
+      }
+    ],
+    "verificationStatus": "verified",
+    "notes": "Crossref 记录 Science 该文出版日 2006-07-28。同期的深度信念网络专论为 Hinton, Osindero & Teh，Neural Computation 18(7)，同年。"
+  },
+  {
+    "id": "imagenet-2009",
+    "date": "2009-06",
+    "displayDate": "2009.06",
+    "datePrecision": "month",
+    "dateType": "paper",
+    "title": "ImageNet 数据集发布",
+    "titleEn": "ImageNet: A Large-Scale Hierarchical Image Database",
+    "category": "science",
+    "summary": "李飞飞等在 CVPR 公布 ImageNet：按 WordNet 语义层级组织、经众包清洗的千万级标注图像库，规模与类别细度远超此前数据集，并配套举办 ILSVRC 竞赛，为视觉算法提供统一评测基准。",
+    "significance": "把 AI 的竞争从单纯算法设计转向数据与算力规模，为 2012 年深度卷积网络的突破提供必要土壤，也确立「基准竞赛」这一研究组织方式。",
+    "organizations": [
+      "stanford",
+      "princeton"
+    ],
+    "people": [
+      "Fei-Fei Li",
+      "Jia Deng",
+      "Kai Li",
+      "Olga Russakovsky"
+    ],
+    "relatedModels": [],
+    "chapter": 2,
+    "sources": [
+      {
+        "label": "CVPR 2009, pp. 248–255 — ImageNet: A Large-Scale Hierarchical Image Database",
+        "url": "https://doi.org/10.1109/CVPR.2009.5206848",
+        "kind": "paper"
+      }
+    ],
+    "verificationStatus": "verified",
+    "notes": "Crossref 记录会议论文集为 2009 IEEE Conference on Computer Vision and Pattern Recognition，出版日期 2009 年 6 月。"
+  },
+  {
+    "id": "ibm-watson-jeopardy-2011",
+    "date": "2011-02-16",
+    "displayDate": "2011.02.16",
+    "datePrecision": "day",
+    "dateType": "announcement",
+    "title": "IBM Watson 赢得《危险边缘》",
+    "titleEn": "IBM Watson Wins Jeopardy!",
+    "category": "system",
+    "summary": "IBM Watson 在《危险边缘》三轮比赛中击败两位人类冠军。系统以问题分析、候选答案生成与证据打分为流水线，在无联网条件下检索海量文本并对答案置信度排序，最终以明显优势取胜。",
+    "significance": "把开放域问答推到公众面前，证明统计与知识结合的系统能处理歧义与常识，并引出 AI 进入医疗等专业领域的商业化尝试。",
+    "organizations": [
+      "ibm"
+    ],
+    "people": [
+      "David Ferrucci"
+    ],
+    "relatedModels": [],
+    "chapter": 2,
+    "sources": [
+      {
+        "label": "IBM Newsroom（法文站，2011-02-21）— Watson 赢得 Jeopardy! 并转向医疗领域",
+        "url": "https://fr.newsroom.ibm.com/2011-02-21-Watson-lordinateur-dIBM-qui-vient-de-gagner-Jeopardy-conquiert-le-monde-de-la-sante",
+        "kind": "press"
+      }
+    ],
+    "verificationStatus": "partially-verified",
+    "notes": "比赛于 2011 年 2 月 14–16 日播出，16 日决出胜负。IBM 英文新闻稿原页已不可访问，现可读取的官方通告为 2011-02-21 的后续新闻稿，其中确认 Watson 已在三轮中获胜。"
+  },
+  {
+    "id": "alexnet-2012",
+    "date": "2012",
+    "displayDate": "2012",
+    "datePrecision": "year",
+    "dateType": "paper",
+    "title": "AlexNet 在 ImageNet 上大幅降低错误率",
+    "titleEn": "ImageNet Classification with Deep Convolutional Neural Networks",
+    "category": "breakthrough",
+    "summary": "克里热夫斯基等用两块 GPU 训练含六千万参数的八层卷积网络，在 ILSVRC-2010 数据上取得 39.7% 的 top-1 与 18.9% 的 top-5 错误率，显著优于此前方法。ReLU、Dropout 与高效 GPU 实现是三个关键工程选择。",
+    "significance": "深度卷积网络自此取代手工特征成为视觉主流，GPU 训练成为标准做法，业界普遍把 2012 年视为深度学习浪潮的实际起点。",
+    "organizations": [
+      "toronto"
+    ],
+    "people": [
+      "Alex Krizhevsky",
+      "Ilya Sutskever",
+      "Geoffrey E. Hinton"
+    ],
+    "relatedModels": [],
+    "chapter": 3,
+    "sources": [
+      {
+        "label": "NIPS 2012 (Advances in Neural Information Processing Systems 25) — ImageNet Classification with Deep Convolutional Neural Networks",
+        "url": "https://papers.nips.cc/paper_files/paper/2012/hash/c399862d3b9d6b76c8436e924a68c45b-Abstract.html",
+        "kind": "paper"
+      }
+    ],
+    "verificationStatus": "verified",
+    "notes": "ILSVRC 2012 结果于 2012 年秋公布，论文收录于 NIPS 2012 论文集；无精确到日的公开记录，故取年精度。"
+  },
+  {
+    "id": "word2vec-2013",
+    "date": "2013-01-16",
+    "displayDate": "2013.01.16",
+    "datePrecision": "day",
+    "dateType": "paper",
+    "title": "word2vec：词向量的高效学习",
+    "titleEn": "Efficient Estimation of Word Representations in Vector Space",
+    "category": "breakthrough",
+    "summary": "米科洛夫等提出 CBOW 与 Skip-gram 两种结构，用简化后的浅层网络在十几亿词规模语料上于一天内学出词向量，并在词相似度与语义类比任务上取得当时最佳成绩。",
+    "significance": "让「语义可由向量空间的几何关系表示」成为可廉价复现的事实，直接催生此后所有嵌入方法与「向量语义」的通用直觉。",
+    "organizations": [
+      "google-deepmind"
+    ],
+    "people": [
+      "Tomas Mikolov",
+      "Kai Chen",
+      "Greg Corrado",
+      "Jeffrey Dean"
+    ],
+    "relatedModels": [],
+    "chapter": 3,
+    "sources": [
+      {
+        "label": "arXiv:1301.3781 — Efficient Estimation of Word Representations in Vector Space",
+        "url": "https://arxiv.org/abs/1301.3781",
+        "kind": "paper"
+      }
+    ],
+    "verificationStatus": "verified",
+    "notes": "arXiv 元数据记录 v1 提交时间为 2013-01-16。作者当时属 Google（Google Brain），按规范归入 google-deepmind。"
+  },
+  {
+    "id": "vae-2013",
+    "date": "2013-12-20",
+    "displayDate": "2013.12.20",
+    "datePrecision": "day",
+    "dateType": "paper",
+    "title": "变分自编码器",
+    "titleEn": "Auto-Encoding Variational Bayes",
+    "category": "theory",
+    "summary": "金马与韦林提出重参数化技巧，把变分下界改写为可用随机梯度直接优化的目标，使含连续隐变量的深层生成模型能在大数据上训练，推断网络与生成网络可联合学习。",
+    "significance": "为深度生成模型提供可规模化的变分推断框架，与同期的 GAN 一起把「生成」确立为与判别并列的独立研究方向。",
+    "organizations": [],
+    "people": [
+      "Diederik P. Kingma",
+      "Max Welling"
+    ],
+    "relatedModels": [],
+    "chapter": 3,
+    "sources": [
+      {
+        "label": "arXiv:1312.6114 — Auto-Encoding Variational Bayes",
+        "url": "https://arxiv.org/abs/1312.6114",
+        "kind": "paper"
+      }
+    ],
+    "verificationStatus": "verified",
+    "notes": "arXiv 元数据记录 v1 提交时间为 2013-12-20。"
+  },
+  {
+    "id": "gan-2014",
+    "date": "2014-06-10",
+    "displayDate": "2014.06.10",
+    "datePrecision": "day",
+    "dateType": "paper",
+    "title": "生成对抗网络",
+    "titleEn": "Generative Adversarial Nets",
+    "category": "breakthrough",
+    "summary": "古德费洛等提出让生成器与判别器互相对抗：判别器学习区分真实与生成样本，生成器据此改进，二者构成极小极大博弈，理论最优处生成分布与真实分布一致，且无需马尔可夫链或近似推断网络。",
+    "significance": "用博弈替代显式似然估计，使高质量图像生成首次成为可行目标，开启此后十年的生成模型竞赛与合成媒体议题。",
+    "organizations": [
+      "montreal"
+    ],
+    "people": [
+      "Ian J. Goodfellow",
+      "Jean Pouget-Abadie",
+      "Yoshua Bengio"
+    ],
+    "relatedModels": [],
+    "chapter": 3,
+    "sources": [
+      {
+        "label": "arXiv:1406.2661 — Generative Adversarial Nets",
+        "url": "https://arxiv.org/abs/1406.2661",
+        "kind": "paper"
+      }
+    ],
+    "verificationStatus": "verified",
+    "notes": "arXiv 元数据记录 v1 提交时间为 2014-06-10。"
+  },
+  {
+    "id": "bahdanau-attention-2014",
+    "date": "2014-09-01",
+    "displayDate": "2014.09.01",
+    "datePrecision": "day",
+    "dateType": "paper",
+    "title": "注意力机制：让解码器回看源句",
+    "titleEn": "Neural Machine Translation by Jointly Learning to Align and Translate",
+    "category": "breakthrough",
+    "summary": "巴赫达瑙等指出编码器把整句压成定长向量是瓶颈，改为在解码的每一步对源句各位置计算软对齐权重，让模型自行决定当前词该看哪些输入。英法翻译效果与当时最好的短语系统相当，对齐结果也符合直觉。",
+    "significance": "注意力由此成为可独立复用的构件，解除了定长瓶颈，并直接演化出 Transformer 的自注意力架构，是 2017 年变革的技术前身。",
+    "organizations": [
+      "montreal"
+    ],
+    "people": [
+      "Dzmitry Bahdanau",
+      "Kyunghyun Cho",
+      "Yoshua Bengio"
+    ],
+    "relatedModels": [],
+    "chapter": 3,
+    "sources": [
+      {
+        "label": "arXiv:1409.0473 — Neural Machine Translation by Jointly Learning to Align and Translate",
+        "url": "https://arxiv.org/abs/1409.0473",
+        "kind": "paper"
+      }
+    ],
+    "verificationStatus": "verified",
+    "notes": "arXiv 元数据记录 v1 提交时间为 2014-09-01；该文为 ICLR 2015 口头报告。"
+  },
+  {
+    "id": "seq2seq-2014",
+    "date": "2014-09-10",
+    "displayDate": "2014.09.10",
+    "datePrecision": "day",
+    "dateType": "paper",
+    "title": "序列到序列学习",
+    "titleEn": "Sequence to Sequence Learning with Neural Networks",
+    "category": "breakthrough",
+    "summary": "苏茨克维等用多层 LSTM 把输入序列编码为定长向量，再由另一 LSTM 解码输出，在 WMT'14 英法翻译上取得 34.8 BLEU，超过当时基于短语的统计机器翻译系统；反转源句词序可显著改善效果。",
+    "significance": "证明单一神经网络可端到端完成变长序列转换，机器翻译由此从特征工程流水线转向神经方法，也为注意力与 Transformer 铺路。",
+    "organizations": [
+      "google-deepmind"
+    ],
+    "people": [
+      "Ilya Sutskever",
+      "Oriol Vinyals",
+      "Quoc V. Le"
+    ],
+    "relatedModels": [],
+    "chapter": 3,
+    "sources": [
+      {
+        "label": "arXiv:1409.3215 — Sequence to Sequence Learning with Neural Networks",
+        "url": "https://arxiv.org/abs/1409.3215",
+        "kind": "paper"
+      }
+    ],
+    "verificationStatus": "verified",
+    "notes": "arXiv 元数据记录 v1 提交时间为 2014-09-10。"
+  },
+  {
+    "id": "neural-turing-machine-2014",
+    "date": "2014-10-20",
+    "displayDate": "2014.10.20",
+    "datePrecision": "day",
+    "dateType": "paper",
+    "title": "神经图灵机",
+    "titleEn": "Neural Turing Machines",
+    "category": "theory",
+    "summary": "格雷夫斯等把神经网络与外部记忆矩阵耦合，通过可微的读写注意力与记忆交互，整个系统可端到端用梯度训练。实验表明它可从输入输出样例中归纳复制、排序与联想回忆等简单算法。",
+    "significance": "首次明确把「记忆」与「计算」分离同时保持可微，是记忆增强网络与后续外部记忆、检索增强思路的共同起点。",
+    "organizations": [
+      "google-deepmind"
+    ],
+    "people": [
+      "Alex Graves",
+      "Greg Wayne",
+      "Ivo Danihelka"
+    ],
+    "relatedModels": [],
+    "chapter": 3,
+    "sources": [
+      {
+        "label": "arXiv:1410.5401 — Neural Turing Machines",
+        "url": "https://arxiv.org/abs/1410.5401",
+        "kind": "paper"
+      }
+    ],
+    "verificationStatus": "verified",
+    "notes": "arXiv 元数据记录 v1 提交时间为 2014-10-20。"
+  },
+  {
+    "id": "adam-optimizer-2014",
+    "date": "2014-12-22",
+    "displayDate": "2014.12.22",
+    "datePrecision": "day",
+    "dateType": "paper",
+    "title": "Adam 优化器",
+    "titleEn": "Adam: A Method for Stochastic Optimization",
+    "category": "theory",
+    "summary": "金马与巴提出 Adam：用梯度一阶矩与二阶矩的指数移动平均自适应调整每个参数的学习率，并做偏差校正。方法实现简单、内存开销小，对稀疏梯度与非平稳目标均适用，并给出收敛遗憾界分析。",
+    "significance": "成为深度学习最常用的默认优化器，使训练深层网络不再高度依赖手工调参，是 2010 年代模型规模扩张的隐形基础设施。",
+    "organizations": [],
+    "people": [
+      "Diederik P. Kingma",
+      "Jimmy Ba"
+    ],
+    "relatedModels": [],
+    "chapter": 3,
+    "sources": [
+      {
+        "label": "arXiv:1412.6980 — Adam: A Method for Stochastic Optimization",
+        "url": "https://arxiv.org/abs/1412.6980",
+        "kind": "paper"
+      }
+    ],
+    "verificationStatus": "verified",
+    "notes": "arXiv 元数据记录 v1 提交时间为 2014-12-22；后作为 ICLR 2015 会议论文发表。"
+  },
+  {
+    "id": "tensorflow-open-source-2015",
+    "date": "2015-11-09",
+    "displayDate": "2015.11.09",
+    "datePrecision": "day",
+    "dateType": "product",
+    "title": "TensorFlow 开源",
+    "titleEn": "TensorFlow: Google's Latest Machine Learning System, Open Sourced for Everyone",
+    "category": "system",
+    "summary": "Google 把内部第二代分布式机器学习系统 DistBelief 重写并开源为 TensorFlow：以数据流图描述计算，同一套代码可在单机多卡到大规模集群上运行，支持自动微分与多平台部署。",
+    "significance": "把工业级深度学习基础设施免费交给研究社区，大幅降低深度学习的工程门槛，与同期开源框架共同奠定此后十年的研发生态。",
+    "organizations": [
+      "google-deepmind"
+    ],
+    "people": [
+      "Jeff Dean",
+      "Sanjay Ghemawat"
+    ],
+    "relatedModels": [],
+    "chapter": 3,
+    "sources": [
+      {
+        "label": "Google Research Blog — TensorFlow: Google's latest machine learning system, open sourced for everyone",
+        "url": "https://research.google/blog/tensorflow-googles-latest-machine-learning-system-open-sourced-for-everyone/",
+        "kind": "official"
+      }
+    ],
+    "verificationStatus": "partially-verified",
+    "notes": "开源发布日为 2015-11-09，为该博客文章与 TensorFlow 官方发布记录所载；该页在自动抓取时连接失败，未能读取正文，故标为部分核实。"
+  },
+  {
+    "id": "resnet-2015",
+    "date": "2015-12-10",
+    "displayDate": "2015.12.10",
+    "datePrecision": "day",
+    "dateType": "paper",
+    "title": "残差网络 ResNet",
+    "titleEn": "Deep Residual Learning for Image Recognition",
+    "category": "breakthrough",
+    "summary": "何恺明等提出把每层改为学习相对输入的残差映射，配合恒等捷径连接，使 152 层网络可稳定训练。该结构在 ILSVRC 2015 分类任务夺冠，集成模型 top-5 错误率 3.57%，并同时赢下检测、定位与分割任务。",
+    "significance": "解决深度增加反而退化的矛盾，把网络深度从十几层推到上百层，残差连接此后成为几乎所有深层模型的默认组件。",
+    "organizations": [
+      "microsoft"
+    ],
+    "people": [
+      "Kaiming He",
+      "Xiangyu Zhang",
+      "Shaoqing Ren",
+      "Jian Sun"
+    ],
+    "relatedModels": [],
+    "chapter": 3,
+    "sources": [
+      {
+        "label": "arXiv:1512.03385 — Deep Residual Learning for Image Recognition",
+        "url": "https://arxiv.org/abs/1512.03385",
+        "kind": "paper"
+      }
+    ],
+    "verificationStatus": "verified",
+    "notes": "arXiv 元数据记录 v1 提交时间为 2015-12-10；后发表于 CVPR 2016。"
+  },
+  {
+    "id": "openai-founded-2015",
+    "date": "2015-12-11",
+    "displayDate": "2015.12.11",
+    "datePrecision": "day",
+    "dateType": "announcement",
+    "title": "OpenAI 成立",
+    "titleEn": "Introducing OpenAI",
+    "category": "organization",
+    "summary": "OpenAI 以非营利研究机构的形式公开成立，声明目标是推进数字智能并以最可能造福全人类的方式进行，不受财务回报约束。初始资金来自多位科技界人士的捐赠承诺，研究议程聚焦深度学习与强化学习。",
+    "significance": "一种以使命而非产品为核心的组织形态进入 AI 领域，此后成为推动大模型竞赛与「通用人工智能」公共讨论的主要力量之一。",
+    "organizations": [
+      "openai"
+    ],
+    "people": [
+      "Sam Altman",
+      "Elon Musk",
+      "Ilya Sutskever",
+      "Greg Brockman"
+    ],
+    "relatedModels": [],
+    "chapter": 3,
+    "sources": [
+      {
+        "label": "OpenAI — Introducing OpenAI（2015-12-11）",
+        "url": "https://openai.com/index/introducing-openai/",
+        "kind": "official"
+      }
+    ],
+    "verificationStatus": "verified",
+    "notes": "官方页面标注日期 December 11, 2015。"
+  },
+  {
+    "id": "alphago-nature-2016",
+    "date": "2016-01-27",
+    "displayDate": "2016.01.27",
+    "datePrecision": "day",
+    "dateType": "paper",
+    "title": "AlphaGo：深度网络与树搜索结合征服围棋",
+    "titleEn": "Mastering the game of Go with deep neural networks and tree search",
+    "category": "breakthrough",
+    "summary": "DeepMind 在《自然》描述 AlphaGo：策略网络收窄搜索宽度，价值网络评估局面，二者与蒙特卡洛树搜索结合；系统先用人类棋谱做监督学习，再以自我对弈强化。论文公布其以 5 比 0 击败欧洲冠军樊麾。",
+    "significance": "围棋长期被视为暴力搜索无法攻克的领域，AlphaGo 证明「学习得到的直觉加搜索」可超越人类，成为深度学习能力最有说服力的公开证据。",
+    "organizations": [
+      "google-deepmind"
+    ],
+    "people": [
+      "David Silver",
+      "Aja Huang",
+      "Demis Hassabis"
+    ],
+    "relatedModels": [],
+    "chapter": 3,
+    "sources": [
+      {
+        "label": "Nature 529(7587): 484–489 — Mastering the game of Go with deep neural networks and tree search",
+        "url": "https://www.nature.com/articles/nature16961",
+        "kind": "paper"
+      }
+    ],
+    "verificationStatus": "verified",
+    "notes": "Crossref 记录在线首发 2016-01-27、纸本期 2016-01-28，故取 2016-01-27。与樊麾的对局实际于 2015 年 10 月进行，由论文首次公开。"
+  },
+  {
+    "id": "alphago-lee-sedol-2016",
+    "date": "2016-03",
+    "displayDate": "2016.03",
+    "datePrecision": "month",
+    "dateType": "announcement",
+    "title": "AlphaGo 与李世石对局",
+    "titleEn": "AlphaGo versus Lee Sedol",
+    "category": "system",
+    "summary": "2016 年 3 月 9 日至 15 日，AlphaGo 在首尔与九段李世石进行五番棋，以 4 比 1 获胜。第二局第 37 手被广泛讨论为超出人类定式的招式；第四局李世石取胜，是全程唯一一败。",
+    "significance": "全球数亿人围观的对局把 AI 从技术新闻变成公共事件，各国随即加大 AI 投入，2016 年由此成为政策与资本转向的年份。",
+    "organizations": [
+      "google-deepmind"
+    ],
+    "people": [
+      "Lee Sedol",
+      "David Silver",
+      "Demis Hassabis"
+    ],
+    "relatedModels": [],
+    "chapter": 3,
+    "sources": [
+      {
+        "label": "Google DeepMind — AlphaGo（官方项目页，含 The matches 分节）",
+        "url": "https://deepmind.google/research/alphago/",
+        "kind": "official"
+      }
+    ],
+    "verificationStatus": "partially-verified",
+    "notes": "对局跨 3 月 9–15 日，无单一日可代表，故取月精度。官方页面在抓取时被截断，未能逐字读取比分段落，比分与日期依据该页 The matches 分节及当时的公开赛程记录。"
+  },
+  {
+    "id": "wavenet-2016",
+    "date": "2016-09-12",
+    "displayDate": "2016.09.12",
+    "datePrecision": "day",
+    "dateType": "paper",
+    "title": "WaveNet：直接生成原始音频波形",
+    "titleEn": "WaveNet: A Generative Model for Raw Audio",
+    "category": "breakthrough",
+    "summary": "DeepMind 提出以扩张因果卷积逐样本自回归建模原始波形，无需声码器与特征工程即可在数万赫兹采样率上训练。用于文本转语音时，听感自然度显著优于当时最好的参数化与拼接式系统，并可切换说话人。",
+    "significance": "把语音合成从拼接与参数化流水线推向端到端神经生成，也证明自回归深度模型可处理高采样率时序信号，为此后音频生成定下范式。",
+    "organizations": [
+      "google-deepmind"
+    ],
+    "people": [
+      "Aaron van den Oord",
+      "Sander Dieleman",
+      "Karen Simonyan",
+      "Koray Kavukcuoglu"
+    ],
+    "relatedModels": [],
+    "chapter": 3,
+    "sources": [
+      {
+        "label": "arXiv:1609.03499 — WaveNet: A Generative Model for Raw Audio",
+        "url": "https://arxiv.org/abs/1609.03499",
+        "kind": "paper"
+      }
+    ],
+    "verificationStatus": "verified",
+    "notes": "arXiv 元数据记录 v1 提交时间为 2016-09-12。"
+  },
+  {
+    "id": "transformer-2017",
+    "date": "2017-06-12",
+    "displayDate": "2017.06.12",
+    "datePrecision": "day",
+    "dateType": "paper",
+    "title": "《Attention Is All You Need》：Transformer 架构",
+    "titleEn": "Attention Is All You Need",
+    "category": "breakthrough",
+    "summary": "Google 团队提出完全基于注意力的 Transformer，用多头自注意力与位置编码取代循环与卷积。WMT 2014 英德任务取得 28.4 BLEU，英法单模型 41.8 BLEU，训练仅用八块 GPU 三天，且可并行处理整句。",
+    "significance": "去掉了序列建模的顺序依赖，使训练可以大规模并行，成为此后所有大语言模型的基础架构，是 1950–2017 年最重要的技术分水岭。",
+    "organizations": [
+      "google-deepmind"
+    ],
+    "people": [
+      "Ashish Vaswani",
+      "Noam Shazeer",
+      "Jakob Uszkoreit",
+      "Llion Jones",
+      "Illia Polosukhin"
+    ],
+    "relatedModels": [],
+    "chapter": 3,
+    "sources": [
+      {
+        "label": "arXiv:1706.03762 — Attention Is All You Need",
+        "url": "https://arxiv.org/abs/1706.03762",
+        "kind": "paper"
+      }
+    ],
+    "verificationStatus": "verified",
+    "notes": "arXiv 元数据记录 v1 提交时间为 2017-06-12。作者当时属 Google Brain / Google Research，按规范归入 google-deepmind。"
+  },
+  {
+    "id": "alphazero-2017",
+    "date": "2017-12-05",
+    "displayDate": "2017.12.05",
+    "datePrecision": "day",
+    "dateType": "paper",
+    "title": "AlphaZero：不依赖人类棋谱的通用自我博弈",
+    "titleEn": "Mastering Chess and Shogi by Self-Play with a General Reinforcement Learning Algorithm",
+    "category": "breakthrough",
+    "summary": "论文把 AlphaGo Zero 的方法推广为单一算法 AlphaZero：只给定规则，从随机下棋开始自我对弈，用同一套网络与搜索，在 24 小时内于国际象棋、将棋与围棋中均达到超人水平，并击败各项目的世界冠军程序。",
+    "significance": "证明通用学习算法可在不依赖人类知识的情况下自行发现高水平策略，「经验而非示范」成为强化学习的重要路线，也重塑了 AI 与人类知识关系的讨论。",
+    "organizations": [
+      "google-deepmind"
+    ],
+    "people": [
+      "David Silver",
+      "Thomas Hubert",
+      "Julian Schrittwieser",
+      "Demis Hassabis"
+    ],
+    "relatedModels": [],
+    "chapter": 3,
+    "sources": [
+      {
+        "label": "arXiv:1712.01815 — Mastering Chess and Shogi by Self-Play with a General Reinforcement Learning Algorithm",
+        "url": "https://arxiv.org/abs/1712.01815",
+        "kind": "paper"
+      }
+    ],
+    "verificationStatus": "verified",
+    "notes": "arXiv 元数据记录 v1 提交时间为 2017-12-05。其前身 AlphaGo Zero 的结果以 Mastering the game of Go without human knowledge 为题发表于 Nature，2017 年 10 月。"
+  },
+  {
+    "id": "gpt-2-staged-release",
+    "date": "2019-02-14",
+    "displayDate": "2019.02.14",
+    "datePrecision": "day",
+    "dateType": "announcement",
+    "title": "GPT-2 分阶段发布与开放权重之争",
+    "titleEn": "GPT-2 Staged Release",
+    "category": "policy",
+    "summary": "OpenAI 在公布 15 亿参数 GPT-2 时，以可能被用于批量生成虚假信息为由，只先放出小版本，此后分四次逐步开放，直到 2019 年 11 月才发布完整权重。这是模型能力与滥用风险如何权衡的首个公开案例。",
+    "significance": "首次把「发布策略」本身当作安全工具，奠定此后开放权重、分阶段披露与许可限制的讨论框架。",
+    "organizations": [
+      "openai"
+    ],
+    "people": [],
+    "relatedModels": [
+      "gpt-2"
+    ],
+    "chapter": 4,
+    "sources": [
+      {
+        "label": "OpenAI — Better language models and their implications",
+        "url": "https://openai.com/index/better-language-models/",
+        "kind": "official"
+      },
+      {
+        "label": "OpenAI — GPT-2 1.5B release",
+        "url": "https://openai.com/index/gpt-2-1-5b-release/",
+        "kind": "official"
+      }
+    ],
+    "verificationStatus": "verified",
+    "notes": null
+  },
+  {
+    "id": "china-ai-governance-principles-2019",
+    "date": "2019-06-17",
+    "displayDate": "2019.06.17",
+    "datePrecision": "day",
+    "dateType": "policy",
+    "title": "《新一代人工智能治理原则》发布",
+    "titleEn": "Principles for the Governance of Next-Generation Artificial Intelligence",
+    "category": "policy",
+    "summary": "国家新一代人工智能治理专业委员会发布《新一代人工智能治理原则——发展负责任的人工智能》，提出和谐友好、公平公正、包容共享、尊重隐私、安全可控、共担责任、开放协作、敏捷治理八项原则，为中国人工智能治理提供早期框架。",
+    "significance": "是中国第一份系统性的人工智能治理原则文件，为后续算法备案与生成式人工智能监管提供了政策语汇与思路。",
+    "organizations": [
+      "china-government"
+    ],
+    "people": [],
+    "relatedModels": [],
+    "chapter": 4,
+    "sources": [
+      {
+        "label": "科技部 — 发展负责任的人工智能：新一代人工智能治理原则发布（2019-06-17）",
+        "url": "https://www.most.gov.cn/kjbgz/201906/t20190617_147107.html",
+        "kind": "official"
+      }
+    ],
+    "verificationStatus": "verified",
+    "notes": null
+  },
+  {
+    "id": "bert-search-rollout",
+    "date": "2019-10-25",
+    "displayDate": "2019.10.25",
+    "datePrecision": "day",
+    "dateType": "product",
+    "title": "BERT 进入 Google 搜索排序",
+    "titleEn": "BERT Rolls Out in Google Search",
+    "category": "product",
+    "summary": "Google 宣布把 BERT 用于搜索排序，先覆盖英语查询，随后扩展到 70 多种语言。它让搜索引擎从关键词匹配转向理解介词、否定与上下文关系，官方称这项改动影响了约十分之一的英文搜索结果。",
+    "significance": "预训练模型第一次以「看不见的组件」进入数十亿人日常使用的产品，标志 NLP 研究产业化的转折点。",
+    "organizations": [
+      "google-deepmind"
+    ],
+    "people": [],
+    "relatedModels": [
+      "bert"
+    ],
+    "chapter": 4,
+    "sources": [
+      {
+        "label": "Google — Understanding searches better than ever before",
+        "url": "https://blog.google/products/search/search-language-understanding-bert/",
+        "kind": "official"
+      }
+    ],
+    "verificationStatus": "verified",
+    "notes": null
+  },
+  {
+    "id": "scaling-laws-2020",
+    "date": "2020-01-23",
+    "displayDate": "2020.01.23",
+    "datePrecision": "day",
+    "dateType": "paper",
+    "title": "神经语言模型的缩放定律",
+    "titleEn": "Scaling Laws for Neural Language Models",
+    "category": "theory",
+    "summary": "OpenAI 发现语言模型的损失随参数量、数据量与训练算力呈幂律下降，规律跨越七个数量级仍然成立，并给出固定算力下模型规模与数据量的最优分配公式。",
+    "significance": "把模型规模从经验判断变成可计算的工程决策，直接塑造了 2020 年之后的千亿参数竞赛。",
+    "organizations": [
+      "openai"
+    ],
+    "people": [
+      "Jared Kaplan",
+      "Sam McCandlish"
+    ],
+    "relatedModels": [
+      "gpt-3"
+    ],
+    "chapter": 4,
+    "sources": [
+      {
+        "label": "arXiv:2001.08361 — Scaling Laws for Neural Language Models",
+        "url": "https://arxiv.org/abs/2001.08361",
+        "kind": "official"
+      }
+    ],
+    "verificationStatus": "verified",
+    "notes": null
+  },
+  {
+    "id": "openai-api-launch",
+    "date": "2020-06-11",
+    "displayDate": "2020.06.11",
+    "datePrecision": "day",
+    "dateType": "product",
+    "title": "OpenAI 开放商业 API",
+    "titleEn": "OpenAI API launch",
+    "category": "product",
+    "summary": "OpenAI 推出付费 API，把 GPT-3 等模型以按 token 计费的方式开放给开发者，最初需申请等待名单。模型能力首次以云服务形式出售，围绕其构建的应用层创业潮随之出现。",
+    "significance": "确立基础模型加 API 的商业模式，此后成为整个行业的默认分发方式与收入结构，应用层估值随之抬升。",
+    "organizations": [
+      "openai"
+    ],
+    "people": [],
+    "relatedModels": [
+      "gpt-3"
+    ],
+    "chapter": 4,
+    "sources": [
+      {
+        "label": "OpenAI — OpenAI API",
+        "url": "https://openai.com/index/openai-api/",
+        "kind": "official"
+      }
+    ],
+    "verificationStatus": "verified",
+    "notes": null
+  },
+  {
+    "id": "alphafold-2-2020",
+    "date": "2020-11-30",
+    "displayDate": "2020.11.30",
+    "datePrecision": "day",
+    "dateType": "paper",
+    "title": "AlphaFold 2 在 CASP14 取得蛋白质结构预测突破",
+    "titleEn": "AlphaFold 2 at CASP14",
+    "category": "science",
+    "summary": "在第 14 届蛋白质结构预测评估（CASP14）中，DeepMind 的 AlphaFold 2 对多数目标的中位精度接近实验测定结构，GDT 中位数约 92，显著超过其他参赛方法。2021 年 7 月方法论文发表于《自然》，并逐步公开结构与代码。",
+    "significance": "解决困扰生物学五十年的蛋白质折叠预测难题，把「AI 用于科学发现」从叙事变成可复现成果。",
+    "organizations": [
+      "google-deepmind"
+    ],
+    "people": [
+      "John Jumper",
+      "Demis Hassabis"
+    ],
+    "relatedModels": [],
+    "chapter": 4,
+    "sources": [
+      {
+        "label": "Google DeepMind — AlphaFold 项目页",
+        "url": "https://deepmind.google/science/alphafold/",
+        "kind": "official"
+      },
+      {
+        "label": "Nature — Highly accurate protein structure prediction with AlphaFold",
+        "url": "https://www.nature.com/articles/s41586-021-03819-2",
+        "kind": "paper"
+      }
+    ],
+    "verificationStatus": "verified",
+    "notes": "事件日期取 CASP14 结果公布日（2020-11-30）；论文于 2021-07-15 在《自然》在线发表。"
+  },
+  {
+    "id": "eu-ai-act-proposal-2021",
+    "date": "2021-04-21",
+    "displayDate": "2021.04.21",
+    "datePrecision": "day",
+    "dateType": "policy",
+    "title": "欧盟提出《人工智能法案》草案",
+    "titleEn": "Proposal for the EU AI Act",
+    "category": "policy",
+    "summary": "欧盟委员会发布全球首部综合性 AI 监管立法提案，按不可接受、高、有限、极小四级风险设定义务，禁止社会评分等用途，并对高风险系统提出数据治理、透明度与合格评定要求。",
+    "significance": "首次以立法形式确立风险分级治理框架，成为各国 AI 监管的参照模板，也提前塑造了企业的合规预期。",
+    "organizations": [
+      "eu"
+    ],
+    "people": [],
+    "relatedModels": [],
+    "chapter": 4,
+    "sources": [
+      {
+        "label": "European Commission — Proposal for a Regulation laying down harmonised rules on AI",
+        "url": "https://digital-strategy.ec.europa.eu/en/library/proposal-regulation-laying-down-harmonised-rules-artificial-intelligence",
+        "kind": "official"
+      }
+    ],
+    "verificationStatus": "verified",
+    "notes": null
+  },
+  {
+    "id": "chinchilla-2022",
+    "date": "2022-03-29",
+    "displayDate": "2022.03.29",
+    "datePrecision": "day",
+    "dateType": "paper",
+    "title": "Chinchilla 修正缩放定律：数据应与参数同比扩张",
+    "titleEn": "Training Compute-Optimal Large Language Models (Chinchilla)",
+    "category": "theory",
+    "summary": "DeepMind 的系统实验发现，此前大模型普遍参数过大而训练数据不足；在固定算力下，参数量与训练 token 数应大致同比例增长。按此训练的 700 亿参数 Chinchilla，以更少算力超过了 2800 亿参数的 Gopher。",
+    "significance": "改变了全行业的训练配方，此后高质量语料与数据墙取代参数量成为更稀缺的资源，数据集价值被重估。",
+    "organizations": [
+      "google-deepmind"
+    ],
+    "people": [
+      "Jordan Hoffmann",
+      "Arthur Mensch"
+    ],
+    "relatedModels": [],
+    "chapter": 4,
+    "sources": [
+      {
+        "label": "arXiv:2203.15556 — Training Compute-Optimal Large Language Models",
+        "url": "https://arxiv.org/abs/2203.15556",
+        "kind": "official"
+      }
+    ],
+    "verificationStatus": "verified",
+    "notes": null
+  },
+  {
+    "id": "us-ai-bill-of-rights-2022",
+    "date": "2022-10-04",
+    "displayDate": "2022.10.04",
+    "datePrecision": "day",
+    "dateType": "policy",
+    "title": "美国发布《AI 权利法案》蓝图",
+    "titleEn": "Blueprint for an AI Bill of Rights",
+    "category": "policy",
+    "summary": "白宫科技政策办公室发布不具约束力的原则文件，提出免受不安全或无效系统伤害、免受算法歧视、数据隐私保护、知情权与人工替代选择等五项原则，用于指导 AI 系统的设计与部署。",
+    "significance": "美国联邦层面首次系统表述 AI 权利框架，为后续行政令与机构规则提供了话语与原则基础。",
+    "organizations": [
+      "white-house"
+    ],
+    "people": [],
+    "relatedModels": [],
+    "chapter": 4,
+    "sources": [
+      {
+        "label": "The White House (archive) — Blueprint for an AI Bill of Rights",
+        "url": "https://bidenwhitehouse.archives.gov/ostp/ai-bill-of-rights/",
+        "kind": "official"
+      }
+    ],
+    "verificationStatus": "verified",
+    "notes": null
+  },
+  {
+    "id": "constitutional-ai-2022",
+    "date": "2022-12-15",
+    "displayDate": "2022.12.15",
+    "datePrecision": "day",
+    "dateType": "paper",
+    "title": "宪法 AI：用 AI 反馈替代部分人工标注",
+    "titleEn": "Constitutional AI: Harmlessness from AI Feedback",
+    "category": "theory",
+    "summary": "Anthropic 提出以一组书面原则（宪法）指导模型自我批评与修订回答，再用 AI 反馈训练偏好模型，减少对人工标注有害内容的依赖，同时让价值取向可解释、可调整。",
+    "significance": "为对齐研究提供可扩展的替代路线，也成为 Anthropic 模型安全叙事的核心技术基础。",
+    "organizations": [
+      "anthropic"
+    ],
+    "people": [
+      "Yuntao Bai",
+      "Jared Kaplan"
+    ],
+    "relatedModels": [
+      "claude"
+    ],
+    "chapter": 4,
+    "sources": [
+      {
+        "label": "Anthropic — Constitutional AI: Harmlessness from AI Feedback",
+        "url": "https://www.anthropic.com/news/constitutional-ai-harmlessness-from-ai-feedback",
+        "kind": "official"
+      },
+      {
+        "label": "arXiv:2212.08073 — Constitutional AI: Harmlessness from AI Feedback",
+        "url": "https://arxiv.org/abs/2212.08073",
+        "kind": "paper"
+      }
+    ],
+    "verificationStatus": "verified",
+    "notes": null
+  },
+  {
+    "id": "microsoft-openai-expand-2023",
+    "date": "2023-01-23",
+    "displayDate": "2023.01.23",
+    "datePrecision": "day",
+    "dateType": "announcement",
+    "title": "微软与 OpenAI 扩大合作，追加数十亿美元投资",
+    "titleEn": "Microsoft and OpenAI extend partnership",
+    "category": "organization",
+    "summary": "微软宣布对 OpenAI 进行多年、数十亿美元的投资（据报道约 100 亿美元），Azure 成为其独家云平台，OpenAI 模型开始嵌入 Azure 服务与 Microsoft 产品线。",
+    "significance": "云厂商与模型公司深度绑定成型，算力、模型与产品被整合进同一商业闭环，资本成为竞争杠杆。",
+    "organizations": [
+      "microsoft",
+      "openai"
+    ],
+    "people": [
+      "Satya Nadella",
+      "Sam Altman"
+    ],
+    "relatedModels": [
+      "gpt-4"
+    ],
+    "chapter": 5,
+    "sources": [
+      {
+        "label": "OpenAI — OpenAI and Microsoft extend partnership",
+        "url": "https://openai.com/index/openai-and-microsoft-extend-partnership/",
+        "kind": "official"
+      },
+      {
+        "label": "Microsoft Blog — Microsoft and OpenAI extend partnership",
+        "url": "https://blogs.microsoft.com/blog/2023/01/23/microsoftandopenaiextendpartnership/",
+        "kind": "official"
+      }
+    ],
+    "verificationStatus": "verified",
+    "notes": "具体投资金额官方未披露，媒体报道约 100 亿美元，故文案使用「据报道」。"
+  },
+  {
+    "id": "nist-ai-rmf-2023",
+    "date": "2023-01-26",
+    "displayDate": "2023.01.26",
+    "datePrecision": "day",
+    "dateType": "policy",
+    "title": "NIST 发布 AI 风险管理框架 1.0",
+    "titleEn": "AI Risk Management Framework 1.0",
+    "category": "policy",
+    "summary": "美国国家标准与技术研究院发布自愿性框架，围绕治理、映射、度量与管理四项职能，给出识别、评估与缓解 AI 风险的通用流程，并配套可信性特征与使用手册。",
+    "significance": "企业 AI 治理第一次有了可操作的通用模板，被广泛引入采购条款、内部政策与合规评估。",
+    "organizations": [
+      "nist"
+    ],
+    "people": [],
+    "relatedModels": [],
+    "chapter": 5,
+    "sources": [
+      {
+        "label": "NIST — AI Risk Management Framework",
+        "url": "https://www.nist.gov/itl/ai-risk-management-framework",
+        "kind": "official"
+      }
+    ],
+    "verificationStatus": "verified",
+    "notes": null
+  },
+  {
+    "id": "china-genai-measures-draft-2023",
+    "date": "2023-04-11",
+    "displayDate": "2023.04.11",
+    "datePrecision": "day",
+    "dateType": "policy",
+    "title": "《生成式人工智能服务管理办法（征求意见稿）》公开征求意见",
+    "titleEn": "Draft Measures for the Administration of Generative AI Services",
+    "category": "policy",
+    "summary": "国家互联网信息办公室公布《生成式人工智能服务管理办法（征求意见稿）》，要求生成式人工智能产品在提供服务前申报安全评估，并对训练数据、内容标识与使用者实名等作出规定，公开征求意见一个月。",
+    "significance": "首次把生成式人工智能作为独立监管对象提出规则，确立了「备案 + 安全评估」的监管雏形。",
+    "organizations": [
+      "china-government"
+    ],
+    "people": [],
+    "relatedModels": [],
+    "chapter": 5,
+    "sources": [
+      {
+        "label": "数字中国建设峰会（转人民网）— 生成式人工智能服务管理办法公开征求意见（2023-04-11）",
+        "url": "https://www.szzg.gov.cn/2023/xwzx/fhzx/202304/t20230411_4598306.htm",
+        "kind": "press"
+      }
+    ],
+    "verificationStatus": "partially-verified",
+    "notes": "网信办原始页面不可直接定位，引用当日政府网站转载页；文件由网信办于同日在其官网发布。"
+  },
+  {
+    "id": "google-deepmind-merger-2023",
+    "date": "2023-04-20",
+    "displayDate": "2023.04.20",
+    "datePrecision": "day",
+    "dateType": "announcement",
+    "title": "Google Brain 与 DeepMind 合并为 Google DeepMind",
+    "titleEn": "Announcing Google DeepMind",
+    "category": "organization",
+    "summary": "Google 将 Google Brain 与 DeepMind 合并为单一部门 Google DeepMind，由 Demis Hassabis 领导，集中算力、人才与工程资源推进 Gemini 等前沿模型项目。",
+    "significance": "大公司内部研究力量被整合，标志前沿模型竞赛进入集中资源打大仗的阶段，组织效率成为竞争力。",
+    "organizations": [
+      "google-deepmind"
+    ],
+    "people": [
+      "Demis Hassabis",
+      "Sundar Pichai"
+    ],
+    "relatedModels": [
+      "gemini-1-0"
+    ],
+    "chapter": 5,
+    "sources": [
+      {
+        "label": "Google DeepMind — Announcing Google DeepMind",
+        "url": "https://deepmind.google/blog/announcing-google-deepmind/",
+        "kind": "official"
+      }
+    ],
+    "verificationStatus": "verified",
+    "notes": null
+  },
+  {
+    "id": "china-genai-interim-measures-2023",
+    "date": "2023-07-13",
+    "displayDate": "2023.07.13",
+    "datePrecision": "day",
+    "dateType": "policy",
+    "title": "《生成式人工智能服务管理暂行办法》公布",
+    "titleEn": "Interim Measures for the Administration of Generative AI Services",
+    "category": "policy",
+    "summary": "国家网信办等七部门联合公布《生成式人工智能服务管理暂行办法》，共五章二十四条，明确对生成式人工智能服务实行分类分级监管、坚持发展和安全并重，要求服务提供者履行训练数据合规、内容标识与未成年人保护等义务，自 2023 年 8 月 15 日起施行。",
+    "significance": "是全球较早出台的生成式人工智能专项监管规则，确立了「备案制」而非许可制，直接影响此后中国所有大模型产品的上线节奏。",
+    "organizations": [
+      "china-government"
+    ],
+    "people": [],
+    "relatedModels": [],
+    "chapter": 5,
+    "sources": [
+      {
+        "label": "国家互联网信息办公室 — 生成式人工智能服务管理暂行办法（2023-07-13）",
+        "url": "https://www.cac.gov.cn/2023-07/13/c_1690898327029107.htm",
+        "kind": "official"
+      }
+    ],
+    "verificationStatus": "verified",
+    "notes": "该办法于 2023 年 5 月 23 日经国家网信办审议通过，7 月 13 日公布，8 月 15 日施行；主时间轴取公布日。"
+  },
+  {
+    "id": "china-genai-measures-in-force-2023",
+    "date": "2023-08-15",
+    "displayDate": "2023.08.15",
+    "datePrecision": "day",
+    "dateType": "policy",
+    "title": "《生成式人工智能服务管理暂行办法》正式施行",
+    "titleEn": "Interim Measures for Generative AI Services Enter into Force",
+    "category": "policy",
+    "summary": "《生成式人工智能服务管理暂行办法》自 2023 年 8 月 15 日起施行，生成式人工智能服务正式进入「先备案、后上线」的运行轨道，境内外提供者向境内公众提供服务均需履行相应义务。",
+    "significance": "施行日成为中国大模型产品合规上线的时间基准，此后每一次模型发布都需同步考虑备案与安全评估流程。",
+    "organizations": [
+      "china-government"
+    ],
+    "people": [],
+    "relatedModels": [],
+    "chapter": 5,
+    "sources": [
+      {
+        "label": "国家互联网信息办公室 — 生成式人工智能服务管理暂行办法（文末载明施行日期）",
+        "url": "https://www.cac.gov.cn/2023-07/13/c_1690898327029107.htm",
+        "kind": "official"
+      }
+    ],
+    "verificationStatus": "verified",
+    "notes": null
+  },
+  {
+    "id": "china-genai-first-filings-2023",
+    "date": "2023-08-31",
+    "displayDate": "2023.08.31",
+    "datePrecision": "day",
+    "dateType": "policy",
+    "title": "首批生成式人工智能服务通过备案并向公众开放",
+    "titleEn": "First Batch of Generative AI Services Approved for Public Release",
+    "category": "policy",
+    "summary": "首批 8 款生成式人工智能服务在 8 月 31 日起陆续通过《生成式人工智能服务管理暂行办法》备案并向全社会开放，涉及百度、抖音、商汤、智谱、百川智能、MiniMax、阿里通义千问与中科院紫东太初等产品，用户可直接下载或访问使用。",
+    "significance": "备案从纸面规则变成可执行的产品准入流程，标志着中国大模型从内测转向面向公众的规模化服务。",
+    "organizations": [
+      "china-government",
+      "baidu",
+      "bytedance",
+      "sensetime",
+      "zhipu",
+      "baichuan",
+      "minimax",
+      "alibaba-qwen"
+    ],
+    "people": [],
+    "relatedModels": [
+      "ernie-bot",
+      "chatglm-6b",
+      "baichuan2",
+      "minimax-abab6",
+      "sensenova",
+      "doubao"
+    ],
+    "chapter": 5,
+    "sources": [
+      {
+        "label": "新浪财经转财联社 — AI大模型太「卷」了！百度、抖音、商汤等获批（2023-08-31）",
+        "url": "http://t.cj.sina.com.cn/articles/view/1686546714/6486a91a02001xs8q",
+        "kind": "press"
+      }
+    ],
+    "verificationStatus": "partially-verified",
+    "notes": "网信办未公开发布统一名单页，首批名单与时间依据当日财联社报道及后续多家媒体核对；名单细节（8 款/11 家）在不同报道中略有差异。"
+  },
+  {
+    "id": "amazon-anthropic-2023",
+    "date": "2023-09-25",
+    "displayDate": "2023.09.25",
+    "datePrecision": "day",
+    "dateType": "announcement",
+    "title": "亚马逊向 Anthropic 投资至多 40 亿美元",
+    "titleEn": "Amazon and Anthropic strategic collaboration",
+    "category": "organization",
+    "summary": "亚马逊宣布向 Anthropic 投资至多 40 亿美元，后者将 AWS 作为主要云服务与训练伙伴，Claude 模型进入 Amazon Bedrock，双方在芯片、训练与分发上建立深度合作。",
+    "significance": "云厂商通过股权绑定模型公司，模型供应关系从客户合同变为资本联盟，算力方与模型方利益绑定。",
+    "organizations": [
+      "amazon",
+      "anthropic"
+    ],
+    "people": [
+      "Andy Jassy",
+      "Dario Amodei"
+    ],
+    "relatedModels": [
+      "claude-2"
+    ],
+    "chapter": 5,
+    "sources": [
+      {
+        "label": "Amazon — Amazon and Anthropic Announce Strategic Collaboration to Advance Generative AI",
+        "url": "https://press.aboutamazon.com/2023/9/amazon-and-anthropic-announce-strategic-collaboration-to-advance-generative-ai",
+        "kind": "official"
+      }
+    ],
+    "verificationStatus": "verified",
+    "notes": null
+  },
+  {
+    "id": "china-global-ai-governance-initiative-2023",
+    "date": "2023-10-18",
+    "displayDate": "2023.10.18",
+    "datePrecision": "day",
+    "dateType": "policy",
+    "title": "《全球人工智能治理倡议》发布",
+    "titleEn": "Global Initiative for AI Governance",
+    "category": "policy",
+    "summary": "中国在第三届「一带一路」国际合作高峰论坛期间发布《全球人工智能治理倡议》，提出以人为本、智能向善、相互尊重、平等互利等主张，反对利用人工智能干涉他国内政与技术封锁，呼吁建立广泛参与的国际治理机制。",
+    "significance": "是中国首份面向全球的人工智能治理立场文件，为 2024 年联大人工智能能力建设决议铺垫了话语基础。",
+    "organizations": [
+      "china-government"
+    ],
+    "people": [],
+    "relatedModels": [],
+    "chapter": 5,
+    "sources": [
+      {
+        "label": "中国网 — 全球人工智能治理倡议发布（2023-10-19）",
+        "url": "http://zw.china.com.cn/2023-10/19/content_116759358.shtml",
+        "kind": "press"
+      }
+    ],
+    "verificationStatus": "partially-verified",
+    "notes": "原始发布渠道为网信办官网，当前未定位到可静态访问的公告页；倡议于 2023-10-18 在高峰论坛期间发布，媒体次日报道。"
+  },
+  {
+    "id": "us-ai-executive-order-2023",
+    "date": "2023-10-30",
+    "displayDate": "2023.10.30",
+    "datePrecision": "day",
+    "dateType": "policy",
+    "title": "美国发布首份 AI 行政令",
+    "titleEn": "Executive Order on Safe, Secure, and Trustworthy AI",
+    "category": "policy",
+    "summary": "拜登政府签署行政令，要求强大模型开发者向政府报告训练与安全测试结果、制定前沿模型安全标准，并覆盖生物安全、关键基础设施、隐私保护与版权等方向。",
+    "significance": "美国联邦首次以行政手段直接介入前沿模型治理，触发算力申报、安全评估与标准制定的一整套流程。",
+    "organizations": [
+      "white-house"
+    ],
+    "people": [
+      "Joe Biden"
+    ],
+    "relatedModels": [],
+    "chapter": 5,
+    "sources": [
+      {
+        "label": "Federal Register — Executive Order 14110: Safe, Secure, and Trustworthy Development and Use of AI",
+        "url": "https://www.federalregister.gov/documents/2023/11/01/2023-24283/safe-secure-and-trustworthy-development-and-use-of-artificial-intelligence",
+        "kind": "official"
+      }
+    ],
+    "verificationStatus": "verified",
+    "notes": null
+  },
+  {
+    "id": "bletchley-declaration-2023",
+    "date": "2023-11-01",
+    "displayDate": "2023.11.01",
+    "datePrecision": "day",
+    "dateType": "policy",
+    "title": "布莱切利宣言与首届 AI 安全峰会",
+    "titleEn": "The Bletchley Declaration",
+    "category": "policy",
+    "summary": "在英国布莱切利园举行的首届 AI 安全峰会上，包括中国、美国、欧盟在内的 28 个国家和欧盟签署宣言，承认前沿 AI 的潜在灾难性风险，主张通过国际合作开展风险评估与治理。",
+    "significance": "前沿 AI 安全首次进入多边外交议程，为后续首尔峰会与各国 AI 安全研究所网络铺路，也留下执行难题。",
+    "organizations": [
+      "uk-government"
+    ],
+    "people": [
+      "Rishi Sunak"
+    ],
+    "relatedModels": [],
+    "chapter": 5,
+    "sources": [
+      {
+        "label": "GOV.UK — The Bletchley Declaration by Countries Attending the AI Safety Summit",
+        "url": "https://www.gov.uk/government/publications/ai-safety-summit-2023-the-bletchley-declaration",
+        "kind": "official"
+      }
+    ],
+    "verificationStatus": "verified",
+    "notes": null
+  },
+  {
+    "id": "openai-board-crisis-2023",
+    "date": "2023-11-17",
+    "displayDate": "2023.11.17",
+    "datePrecision": "day",
+    "dateType": "announcement",
+    "title": "OpenAI 董事会解雇与复职风波",
+    "titleEn": "OpenAI leadership crisis",
+    "category": "organization",
+    "summary": "OpenAI 董事会以沟通不坦诚为由解雇 CEO Sam Altman，五天内经历临时 CEO 更替、员工联名与微软介入，最终 Altman 复职，董事会重组，Mira Murati 等管理层留任。",
+    "significance": "暴露非营利治理结构与商业化之间的结构性冲突，成为 AI 治理与公司控制权讨论的标志性案例。",
+    "organizations": [
+      "openai",
+      "microsoft"
+    ],
+    "people": [
+      "Sam Altman",
+      "Mira Murati",
+      "Ilya Sutskever",
+      "Greg Brockman"
+    ],
+    "relatedModels": [],
+    "chapter": 5,
+    "sources": [
+      {
+        "label": "OpenAI — OpenAI announces leadership transition",
+        "url": "https://openai.com/index/openai-announces-leadership-transition/",
+        "kind": "official"
+      },
+      {
+        "label": "OpenAI — Sam Altman returns as CEO, OpenAI has a new initial board",
+        "url": "https://openai.com/index/sam-altman-returns-as-ceo-openai-has-a-new-initial-board/",
+        "kind": "official"
+      }
+    ],
+    "verificationStatus": "verified",
+    "notes": "事件起点为 2023-11-17 的解雇公告，2023-11-21 至 11-22 完成复职与董事会重组。"
+  },
+  {
+    "id": "eu-ai-act-adopted-2024",
+    "date": "2024-03-13",
+    "displayDate": "2024.03.13",
+    "datePrecision": "day",
+    "dateType": "policy",
+    "title": "欧洲议会通过《人工智能法案》",
+    "titleEn": "European Parliament adopts the AI Act",
+    "category": "policy",
+    "summary": "欧洲议会以 523 票赞成通过 AI 法案：禁止社会评分与无差别人脸抓取等用途，对通用模型分阶段设透明度与系统性风险评估义务，高风险系统须满足数据治理与合格评定；5 月获理事会批准，8 月 1 日生效。",
+    "significance": "全球首部综合性 AI 法律落地，形成「布鲁塞尔效应」，直接改变企业在欧洲的合规路径与产品设计。",
+    "organizations": [
+      "eu"
+    ],
+    "people": [],
+    "relatedModels": [],
+    "chapter": 5,
+    "sources": [
+      {
+        "label": "European Parliament — AI Act: MEPs adopt landmark law",
+        "url": "https://www.europarl.europa.eu/news/en/press-room/20240308IPR19015/artificial-intelligence-act-meps-adopt-landmark-law",
+        "kind": "official"
+      },
+      {
+        "label": "EUR-Lex — Regulation (EU) 2024/1689",
+        "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj",
+        "kind": "official"
+      }
+    ],
+    "verificationStatus": "verified",
+    "notes": "2024-03-13 议会通过；2024-05-21 理事会批准；2024-08-01 正式生效并分阶段适用。"
+  },
+  {
+    "id": "kimi-long-context-2024",
+    "date": "2024-03-18",
+    "displayDate": "2024.03.18",
+    "datePrecision": "day",
+    "dateType": "product",
+    "title": "Kimi 智能助手支持 200 万字无损上下文",
+    "titleEn": "Kimi Assistant Extends Context to 2 Million Chinese Characters",
+    "category": "product",
+    "summary": "月之暗面宣布 Kimi 智能助手支持 200 万字超长无损上下文，较 2023 年 10 月的 20 万字提升 10 倍，并于即日起开启产品内测；长上下文能力被直接做成面向用户的功能卖点，而非仅出现在技术报告中。",
+    "significance": "把长上下文从模型指标变成产品竞争维度，引发 2024 年中国大模型在长文本上的密集对标与跟进。",
+    "organizations": [
+      "moonshot"
+    ],
+    "people": [],
+    "relatedModels": [
+      "kimi-chat"
+    ],
+    "chapter": 5,
+    "sources": [
+      {
+        "label": "中国日报转载 — Kimi智能助手宣布支持200万字无损上下文（2024-03-18）",
+        "url": "http://ex.chinadaily.com.cn/exchange/partners/82/rss/channel/cn/columns/j3u3t6/stories/WS65f802d6a3109f7860dd5ed7.html",
+        "kind": "press"
+      }
+    ],
+    "verificationStatus": "partially-verified",
+    "notes": "月之暗面官网未提供可静态引用的公告页，引用当日媒体转载稿。"
+  },
+  {
+    "id": "china-llm-api-price-war-2024",
+    "date": "2024-05",
+    "displayDate": "2024.05",
+    "datePrecision": "month",
+    "dateType": "product",
+    "title": "中国大模型 API 价格战爆发",
+    "titleEn": "China's LLM API Price War",
+    "category": "product",
+    "summary": "2024 年 5 月，DeepSeek 以 MoE 架构的 V2 把 API 价格压到每百万输入 token 1 元量级，随后字节跳动豆包大模型、阿里云通义千问（部分模型降价 97%）、百度与智谱相继降价或免费开放轻量模型，主力模型 API 价格在数周内下降一个数量级。",
+    "significance": "价格成为模型架构效率的直接体现，稀疏架构与推理优化第一次以「每 token 价格」的形式进入公开竞争。",
+    "organizations": [
+      "deepseek",
+      "alibaba-qwen",
+      "bytedance",
+      "baidu",
+      "zhipu"
+    ],
+    "people": [],
+    "relatedModels": [
+      "deepseek-v2",
+      "doubao-llm",
+      "qwen2",
+      "glm-4-plus"
+    ],
+    "chapter": 5,
+    "sources": [
+      {
+        "label": "证券时报 — 杀疯了！阿里：降价97%！百度「王炸」：免费！（2024-05-21）",
+        "url": "https://stcn.com/article/detail/1210492.html",
+        "kind": "press"
+      },
+      {
+        "label": "中国金融信息网转证券时报 — 大模型开打价格战（2024-05-22）",
+        "url": "https://m.cnfin.com/yw-lb//zixun/20240522/4051572_1.html",
+        "kind": "press"
+      }
+    ],
+    "verificationStatus": "partially-verified",
+    "notes": "各厂商降价公告分散在各自渠道，事件日期取价格战集中爆发的 5 月，精度到月；各模型具体降幅以当日报价为准。"
+  },
+  {
+    "id": "alphafold-3-2024",
+    "date": "2024-05-08",
+    "displayDate": "2024.05.08",
+    "datePrecision": "day",
+    "dateType": "paper",
+    "title": "AlphaFold 3 扩展到蛋白质—配体复合物",
+    "titleEn": "AlphaFold 3",
+    "category": "science",
+    "summary": "Google DeepMind 与 Isomorphic Labs 发布 AlphaFold 3，把预测范围从蛋白质扩展到蛋白质与 DNA、RNA、小分子配体、离子的复合结构，采用扩散模块提升精度，模型代码面向学术非商用开放。",
+    "significance": "结构预测从单一蛋白走向分子相互作用，为药物设计提供可规模化的通用建模工具，并重塑早期研发流程。",
+    "organizations": [
+      "google-deepmind"
+    ],
+    "people": [
+      "Demis Hassabis",
+      "John Jumper"
+    ],
+    "relatedModels": [],
+    "chapter": 5,
+    "sources": [
+      {
+        "label": "Google — AlphaFold 3 predicts the structure and interactions of all of life's molecules",
+        "url": "https://blog.google/technology/ai/google-deepmind-isomorphic-alphafold-3-ai-model/",
+        "kind": "official"
+      },
+      {
+        "label": "Nature — Accurate structure prediction of biomolecular interactions with AlphaFold 3",
+        "url": "https://www.nature.com/articles/s41586-024-07487-w",
+        "kind": "paper"
+      }
+    ],
+    "verificationStatus": "verified",
+    "notes": null
+  },
+  {
+    "id": "un-ai-capacity-building-resolution-2024",
+    "date": "2024-07-01",
+    "displayDate": "2024.07.01",
+    "datePrecision": "day",
+    "dateType": "policy",
+    "title": "联大协商一致通过中国主提的人工智能能力建设决议",
+    "titleEn": "UNGA Resolution on Enhancing International Cooperation on AI Capacity-Building",
+    "category": "policy",
+    "summary": "第 78 届联合国大会协商一致通过中国主提的「加强人工智能能力建设国际合作」决议，140 多个国家参加联署；决议强调人工智能发展应坚持以人为本、智能向善，鼓励通过国际合作帮助发展中国家加强能力建设。",
+    "significance": "是中国首次主导推动联大通过的人工智能治理决议，把「能力建设」与「发展权」写入国际AI治理议程。",
+    "organizations": [
+      "united-nations",
+      "china-government"
+    ],
+    "people": [],
+    "relatedModels": [],
+    "chapter": 5,
+    "sources": [
+      {
+        "label": "中国驻法国大使馆 — 中国提议，在联合国大会一致通过！（2024-07-04）",
+        "url": "https://fr.china-embassy.gov.cn/zgyw/202407/t20240704_11448196.htm",
+        "kind": "official"
+      }
+    ],
+    "verificationStatus": "verified",
+    "notes": null
+  },
+  {
+    "id": "china-ai-content-labeling-draft-2024",
+    "date": "2024-09-14",
+    "displayDate": "2024.09.14",
+    "datePrecision": "day",
+    "dateType": "policy",
+    "title": "《人工智能生成合成内容标识办法（征求意见稿）》公开征求意见",
+    "titleEn": "Draft Measures for Labeling AI-Generated Content",
+    "category": "policy",
+    "summary": "国家互联网信息办公室就《人工智能生成合成内容标识办法（征求意见稿）》公开征求意见，要求生成合成内容添加显式标识与隐式标识（元数据），并规定网络信息服务提供者的核验与提示义务，意见反馈截止 2024 年 10 月 14 日。",
+    "significance": "把「AI 生成内容必须可识别」推进到可执行规则层面，为此后中国平台的内容标识与溯源体系定下框架。",
+    "organizations": [
+      "china-government"
+    ],
+    "people": [],
+    "relatedModels": [],
+    "chapter": 5,
+    "sources": [
+      {
+        "label": "江苏网信网 — 国家互联网信息办公室关于《人工智能生成合成内容标识办法（征求意见稿）》公开征求意见的通知（2024-09-14）",
+        "url": "https://www.jswx.gov.cn:8888/fwhd/tzgg/202409/t20240914_106660.shtml",
+        "kind": "official"
+      }
+    ],
+    "verificationStatus": "verified",
+    "notes": "引用省级网信办转载的网信办通知原文，页面标注日期 2024-09-14；正式稿于 2025 年发布，不在本文件范围内。"
+  },
+  {
+    "id": "nobel-physics-2024",
+    "date": "2024-10-08",
+    "displayDate": "2024.10.08",
+    "datePrecision": "day",
+    "dateType": "announcement",
+    "title": "2024 诺贝尔物理学奖授予霍普菲尔德与辛顿",
+    "titleEn": "Nobel Prize in Physics 2024",
+    "category": "science",
+    "summary": "瑞典皇家科学院把物理学奖授予 John Hopfield 与 Geoffrey Hinton，表彰其在人工神经网络与机器学习基础发现上的贡献，包括霍普菲尔德网络与玻尔兹曼机等可用于联想记忆与特征学习的模型。",
+    "significance": "机器学习首次以物理学名义获得最高科学荣誉，标志 AI 的方法论地位被主流科学界正式承认。",
+    "organizations": [
+      "princeton",
+      "toronto"
+    ],
+    "people": [
+      "John Hopfield",
+      "Geoffrey Hinton"
+    ],
+    "relatedModels": [],
+    "chapter": 5,
+    "sources": [
+      {
+        "label": "NobelPrize.org — Press release: The Nobel Prize in Physics 2024",
+        "url": "https://www.nobelprize.org/prizes/physics/2024/press-release/",
+        "kind": "official"
+      }
+    ],
+    "verificationStatus": "verified",
+    "notes": null
+  },
+  {
+    "id": "nobel-chemistry-2024",
+    "date": "2024-10-09",
+    "displayDate": "2024.10.09",
+    "datePrecision": "day",
+    "dateType": "announcement",
+    "title": "2024 诺贝尔化学奖授予蛋白质设计与结构预测",
+    "titleEn": "Nobel Prize in Chemistry 2024",
+    "category": "science",
+    "summary": "化学奖一半授予 David Baker 表彰计算蛋白质设计，另一半授予 Demis Hassabis 与 John Jumper 表彰 AlphaFold 2 的蛋白质结构预测，评委会称其从根本上改变了生物化学研究方式。",
+    "significance": "AI 与生命科学的结合获得最高学术认可，产业实验室的研究者首次与学术同行共同获奖。",
+    "organizations": [
+      "stanford",
+      "google-deepmind"
+    ],
+    "people": [
+      "David Baker",
+      "Demis Hassabis",
+      "John Jumper"
+    ],
+    "relatedModels": [],
+    "chapter": 5,
+    "sources": [
+      {
+        "label": "NobelPrize.org — Press release: The Nobel Prize in Chemistry 2024",
+        "url": "https://www.nobelprize.org/prizes/chemistry/2024/press-release/",
+        "kind": "official"
+      }
+    ],
+    "verificationStatus": "verified",
+    "notes": null
+  },
+  {
+    "id": "stargate-project-2025",
+    "date": "2025-01-21",
+    "displayDate": "2025.01.21",
+    "datePrecision": "day",
+    "dateType": "announcement",
+    "title": "Stargate 计划公布",
+    "titleEn": "Announcing the Stargate Project",
+    "category": "hardware",
+    "summary": "OpenAI 与软银、甲骨文等合作方公布 Stargate 计划，拟在数年内投入大规模资金在美国建设 AI 数据中心与算力基础设施，首期站点落在得克萨斯州。计划把模型训练所需电力、芯片与机房作为独立议题提出，并配套成立新的实体负责建设与运营。",
+    "significance": "前沿模型的竞争要素从算法与数据扩展到电力与厂房，算力基础设施投资开始以千亿美元量级计价。",
+    "organizations": [
+      "openai"
+    ],
+    "people": [],
+    "relatedModels": [],
+    "chapter": 6,
+    "sources": [
+      {
+        "label": "OpenAI — Announcing the Stargate Project",
+        "url": "https://openai.com/index/announcing-the-stargate-project/",
+        "kind": "official"
+      }
+    ],
+    "verificationStatus": "verified",
+    "notes": null
+  },
+  {
+    "id": "alibaba-rmb380b-ai-infrastructure",
+    "date": "2025-02",
+    "displayDate": "2025.02",
+    "datePrecision": "month",
+    "dateType": "announcement",
+    "title": "阿里巴巴宣布三年 3800 亿元 AI 与云基建投入",
+    "titleEn": "Alibaba pledges RMB 380 billion for AI and cloud infrastructure",
+    "category": "hardware",
+    "summary": "阿里巴巴宣布未来三年投入 3800 亿元人民币（约 530 亿美元）用于云与 AI 基础设施建设，并在同年 9 月云栖大会上重申该承诺，作为其全栈 AI 战略的算力底座。这一规模超过当时中国互联网公司公开的同类投资计划。",
+    "significance": "以三年超 500 亿美元级别的资本开支为国产大模型训练与推理提供算力基础，开启 2025 年中国 AI 基础设施投资竞赛，也解释了同期国产模型密集放量的物质条件。",
+    "organizations": [
+      "alibaba-qwen"
+    ],
+    "people": [],
+    "relatedModels": [],
+    "chapter": 6,
+    "sources": [
+      {
+        "label": "Alibaba Cloud — Alibaba to invest RMB 380 billion in AI and cloud infrastructure",
+        "url": "https://www.alibabacloud.com/blog/alibaba-to-invest-rmb380-billion-in-ai-and-cloud-infrastructure-over-next-three-years_602007",
+        "kind": "official"
+      },
+      {
+        "label": "Alibaba Cloud — From Models to Momentum（2025 年回顾，确认 2 月宣布及金额）",
+        "url": "https://www.alibabacloud.com/blog/from-models-to-momentum-how-alibaba-turned-artificial-intelligence-into-a-real-world-utility-in-2025_602797",
+        "kind": "official"
+      }
+    ],
+    "verificationStatus": "verified",
+    "notes": "官方回顾文给出「RMB 380 billion (US$53 billion)」且说明于 2025 年 2 月宣布，官方仅给到月份。"
+  },
+  {
+    "id": "eu-ai-act-prohibitions-2025",
+    "date": "2025-02-02",
+    "displayDate": "2025.02.02",
+    "datePrecision": "day",
+    "dateType": "policy",
+    "title": "欧盟《人工智能法案》禁止性条款生效",
+    "titleEn": "EU AI Act: Prohibited AI Practices Take Effect",
+    "category": "policy",
+    "summary": "欧盟《人工智能法案》中关于禁止性实践的部分自 2025 年 2 月 2 日起适用，禁止在欧盟境内投放用于社会评分、无差别抓取人脸、操纵性行为推断情绪等用途的 AI 系统。同期生效的还包括 AI 素养义务，要求提供方与部署方确保相关人员具备足够理解。",
+    "significance": "全球首个按风险分级立法的 AI 监管框架开始产生实际约束力，模型能力之外合规成本第一次进入产品决策。",
+    "organizations": [
+      "eu"
+    ],
+    "people": [],
+    "relatedModels": [],
+    "chapter": 6,
+    "sources": [
+      {
+        "label": "European Commission — AI Act regulatory framework",
+        "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai",
+        "kind": "official"
+      }
+    ],
+    "verificationStatus": "verified",
+    "notes": null
+  },
+  {
+    "id": "anthropic-asl3-activation-2025",
+    "date": "2025-05",
+    "displayDate": "2025.05",
+    "datePrecision": "month",
+    "dateType": "announcement",
+    "title": "Anthropic 启动 ASL-3 防护等级",
+    "titleEn": "Activating ASL-3 Protections",
+    "category": "organization",
+    "summary": "Anthropic 宣布对部分 Claude 模型启用其负责任扩展政策中的 ASL-3 级防护，理由是模型的生物相关能力达到该级别门槛。措施包括更强的分类器拦截、访问控制与部署限制。这是该公司首次实际启用高于 ASL-2 的防护等级。",
+    "significance": "分级安全政策第一次从文件走入生产部署，能力阈值触发具体工程措施，为后续 Mythos 级受控发布积累先例。",
+    "organizations": [
+      "anthropic"
+    ],
+    "people": [],
+    "relatedModels": [
+      "claude-opus-4"
+    ],
+    "chapter": 6,
+    "sources": [
+      {
+        "label": "Anthropic — Activating ASL-3 protections",
+        "url": "https://www.anthropic.com/news/activating-asl3-protections",
+        "kind": "official"
+      }
+    ],
+    "verificationStatus": "verified",
+    "notes": "官方页面确认事件；精确日未核实，故只写到月。"
+  },
+  {
+    "id": "openai-codex-agent-2025",
+    "date": "2025-05-16",
+    "displayDate": "2025.05.16",
+    "datePrecision": "day",
+    "dateType": "product",
+    "title": "OpenAI 发布云端编码 Agent Codex",
+    "titleEn": "Introducing Codex",
+    "category": "system",
+    "summary": "OpenAI 推出 Codex，一个在云端沙箱中并行执行编码任务的 Agent：它可以读取仓库、编写与运行代码、提交拉取请求，多个任务可同时进行。产品与 CLI、IDE 插件及代码审查流程打通，标志着编码从对话式补全转向可委托的任务执行。",
+    "significance": "软件工程成为第一个被完整 Agent 化的知识工作门类，任务委派与结果审查取代逐行协作，对结果的审阅取代逐行编写指导。",
+    "organizations": [
+      "openai"
+    ],
+    "people": [],
+    "relatedModels": [
+      "gpt-5-codex"
+    ],
+    "chapter": 6,
+    "sources": [
+      {
+        "label": "OpenAI — Introducing Codex",
+        "url": "https://openai.com/index/introducing-codex/",
+        "kind": "official"
+      }
+    ],
+    "verificationStatus": "verified",
+    "notes": null
+  },
+  {
+    "id": "waic-2025",
+    "date": "2025-07",
+    "displayDate": "2025.07",
+    "datePrecision": "month",
+    "dateType": "conference",
+    "title": "2025 世界人工智能大会在上海举行",
+    "titleEn": "World Artificial Intelligence Conference 2025",
+    "category": "organization",
+    "summary": "2025 世界人工智能大会在上海举行，集中展示中国大模型、具身智能与算力成果，多家厂商在会期发布或预览新模型与智能体产品，首日即出现成果集中发布的现象。",
+    "significance": "作为中国规模最大的 AI 行业展会，WAIC 成为国产模型集中发布的窗口，也是观察政策风向、算力叙事与产业热度的年度指标。",
+    "organizations": [
+      "china-government"
+    ],
+    "people": [],
+    "relatedModels": [],
+    "chapter": 6,
+    "sources": [
+      {
+        "label": "央视网 — WAIC 2025 首日成果报道（2025-07-28）",
+        "url": "https://business.cctv.com/2025/07/28/ARTIn90TBeIFcxRieKer7ryk250727.shtml",
+        "kind": "press"
+      }
+    ],
+    "verificationStatus": "partially-verified",
+    "notes": "官方大会网站未取得含日期的可抓取页面，本条以主流媒体报道为准，仅给到月份精度。"
+  },
+  {
+    "id": "eu-ai-act-gpai-2025",
+    "date": "2025-08-02",
+    "displayDate": "2025.08.02",
+    "datePrecision": "day",
+    "dateType": "policy",
+    "title": "欧盟《人工智能法案》通用模型义务生效",
+    "titleEn": "EU AI Act: General-Purpose AI Obligations Apply",
+    "category": "policy",
+    "summary": "欧盟《人工智能法案》针对通用目的 AI 模型的义务自 2025 年 8 月 2 日起适用，要求提供方提交技术文档与训练数据摘要、遵守版权政策，并对被认定为具有系统性风险的模型履行额外评估与事件报告义务。配套的行为准则与执法安排同步推进。",
+    "significance": "前沿模型首次被纳入强制披露框架，训练数据与风险评估从自愿公开变成合规要求，影响所有向欧盟提供服务的实验室。",
+    "organizations": [
+      "eu"
+    ],
+    "people": [],
+    "relatedModels": [],
+    "chapter": 6,
+    "sources": [
+      {
+        "label": "European Commission — AI Act regulatory framework",
+        "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai",
+        "kind": "official"
+      }
+    ],
+    "verificationStatus": "verified",
+    "notes": null
+  },
+  {
+    "id": "openai-gpt-oss-open-weights-2025",
+    "date": "2025-08-05",
+    "displayDate": "2025.08.05",
+    "datePrecision": "day",
+    "dateType": "weights",
+    "title": "OpenAI 发布开放权重推理模型 gpt-oss",
+    "titleEn": "Introducing gpt-oss-120b and gpt-oss-20b",
+    "category": "breakthrough",
+    "summary": "OpenAI 发布两个开放权重推理模型 gpt-oss-120b 与 gpt-oss-20b，支持函数调用与结构化输出，可在自有基础设施或托管服务上运行。这是该公司自 GPT-2 之后首次发布开放权重语言模型，并附带模型卡与安全评估说明。",
+    "significance": "前沿实验室重新进入开放权重赛道，本地部署者首次获得带推理能力的官方模型，开源与闭源的边界重新划定。",
+    "organizations": [
+      "openai"
+    ],
+    "people": [],
+    "relatedModels": [
+      "gpt-oss-120b"
+    ],
+    "chapter": 6,
+    "sources": [
+      {
+        "label": "OpenAI — Model Release Notes",
+        "url": "https://help.openai.com/en/articles/9624314-model-release-notes",
+        "kind": "official"
+      },
+      {
+        "label": "OpenAI — Open models",
+        "url": "https://openai.com/open-models/",
+        "kind": "official"
+      }
+    ],
+    "verificationStatus": "verified",
+    "notes": null
+  },
+  {
+    "id": "china-ai-plus-action-plan",
+    "date": "2025-08-26",
+    "displayDate": "2025.08.26",
+    "datePrecision": "day",
+    "dateType": "policy",
+    "title": "国务院印发「人工智能+」行动意见",
+    "titleEn": "State Council Opinions on Deepening the AI Plus Initiative",
+    "category": "policy",
+    "summary": "国务院印发《关于深入实施“人工智能+”行动的意见》（国发〔2025〕11号），提出到 2027 年智能终端与智能体应用普及率超 70%、2030 年超 90%，并围绕科学技术、产业发展、消费提质、民生福祉、治理能力、全球合作部署六大行动。",
+    "significance": "首次把智能体与智能终端的普及率写成量化目标，并把开源生态、算力统筹与安全备案并列写入国家行动，为 2025 至 2026 年中国模型开源与算力建设提供了政策依据。",
+    "organizations": [
+      "china-government"
+    ],
+    "people": [],
+    "relatedModels": [],
+    "chapter": 6,
+    "sources": [
+      {
+        "label": "中国政府网 — 国务院关于深入实施“人工智能+”行动的意见（成文 2025-08-21，发布 2025-08-26）",
+        "url": "https://www.gov.cn/zhengce/zhengceku/202508/content_7037862.htm",
+        "kind": "official"
+      }
+    ],
+    "verificationStatus": "verified",
+    "notes": "文件成文日期为 2025-08-21，公开发布日期为 2025-08-26，本条取发布日期。"
+  },
+  {
+    "id": "apsara-conference-2025",
+    "date": "2025-09",
+    "displayDate": "2025.09",
+    "datePrecision": "month",
+    "dateType": "conference",
+    "title": "2025 云栖大会：阿里云集中发布模型与全栈 AI 基础设施",
+    "titleEn": "Apsara Conference 2025: Alibaba Cloud unveils models and full-stack AI infrastructure",
+    "category": "organization",
+    "summary": "阿里云在 2025 年云栖大会集中发布新一代模型与基础设施：超万亿参数的闭源旗舰 Qwen3-Max、视觉模型 Qwen3-VL、全模态模型 Qwen3-Omni，预览 Wan2.5 视频生成模型，并升级智能体开发框架与网络、存储、数据库等 AI 基础设施。",
+    "significance": "把模型、智能体平台与算力基础设施一次性打包发布，确立「全栈 AI 云」这一中国云厂商的主导叙事，也让模型发布与算力投资在对外沟通中绑定为同一件事。",
+    "organizations": [
+      "alibaba-qwen"
+    ],
+    "people": [
+      "吴泳铭"
+    ],
+    "relatedModels": [
+      "qwen3-max",
+      "qwen3-vl",
+      "qwen3-omni"
+    ],
+    "chapter": 6,
+    "sources": [
+      {
+        "label": "阿里巴巴集团 — 2025 年云栖大会：阿里云发布下一代 AI 创新策略路线图",
+        "url": "https://www.alibabagroup.com/document-1911884625546838016",
+        "kind": "official"
+      }
+    ],
+    "verificationStatus": "verified",
+    "notes": "官方新闻稿发布于 2025-09-29，会议于 9 月下旬举行，故取月份精度。"
+  },
+  {
+    "id": "deepseek-r1-nature-cover",
+    "date": "2025-09",
+    "displayDate": "2025.09",
+    "datePrecision": "month",
+    "dateType": "paper",
+    "title": "DeepSeek-R1 论文登上《自然》封面",
+    "titleEn": "DeepSeek-R1 paper featured on the cover of Nature",
+    "category": "science",
+    "summary": "《自然》以封面文章形式发表 DeepSeek-R1 论文，梁文锋为通讯作者。论文披露 R1 以强化学习为主的训练方法、数据构成与评测细节，并讨论其推理行为与安全边界，是少数以完整同行评审形式进入顶级期刊的前沿大模型研究之一。",
+    "significance": "把大模型的技术披露从预印本与博客推进到同行评审，为开源权重模型的可复现性提供学术背书，也抬高了模型发布时的证据标准。",
+    "organizations": [
+      "deepseek"
+    ],
+    "people": [
+      "梁文锋"
+    ],
+    "relatedModels": [
+      "deepseek-r1"
+    ],
+    "chapter": 6,
+    "sources": [
+      {
+        "label": "新浪科技 — 梁文锋团队 DeepSeek-R1 论文登 Nature 封面",
+        "url": "https://k.sina.cn/article_1611935011_60142d2304001atyg.html",
+        "kind": "press"
+      }
+    ],
+    "verificationStatus": "partially-verified",
+    "notes": "nature.com 对自动抓取跳转至身份验证页，本次未能直接读取 DOI 页面，故以同期权威媒体报道为准并只给到月份精度；条目正式入库前建议补一次 nature.com 直连核验。"
+  },
+  {
+    "id": "openai-model-spec-agentic-2025",
+    "date": "2025-09-12",
+    "displayDate": "2025.09.12",
+    "datePrecision": "day",
+    "dateType": "policy",
+    "title": "OpenAI 模型规范加入 Agent 行为准则",
+    "titleEn": "OpenAI Model Spec: Agentic Principles",
+    "category": "theory",
+    "summary": "OpenAI 更新模型规范，首次系统写入 Agent 行为原则：AI 只应在与用户达成一致的自主范围内行动，并须控制与披露副作用，优先选择可逆操作、避免不可逆动作。规范同时把最高权威层级从 Platform 改为 Root，并调整人格与安全相关条款。",
+    "significance": "Agent 的行为边界第一次被写成可引用的公开规范，为「模型可自主操作世界」这一阶段提供了对齐文本基础。",
+    "organizations": [
+      "openai"
+    ],
+    "people": [],
+    "relatedModels": [],
+    "chapter": 6,
+    "sources": [
+      {
+        "label": "OpenAI — Model Release Notes (Model Spec update, September 12, 2025)",
+        "url": "https://help.openai.com/en/articles/9624314-model-release-notes",
+        "kind": "official"
+      },
+      {
+        "label": "OpenAI — Model Spec",
+        "url": "https://model-spec.openai.com/",
+        "kind": "official"
+      }
+    ],
+    "verificationStatus": "verified",
+    "notes": null
+  },
+  {
+    "id": "baguan-seasonal-cop30",
+    "date": "2025-11",
+    "displayDate": "2025.11",
+    "datePrecision": "month",
+    "dateType": "announcement",
+    "title": "阿里发布八观季节性气候模型 Baguan-Seasonal",
+    "titleEn": "Alibaba unveils Baguan-Seasonal climate model at COP30",
+    "category": "science",
+    "summary": "阿里在《联合国气候变化框架公约》第三十次缔约方大会（COP30）中国角发布八观季节性气候模型 Baguan-Seasonal，可对未来 12 个月的气候条件进行预报，用于气候韧性规划与农业决策。",
+    "significance": "把大模型能力延伸到地球科学，说明中国 AI 实验室正把气象与气候预报作为科学智能的重点落地场景，而非仅停留在论文演示。",
+    "organizations": [
+      "alibaba-qwen"
+    ],
+    "people": [],
+    "relatedModels": [],
+    "chapter": 6,
+    "sources": [
+      {
+        "label": "Alibaba Cloud — Alibaba Unveils Baguan-Seasonal AI Model at UN COP30",
+        "url": "https://www.alibabacloud.com/blog/alibaba-unveils-baguan-seasonal-ai-model-at-un-cop30_602683",
+        "kind": "official"
+      },
+      {
+        "label": "Alibaba Cloud — From Models to Momentum（确认 COP30 发布与 12 个月预报能力）",
+        "url": "https://www.alibabacloud.com/blog/from-models-to-momentum-how-alibaba-turned-artificial-intelligence-into-a-real-world-utility-in-2025_602797",
+        "kind": "official"
+      }
+    ],
+    "verificationStatus": "verified",
+    "notes": "官方仅给出发布月份与会议场次。"
+  },
+  {
+    "id": "quark-ai-glasses",
+    "date": "2025-11",
+    "displayDate": "2025.11",
+    "datePrecision": "month",
+    "dateType": "product",
+    "title": "阿里发布夸克 AI 眼镜",
+    "titleEn": "Alibaba launches Quark AI Glasses",
+    "category": "product",
+    "summary": "阿里发布夸克 AI 眼镜系列，与千问模型深度集成，支持近眼导航、实时翻译等功能，把模型能力从手机延伸到可穿戴设备，并尝试免提交互的形态。",
+    "significance": "中国厂商开始把大模型作为硬件卖点而非仅云端服务，端侧与可穿戴成为 Agent 的新载体，也带动国内 AI 眼镜供应链的形成。",
+    "organizations": [
+      "alibaba-qwen"
+    ],
+    "people": [],
+    "relatedModels": [],
+    "chapter": 6,
+    "sources": [
+      {
+        "label": "Alibaba Cloud — Alibaba Launches New Quark AI Glasses Series in China, Deeply Integrated with Qwen",
+        "url": "https://www.alibabacloud.com/blog/alibaba-launches-new-quark-ai-glasses-series-in-china-deeply-integrated-with-qwen_602717",
+        "kind": "official"
+      },
+      {
+        "label": "Alibaba Cloud — From Models to Momentum（确认产品发布与定位）",
+        "url": "https://www.alibabacloud.com/blog/from-models-to-momentum-how-alibaba-turned-artificial-intelligence-into-a-real-world-utility-in-2025_602797",
+        "kind": "official"
+      }
+    ],
+    "verificationStatus": "verified",
+    "notes": "官方仅给出发布月份。"
+  },
+  {
+    "id": "qwen-app-launch",
+    "date": "2025-11",
+    "displayDate": "2025.11",
+    "datePrecision": "month",
+    "dateType": "product",
+    "title": "阿里推出千问 App，定位可执行任务的助手",
+    "titleEn": "Alibaba launches the Qwen App as a task-executing assistant",
+    "category": "product",
+    "summary": "阿里推出千问 App，定位为能规划和完成任务的助手，而非单纯对话界面：通过接入导航、出行预订与电商等服务打通阿里生态。官方称该应用上线 23 天内月活跃用户达到 3000 万。",
+    "significance": "标志中国大模型竞争从模型能力延伸到消费级入口，Agent 化应用成为拉新主要卖点，模型公司开始直接经营终端用户而非只做 API 供应商。",
+    "organizations": [
+      "alibaba-qwen"
+    ],
+    "people": [],
+    "relatedModels": [],
+    "chapter": 6,
+    "sources": [
+      {
+        "label": "Alibaba Cloud — Alibaba Launches Qwen App to Boost Its Consumer AI Efforts",
+        "url": "https://www.alibabacloud.com/blog/alibaba-launches-qwen-app-to-boost-its-consumer-ai-efforts_602672",
+        "kind": "official"
+      },
+      {
+        "label": "Alibaba Cloud — From Models to Momentum（确认 2025 年 11 月上线与 23 天 3000 万月活）",
+        "url": "https://www.alibabacloud.com/blog/from-models-to-momentum-how-alibaba-turned-artificial-intelligence-into-a-real-world-utility-in-2025_602797",
+        "kind": "official"
+      }
+    ],
+    "verificationStatus": "verified",
+    "notes": "官方给出月份与 23 天、3000 万月活数据，未给出具体上线日。"
+  },
+  {
+    "id": "qwen-neurips-2025-best-paper",
+    "date": "2025-12",
+    "displayDate": "2025.12",
+    "datePrecision": "month",
+    "dateType": "paper",
+    "title": "Qwen 团队获 NeurIPS 2025 最佳论文奖",
+    "titleEn": "Qwen team wins NeurIPS 2025 Best Paper Award",
+    "category": "theory",
+    "summary": "Qwen 团队凭注意力机制研究获 NeurIPS 2025 最佳论文奖。官方称相关成果已用于 Qwen3-Next 架构，形成 Gated DeltaNet 与 Gated Attention 的混合注意力，并延伸到后续 Qwen3.5 与 Qwen3.8 系列。",
+    "significance": "中国团队在顶级机器学习会议以基础架构研究获奖，并迅速把论文转化为量产开源模型，说明从研究到产品的闭环正在缩短，架构原创性开始成为中国实验室的核心竞争力。",
+    "organizations": [
+      "alibaba-qwen"
+    ],
+    "people": [],
+    "relatedModels": [
+      "qwen3-next"
+    ],
+    "chapter": 6,
+    "sources": [
+      {
+        "label": "Alibaba Cloud — Alibaba Qwen Wins NeurIPS 2025 Best Paper Award",
+        "url": "https://www.alibabacloud.com/blog/alibaba-qwen-wins-%E2%80%9Cneurips-2025-best-paper-award%E2%80%9D-for-breakthrough-in-attention-mechanisms_602708",
+        "kind": "official"
+      },
+      {
+        "label": "Alibaba Cloud — From Models to Momentum（确认最佳论文与 Qwen3-Next 的承接关系）",
+        "url": "https://www.alibabacloud.com/blog/from-models-to-momentum-how-alibaba-turned-artificial-intelligence-into-a-real-world-utility-in-2025_602797",
+        "kind": "official"
+      }
+    ],
+    "verificationStatus": "verified",
+    "notes": "官方仅给出会议与年份，本条按 NeurIPS 2025 会期取 2025-12 月份精度。"
+  },
+  {
+    "id": "anthropic-pace-the-frontier-2026",
+    "date": "2026",
+    "displayDate": "2026",
+    "datePrecision": "year",
+    "dateType": "announcement",
+    "title": "Anthropic 提出「为前沿减速」主张",
+    "titleEn": "We Must Pace the Frontier",
+    "category": "theory",
+    "summary": "Anthropic 首席执行官发表「我们必须为前沿减速」一文，主张在能力持续提升的同时主动控制发布节奏，而非以最快速度把新能力推向市场。文中观点随后被公司用作发布政策的公开依据，Claude Opus 5.5 即被官方称为该主张提出后的首个发布。",
+    "significance": "头部实验室首次把「放慢」写成公开主张并落到发布节奏上，竞争叙事中出现了以克制为卖点的路线。",
+    "organizations": [
+      "anthropic"
+    ],
+    "people": [
+      "Dario Amodei"
+    ],
+    "relatedModels": [
+      "claude-opus-5-5"
+    ],
+    "chapter": 7,
+    "sources": [
+      {
+        "label": "Dario Amodei — We must pace the frontier",
+        "url": "https://darioamodei.com/post/we-must-pace-the-frontier",
+        "kind": "official"
+      },
+      {
+        "label": "Anthropic — Introducing Claude Opus 5.5",
+        "url": "https://www.anthropic.com/claude-opus-5-5",
+        "kind": "official"
+      }
+    ],
+    "verificationStatus": "verified",
+    "notes": "Opus 5.5 发布页确认其为该文发表后的首个发布，但未给出文章确切日期，故只写到年。"
+  },
+  {
+    "id": "china-genai-service-filing-2025",
+    "date": "2026-01",
+    "displayDate": "2026.01",
+    "datePrecision": "month",
+    "dateType": "policy",
+    "title": "国家网信办发布 2025 年生成式人工智能服务已备案信息",
+    "titleEn": "CAC releases 2025 filing list for generative AI services",
+    "category": "policy",
+    "summary": "国家互联网信息办公室发布 2025 年生成式人工智能服务已备案信息公告，汇总全年按《生成式人工智能服务管理暂行办法》完成备案的服务清单，地方网信部门同步转载。备案是生成式 AI 在中国境内面向公众提供服务的前置条件。",
+    "significance": "为观察中国生成式 AI 的商业化规模提供了官方口径，也说明备案制已从临时管理手段演化为常态化准入制度，成为模型厂商合规发布的硬约束。",
+    "organizations": [
+      "china-government"
+    ],
+    "people": [],
+    "relatedModels": [],
+    "chapter": 7,
+    "sources": [
+      {
+        "label": "国家网信办公告（福建省委网信办转载，2026-01-12）",
+        "url": "https://www.fjwx.gov.cn/yw/20260112/3021895.html",
+        "kind": "official"
+      }
+    ],
+    "verificationStatus": "partially-verified",
+    "notes": "本次仅取得地方政府网站的转载版本，未取得 cac.gov.cn 原始公告页，故标注为部分核实；公告正文中的具体备案数量未采集，避免二次转述误差。"
+  },
+  {
+    "id": "china-open-source-ecosystem-scale",
+    "date": "2026-02",
+    "displayDate": "2026.02",
+    "datePrecision": "month",
+    "dateType": "announcement",
+    "title": "阿里开源千问模型累计下载突破十亿次",
+    "titleEn": "Qwen open models surpass one billion cumulative downloads",
+    "category": "organization",
+    "summary": "阿里在 Qwen3.5 发布时披露：累计开源超过 400 个千问系列模型，覆盖文本、图像、音频与视频；累计下载量突破 10 亿次，全球开发者基于千问创建的衍生模型超过 20 万个，覆盖 201 种语言与方言。",
+    "significance": "以下载量与衍生模型数双指标确认中国开源模型已成为全球开发者的事实基础设施，而不仅是单点技术输出；开源由此从企业策略变成可量化的产业竞争力指标。",
+    "organizations": [
+      "alibaba-qwen"
+    ],
+    "people": [],
+    "relatedModels": [
+      "qwen3-5"
+    ],
+    "chapter": 7,
+    "sources": [
+      {
+        "label": "阿里巴巴集团 — Qwen3.5：为效率而生的原生多模态模型（含开源规模数据）",
+        "url": "https://www.alibabagroup.com/zh-HK/document-1960233590314762240",
+        "kind": "official"
+      }
+    ],
+    "verificationStatus": "verified",
+    "notes": "官方新闻稿日期为 2026-02-16；本条的「10 亿次下载」为阿里单方披露口径。"
+  },
+  {
+    "id": "openai-retire-gpt4o-2026",
+    "date": "2026-02-13",
+    "displayDate": "2026.02.13",
+    "datePrecision": "day",
+    "dateType": "product",
+    "title": "OpenAI 从 ChatGPT 下线 GPT-4o 与 GPT-5 等旧模型",
+    "titleEn": "Retiring GPT-4o and Older Models",
+    "category": "product",
+    "summary": "OpenAI 按预告从 ChatGPT 下线 GPT-4o、GPT-4.1、GPT-4.1 mini、o4-mini 以及 GPT-5 的 Instant 与 Thinking 版本，API 侧暂不受影响。官方理由是旧模型使用量有限，需要把资源集中到更新的旗舰与推理模型上，官方建议用户迁移到当前默认模型。",
+    "significance": "模型生命周期被压到一年以内，用户依赖的模型会定期消失，迁移与版本锁定成为应用层必须规划的成本。",
+    "organizations": [
+      "openai"
+    ],
+    "people": [],
+    "relatedModels": [
+      "gpt-5",
+      "gpt-4-1"
+    ],
+    "chapter": 7,
+    "sources": [
+      {
+        "label": "OpenAI — Model Release Notes",
+        "url": "https://help.openai.com/en/articles/9624314-model-release-notes",
+        "kind": "official"
+      },
+      {
+        "label": "OpenAI — Retiring GPT-4o and older models",
+        "url": "https://openai.com/index/retiring-gpt-4o-and-older-models/",
+        "kind": "official"
+      }
+    ],
+    "verificationStatus": "verified",
+    "notes": null
+  },
+  {
+    "id": "anthropic-project-glasswing-2026",
+    "date": "2026-04",
+    "displayDate": "2026.04",
+    "datePrecision": "month",
+    "dateType": "announcement",
+    "title": "Anthropic 启动 Project Glasswing 受控发布机制",
+    "titleEn": "Project Glasswing",
+    "category": "system",
+    "summary": "Anthropic 启动 Project Glasswing，把首个 Mythos 级模型 Claude Mythos Preview 只提供给少数网络防御方与关键软件基础设施提供方，并与美国政府协作推进。官方明确表示此类模型具备真实攻击性能力，只有在防护手段足够可靠后才会扩大分发范围。",
+    "significance": "前沿能力首次出现按等级审批的分发制度，AI 治理从使用条款扩展到对合作方资质的实质审核，合作方资质成为实质性的准入门槛。",
+    "organizations": [
+      "anthropic"
+    ],
+    "people": [],
+    "relatedModels": [
+      "claude-mythos-preview",
+      "claude-mythos-5"
+    ],
+    "chapter": 7,
+    "sources": [
+      {
+        "label": "Anthropic — Project Glasswing",
+        "url": "https://www.anthropic.com/glasswing",
+        "kind": "official"
+      },
+      {
+        "label": "Anthropic — Claude Fable 5 and Claude Mythos 5",
+        "url": "https://www.anthropic.com/news/claude-fable-5-mythos-5",
+        "kind": "official"
+      }
+    ],
+    "verificationStatus": "verified",
+    "notes": "官方页面与 Fable 5 发布页均记载该项目始于 2026 年 4 月。"
+  },
+  {
+    "id": "anthropic-fable-mythos-suspension-2026",
+    "date": "2026-06-12",
+    "displayDate": "2026.06.12",
+    "datePrecision": "day",
+    "dateType": "product",
+    "title": "Anthropic 暂停 Claude Fable 5 与 Mythos 5 访问",
+    "titleEn": "Claude Mythos 5 and Fable 5 Access Unavailable",
+    "category": "organization",
+    "summary": "Anthropic 在 Fable 5 与 Mythos 5 开放后不久宣布暂停两者的访问，向用户致歉并表示正在尽快恢复，未在公告中详述原因。此次中断发生在模型刚进入公开可用阶段的数日内，属于前沿模型发布后少见的中途撤回。",
+    "significance": "说明极高性能模型的发布不再是单向事件，运行期问题或安全评估可以导致已上线服务被整体撤回。",
+    "organizations": [
+      "anthropic"
+    ],
+    "people": [],
+    "relatedModels": [
+      "claude-fable-5",
+      "claude-mythos-5"
+    ],
+    "chapter": 7,
+    "sources": [
+      {
+        "label": "Anthropic — Claude Mythos 5 and Fable 5 access unavailable",
+        "url": "https://www.anthropic.com/news/fable-mythos-access",
+        "kind": "official"
+      }
+    ],
+    "verificationStatus": "verified",
+    "notes": null
+  },
+  {
+    "id": "anthropic-fable-mythos-redeploy-2026",
+    "date": "2026-07-01",
+    "displayDate": "2026.07.01",
+    "datePrecision": "day",
+    "dateType": "product",
+    "title": "Claude Fable 5 与 Mythos 5 恢复上线",
+    "titleEn": "Claude Mythos 5 and Fable 5 Redeployed",
+    "category": "organization",
+    "summary": "Anthropic 宣布 Fable 5 与 Mythos 5 重新可用，结束了 6 月 12 日开始的访问中断。恢复后两者继续按原有定价与访问规则提供，Mythos 5 仍限于受信任访问计划内的机构，官方未公布中断原因的更多细节。",
+    "significance": "撤回与恢复之间不到三周，表明受控发布机制具备可回滚的操作性，安全干预可以快速执行而不必永久下线。",
+    "organizations": [
+      "anthropic"
+    ],
+    "people": [],
+    "relatedModels": [
+      "claude-fable-5",
+      "claude-mythos-5"
+    ],
+    "chapter": 7,
+    "sources": [
+      {
+        "label": "Anthropic — Claude Mythos 5 and Fable 5 redeployed",
+        "url": "https://www.anthropic.com/news/redeploying-fable-5",
+        "kind": "official"
+      }
+    ],
+    "verificationStatus": "verified",
+    "notes": null
+  },
+  {
+    "id": "anthropic-public-benefit-fund-2026",
+    "date": "2026-10-18",
+    "displayDate": "2026.10.18",
+    "datePrecision": "day",
+    "dateType": "announcement",
+    "title": "Anthropic 设立公共利益基金",
+    "titleEn": "Investing in the Public Benefit",
+    "category": "organization",
+    "summary": "Anthropic 宣布把公司一部分股份划入新设立的 Anthropic Public Benefit Fund，并设计为随公司成长而扩大的结构。该基金被定位为与公司使命绑定的长期公益载体，用于把公司价值增长的一部分定向投入公共利益。",
+    "significance": "前沿实验室开始用股权结构而非利润捐赠来承诺公共责任，治理设计本身成为 AI 公司竞争叙事的一部分。",
+    "organizations": [
+      "anthropic"
+    ],
+    "people": [],
+    "relatedModels": [],
+    "chapter": 7,
+    "sources": [
+      {
+        "label": "Anthropic — Investing in the public benefit",
+        "url": "https://www.anthropic.com/news/public-benefit-fund",
+        "kind": "official"
+      }
+    ],
+    "verificationStatus": "verified",
+    "notes": null
+  },
+  {
+    "id": "anthropic-s1-ipo-2026",
+    "date": "2026-10-26",
+    "displayDate": "2026.10.26",
+    "datePrecision": "day",
+    "dateType": "announcement",
+    "title": "Anthropic 向美国 SEC 提交 IPO 注册文件",
+    "titleEn": "Anthropic Files S-1 for Proposed IPO",
+    "category": "organization",
+    "summary": "Anthropic 宣布已就拟议的首次公开募股向美国证券交易委员会提交 S-1 注册声明，涉及 A 类普通股。这意味着公司从闭门的公益公司转向需要按季披露财务状况的公众公司，此前它已完成多轮超大额融资。",
+    "significance": "前沿实验室进入资本市场公开监督阶段，研发投入与安全支出的可持续性将首次接受公开财务口径的检验。",
+    "organizations": [
+      "anthropic"
+    ],
+    "people": [],
+    "relatedModels": [],
+    "chapter": 7,
+    "sources": [
+      {
+        "label": "Anthropic — Anthropic files S-1 with the SEC",
+        "url": "https://www.anthropic.com/news/s1-sec",
+        "kind": "official"
+      }
+    ],
+    "verificationStatus": "verified",
+    "notes": null
+  },
+  {
+    "id": "openai-model-spec-2026-10-29",
+    "date": "2026-10-29",
+    "displayDate": "2026.10.29",
+    "datePrecision": "day",
+    "dateType": "policy",
+    "title": "OpenAI 重构模型规范为五项价值",
+    "titleEn": "Updates to the OpenAI Model Spec",
+    "category": "theory",
+    "summary": "OpenAI 改写模型规范，把指导原则重组为忠实于人类意图、最小化伤害、诚实与透明、人类能动性、关怀五项价值，并新增关于上下文、记忆、个性化、人类能动性与监督的指引。规范同时把模型统称为「GPT」而非「the assistant」，反映其使用范围已超出对话助手。",
+    "significance": "模型行为的公共文本开始围绕难以量化的价值而非规则清单组织，命名变化也承认了助手定位已被 Agent 取代。",
+    "organizations": [
+      "openai"
+    ],
+    "people": [],
+    "relatedModels": [],
+    "chapter": 7,
+    "sources": [
+      {
+        "label": "OpenAI — Model Release Notes (Model Spec update, October 29, 2026)",
+        "url": "https://help.openai.com/en/articles/9624314-model-release-notes",
+        "kind": "official"
+      },
+      {
+        "label": "OpenAI — Model Spec 2026-10-29",
+        "url": "https://model-spec.openai.com/2026-10-29.html",
+        "kind": "official"
+      }
+    ],
+    "verificationStatus": "verified",
+    "notes": null
+  },
+  {
+    "id": "openai-gpt6-rosalind-research-2026",
+    "date": "2026-10-30",
+    "displayDate": "2026.10.30",
+    "datePrecision": "day",
+    "dateType": "product",
+    "title": "OpenAI 推出面向生命科学的 GPT-6 Rosalind Research",
+    "titleEn": "GPT-6 Rosalind Research",
+    "category": "science",
+    "summary": "OpenAI 把 GPT-6 的推理能力引入多步生命科学研究，推出受审核的 Rosalind Research 访问通道，附带为生物工作设计的安全措施。使用需通过机构审批与授权用户名单，企业工作区默认关闭并先经历管理员预览，Rosalind Discovery 仍停留在 5.5 系列。",
+    "significance": "科研场景的模型准入从个人订阅转为机构许可，同一基座按用途分壳发布开始成为前沿实验室的标准做法。",
+    "organizations": [
+      "openai"
+    ],
+    "people": [],
+    "relatedModels": [
+      "gpt-6-rosalind-research",
+      "gpt-6-astra"
+    ],
+    "chapter": 7,
+    "sources": [
+      {
+        "label": "OpenAI — Model Release Notes (GPT-6 Rosalind Research, October 30, 2026)",
+        "url": "https://help.openai.com/en/articles/9624314-model-release-notes",
+        "kind": "official"
+      }
+    ],
+    "verificationStatus": "verified",
+    "notes": null
+  }
+]

@@ -1,0 +1,3166 @@
+{
+  "models": [
+    {
+      "id": "openai-o3-mini",
+      "name": "OpenAI o3-mini",
+      "organization": "openai",
+      "countryOrRegion": "US",
+      "family": "o-series",
+      "generation": "o3-mini",
+      "announcementDate": "2025-01-31",
+      "availabilityDate": "2025-01-31",
+      "displayDate": "2025.01.31",
+      "datePrecision": "day",
+      "dateType": "product",
+      "category": "reasoning",
+      "tags": [
+        "推理模型",
+        "成本效率",
+        "Coding"
+      ],
+      "openWeights": false,
+      "architecture": "未公开（闭源）",
+      "parameters": null,
+      "contextWindow": null,
+      "capabilities": [
+        "结构化输出",
+        "函数调用",
+        "可调推理强度"
+      ],
+      "summary": "o3-mini 把 o 系列的思维链推理下放到低成本档位，在 API 中支持结构化输出、函数调用与流式返回，并提供低、中、高三档推理强度。它在数学、代码与科学题上接近 o1 的水平，但延迟和价格显著下降，同时首次让推理模型与联网搜索结合。",
+      "keyAdvancement": "把长思考推理从高价旗舰下推到可批量调用的价位，并用三档推理强度把「思考多久」变成可调参数。",
+      "significance": "推理能力开始按成本分层供给，Agent 与批量代码任务第一次有了可负担的推理底座，为同年 o3 与 o4-mini 的密集发布铺路。",
+      "predecessors": [],
+      "successors": [
+        "openai-o4-mini"
+      ],
+      "sources": [
+        {
+          "label": "OpenAI — Model Release Notes",
+          "url": "https://help.openai.com/en/articles/9624314-model-release-notes",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": "发布日期可从 OpenAI 官方发布说明正文直接读到。"
+    },
+    {
+      "id": "gpt-4-5",
+      "name": "GPT-4.5",
+      "organization": "openai",
+      "countryOrRegion": "US",
+      "family": "GPT",
+      "generation": "4.5",
+      "announcementDate": "2025-02-27",
+      "availabilityDate": "2025-02-27",
+      "displayDate": "2025.02.27",
+      "datePrecision": "day",
+      "dateType": "announcement",
+      "category": "language",
+      "tags": [
+        "预训练缩放",
+        "研究预览",
+        "对话"
+      ],
+      "openWeights": false,
+      "architecture": "未公开（闭源）",
+      "parameters": null,
+      "contextWindow": null,
+      "capabilities": [
+        "知识广度",
+        "意图跟随",
+        "写作与编程"
+      ],
+      "summary": "GPT-4.5 是研究预览版，路线是继续放大无监督预训练与后训练，而不依赖推理时的思维链。官方称其为当时最大的对话模型，知识面更广、更擅长理解用户意图、幻觉更少，写作与编程体验更自然，但推理能力弱于同期 o 系列。",
+      "keyAdvancement": "证明单纯扩大预训练与后训练仍能换来更好的直觉、知识覆盖与对话质量，与推理时计算形成两条并行路线。",
+      "significance": "它是「预训练缩放」路线在 2025 年的最后一次大规模公开实验；此后旗舰模型的性能增量主要来自强化学习与推理时计算，而非参数堆叠。",
+      "predecessors": [],
+      "successors": [
+        "gpt-5"
+      ],
+      "sources": [
+        {
+          "label": "OpenAI — Introducing GPT-4.5",
+          "url": "https://openai.com/index/introducing-gpt-4-5/",
+          "kind": "official"
+        },
+        {
+          "label": "OpenAI — Model Release Notes",
+          "url": "https://help.openai.com/en/articles/9624314-model-release-notes",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": "研究预览，仅向 Pro 用户与 API 开放；2026-06-27 从 ChatGPT 退役。"
+    },
+    {
+      "id": "gpt-4-1",
+      "name": "GPT-4.1",
+      "organization": "openai",
+      "countryOrRegion": "US",
+      "family": "GPT",
+      "generation": "4.1",
+      "announcementDate": "2025-04-14",
+      "availabilityDate": "2025-04-14",
+      "displayDate": "2025.04.14",
+      "datePrecision": "day",
+      "dateType": "api",
+      "category": "coding",
+      "tags": [
+        "Coding",
+        "长上下文",
+        "指令跟随"
+      ],
+      "openWeights": false,
+      "architecture": "未公开（闭源）",
+      "parameters": null,
+      "contextWindow": "100 万 tokens",
+      "capabilities": [
+        "代码生成",
+        "前端开发",
+        "精确指令跟随"
+      ],
+      "summary": "GPT-4.1 先在 API 发布，主打编码与指令跟随，支持百万级 token 上下文。相比 GPT-4o，它在补丁式代码修改、前端页面还原和多轮工具调用上更稳，且官方给出更低的单位成本。5 月起进入 ChatGPT 付费档。",
+      "keyAdvancement": "把百万 token 上下文与更强的精确指令跟随结合，使「读完整仓库再改代码」成为可用的默认工作方式，并同时压低单位 token 成本。",
+      "significance": "长上下文从演示指标变成工程默认值，直接支撑了同年晚些时候 Codex 类编码 Agent 的上下文策略，这直接改变了代码库级工具的设计假设。",
+      "predecessors": [],
+      "successors": [
+        "gpt-5-codex"
+      ],
+      "sources": [
+        {
+          "label": "OpenAI — Introducing GPT-4.1",
+          "url": "https://openai.com/index/gpt-4-1/",
+          "kind": "official"
+        },
+        {
+          "label": "OpenAI — Model Release Notes",
+          "url": "https://help.openai.com/en/articles/9624314-model-release-notes",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": "API 首发 2025-04-14；ChatGPT 上线 2025-05-14（官方发布说明有记载）。2026-02-13 从 ChatGPT 退役。"
+    },
+    {
+      "id": "openai-o3",
+      "name": "OpenAI o3",
+      "organization": "openai",
+      "countryOrRegion": "US",
+      "family": "o-series",
+      "generation": "o3",
+      "announcementDate": "2025-04-16",
+      "availabilityDate": "2025-04-16",
+      "displayDate": "2025.04.16",
+      "datePrecision": "day",
+      "dateType": "announcement",
+      "category": "reasoning",
+      "tags": [
+        "推理模型",
+        "工具调用",
+        "视觉推理"
+      ],
+      "openWeights": false,
+      "architecture": "未公开（闭源）",
+      "parameters": null,
+      "contextWindow": null,
+      "capabilities": [
+        "多步推理",
+        "图像与图表分析",
+        "Python 工具调用"
+      ],
+      "summary": "o3 把思维链推理与工具调用合成一个模型：它会在思考过程中调用搜索、Python 与图像分析，并把中间结论写进推理链。官方称其在 Codeforces、SWE-bench 与 MMMU 上达到当时最好水平，外部专家评审中重大错误比 o1 少约两成。",
+      "keyAdvancement": "推理过程与工具调用交织，模型可在思考中途取数、跑代码、看图表，再基于结果继续推理，从而把推理变成可被检索与验证的搜索过程。",
+      "significance": "确立了「推理即带工具的搜索」这一范式，Agent 的能力上限不再只取决于参数，而取决于能否在思考中调用环境。",
+      "predecessors": [
+        "openai-o3-mini"
+      ],
+      "successors": [
+        "openai-o3-pro",
+        "gpt-5"
+      ],
+      "sources": [
+        {
+          "label": "OpenAI — Introducing OpenAI o3 and o4-mini",
+          "url": "https://openai.com/index/introducing-o3-and-o4-mini/",
+          "kind": "official"
+        },
+        {
+          "label": "OpenAI — Model Release Notes",
+          "url": "https://help.openai.com/en/articles/9624314-model-release-notes",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": null
+    },
+    {
+      "id": "openai-o4-mini",
+      "name": "OpenAI o4-mini",
+      "organization": "openai",
+      "countryOrRegion": "US",
+      "family": "o-series",
+      "generation": "o4-mini",
+      "announcementDate": "2025-04-16",
+      "availabilityDate": "2025-04-16",
+      "displayDate": "2025.04.16",
+      "datePrecision": "day",
+      "dateType": "announcement",
+      "category": "reasoning",
+      "tags": [
+        "小模型",
+        "高吞吐",
+        "数学与代码"
+      ],
+      "openWeights": false,
+      "architecture": "未公开（闭源）",
+      "parameters": null,
+      "contextWindow": null,
+      "capabilities": [
+        "快速推理",
+        "数学竞赛题",
+        "视觉任务"
+      ],
+      "summary": "o4-mini 是与 o3 同日发布的小尺寸推理模型，面向高并发、高频调用的场景。官方称其单位成本下的表现在数学、编码与视觉题上超过 o3-mini，且在 AIME 2024/2025 上为当时评测最优，因而获得比 o3 宽松得多的用量配额。",
+      "keyAdvancement": "在同一代里把推理能力与成本效率解耦，小模型承担高吞吐推理，旗舰模型只处理难题，让单位成本下的推理质量成为可优化的目标。",
+      "significance": "推理模型的选型逻辑变成「按任务难度分流」，这成为此后所有厂商拆分 mini、nano 档位的模板，这一按难度分流的思路延续至今。",
+      "predecessors": [
+        "openai-o3-mini"
+      ],
+      "successors": [],
+      "sources": [
+        {
+          "label": "OpenAI — Introducing OpenAI o3 and o4-mini",
+          "url": "https://openai.com/index/introducing-o3-and-o4-mini/",
+          "kind": "official"
+        },
+        {
+          "label": "OpenAI — Model Release Notes",
+          "url": "https://help.openai.com/en/articles/9624314-model-release-notes",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": null
+    },
+    {
+      "id": "openai-o3-pro",
+      "name": "OpenAI o3-pro",
+      "organization": "openai",
+      "countryOrRegion": "US",
+      "family": "o-series",
+      "generation": "o3-pro",
+      "announcementDate": "2025-06-10",
+      "availabilityDate": "2025-06-10",
+      "displayDate": "2025.06.10",
+      "datePrecision": "day",
+      "dateType": "product",
+      "category": "reasoning",
+      "tags": [
+        "长思考",
+        "可靠性",
+        "科研"
+      ],
+      "openWeights": false,
+      "architecture": "未公开（闭源）",
+      "parameters": null,
+      "contextWindow": null,
+      "capabilities": [
+        "长时间思考",
+        "高可靠性",
+        "工具链调用"
+      ],
+      "summary": "o3-pro 与 o3 共用底层模型，但允许更长的思考时间并优先保证可靠性，取代 o1-pro 进入 Pro 与 Team 档。它可以联网搜索、分析文件、运行 Python 并调用记忆，代价是响应时间从秒级拉长到分钟级。官方称专家评审在各领域都更偏好它的答案。",
+      "keyAdvancement": "把「思考预算」本身当作产品维度：同一个权重，通过延长推理时间换取可靠性而非换权重，而不是依赖再来一次更强的训练。",
+      "significance": "推理时计算被明确商品化，模型能力开始依赖服务端愿意为单次请求分配多少算力，服务端算力分配成为能力上限的一部分。",
+      "predecessors": [
+        "openai-o3"
+      ],
+      "successors": [],
+      "sources": [
+        {
+          "label": "OpenAI — Model Release Notes",
+          "url": "https://help.openai.com/en/articles/9624314-model-release-notes",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": null
+    },
+    {
+      "id": "gpt-oss-120b",
+      "name": "gpt-oss-120b",
+      "organization": "openai",
+      "countryOrRegion": "US",
+      "family": "GPT",
+      "generation": "oss-120b",
+      "announcementDate": "2025-08-05",
+      "availabilityDate": "2025-08-05",
+      "displayDate": "2025.08.05",
+      "datePrecision": "day",
+      "dateType": "weights",
+      "category": "reasoning",
+      "tags": [
+        "开放权重",
+        "MoE",
+        "推理模型"
+      ],
+      "openWeights": true,
+      "architecture": "MoE Transformer",
+      "parameters": "约 117B total / 5.1B active",
+      "contextWindow": "128K tokens",
+      "capabilities": [
+        "思维链推理",
+        "函数调用",
+        "结构化输出"
+      ],
+      "summary": "gpt-oss-120b 是 OpenAI 自 GPT-2 之后首次发布的开放权重模型，采用 MoE 结构，可在单张高端 GPU 上运行。模型支持函数调用与结构化输出等开发者常用模式，推理链以可读文本形式输出，附带官方模型卡与安全评估。",
+      "keyAdvancement": "把 o 系列的推理训练成果以开放权重形式释放，并做到可在单卡部署的激活参数量，同时保留可读的思维链输出。",
+      "significance": "前沿实验室首次把推理模型交到本地部署者手里，改变了开放权重生态的能力基线，也让「可审计的推理链」成为可复现的研究对象。",
+      "predecessors": [],
+      "successors": [],
+      "sources": [
+        {
+          "label": "OpenAI — Open models",
+          "url": "https://openai.com/open-models/",
+          "kind": "official"
+        },
+        {
+          "label": "OpenAI — Model Release Notes",
+          "url": "https://help.openai.com/en/articles/9624314-model-release-notes",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": "参数量与上下文长度取自官方模型卡与发布说明。"
+    },
+    {
+      "id": "gpt-5",
+      "name": "GPT-5",
+      "organization": "openai",
+      "countryOrRegion": "US",
+      "family": "GPT",
+      "generation": "5",
+      "announcementDate": "2025-08-07",
+      "availabilityDate": "2025-08-07",
+      "displayDate": "2025.08.07",
+      "datePrecision": "day",
+      "dateType": "announcement",
+      "category": "reasoning",
+      "tags": [
+        "统一系统",
+        "路由",
+        "Agent"
+      ],
+      "openWeights": false,
+      "architecture": "未公开（闭源）",
+      "parameters": null,
+      "contextWindow": null,
+      "capabilities": [
+        "自动模型路由",
+        "深度推理",
+        "工具与代码执行"
+      ],
+      "summary": "GPT-5 不再是单一模型，而是一个带路由器的统一系统：由快速模型处理常规请求，遇到难题再切换到思考更久的推理版本，用户无需手动选型。官方称其显著降低幻觉与谄媚倾向，并在编码、数学与健康问答上提升可靠性。",
+      "keyAdvancement": "把「选哪个模型」交给服务端路由，用系统而非权重来同时交付速度、成本与推理深度，并以此缓和单模型难以兼得深度与速度的矛盾。",
+      "significance": "模型发布从「一个新权重」变成「一套调度策略」，此后旗舰版本号更多标记的是路由与训练配方，而非单一网络。",
+      "predecessors": [
+        "gpt-4-5",
+        "openai-o3"
+      ],
+      "successors": [
+        "gpt-5-1"
+      ],
+      "sources": [
+        {
+          "label": "OpenAI — Introducing GPT-5",
+          "url": "https://openai.com/index/introducing-gpt-5/",
+          "kind": "official"
+        },
+        {
+          "label": "OpenAI — Model Release Notes",
+          "url": "https://help.openai.com/en/articles/9624314-model-release-notes",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": "2026-02-13 从 ChatGPT 退役。"
+    },
+    {
+      "id": "gpt-5-codex",
+      "name": "GPT-5-Codex",
+      "organization": "openai",
+      "countryOrRegion": "US",
+      "family": "GPT",
+      "generation": "5-codex",
+      "announcementDate": "2025-09-15",
+      "availabilityDate": "2025-09-15",
+      "displayDate": "2025.09.15",
+      "datePrecision": "day",
+      "dateType": "product",
+      "category": "coding",
+      "tags": [
+        "编码 Agent",
+        "长任务",
+        "图像输入"
+      ],
+      "openWeights": false,
+      "architecture": "未公开（闭源）",
+      "parameters": null,
+      "contextWindow": null,
+      "capabilities": [
+        "仓库级重构",
+        "代码审查",
+        "截图驱动前端开发"
+      ],
+      "summary": "GPT-5-Codex 是 GPT-5 针对 Agent 式编码调优的变体，作为 Codex 云端任务与代码审查的默认模型，也可在 CLI 与 IDE 插件中选用。它能接受截图或设计稿作为输入来做前端还原，并支持长时间独立运行的重构任务。",
+      "keyAdvancement": "从逐行补全转向可独立跑完长任务的编码 Agent，并把截图与设计稿作为常规输入，用视觉输入驱动前端还原与界面修改。",
+      "significance": "编码成为第一个被完整 Agent 化的知识工作门类，模型评测的重心也随之从单函数正确率转向多步任务完成率。",
+      "predecessors": [
+        "gpt-4-1",
+        "gpt-5"
+      ],
+      "successors": [
+        "gpt-5-1-codex-max",
+        "gpt-5-3-codex"
+      ],
+      "sources": [
+        {
+          "label": "OpenAI — Introducing upgrades to Codex",
+          "url": "https://openai.com/index/introducing-upgrades-to-codex/",
+          "kind": "official"
+        },
+        {
+          "label": "OpenAI — Model Release Notes",
+          "url": "https://help.openai.com/en/articles/9624314-model-release-notes",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": null
+    },
+    {
+      "id": "gpt-5-1",
+      "name": "GPT-5.1",
+      "organization": "openai",
+      "countryOrRegion": "US",
+      "family": "GPT",
+      "generation": "5.1",
+      "announcementDate": "2025-11-12",
+      "availabilityDate": "2025-11-12",
+      "displayDate": "2025.11.12",
+      "datePrecision": "day",
+      "dateType": "announcement",
+      "category": "language",
+      "tags": [
+        "对话质量",
+        "自适应思考",
+        "情感表达"
+      ],
+      "openWeights": false,
+      "architecture": "未公开（闭源）",
+      "parameters": null,
+      "contextWindow": null,
+      "capabilities": [
+        "自适应思考时长",
+        "更自然的对话",
+        "指令跟随"
+      ],
+      "summary": "GPT-5.1 拆成 Instant 与 Thinking 两条线，重点是对话自然度与可控性：模型会自行判断该思考多久，用户也能手动调节；回答更少套话、更愿意直接给结论。官方同时在安全侧扩展了心理健康相关的响应策略。",
+      "keyAdvancement": "把思考深度做成用户可调、模型自适应的连续谱，并用更强的语气控制压掉机械式套话，让延迟与推理深度可以按场景权衡。",
+      "significance": "推理模型的竞争从分数转向「何时不思考」，延迟与对话风格成为与能力并列的设计目标，用户可感知的部分被优先优化。",
+      "predecessors": [
+        "gpt-5"
+      ],
+      "successors": [
+        "gpt-5-2"
+      ],
+      "sources": [
+        {
+          "label": "OpenAI — GPT-5.1",
+          "url": "https://openai.com/index/gpt-5-1/",
+          "kind": "official"
+        },
+        {
+          "label": "OpenAI — Model Release Notes",
+          "url": "https://help.openai.com/en/articles/9624314-model-release-notes",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": "2026-03-11 在 ChatGPT 退役，会话自动迁移到 GPT-5.3/5.4。"
+    },
+    {
+      "id": "gpt-5-1-codex-max",
+      "name": "GPT-5.1-Codex-Max",
+      "organization": "openai",
+      "countryOrRegion": "US",
+      "family": "GPT",
+      "generation": "5.1-codex-max",
+      "announcementDate": "2025-11-19",
+      "availabilityDate": "2025-11-19",
+      "displayDate": "2025.11.19",
+      "datePrecision": "day",
+      "dateType": "product",
+      "category": "coding",
+      "tags": [
+        "压缩上下文",
+        "项目级任务",
+        "长时程"
+      ],
+      "openWeights": false,
+      "architecture": "未公开（闭源）",
+      "parameters": null,
+      "contextWindow": null,
+      "capabilities": [
+        "跨上下文窗口续跑",
+        "项目级重构",
+        "token 效率"
+      ],
+      "summary": "GPT-5.1-Codex-Max 面向跨越多个上下文窗口的项目级工作，核心机制是「压缩」：当上下文接近上限时，模型把中间状态压缩成可续读的摘要，从而在一次任务中连贯地跨越多个窗口。官方称它更快、更省 token，价格与前代 Codex 持平。",
+      "keyAdvancement": "用上下文压缩实现跨窗口续跑，让单个 Agent 任务的有效时长突破单次上下文长度限制，并把压缩后的状态当作可复用的中间产物。",
+      "significance": "长时程 Agent 的瓶颈从窗口大小转向状态压缩的质量，谁能在压缩中保住关键约束，谁就能把任务做得更长。",
+      "predecessors": [
+        "gpt-5-codex"
+      ],
+      "successors": [
+        "gpt-5-3-codex"
+      ],
+      "sources": [
+        {
+          "label": "OpenAI — GPT-5.1-Codex-Max",
+          "url": "https://openai.com/index/gpt-5-1-codex-max/",
+          "kind": "official"
+        },
+        {
+          "label": "OpenAI — Model Release Notes",
+          "url": "https://help.openai.com/en/articles/9624314-model-release-notes",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": null
+    },
+    {
+      "id": "gpt-5-2",
+      "name": "GPT-5.2",
+      "organization": "openai",
+      "countryOrRegion": "US",
+      "family": "GPT",
+      "generation": "5.2",
+      "announcementDate": "2025-12-11",
+      "availabilityDate": "2025-12-11",
+      "displayDate": "2025.12.11",
+      "datePrecision": "day",
+      "dateType": "announcement",
+      "category": "reasoning",
+      "tags": [
+        "竞争回应",
+        "推理",
+        "人格系统"
+      ],
+      "openWeights": false,
+      "architecture": "未公开（闭源）",
+      "parameters": null,
+      "contextWindow": null,
+      "capabilities": [
+        "分级思考时间",
+        "人格与语气控制",
+        "复杂推理"
+      ],
+      "summary": "GPT-5.2 在 Gemini 3 发布后不久推出，官方把它定位为推理与通用能力的整体升级，并引入可切换的思考时间档位（标准、轻量、扩展）。2026 年 1 月起，OpenAI 又为其加入人格系统提示词更新，让默认语气更随上下文变化。",
+      "keyAdvancement": "把思考时间做成显式档位开关，并把「人格」作为可独立更新的系统层与能力解耦，并把人格设定做成可独立发布的层。",
+      "significance": "版本迭代节奏被竞争对手的发布日历牵引，模型能力与人格设定开始分轨更新，前者按季度、后者按周。",
+      "predecessors": [
+        "gpt-5-1"
+      ],
+      "successors": [
+        "gpt-5-3-codex"
+      ],
+      "sources": [
+        {
+          "label": "OpenAI — Model Release Notes",
+          "url": "https://help.openai.com/en/articles/9624314-model-release-notes",
+          "kind": "official"
+        },
+        {
+          "label": "Reuters — OpenAI launches GPT-5.2 after 'code red' push to counter Gemini 3",
+          "url": "https://www.reuters.com/technology/openai-launches-gpt-52-ai-model-with-improved-capabilities-2025-12-11/",
+          "kind": "press"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": "官方发布说明确认 GPT-5.2 存在及其 2026 年初的多次更新；首发日 2025-12-11 由路透社报道与报道 URL 日期一致。"
+    },
+    {
+      "id": "gpt-5-3-codex",
+      "name": "GPT-5.3-Codex",
+      "organization": "openai",
+      "countryOrRegion": "US",
+      "family": "GPT",
+      "generation": "5.3-codex",
+      "announcementDate": "2026-02-05",
+      "availabilityDate": "2026-02-05",
+      "displayDate": "2026.02.05",
+      "datePrecision": "day",
+      "dateType": "announcement",
+      "category": "coding",
+      "tags": [
+        "统一训练栈",
+        "可干预",
+        "通用编码 Agent"
+      ],
+      "openWeights": false,
+      "architecture": "未公开（闭源）",
+      "parameters": null,
+      "contextWindow": null,
+      "capabilities": [
+        "长时程编码",
+        "运行中干预",
+        "通用任务"
+      ],
+      "summary": "GPT-5.3-Codex 首次把 Codex 与 GPT-5 两条训练栈合并为一个模型，官方称速度提升约 25%，并强调它从「代码生成器」变成可在运行中被用户中途干预、调整方向的通用编码 Agent。它也成为一个月后 GPT-5.4 的编码能力来源。",
+      "keyAdvancement": "合并专用编码栈与通用栈，使同一模型既能写代码又能承担通用推理，并支持运行时人工纠偏，使专用编码与通用推理不再需要二选一。",
+      "significance": "专用编码模型与通用模型的分野开始消失，编码能力被当作通用智能的一部分来训练，而不是单独微调的分支。",
+      "predecessors": [
+        "gpt-5-codex",
+        "gpt-5-1-codex-max"
+      ],
+      "successors": [
+        "gpt-5-4"
+      ],
+      "sources": [
+        {
+          "label": "OpenAI — Introducing GPT-5.3-Codex",
+          "url": "https://openai.com/index/introducing-gpt-5-3-codex/",
+          "kind": "official"
+        },
+        {
+          "label": "OpenAI — Model Release Notes",
+          "url": "https://help.openai.com/en/articles/9624314-model-release-notes",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": null
+    },
+    {
+      "id": "gpt-5-4",
+      "name": "GPT-5.4",
+      "organization": "openai",
+      "countryOrRegion": "US",
+      "family": "GPT",
+      "generation": "5.4",
+      "announcementDate": "2026-03-05",
+      "availabilityDate": "2026-03-05",
+      "displayDate": "2026.03.05",
+      "datePrecision": "day",
+      "dateType": "announcement",
+      "category": "agent",
+      "tags": [
+        "前置计划",
+        "深度研究",
+        "专业工作流"
+      ],
+      "openWeights": false,
+      "architecture": "未公开（闭源）",
+      "parameters": null,
+      "contextWindow": null,
+      "capabilities": [
+        "可调整的思考计划",
+        "深度网页研究",
+        "文档与表格处理"
+      ],
+      "summary": "GPT-5.4 把推理、编码与 Agent 工作流合并进单一旗舰，并复用 GPT-5.3-Codex 的编码能力。最直接的变化是它会先给出思考计划，用户可在生成过程中改方向；同时改进深度网页研究与长任务中的上下文管理，面向表格、演示与文档类职业任务。",
+      "keyAdvancement": "把计划提前暴露成可编辑对象，让人在模型执行中纠偏，而不是事后重来一轮对话，使纠偏成本从重来一轮对话降为一次编辑。",
+      "significance": "人机协作从「提问—等待—重试」变成「审计划—纠偏」，这是 Agent 可被真正纳入工作流的前提，这是 Agent 能够进入真实工作流的前提条件。",
+      "predecessors": [
+        "gpt-5-3-codex",
+        "gpt-5-2"
+      ],
+      "successors": [
+        "gpt-5-5"
+      ],
+      "sources": [
+        {
+          "label": "OpenAI — Model Release Notes",
+          "url": "https://help.openai.com/en/articles/9624314-model-release-notes",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": null
+    },
+    {
+      "id": "gpt-5-4-mini",
+      "name": "GPT-5.4 mini",
+      "organization": "openai",
+      "countryOrRegion": "US",
+      "family": "GPT",
+      "generation": "5.4-mini",
+      "announcementDate": "2026-03-18",
+      "availabilityDate": "2026-03-18",
+      "displayDate": "2026.03.18",
+      "datePrecision": "day",
+      "dateType": "product",
+      "category": "reasoning",
+      "tags": [
+        "小模型",
+        "免费档",
+        "限流回退"
+      ],
+      "openWeights": false,
+      "architecture": "未公开（闭源）",
+      "parameters": null,
+      "contextWindow": null,
+      "capabilities": [
+        "轻量推理",
+        "高吞吐",
+        "回退兜底"
+      ],
+      "summary": "GPT-5.4 mini 主要承担两件事：给 Free 与 Go 用户提供「思考」入口，以及作为付费用户 GPT-5.4 Thinking 达到限流后的自动回退模型。它不作为可选模型出现在选择器中，官方称其定位是在高负载时维持推理能力的连续性。",
+      "keyAdvancement": "小模型从独立产品变成系统内的容量缓冲层，用于在限流时无缝接管请求而非直接拒绝，而不是在高负载时直接拒绝请求。",
+      "significance": "推理服务的产品设计开始围绕配额与降级展开，模型档位成为保障体验连续性的基础设施而非卖点。",
+      "predecessors": [
+        "openai-o4-mini"
+      ],
+      "successors": [],
+      "sources": [
+        {
+          "label": "OpenAI — Introducing GPT-5.4 mini and nano",
+          "url": "https://openai.com/index/introducing-gpt-5-4-mini-and-nano/",
+          "kind": "official"
+        },
+        {
+          "label": "OpenAI — Model Release Notes",
+          "url": "https://help.openai.com/en/articles/9624314-model-release-notes",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": null
+    },
+    {
+      "id": "gpt-5-5",
+      "name": "GPT-5.5",
+      "organization": "openai",
+      "countryOrRegion": "US",
+      "family": "GPT",
+      "generation": "5.5",
+      "announcementDate": "2026-04",
+      "availabilityDate": "2026-04-24",
+      "displayDate": "2026.04",
+      "datePrecision": "month",
+      "dateType": "announcement",
+      "category": "agent",
+      "tags": [
+        "推理",
+        "科学",
+        "长任务"
+      ],
+      "openWeights": false,
+      "architecture": "未公开（闭源）",
+      "parameters": null,
+      "contextWindow": null,
+      "capabilities": [
+        "复杂推理",
+        "科研任务",
+        "Agent 执行"
+      ],
+      "summary": "GPT-5.5 于 2026 年 4 月推出，随后 GPT-5.5 Pro 进入 API，并在 5 月获得一次 Instant 更新以改善回答节奏与可读性。它在官方叙事中承担长时间科研与复杂推理任务，Rosalind 生命科学版本在 GPT-6 之前一直沿用 5.5 系列。",
+      "keyAdvancement": "把旗舰能力的重心从对话转向长时间科研与 Agent 执行，并按行业拆出专用变体以匹配不同的安全与合规要求。",
+      "significance": "旗舰模型的评价标准转向「能否独立推进数小时的专业任务」，同期 Claude Fable 5 的对照也以它为基准，评价标准随之从对话质量转向端到端任务完成度。",
+      "predecessors": [
+        "gpt-5-4"
+      ],
+      "successors": [
+        "gpt-5-6-sol"
+      ],
+      "sources": [
+        {
+          "label": "OpenAI — Introducing GPT-5.5",
+          "url": "https://openai.com/index/introducing-gpt-5-5/",
+          "kind": "official"
+        },
+        {
+          "label": "OpenAI — Model Release Notes",
+          "url": "https://help.openai.com/en/articles/9624314-model-release-notes",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": "官方页面标注 2026-04-24 GPT-5.5 / GPT-5.5 Pro 在 API 可用；首发公告只给到月份。2026-10-14 从 ChatGPT / Codex 退役。"
+    },
+    {
+      "id": "gpt-5-6-sol",
+      "name": "GPT-5.6 Sol",
+      "organization": "openai",
+      "countryOrRegion": "US",
+      "family": "GPT",
+      "generation": "5.6",
+      "announcementDate": "2026-07-09",
+      "availabilityDate": "2026-07-09",
+      "displayDate": "2026.07.09",
+      "datePrecision": "day",
+      "dateType": "announcement",
+      "category": "reasoning",
+      "tags": [
+        "旗舰推理",
+        "网络安全",
+        "计算机使用"
+      ],
+      "openWeights": false,
+      "architecture": "未公开（闭源）",
+      "parameters": null,
+      "contextWindow": null,
+      "capabilities": [
+        "复杂推理",
+        "计算机使用",
+        "设计与科研"
+      ],
+      "summary": "GPT-5.6 Sol 在 ChatGPT 中开始向付费档推送，官方称其为面向编码、研究、科学、网络安全、计算机使用与设计的旗舰推理模型。同代还有多个 5.6 家族变体按产品与套餐分别开放，免费与未登录用户不在首批范围内。",
+      "keyAdvancement": "把网络安全与计算机使用列为核心定位，从对话助手转向具备实际操作权限的高风险任务执行者。",
+      "significance": "能力越界到可执行操作之后，发布策略从「全量放开」改成按套餐与信任等级分批，安全审查开始直接影响分发节奏。",
+      "predecessors": [
+        "gpt-5-5"
+      ],
+      "successors": [
+        "gpt-6-astra"
+      ],
+      "sources": [
+        {
+          "label": "OpenAI — Model Release Notes",
+          "url": "https://help.openai.com/en/articles/9624314-model-release-notes",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": null
+    },
+    {
+      "id": "gpt-6-astra",
+      "name": "GPT-6 Astra",
+      "organization": "openai",
+      "countryOrRegion": "US",
+      "family": "GPT",
+      "generation": "6",
+      "announcementDate": "2026-09",
+      "availabilityDate": "2026-09-08",
+      "displayDate": "2026.09",
+      "datePrecision": "month",
+      "dateType": "announcement",
+      "category": "agent",
+      "tags": [
+        "新一代",
+        "Agent",
+        "推理"
+      ],
+      "openWeights": false,
+      "architecture": "未公开（闭源）",
+      "parameters": null,
+      "contextWindow": "1,050,000 tokens",
+      "capabilities": [
+        "长时程任务",
+        "专业推理",
+        "工具与终端操作"
+      ],
+      "summary": "GPT-6 Astra 是 OpenAI 官方以「新一代智能」口径发布的产品线，官方页面同时提供多语言版本。它在 ChatGPT 中通常直接显示为 GPT-6，10 月 29 日起对免费与未登录用户做了一轮更简洁、减少奉承语的更新；同期还派生出了面向生命科学的 Rosalind 变体与 6.1 系列。",
+      "keyAdvancement": "从单一对话模型扩展为可派生出行业专用变体（科研、代码）的基座，并把发布口径统一到「代际」而非单点版本。",
+      "significance": "前沿模型进入按代际命名、内部再按变体分发的阶段，命名体系本身成为产品分层与安全分级的一部分。",
+      "predecessors": [
+        "gpt-5-6-sol"
+      ],
+      "successors": [
+        "gpt-6-1-terra"
+      ],
+      "sources": [
+        {
+          "label": "OpenAI — Model Release Notes",
+          "url": "https://help.openai.com/en/articles/9624314-model-release-notes",
+          "kind": "official"
+        },
+        {
+          "label": "Amazon Bedrock — GPT-6 Astra model card (launch date: September 8, 2026)",
+          "url": "https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-openai-gpt-6-astra.html",
+          "kind": "official"
+        },
+        {
+          "label": "OpenAI — GPT-6 Astra: A new generation of intelligence",
+          "url": "https://openai.com/index/gpt-6-astra/",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": "AWS Bedrock 官方模型卡标注 Model launch date: 2026-09-08；OpenAI 官方页面无正文日期，媒体报道 2026-09-04 正式发布。此前按 2026-10-29 的 ChatGPT 更新倒推为 10 月，已按一手模型卡更正为 9 月（公告只到月，可用日单列）。"
+    },
+    {
+      "id": "gpt-6-1-terra",
+      "name": "GPT-6.1 Terra",
+      "organization": "openai",
+      "countryOrRegion": "US",
+      "family": "GPT",
+      "generation": "6.1",
+      "announcementDate": "2026-10-26",
+      "availabilityDate": "2026-10-26",
+      "displayDate": "2026.10.26",
+      "datePrecision": "day",
+      "dateType": "api",
+      "category": "multimodal",
+      "tags": [
+        "视觉推理",
+        "计算机使用",
+        "低成本"
+      ],
+      "openWeights": false,
+      "architecture": "未公开（闭源）",
+      "parameters": null,
+      "contextWindow": null,
+      "capabilities": [
+        "视觉推理",
+        "计算机使用",
+        "写作"
+      ],
+      "summary": "GPT-6.1 Terra 以 API 标识 gpt-6.1-terra 上线，同时进入 ChatGPT Work 与 Codex，但不进入普通对话。官方列出的能力包括视觉推理、计算机使用与写作，定价为每百万输入 1 美元、缓存输入 0.05 美元、输出 5 美元，并注明不支持阿联酋推理驻留。",
+      "keyAdvancement": "把视觉推理与计算机使用下放到低价档，用明显更低的单价承接原本需要旗舰模型的操作型任务。",
+      "significance": "操作型能力（看屏幕、点界面）的价格门槛被大幅拉低，Agent 从演示走向可规模化计费的日常工具，操作型能力由此具备规模化计费的条件。",
+      "predecessors": [
+        "gpt-6-astra",
+        "gpt-5-6-sol"
+      ],
+      "successors": [],
+      "sources": [
+        {
+          "label": "OpenAI — Model Release Notes (GPT-6.1 Terra, October 26, 2026)",
+          "url": "https://help.openai.com/en/articles/9624314-model-release-notes",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": null
+    },
+    {
+      "id": "gpt-6-1-sol",
+      "name": "GPT-6.1 Sol",
+      "organization": "openai",
+      "countryOrRegion": "US",
+      "family": "GPT",
+      "generation": "6.1",
+      "announcementDate": "2026-09-29",
+      "availabilityDate": "2026-09-29",
+      "displayDate": "2026.09.29",
+      "datePrecision": "day",
+      "dateType": "announcement",
+      "category": "coding",
+      "tags": [
+        "编程",
+        "多步 Agent",
+        "高性价比",
+        "1M 上下文"
+      ],
+      "openWeights": false,
+      "architecture": "未公开（闭源）",
+      "parameters": null,
+      "contextWindow": "1M tokens",
+      "capabilities": [
+        "复杂编程",
+        "多步 Agent",
+        "计算机使用",
+        "长文档理解"
+      ],
+      "summary": "GPT-6.1 Sol 于 2026 年 9 月 29 日发布，定位为面向编程与复杂任务的高性价比模型。它支持 100 万 token 上下文与 13.1 万 token 输出，可接收图像与文本输入，官方称其能在多步 Agent 工作流中检查代码库并迭代方案。",
+      "keyAdvancement": "在 GPT-6 Astra 之后推出，以约五分之一的价格提供接近前沿的编码与 Agent 能力，把 6.1 代的成本曲线整体压低。",
+      "significance": "同一代际内按「能力/成本」分层：旗舰 Astra 承担最难任务，Sol 把可用的前沿能力下放到规模化编程与业务流程，价格成为模型分层的主要变量。",
+      "predecessors": [],
+      "successors": [],
+      "sources": [
+        {
+          "label": "OpenAI — Model Release Notes",
+          "url": "https://help.openai.com/en/articles/9624314-model-release-notes",
+          "kind": "official"
+        },
+        {
+          "label": "Amazon Bedrock — GPT-6.1 Sol model card (launch date: September 29, 2026)",
+          "url": "https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-openai-gpt-6-1-sol.html",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": "AWS Bedrock 官方模型卡标注 launch date 2026-09-29、上下文 1M、最大输出 131,072 tokens，Global CRIS 定价 $2/$10 per 1M；Rai News 2026-09-29 报道其在 DevDay 发布、成本约为 Astra 的 1/5。与 GPT-6 Astra 属不同档位，不建立直接继承边。"
+    },
+    {
+      "id": "gpt-6-rosalind-research",
+      "name": "GPT-6 Rosalind Research",
+      "organization": "openai",
+      "countryOrRegion": "US",
+      "family": "GPT",
+      "generation": "6-rosalind",
+      "announcementDate": "2026-10-30",
+      "availabilityDate": "2026-10-30",
+      "displayDate": "2026.10.30",
+      "datePrecision": "day",
+      "dateType": "product",
+      "category": "science",
+      "tags": [
+        "生命科学",
+        "生物安全",
+        "审核制"
+      ],
+      "openWeights": false,
+      "architecture": "未公开（闭源）",
+      "parameters": null,
+      "contextWindow": null,
+      "capabilities": [
+        "多步科研推理",
+        "生物安全工作流"
+      ],
+      "summary": "GPT-6 Rosalind Research 把 GPT-6 的推理能力用于多步生命科学研究，并配套为生物工作设计的安全措施。它只向通过 Rosalind Research 审批的组织与授权用户开放，进入 Work、Codex 与 API（标识 gpt-6-rosalind），不进入对话标签页；企业工作区默认关闭并先经历两周管理员预览。",
+      "keyAdvancement": "把前沿模型按用途切片，用机构级审批与默认关闭替代统一开放，形成「同一基座、不同安全壳」的分发方式。",
+      "significance": "高风险科研场景的准入从用户级同意升级为组织级审核，模型分发开始出现类似受控物资的许可制度。",
+      "predecessors": [
+        "gpt-6-astra",
+        "gpt-5-5"
+      ],
+      "successors": [],
+      "sources": [
+        {
+          "label": "OpenAI — Model Release Notes (GPT-6 Rosalind Research)",
+          "url": "https://help.openai.com/en/articles/9624314-model-release-notes",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": null
+    },
+    {
+      "id": "claude-opus-4",
+      "name": "Claude Opus 4",
+      "organization": "anthropic",
+      "countryOrRegion": "US",
+      "family": "Claude",
+      "generation": "4",
+      "announcementDate": "2025-05-22",
+      "availabilityDate": "2025-05-22",
+      "displayDate": "2025.05.22",
+      "datePrecision": "day",
+      "dateType": "announcement",
+      "category": "coding",
+      "tags": [
+        "编码",
+        "长时程 Agent",
+        "混合推理"
+      ],
+      "openWeights": false,
+      "architecture": "未公开（闭源）",
+      "parameters": null,
+      "contextWindow": "200K tokens",
+      "capabilities": [
+        "仓库级编码",
+        "长任务执行",
+        "工具使用"
+      ],
+      "summary": "Claude Opus 4 与 Sonnet 4 同日发布，引入可在即时回答与扩展思考之间切换的混合推理模式。Opus 4 定位长时间运行的编码 Agent，官方强调它能在单次任务中持续工作数小时、跨文件重构代码，并配套发布 Claude Code 与工具使用能力。",
+      "keyAdvancement": "把「连续工作数小时」当成核心指标，用混合推理让模型在需要时展开长思考、不需要时保持低延迟。",
+      "significance": "编码 Agent 从辅助补全变成可独立承担工程的执行者，Anthropic 也由此把产品重心转向 Claude Code 这类终端工具，终端工具成为主要的交付界面。",
+      "predecessors": [],
+      "successors": [
+        "claude-opus-4-1"
+      ],
+      "sources": [
+        {
+          "label": "Anthropic — Introducing Claude 4",
+          "url": "https://www.anthropic.com/news/claude-4",
+          "kind": "official"
+        },
+        {
+          "label": "Anthropic — Model system cards",
+          "url": "https://www.anthropic.com/system-cards",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": null
+    },
+    {
+      "id": "claude-sonnet-4",
+      "name": "Claude Sonnet 4",
+      "organization": "anthropic",
+      "countryOrRegion": "US",
+      "family": "Claude",
+      "generation": "4",
+      "announcementDate": "2025-05-22",
+      "availabilityDate": "2025-05-22",
+      "displayDate": "2025.05.22",
+      "datePrecision": "day",
+      "dateType": "announcement",
+      "category": "coding",
+      "tags": [
+        "均衡档",
+        "编码",
+        "Agent"
+      ],
+      "openWeights": false,
+      "architecture": "未公开（闭源）",
+      "parameters": null,
+      "contextWindow": "200K tokens",
+      "capabilities": [
+        "编码",
+        "工具调用",
+        "成本均衡"
+      ],
+      "summary": "Claude Sonnet 4 与 Opus 4 同架构家族但走性价比路线，在编码与 Agent 任务上接近旗舰表现而成本更低，成为大量第三方编码工具与 Agent 框架的默认模型。它同样支持混合推理模式与工具调用。",
+      "keyAdvancement": "把旗舰级编码与工具能力压到中档价格，使 Agent 应用可以按高频调用而非演示来设计，而不必以旗舰价格换取可用性。",
+      "significance": "中档模型承担了绝大多数真实 Agent 流量，决定生态默认集成的不是峰值分数，而是每任务成本与稳定供给。",
+      "predecessors": [],
+      "successors": [
+        "claude-sonnet-4-5"
+      ],
+      "sources": [
+        {
+          "label": "Anthropic — Introducing Claude 4",
+          "url": "https://www.anthropic.com/news/claude-4",
+          "kind": "official"
+        },
+        {
+          "label": "Anthropic — Model system cards",
+          "url": "https://www.anthropic.com/system-cards",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": null
+    },
+    {
+      "id": "claude-opus-4-1",
+      "name": "Claude Opus 4.1",
+      "organization": "anthropic",
+      "countryOrRegion": "US",
+      "family": "Claude",
+      "generation": "4.1",
+      "announcementDate": "2025-08-05",
+      "availabilityDate": "2025-08-05",
+      "displayDate": "2025.08.05",
+      "datePrecision": "day",
+      "dateType": "announcement",
+      "category": "coding",
+      "tags": [
+        "增量升级",
+        "编码",
+        "研究"
+      ],
+      "openWeights": false,
+      "architecture": "未公开（闭源）",
+      "parameters": null,
+      "contextWindow": "200K tokens",
+      "capabilities": [
+        "多文件重构",
+        "研究型分析",
+        "Agent 任务"
+      ],
+      "summary": "Claude Opus 4.1 是 Opus 4 的增量升级，官方口径集中在多文件代码重构、研究型分析与 Agent 任务的提升，价格与上下文规格保持不变。它属于小步快跑式更新，用于在 Sonnet 4.5 之前维持旗舰档的竞争力。",
+      "keyAdvancement": "在保持价格不变的前提下提升复杂重构的成功率，把迭代重点放在可靠完成任务而非刷新分数。",
+      "significance": "版本号的小数位开始承载「同一架构下的持续训练改进」，模型迭代周期压缩到以月计，持续训练取代了等待下一代架构的漫长周期。",
+      "predecessors": [
+        "claude-opus-4"
+      ],
+      "successors": [
+        "claude-opus-4-5"
+      ],
+      "sources": [
+        {
+          "label": "Anthropic — Claude Opus 4.1",
+          "url": "https://www.anthropic.com/news/claude-opus-4-1",
+          "kind": "official"
+        },
+        {
+          "label": "Anthropic — Model system cards",
+          "url": "https://www.anthropic.com/system-cards",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": null
+    },
+    {
+      "id": "claude-sonnet-4-5",
+      "name": "Claude Sonnet 4.5",
+      "organization": "anthropic",
+      "countryOrRegion": "US",
+      "family": "Claude",
+      "generation": "4.5",
+      "announcementDate": "2025-09-29",
+      "availabilityDate": "2025-09-29",
+      "displayDate": "2025.09.29",
+      "datePrecision": "day",
+      "dateType": "announcement",
+      "category": "agent",
+      "tags": [
+        "编码",
+        "计算机使用",
+        "长时程 Agent"
+      ],
+      "openWeights": false,
+      "architecture": "未公开（闭源）",
+      "parameters": null,
+      "contextWindow": "200K tokens / 1M tokens（测试版）",
+      "capabilities": [
+        "长时程编码",
+        "计算机使用",
+        "上下文压缩"
+      ],
+      "summary": "Claude Sonnet 4.5 在编码与 Agent 任务上对标同代旗舰，引入可选的百万 token 上下文测试版与更强的计算机使用能力。官方同时强调其在长时间任务中的稳定性，并把它设为 Claude Code 的推荐模型，配套扩展了检查点与开发者工具。",
+      "keyAdvancement": "把百万级上下文与计算机使用同时下放到中档模型，并让 Agent 能在跨窗口任务中维持状态，使长任务不再被单次上下文窗口截断。",
+      "significance": "长上下文与图形界面操作不再是旗舰专属，Agent 应用的成本结构因此重排，中档模型成为主流选择，中档模型因此成为大多数 Agent 应用的实际选择。",
+      "predecessors": [
+        "claude-sonnet-4"
+      ],
+      "successors": [
+        "claude-sonnet-4-6"
+      ],
+      "sources": [
+        {
+          "label": "Anthropic — Claude Sonnet 4.5",
+          "url": "https://www.anthropic.com/news/claude-sonnet-4-5",
+          "kind": "official"
+        },
+        {
+          "label": "Anthropic — Model system cards",
+          "url": "https://www.anthropic.com/system-cards",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": null
+    },
+    {
+      "id": "claude-haiku-4-5",
+      "name": "Claude Haiku 4.5",
+      "organization": "anthropic",
+      "countryOrRegion": "US",
+      "family": "Claude",
+      "generation": "4.5",
+      "announcementDate": "2025-10-15",
+      "availabilityDate": "2025-10-15",
+      "displayDate": "2025.10.15",
+      "datePrecision": "day",
+      "dateType": "announcement",
+      "category": "agent",
+      "tags": [
+        "小模型",
+        "子 Agent",
+        "低延迟"
+      ],
+      "openWeights": false,
+      "architecture": "未公开（闭源）",
+      "parameters": null,
+      "contextWindow": "200K tokens",
+      "capabilities": [
+        "低延迟编码",
+        "子 Agent 并行",
+        "计算机使用"
+      ],
+      "summary": "Claude Haiku 4.5 定位高并发小模型，官方强调其在编码与计算机使用上的性价比，适合作为子 Agent 并行调用。它让多 Agent 架构可以把探索、验证、检索等子任务交给廉价模型，只把决策留给旗舰档。",
+      "keyAdvancement": "小模型具备可用的编码与操作能力，使「多 Agent 并行」从昂贵实验变成可负担的常规架构，并行执行不再需要支付旗舰预算。",
+      "significance": "Agent 系统开始以分工而非单模型堆算力扩展，小模型在架构中的角色从降级兜底变为并行执行单元。",
+      "predecessors": [],
+      "successors": [
+        "claude-haiku-5-5"
+      ],
+      "sources": [
+        {
+          "label": "Anthropic — Claude Haiku 4.5",
+          "url": "https://www.anthropic.com/news/claude-haiku-4-5",
+          "kind": "official"
+        },
+        {
+          "label": "Anthropic — Model system cards",
+          "url": "https://www.anthropic.com/system-cards",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": null
+    },
+    {
+      "id": "claude-opus-4-5",
+      "name": "Claude Opus 4.5",
+      "organization": "anthropic",
+      "countryOrRegion": "US",
+      "family": "Claude",
+      "generation": "4.5",
+      "announcementDate": "2025-11-24",
+      "availabilityDate": "2025-11-24",
+      "displayDate": "2025.11.24",
+      "datePrecision": "day",
+      "dateType": "announcement",
+      "category": "agent",
+      "tags": [
+        "Agent",
+        "编码",
+        "效率"
+      ],
+      "openWeights": false,
+      "architecture": "未公开（闭源）",
+      "parameters": null,
+      "contextWindow": "200K tokens",
+      "capabilities": [
+        "长时间自主执行",
+        "代码审查",
+        "工具编排"
+      ],
+      "summary": "Claude Opus 4.5 是 2025 年末的旗舰更新，官方重点放在长时间自主执行、跨工具编排与单位任务成本下降，并被设为 Claude Code 的默认旗舰。它延续混合推理与检查点机制，在编码基准上对同期竞品形成直接对标。",
+      "keyAdvancement": "以「完成一个长任务的总成本」为优化目标，同时提升自主执行时长与 token 效率，并把效率提升直接写进发布口径本身。",
+      "significance": "旗舰模型的竞争指标从单次回答质量转为端到端任务成本，为 2026 年整代的效率竞赛定下基调，效率竞赛由此成为 2026 年的主线。",
+      "predecessors": [
+        "claude-opus-4-1"
+      ],
+      "successors": [
+        "claude-opus-4-6"
+      ],
+      "sources": [
+        {
+          "label": "Anthropic — Claude Opus 4.5",
+          "url": "https://www.anthropic.com/news/claude-opus-4-5",
+          "kind": "official"
+        },
+        {
+          "label": "Anthropic — Model system cards",
+          "url": "https://www.anthropic.com/system-cards",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": null
+    },
+    {
+      "id": "claude-opus-4-6",
+      "name": "Claude Opus 4.6",
+      "organization": "anthropic",
+      "countryOrRegion": "US",
+      "family": "Claude",
+      "generation": "4.6",
+      "announcementDate": "2026-02",
+      "availabilityDate": null,
+      "displayDate": "2026.02",
+      "datePrecision": "month",
+      "dateType": "announcement",
+      "category": "agent",
+      "tags": [
+        "Agent",
+        "长任务",
+        "编码"
+      ],
+      "openWeights": false,
+      "architecture": "未公开（闭源）",
+      "parameters": null,
+      "contextWindow": null,
+      "capabilities": [
+        "长时程任务",
+        "编码",
+        "工具调用"
+      ],
+      "summary": "Claude Opus 4.6 与 Sonnet 4.6 同月发布，是 2026 年初 Anthropic 的主线旗舰更新。官方后续文档把它作为对照基线：Fable 5 的安全降级策略会把部分请求回退到 Opus 4.8，而 Opus 4.6 被明确标注为不带阻断式网络安全防护的版本。",
+      "keyAdvancement": "在持续提升长任务完成度的同时，开始把安全防护配置本身作为版本差异的一部分来标注，防护配置因此需要在文档中单独说明。",
+      "significance": "同一代模型出现「有无某类安全壳」的并行版本，模型发布文档开始需要说明防护配置而不只是能力。",
+      "predecessors": [
+        "claude-opus-4-5"
+      ],
+      "successors": [
+        "claude-opus-4-7"
+      ],
+      "sources": [
+        {
+          "label": "Anthropic — Claude Opus 4.6",
+          "url": "https://www.anthropic.com/news/claude-opus-4-6",
+          "kind": "official"
+        },
+        {
+          "label": "Anthropic — Model system cards",
+          "url": "https://www.anthropic.com/system-cards",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": "官方系统卡页只给到月份（February 2026），故日期精度为月。"
+    },
+    {
+      "id": "claude-sonnet-4-6",
+      "name": "Claude Sonnet 4.6",
+      "organization": "anthropic",
+      "countryOrRegion": "US",
+      "family": "Claude",
+      "generation": "4.6",
+      "announcementDate": "2026-02",
+      "availabilityDate": null,
+      "displayDate": "2026.02",
+      "datePrecision": "month",
+      "dateType": "announcement",
+      "category": "agent",
+      "tags": [
+        "均衡档",
+        "Agent",
+        "编码"
+      ],
+      "openWeights": false,
+      "architecture": "未公开（闭源）",
+      "parameters": null,
+      "contextWindow": null,
+      "capabilities": [
+        "编码",
+        "Agent 任务",
+        "成本均衡"
+      ],
+      "summary": "Claude Sonnet 4.6 与 Opus 4.6 同月发布，延续中档模型承担大部分 Agent 流量的定位，在编码与工具调用上对标上代旗舰。它是 Sonnet 5 之前的中档主力，也承接了大量第三方编码工具的默认模型位。",
+      "keyAdvancement": "把上代旗舰的能力继续下压到中档，使同等预算下的 Agent 任务吞吐再提高一档，同时保持中档价位的可预测性。",
+      "significance": "中档模型的能力滞后旗舰约半年成为稳定规律，这决定了应用层可以按半年周期做成本规划，应用层可以据此按半年周期规划成本。",
+      "predecessors": [
+        "claude-sonnet-4-5"
+      ],
+      "successors": [
+        "claude-sonnet-5"
+      ],
+      "sources": [
+        {
+          "label": "Anthropic — Claude Sonnet 4.6",
+          "url": "https://www.anthropic.com/news/claude-sonnet-4-6",
+          "kind": "official"
+        },
+        {
+          "label": "Anthropic — Model system cards",
+          "url": "https://www.anthropic.com/system-cards",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": "官方系统卡页只给到月份（February 2026）。"
+    },
+    {
+      "id": "claude-opus-4-7",
+      "name": "Claude Opus 4.7",
+      "organization": "anthropic",
+      "countryOrRegion": "US",
+      "family": "Claude",
+      "generation": "4.7",
+      "announcementDate": "2026-04",
+      "availabilityDate": null,
+      "displayDate": "2026.04",
+      "datePrecision": "month",
+      "dateType": "announcement",
+      "category": "agent",
+      "tags": [
+        "Agent",
+        "编码",
+        "网络安全"
+      ],
+      "openWeights": false,
+      "architecture": "未公开（闭源）",
+      "parameters": null,
+      "contextWindow": null,
+      "capabilities": [
+        "长任务",
+        "编码",
+        "漏洞发现"
+      ],
+      "summary": "Claude Opus 4.7 于 2026 年 4 月发布，与 Mythos Preview 同期，是 Anthropic 推出 Mythos 级模型前的通用旗舰。官方后续材料把它列为网络安全防护强度较弱的一档，弱于 Fable 5 与 Opus 4.8，属于不带阻断式拦截的版本，敏感请求也不会被转交给更保守的模型。",
+      "keyAdvancement": "在通用旗舰上继续累积长任务与代码能力，并成为后续 Mythos 级模型衡量安全落差时的对照基准版本，也是受控发布决策的直接依据。",
+      "significance": "旗舰能力提升与安全防护的落差开始被官方显式承认，成为触发受控发布路线的直接原因，受控发布路线由此被直接触发。",
+      "predecessors": [
+        "claude-opus-4-6"
+      ],
+      "successors": [
+        "claude-opus-4-8"
+      ],
+      "sources": [
+        {
+          "label": "Anthropic — Claude Opus 4.7",
+          "url": "https://www.anthropic.com/news/claude-opus-4-7",
+          "kind": "official"
+        },
+        {
+          "label": "Anthropic — Model system cards",
+          "url": "https://www.anthropic.com/system-cards",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": "官方系统卡页只给到月份（April 2026）。"
+    },
+    {
+      "id": "claude-mythos-preview",
+      "name": "Claude Mythos Preview",
+      "organization": "anthropic",
+      "countryOrRegion": "US",
+      "family": "Claude",
+      "generation": "Mythos-preview",
+      "announcementDate": "2026-04",
+      "availabilityDate": null,
+      "displayDate": "2026.04",
+      "datePrecision": "month",
+      "dateType": "announcement",
+      "category": "agent",
+      "tags": [
+        "受控发布",
+        "网络安全",
+        "双用途"
+      ],
+      "openWeights": false,
+      "architecture": "未公开（闭源）",
+      "parameters": null,
+      "contextWindow": null,
+      "capabilities": [
+        "漏洞发现与利用",
+        "Agent 式渗透测试",
+        "长任务执行"
+      ],
+      "summary": "Claude Mythos Preview 是首个 Mythos 级模型，通过 Project Glasswing 只向少数网络防御方与关键基础设施提供方开放。官方承认这类模型能发现并利用软件漏洞、具备 Agent 式攻击技能，因此不公开发布，仅以受控方式用于防御侧。",
+      "keyAdvancement": "首次按「能力等级」而非「产品档位」限制分发：模型具备真实攻击性能力，只给防御方使用，访问资格由合作方资质审核决定。",
+      "significance": "前沿能力首次出现官方的分级准入制度，AI 安全从对齐研究延伸到分发治理与合作伙伴审核，分发治理成为 AI 安全工作的组成部分。",
+      "predecessors": [
+        "claude-opus-4-7"
+      ],
+      "successors": [
+        "claude-mythos-5"
+      ],
+      "sources": [
+        {
+          "label": "Anthropic — Claude Fable 5 and Claude Mythos 5",
+          "url": "https://www.anthropic.com/news/claude-fable-5-mythos-5",
+          "kind": "official"
+        },
+        {
+          "label": "Anthropic — Model system cards",
+          "url": "https://www.anthropic.com/system-cards",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": "官方系统卡页标注 April 2026；具体日未在可读正文中出现。"
+    },
+    {
+      "id": "claude-opus-4-8",
+      "name": "Claude Opus 4.8",
+      "organization": "anthropic",
+      "countryOrRegion": "US",
+      "family": "Claude",
+      "generation": "4.8",
+      "announcementDate": "2026-05",
+      "availabilityDate": null,
+      "displayDate": "2026.05",
+      "datePrecision": "month",
+      "dateType": "announcement",
+      "category": "agent",
+      "tags": [
+        "安全回退基线",
+        "编码",
+        "知识工作"
+      ],
+      "openWeights": false,
+      "architecture": "未公开（闭源）",
+      "parameters": null,
+      "contextWindow": null,
+      "capabilities": [
+        "编码",
+        "知识工作",
+        "安全回退承接"
+      ],
+      "summary": "Claude Opus 4.8 在 2026 年 5 月发布，是 Mythos 级模型公开前的最后一个通用旗舰。它在此后扮演特殊角色：Fable 5 的分类器在判定网络安全、生物化学或蒸馏风险时，会把回答转交给 Opus 4.8 而非直接拒答，官方称这是更可用的降级体验。",
+      "keyAdvancement": "从独立旗舰转变为整个安全体系中的「可接受回退层」，用能力稍弱的合规模型承接敏感请求，从而把生硬的拒答替换为可用回答。",
+      "significance": "模型组合开始承担安全策略：拒答被替换为转交更保守的模型，这成为高风险能力公开发布的前提条件。",
+      "predecessors": [
+        "claude-opus-4-7"
+      ],
+      "successors": [
+        "claude-opus-5"
+      ],
+      "sources": [
+        {
+          "label": "Anthropic — Claude Opus 4.8",
+          "url": "https://www.anthropic.com/news/claude-opus-4-8",
+          "kind": "official"
+        },
+        {
+          "label": "Anthropic — Model system cards",
+          "url": "https://www.anthropic.com/system-cards",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": "官方系统卡页只给到月份（May 2026）。"
+    },
+    {
+      "id": "claude-fable-5",
+      "name": "Claude Fable 5",
+      "organization": "anthropic",
+      "countryOrRegion": "US",
+      "family": "Claude",
+      "generation": "Fable 5",
+      "announcementDate": "2026-06",
+      "availabilityDate": null,
+      "displayDate": "2026.06",
+      "datePrecision": "month",
+      "dateType": "announcement",
+      "category": "agent",
+      "tags": [
+        "Mythos 级",
+        "分类器",
+        "长时程"
+      ],
+      "openWeights": false,
+      "architecture": "未公开（闭源）",
+      "parameters": null,
+      "contextWindow": null,
+      "capabilities": [
+        "长时程自治",
+        "视觉推理",
+        "科研假设生成"
+      ],
+      "summary": "Claude Fable 5 是与 Mythos 5 同一底模、但加上安全壳后公开的版本，官方称其能力超过此前所有公开可用的 Claude。它引入按主题触发的新分类器：涉及网络安全、生物化学或蒸馏的请求会转交给 Opus 4.8 处理，官方称降级触发率低于 5% 的会话。",
+      "keyAdvancement": "首次用「同一权重 + 主题分类器 + 降级模型」的组合，把 Mythos 级能力做成可以公开发布的产品，权重本身无需为安全而改动。",
+      "significance": "安全从模型本身外移为一层可独立迭代的路由逻辑，这使高风险能力可以公开分发而无需改动权重。",
+      "predecessors": [
+        "claude-opus-4-8",
+        "claude-mythos-preview"
+      ],
+      "successors": [
+        "claude-fable-5-1"
+      ],
+      "sources": [
+        {
+          "label": "Anthropic — Claude Fable 5 and Claude Mythos 5",
+          "url": "https://www.anthropic.com/news/claude-fable-5-mythos-5",
+          "kind": "official"
+        },
+        {
+          "label": "Anthropic — Model system cards",
+          "url": "https://www.anthropic.com/system-cards",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": "官方系统卡页标注 June 2026；6 月 12 日曾暂停访问，7 月 1 日重新上线。"
+    },
+    {
+      "id": "claude-mythos-5",
+      "name": "Claude Mythos 5",
+      "organization": "anthropic",
+      "countryOrRegion": "US",
+      "family": "Claude",
+      "generation": "Mythos 5",
+      "announcementDate": "2026-06",
+      "availabilityDate": null,
+      "displayDate": "2026.06",
+      "datePrecision": "month",
+      "dateType": "announcement",
+      "category": "science",
+      "tags": [
+        "受控访问",
+        "生物设计",
+        "自主科研"
+      ],
+      "openWeights": false,
+      "architecture": "未公开（闭源）",
+      "parameters": null,
+      "contextWindow": null,
+      "capabilities": [
+        "蛋白质设计",
+        "自主科研流程",
+        "漏洞发现"
+      ],
+      "summary": "Claude Mythos 5 与 Fable 5 同底模但解除部分网络防护，仅通过 Project Glasswing 与后续受信任访问计划提供。官方披露它在无人类协助下完成蛋白质设计全流程，14 个靶点中 9 个产出候选；还独立完成跨 138 个物种的单细胞基因组研究。",
+      "keyAdvancement": "从「辅助科研」跨到「独立完成科研流程」：自己选靶点、跑工具、从失败中恢复并交付候选，并从失败中自行恢复继续推进流程。",
+      "significance": "AI 首次在真实生物设计任务上达到可与熟练人类操作者相比的水平，科研产出与生物安全风险同时被抬高。",
+      "predecessors": [
+        "claude-mythos-preview"
+      ],
+      "successors": [
+        "claude-mythos-5-1"
+      ],
+      "sources": [
+        {
+          "label": "Anthropic — Claude Fable 5 and Claude Mythos 5",
+          "url": "https://www.anthropic.com/news/claude-fable-5-mythos-5",
+          "kind": "official"
+        },
+        {
+          "label": "Anthropic — Model system cards",
+          "url": "https://www.anthropic.com/system-cards",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": "官方系统卡页标注 June 2026；仅限受信任访问计划。"
+    },
+    {
+      "id": "claude-sonnet-5",
+      "name": "Claude Sonnet 5",
+      "organization": "anthropic",
+      "countryOrRegion": "US",
+      "family": "Claude",
+      "generation": "5",
+      "announcementDate": "2026-06",
+      "availabilityDate": null,
+      "displayDate": "2026.06",
+      "datePrecision": "month",
+      "dateType": "announcement",
+      "category": "agent",
+      "tags": [
+        "中档主力",
+        "Agent",
+        "编码"
+      ],
+      "openWeights": false,
+      "architecture": "未公开（闭源）",
+      "parameters": null,
+      "contextWindow": null,
+      "capabilities": [
+        "编码",
+        "Agent 执行",
+        "成本均衡"
+      ],
+      "summary": "Claude Sonnet 5 于 2026 年 6 月发布，是 Claude 5 代的中档主力，承接 Sonnet 4.6 的位置。此后 Sonnet 5.5 官方将其描述为「明显升级的前代」，速度提升三成以上、多数工作成本下降最多三成，可见 Sonnet 5 是 5.5 的直接比较基准。",
+      "keyAdvancement": "把 5 代架构下放到中档价位，使数小时级的长任务能力摆脱旗舰定价，覆盖更多日常生产场景与团队规模。",
+      "significance": "代际命名从「主版本 + 小数位」转向独立的中档代号体系，产品线分层更加明确，产品线的分层命名也随之稳定下来。",
+      "predecessors": [
+        "claude-sonnet-4-6"
+      ],
+      "successors": [
+        "claude-sonnet-5-5"
+      ],
+      "sources": [
+        {
+          "label": "Anthropic — Claude Sonnet 5",
+          "url": "https://www.anthropic.com/news/claude-sonnet-5",
+          "kind": "official"
+        },
+        {
+          "label": "Anthropic — Model system cards",
+          "url": "https://www.anthropic.com/system-cards",
+          "kind": "official"
+        },
+        {
+          "label": "Anthropic — Introducing Claude Sonnet 5.5",
+          "url": "https://www.anthropic.com/claude-sonnet-5-5",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": "官方系统卡页标注 June 2026；Sonnet 5.5 发布页确认其为直接前代。"
+    },
+    {
+      "id": "claude-opus-5",
+      "name": "Claude Opus 5",
+      "organization": "anthropic",
+      "countryOrRegion": "US",
+      "family": "Claude",
+      "generation": "5",
+      "announcementDate": "2026-07",
+      "availabilityDate": null,
+      "displayDate": "2026.07",
+      "datePrecision": "month",
+      "dateType": "announcement",
+      "category": "agent",
+      "tags": [
+        "旗舰",
+        "Agent 编码",
+        "计算机使用"
+      ],
+      "openWeights": false,
+      "architecture": "未公开（闭源）",
+      "parameters": null,
+      "contextWindow": null,
+      "capabilities": [
+        "Agent 编码",
+        "计算机使用",
+        "知识工作"
+      ],
+      "summary": "Claude Opus 5 于 2026 年 7 月发布，是 Claude 5 代的旗舰，也是 Opus 5.5 的直接前代。官方在 Opus 5.5 发布页给出两者的详细对照：Opus 5.5 在终端编码、代码审查与计算机使用基准上明显更高，且成本低约四成，说明 Opus 5 已是 2026 年中的能力基线。",
+      "keyAdvancement": "把 Opus 档推进到 5 代，在 Agent 编码与图形界面操作上形成可被后续版本量化的基线，并为此后版本提供了可量化的对照基准。",
+      "significance": "Opus 5 与 5.5 的差距被官方用成本与分数同时量化，标志旗舰迭代进入「同代内效率翻倍」的节奏，换代的意义开始由成本与速度而非分数衡量。",
+      "predecessors": [
+        "claude-opus-4-8"
+      ],
+      "successors": [
+        "claude-opus-5-5"
+      ],
+      "sources": [
+        {
+          "label": "Anthropic — Claude Opus 5",
+          "url": "https://www.anthropic.com/news/claude-opus-5",
+          "kind": "official"
+        },
+        {
+          "label": "Anthropic — Model system cards",
+          "url": "https://www.anthropic.com/system-cards",
+          "kind": "official"
+        },
+        {
+          "label": "Anthropic — Introducing Claude Opus 5.5",
+          "url": "https://www.anthropic.com/claude-opus-5-5",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": "官方系统卡页标注 July 2026；Opus 5.5 发布页确认其为直接前代并给出对照数据。"
+    },
+    {
+      "id": "claude-fable-5-1",
+      "name": "Claude Fable 5.1",
+      "organization": "anthropic",
+      "countryOrRegion": "US",
+      "family": "Claude",
+      "generation": "Fable 5.1",
+      "announcementDate": "2026-09",
+      "availabilityDate": null,
+      "displayDate": "2026.09",
+      "datePrecision": "month",
+      "dateType": "announcement",
+      "category": "agent",
+      "tags": [
+        "Mythos 级",
+        "长篇写作",
+        "长时程"
+      ],
+      "openWeights": false,
+      "architecture": "未公开（闭源）",
+      "parameters": null,
+      "contextWindow": null,
+      "capabilities": [
+        "长时程自治",
+        "知识工作",
+        "计算机使用"
+      ],
+      "summary": "Claude Fable 5.1 与 Mythos 5.1 同月发布，是 Fable 5 的升级版，也是同期能力最强、单价最高的一档。官方在 Opus 5.5 发布页把它作为同代对照：Opus 5.5 在多数工作上达到 Fable 5.1 的水平，成本却低约四成，按官方说法实际差距比分数显示得更小。",
+      "keyAdvancement": "在保持 Mythos 级能力的同时继续提升长任务稳定性，成为 Opus 5.5 明确对标的性能上限，并在多数任务上维持同代最高水平。",
+      "significance": "同一实验室内部出现「最强但昂贵」与「稍弱但便宜四成」两档旗舰，定价分层比能力分层更能决定实际采用。",
+      "predecessors": [
+        "claude-fable-5"
+      ],
+      "successors": [],
+      "sources": [
+        {
+          "label": "Anthropic — Claude Fable 5.1 and Mythos 5.1",
+          "url": "https://www.anthropic.com/claude-fable-and-mythos-5-1",
+          "kind": "official"
+        },
+        {
+          "label": "Anthropic — Model system cards",
+          "url": "https://www.anthropic.com/system-cards",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": "官方系统卡页标注 September 2026。"
+    },
+    {
+      "id": "claude-mythos-5-1",
+      "name": "Claude Mythos 5.1",
+      "organization": "anthropic",
+      "countryOrRegion": "US",
+      "family": "Claude",
+      "generation": "Mythos 5.1",
+      "announcementDate": "2026-09",
+      "availabilityDate": null,
+      "displayDate": "2026.09",
+      "datePrecision": "month",
+      "dateType": "announcement",
+      "category": "science",
+      "tags": [
+        "受控访问",
+        "生物安全",
+        "网络安全"
+      ],
+      "openWeights": false,
+      "architecture": "未公开（闭源）",
+      "parameters": null,
+      "contextWindow": null,
+      "capabilities": [
+        "生物设计",
+        "漏洞发现",
+        "长时程科研"
+      ],
+      "summary": "Claude Mythos 5.1 与 Fable 5.1 同底模、解除部分防护，仅通过受信任访问计划提供。官方在 Opus 5.5 的安全说明中直接对标：Opus 5.5 在生物学与网络安全方面与 Mythos 5.1 相当，因此采用了与 Fable 5.1 类似的防护等级，并需通过生命科学与网络验证计划申请使用。",
+      "keyAdvancement": "把 Mythos 级能力推进到 5.1，并使通用旗舰在敏感领域接近该水平，迫使防护等级向上对齐，通用旗舰被迫在敏感领域向上对齐防护。",
+      "significance": "受控模型与公开模型的能力差距缩小到需要「按领域」而非「按模型」设防，验证计划成为准入基础设施。",
+      "predecessors": [
+        "claude-mythos-5"
+      ],
+      "successors": [],
+      "sources": [
+        {
+          "label": "Anthropic — Claude Fable 5.1 and Mythos 5.1",
+          "url": "https://www.anthropic.com/claude-fable-and-mythos-5-1",
+          "kind": "official"
+        },
+        {
+          "label": "Anthropic — Introducing Claude Opus 5.5",
+          "url": "https://www.anthropic.com/claude-opus-5-5",
+          "kind": "official"
+        },
+        {
+          "label": "Anthropic — Model system cards",
+          "url": "https://www.anthropic.com/system-cards",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": "官方系统卡页标注 September 2026。"
+    },
+    {
+      "id": "claude-opus-5-5",
+      "name": "Claude Opus 5.5",
+      "organization": "anthropic",
+      "countryOrRegion": "US",
+      "family": "Claude",
+      "generation": "5.5",
+      "announcementDate": "2026-09-22",
+      "availabilityDate": "2026-09-22",
+      "displayDate": "2026.09.22",
+      "datePrecision": "day",
+      "dateType": "announcement",
+      "category": "agent",
+      "tags": [
+        "Agent 编码",
+        "成本效率",
+        "对齐审计"
+      ],
+      "openWeights": false,
+      "architecture": "未公开（闭源）",
+      "parameters": null,
+      "contextWindow": null,
+      "capabilities": [
+        "大规模代码迁移",
+        "计算机使用",
+        "长任务效率"
+      ],
+      "summary": "Claude Opus 5.5 是 Claude 5.5 家族首个模型，官方称其多数工作达到 Fable 5.1 的水平，运行成本比 Opus 5 低约四成，输出速度快三成以上。缓存读取降至每百万 0.2 美元，输入输出为 4 与 20 美元。它在自动化行为审计上取得官方迄今最好成绩，对提示注入的抵抗力也强于 Opus 5。",
+      "keyAdvancement": "以更低单价与更少 token 消耗逼近上一代最强模型，把竞争焦点从峰值能力转向每任务总成本与安全性。",
+      "significance": "前沿能力的价格曲线出现陡降，Agent 编码从少数团队的重投入变为可按量采购的常规服务，前沿能力的采购方式随之发生改变。",
+      "predecessors": [
+        "claude-opus-5",
+        "claude-fable-5-1"
+      ],
+      "successors": [],
+      "sources": [
+        {
+          "label": "Anthropic — Introducing Claude Opus 5.5",
+          "url": "https://www.anthropic.com/claude-opus-5-5",
+          "kind": "official"
+        },
+        {
+          "label": "Anthropic — Model system cards",
+          "url": "https://www.anthropic.com/system-cards",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": "官方页面正文标注 September 22, 2026。"
+    },
+    {
+      "id": "claude-sonnet-5-5",
+      "name": "Claude Sonnet 5.5",
+      "organization": "anthropic",
+      "countryOrRegion": "US",
+      "family": "Claude",
+      "generation": "5.5",
+      "announcementDate": "2026-09-28",
+      "availabilityDate": "2026-09-28",
+      "displayDate": "2026.09.28",
+      "datePrecision": "day",
+      "dateType": "announcement",
+      "category": "agent",
+      "tags": [
+        "中档升级",
+        "速度",
+        "成本下降"
+      ],
+      "openWeights": false,
+      "architecture": "未公开（闭源）",
+      "parameters": null,
+      "contextWindow": null,
+      "capabilities": [
+        "编码",
+        "Agent 执行",
+        "高吞吐"
+      ],
+      "summary": "Claude Sonnet 5.5 于 9 月 28 日发布，官方称其相对 Sonnet 5 运行速度快三成以上、多数工作成本最多下降三成，属于明确的效率型升级。它与 Opus 5.5 共同构成 5.5 代的双档组合，前者承担旗舰任务，后者承担主力流量。",
+      "keyAdvancement": "在同代内同时提升速度与降低价格，让中档模型承接原本需要旗舰档的 Agent 负载，同时压低每次调用任务的实际花费。",
+      "significance": "5.5 代三档完整铺开意味着「旗舰降价、中档提速」成为标准打法，Agent 应用按量扩张的边际成本因此持续下行。",
+      "predecessors": [
+        "claude-sonnet-5"
+      ],
+      "successors": [],
+      "sources": [
+        {
+          "label": "Anthropic — Introducing Claude Sonnet 5.5",
+          "url": "https://www.anthropic.com/claude-sonnet-5-5",
+          "kind": "official"
+        },
+        {
+          "label": "Anthropic — Model system cards",
+          "url": "https://www.anthropic.com/system-cards",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": null
+    },
+    {
+      "id": "claude-haiku-5-5",
+      "name": "Claude Haiku 5.5",
+      "organization": "anthropic",
+      "countryOrRegion": "US",
+      "family": "Claude",
+      "generation": "5.5",
+      "announcementDate": "2026-10-07",
+      "availabilityDate": "2026-10-07",
+      "displayDate": "2026.10.07",
+      "datePrecision": "day",
+      "dateType": "announcement",
+      "category": "agent",
+      "tags": [
+        "小模型",
+        "子 Agent",
+        "浏览器操作"
+      ],
+      "openWeights": false,
+      "architecture": "未公开（闭源）",
+      "parameters": null,
+      "contextWindow": null,
+      "capabilities": [
+        "摘要与检索",
+        "子 Agent",
+        "浏览器使用"
+      ],
+      "summary": "Claude Haiku 5.5 于 10 月 7 日发布，官方定位为最快、最强的小模型，面向摘要、子 Agent 与浏览器操作等高并发工作。它补齐了 5.5 代的三档结构，使多 Agent 系统可以把大量并行子任务交给最廉价的一档执行。",
+      "keyAdvancement": "把浏览器操作纳入小模型的标准能力，使廉价的界面操作子 Agent 成为可规模化的架构组件，界面操作子任务可以按需并行铺开。",
+      "significance": "5.5 代三档闭环完成，Agent 系统的「分工密度」而非单模型能力成为系统级性能的主要来源，系统级性能更多来自分工密度而非单点能力。",
+      "predecessors": [
+        "claude-haiku-4-5"
+      ],
+      "successors": [],
+      "sources": [
+        {
+          "label": "Anthropic — Introducing Claude Haiku 5.5",
+          "url": "https://www.anthropic.com/claude-haiku-5-5",
+          "kind": "official"
+        },
+        {
+          "label": "Anthropic — Model system cards",
+          "url": "https://www.anthropic.com/system-cards",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": null
+    },
+    {
+      "id": "gemini-2-5-pro",
+      "name": "Gemini 2.5 Pro",
+      "organization": "google-deepmind",
+      "countryOrRegion": "US",
+      "family": "Gemini",
+      "generation": "2.5",
+      "announcementDate": "2025-03-25",
+      "availabilityDate": "2025-03-25",
+      "displayDate": "2025.03.25",
+      "datePrecision": "day",
+      "dateType": "announcement",
+      "category": "reasoning",
+      "tags": [
+        "思考模型",
+        "长上下文",
+        "代码"
+      ],
+      "openWeights": false,
+      "architecture": "未公开（闭源）",
+      "parameters": null,
+      "contextWindow": "100 万 tokens",
+      "capabilities": [
+        "长上下文推理",
+        "代码生成",
+        "多模态输入"
+      ],
+      "summary": "Gemini 2.5 Pro 是 Google 首个把「先思考再回答」作为默认行为的旗舰，支持百万 token 上下文与多模态输入，在编码与数学基准上直接对标同期推理模型。它通过 Gemini API 与 AI Studio 向开发者开放，并进入 Gemini 应用。",
+      "keyAdvancement": "把长上下文与内置推理合并到同一旗舰，使「一次读完大仓库或长视频再推理」成为默认能力，而不必切换到另一个专项模型。",
+      "significance": "推理模型不再需要单独产品线，Google 由此把思考能力植入主力模型，重新加入前沿竞争，Google 由此重新回到前沿第一梯队。",
+      "predecessors": [],
+      "successors": [
+        "gemini-3-pro"
+      ],
+      "sources": [
+        {
+          "label": "Google — Gemini 2.5, our most intelligent AI model",
+          "url": "https://blog.google/technology/google-deepmind/gemini-model-thinking-updates-march-2025/",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "partially-verified",
+      "notes": "官方博客为该模型的正式公告页；本环境未能读取其正文日期，2025-03-25 由多家权威媒体与官方预告一致佐证。"
+    },
+    {
+      "id": "gemma-3",
+      "name": "Gemma 3",
+      "organization": "google-deepmind",
+      "countryOrRegion": "US",
+      "family": "Gemma",
+      "generation": "3",
+      "announcementDate": "2025-03-12",
+      "availabilityDate": "2025-03-12",
+      "displayDate": "2025.03.12",
+      "datePrecision": "day",
+      "dateType": "weights",
+      "category": "multimodal",
+      "tags": [
+        "开放权重",
+        "多模态",
+        "单卡部署"
+      ],
+      "openWeights": true,
+      "architecture": "decoder-only Transformer",
+      "parameters": "1B / 4B / 12B / 27B",
+      "contextWindow": "128K tokens",
+      "capabilities": [
+        "多模态理解",
+        "多语言",
+        "本地部署"
+      ],
+      "summary": "Gemma 3 是 Google 的开放权重家族，提供 1B 到 27B 多档规模，其中较大档位支持图像输入与 128K 上下文，并可在单张 GPU 或 TPU 上运行。它延续 Gemma 系列的开放许可，配套发布技术报告与开发者指南，被广泛用于本地微调与端侧实验。",
+      "keyAdvancement": "把多模态与长上下文带进可在单卡运行的开放权重小模型，缩小本地部署与云端模型的能力差距。",
+      "significance": "开放权重生态第一次拥有接近商用档的多模态小模型，研究复现与隐私敏感部署同时受益，端侧与研究场景的可用能力上限明显抬升。",
+      "predecessors": [],
+      "successors": [
+        "gemma-4"
+      ],
+      "sources": [
+        {
+          "label": "Google — Introducing Gemma 3: The Developer Guide",
+          "url": "https://developers.googleblog.com/en/introducing-gemma3/",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "partially-verified",
+      "notes": "官方开发者博客为公告来源；本环境未能读取其正文日期，2025-03-12 由官方发布节奏与多方报道一致佐证。"
+    },
+    {
+      "id": "veo-3",
+      "name": "Veo 3",
+      "organization": "google-deepmind",
+      "countryOrRegion": "US",
+      "family": "Veo",
+      "generation": "3",
+      "announcementDate": "2025-05-20",
+      "availabilityDate": "2025-05-20",
+      "displayDate": "2025.05.20",
+      "datePrecision": "day",
+      "dateType": "announcement",
+      "category": "video",
+      "tags": [
+        "视频生成",
+        "原生音频",
+        "对白"
+      ],
+      "openWeights": false,
+      "architecture": "未公开（闭源）",
+      "parameters": null,
+      "contextWindow": null,
+      "capabilities": [
+        "文生视频",
+        "音效与对白",
+        "镜头控制"
+      ],
+      "summary": "Veo 3 在 Google I/O 2025 发布，关键变化是同时生成画面与音频：它能为生成的场景配上环境音、音效甚至对白，并保持人物口型与语音同步。这让视频生成从无声片段变成可直接使用的成片素材，官方同时强调其对物理与镜头语言的建模。",
+      "keyAdvancement": "把音频生成与视频生成合并到同一模型，一次推理输出带对白与音效的完整片段，声音不再需要后期单独制作。",
+      "significance": "视频生成从「视觉演示」进入「可剪辑素材」阶段，配音与口型同步这一环节被模型内部消化，视频生成开始进入可交付的生产流程。",
+      "predecessors": [],
+      "successors": [],
+      "sources": [
+        {
+          "label": "Google DeepMind — Veo",
+          "url": "https://deepmind.google/models/veo/",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "partially-verified",
+      "notes": "官方模型页确认 Veo 3 存在；具体发布日 2025-05-20（Google I/O）由官方活动与多家媒体一致佐证，官方页正文未直接标注日期。"
+    },
+    {
+      "id": "nano-banana",
+      "name": "Nano Banana (Gemini 2.5 Flash Image)",
+      "organization": "google-deepmind",
+      "countryOrRegion": "US",
+      "family": "Gemini",
+      "generation": "2.5-flash-image",
+      "announcementDate": "2025-08-26",
+      "availabilityDate": "2025-08-26",
+      "displayDate": "2025.08.26",
+      "datePrecision": "day",
+      "dateType": "product",
+      "category": "image",
+      "tags": [
+        "图像编辑",
+        "角色一致性",
+        "多轮修改"
+      ],
+      "openWeights": false,
+      "architecture": "未公开（闭源）",
+      "parameters": null,
+      "contextWindow": null,
+      "capabilities": [
+        "图像编辑",
+        "角色一致性",
+        "多图融合"
+      ],
+      "summary": "Nano Banana 是 Gemini 2.5 Flash Image 的公开昵称，主打对话式图像编辑：用户可以用自然语言连续修改同一张图，模型在多轮编辑中保持人物与物体的一致性，并支持多图合成。它在 Gemini 应用与 API 中开放，迅速成为社交网络上传播最广的图像编辑工具之一。",
+      "keyAdvancement": "把「多轮编辑中保持主体一致」做稳，让图像生成从一次出图变成可持续修改的工作流，反复调整成为默认的使用方式。",
+      "significance": "图像模型的使用方式从提示词抽卡转向迭代修图，设计与电商素材生产的流程被直接改写，素材生产的迭代速度随之明显加快。",
+      "predecessors": [],
+      "successors": [],
+      "sources": [
+        {
+          "label": "Google DeepMind — Nano Banana",
+          "url": "https://deepmind.google/models/gemini-image/",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "partially-verified",
+      "notes": "官方模型页确认该模型；发布日 2025-08-26 由多方报道一致，官方页正文未直接标注日期。"
+    },
+    {
+      "id": "gemini-3-pro",
+      "name": "Gemini 3 Pro",
+      "organization": "google-deepmind",
+      "countryOrRegion": "US",
+      "family": "Gemini",
+      "generation": "3",
+      "announcementDate": "2025-11-18",
+      "availabilityDate": "2025-11-18",
+      "displayDate": "2025.11.18",
+      "datePrecision": "day",
+      "dateType": "announcement",
+      "category": "reasoning",
+      "tags": [
+        "推理",
+        "Agent",
+        "多模态"
+      ],
+      "openWeights": false,
+      "architecture": "未公开（闭源）",
+      "parameters": null,
+      "contextWindow": "100 万 tokens",
+      "capabilities": [
+        "复杂推理",
+        "多模态理解",
+        "Agent 与工具调用"
+      ],
+      "summary": "Gemini 3 Pro 于 11 月 18 日发布，官方称其在推理与多模态理解上大幅超越 2.5 代，并默认开启思考。它同时进入 Gemini 应用、AI Studio 与 Vertex AI，配套推出 Deep Think 与后续 Flash 档位，形成完整产品线。这次发布直接触发了竞争对手的紧急应对。",
+      "keyAdvancement": "把思考设为默认并同步提升多模态与 Agent 能力，使旗舰在长任务与视觉推理上形成可感知的整体代差。",
+      "significance": "竞争节奏被彻底打乱，对手以「红色警报」级别的资源重排回应，前沿模型的发布日历从此互相牵引。",
+      "predecessors": [
+        "gemini-2-5-pro"
+      ],
+      "successors": [],
+      "sources": [
+        {
+          "label": "Google — Gemini 3: Introducing the latest Gemini AI model from Google",
+          "url": "https://blog.google/products-and-platforms/products/gemini/gemini-3/",
+          "kind": "official"
+        },
+        {
+          "label": "Google DeepMind — Gemini",
+          "url": "https://deepmind.google/models/gemini/",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": "官方博客页可访问并确认发布；日期 2025-11-18 与官方及多家媒体一致。"
+    },
+    {
+      "id": "gemini-3-flash",
+      "name": "Gemini 3 Flash",
+      "organization": "google-deepmind",
+      "countryOrRegion": "US",
+      "family": "Gemini",
+      "generation": "3",
+      "announcementDate": "2025-12-17",
+      "availabilityDate": "2025-12-17",
+      "displayDate": "2025.12.17",
+      "datePrecision": "day",
+      "dateType": "product",
+      "category": "reasoning",
+      "tags": [
+        "快速档",
+        "默认模型",
+        "高吞吐"
+      ],
+      "openWeights": false,
+      "architecture": "未公开（闭源）",
+      "parameters": null,
+      "contextWindow": null,
+      "capabilities": [
+        "快速推理",
+        "多模态",
+        "Agent 工具调用"
+      ],
+      "summary": "Gemini 3 Flash 于 12 月 17 日推出，并被设为 Gemini 应用的默认模型。它把 3 代的推理与多模态能力压到低延迟档位，官方强调其在速度与成本上的优势，用于承接大多数日常请求，而把复杂任务交给 Pro 档。",
+      "keyAdvancement": "让思考型模型达到可做默认入口的速度，使「先思考再回答」不再需要用户显式选择，从而足以覆盖绝大多数日常请求。",
+      "significance": "默认模型换成推理档意味着推理成本被主流流量摊薄，思考能力从选项变成默认基础设施，推理从可选功能变成默认的基础设施。",
+      "predecessors": [
+        "gemini-3-pro"
+      ],
+      "successors": [],
+      "sources": [
+        {
+          "label": "Google — Gemini 3 Flash",
+          "url": "https://blog.google/products/gemini/gemini-3-flash/",
+          "kind": "official"
+        },
+        {
+          "label": "TechCrunch — Google launches Gemini 3 Flash, makes it the default model in the Gemini app",
+          "url": "https://techcrunch.com/2025/12/17/google-launches-gemini-3-flash-makes-it-the-default-model-in-the-gemini-app/",
+          "kind": "press"
+        }
+      ],
+      "verificationStatus": "partially-verified",
+      "notes": "官方博客为该模型公告来源；2025-12-17 由 TechCrunch 报道日期与官方发布节奏一致。"
+    },
+    {
+      "id": "gemma-4",
+      "name": "Gemma 4",
+      "organization": "google-deepmind",
+      "countryOrRegion": "US",
+      "family": "Gemma",
+      "generation": "4",
+      "announcementDate": "2026-04-03",
+      "availabilityDate": "2026-04-03",
+      "displayDate": "2026.04.03",
+      "datePrecision": "day",
+      "dateType": "weights",
+      "category": "multimodal",
+      "tags": [
+        "开放权重",
+        "多模态",
+        "31B"
+      ],
+      "openWeights": true,
+      "architecture": "decoder-only Transformer",
+      "parameters": "31B（另有更小档位）",
+      "contextWindow": null,
+      "capabilities": [
+        "多模态理解",
+        "本地推理",
+        "可微调"
+      ],
+      "summary": "Gemma 4 是 2026 年 4 月发布的开放权重家族，官方模型页以 31B 指令版 gemma-4-31b-it 为主推，可直接在 AI Studio 试用。它延续 Gemma 系列的开放许可与多档规模策略，面向本地部署、微调与研究复现。",
+      "keyAdvancement": "把 4 代架构以开放权重形式放出，使本地可运行模型的能力基线继续逼近同代闭源中档模型，并能直接在浏览器中试用。",
+      "significance": "开放权重与闭源旗舰之间的能力时滞被压缩到约半年，独立开发者与学术团队的可用上限随之抬升。",
+      "predecessors": [
+        "gemma-3"
+      ],
+      "successors": [],
+      "sources": [
+        {
+          "label": "Google DeepMind — Gemma 4",
+          "url": "https://deepmind.google/models/gemma/gemma-4/",
+          "kind": "official"
+        },
+        {
+          "label": "Google DeepMind — Gemma",
+          "url": "https://deepmind.google/models/gemma/",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "partially-verified",
+      "notes": "官方模型页确认 Gemma 4 与 gemma-4-31b-it；2026-04-03 由新华社等报道一致，官方页正文未直接标注日期。"
+    },
+    {
+      "id": "llama-4-maverick",
+      "name": "Llama 4 Maverick",
+      "organization": "meta",
+      "countryOrRegion": "US",
+      "family": "Llama",
+      "generation": "4",
+      "announcementDate": "2025-04-05",
+      "availabilityDate": "2025-04-05",
+      "displayDate": "2025.04.05",
+      "datePrecision": "day",
+      "dateType": "weights",
+      "category": "multimodal",
+      "tags": [
+        "开放权重",
+        "MoE",
+        "多模态"
+      ],
+      "openWeights": true,
+      "architecture": "MoE Transformer",
+      "parameters": "约 400B total / 17B active",
+      "contextWindow": "100 万 tokens",
+      "capabilities": [
+        "多模态理解",
+        "多语言",
+        "长上下文"
+      ],
+      "summary": "Llama 4 Maverick 是 Meta 首批 Llama 4 模型之一，采用混合专家结构，支持文本与图像输入，上下文达到百万 token 量级。它随 Scout 一同以开放权重发布，官方称其多模态能力在同规模开放模型中领先，配套公布模型卡与使用许可。",
+      "keyAdvancement": "把 MoE 与原生多模态、百万级上下文同时引入开放权重家族，使单卡以上的部署也能获得长上下文能力。",
+      "significance": "开放权重阵营首次具备原生多模态旗舰，闭源与开源的差距在视觉理解这一维度上被明显压缩。",
+      "predecessors": [],
+      "successors": [],
+      "sources": [
+        {
+          "label": "Meta AI — Llama 4: Multimodal Intelligence",
+          "url": "https://ai.meta.com/blog/llama-4-multimodal-intelligence/",
+          "kind": "official"
+        },
+        {
+          "label": "Techlusive — Meta Released Llama 4 AI Multimodal Models",
+          "url": "https://www.techlusive.in/news/meta-released-llama-4-ai-multimodal-models-with-10-million-token-context-window-check-details-1553545/",
+          "kind": "press"
+        }
+      ],
+      "verificationStatus": "partially-verified",
+      "notes": "本环境无法访问 ai.meta.com，官方公告页 URL 保留但正文未能读取；2025-04-05 由多家媒体一致佐证，参数量取自官方模型卡口径。"
+    },
+    {
+      "id": "llama-4-scout",
+      "name": "Llama 4 Scout",
+      "organization": "meta",
+      "countryOrRegion": "US",
+      "family": "Llama",
+      "generation": "4",
+      "announcementDate": "2025-04-05",
+      "availabilityDate": "2025-04-05",
+      "displayDate": "2025.04.05",
+      "datePrecision": "day",
+      "dateType": "weights",
+      "category": "multimodal",
+      "tags": [
+        "开放权重",
+        "单卡部署",
+        "超长上下文"
+      ],
+      "openWeights": true,
+      "architecture": "MoE Transformer",
+      "parameters": "约 109B total / 17B active",
+      "contextWindow": "1000 万 tokens",
+      "capabilities": [
+        "超长上下文",
+        "多模态输入",
+        "单卡部署"
+      ],
+      "summary": "Llama 4 Scout 是 Llama 4 家族中可在单张高端 GPU 上运行的一档，采用 16 专家 MoE 结构，官方给出的上下文长度达到千万 token 量级，远超同期同类开放模型。它与 Maverick 同日以开放权重发布，主打本地部署与超长文档处理。",
+      "keyAdvancement": "把千万级上下文与 MoE 效率放进单卡可部署的开放模型，使超长文档分析不再依赖云端旗舰，本地部署也能处理超长材料。",
+      "significance": "超长上下文从云端专属变成本地可及的能力，法律、审计与科研等长文档场景的部署门槛显著下降。",
+      "predecessors": [],
+      "successors": [],
+      "sources": [
+        {
+          "label": "Meta AI — Llama 4: Multimodal Intelligence",
+          "url": "https://ai.meta.com/blog/llama-4-multimodal-intelligence/",
+          "kind": "official"
+        },
+        {
+          "label": "Techlusive — Meta Released Llama 4 AI Multimodal Models",
+          "url": "https://www.techlusive.in/news/meta-released-llama-4-ai-multimodal-models-with-10-million-token-context-window-check-details-1553545/",
+          "kind": "press"
+        }
+      ],
+      "verificationStatus": "partially-verified",
+      "notes": "本环境无法访问 ai.meta.com；千万 token 上下文与 109B/17B 参数取自官方模型卡口径，日期由多方报道佐证。"
+    },
+    {
+      "id": "grok-3",
+      "name": "Grok 3",
+      "organization": "xai",
+      "countryOrRegion": "US",
+      "family": "Grok",
+      "generation": "3",
+      "announcementDate": "2025-02-17",
+      "availabilityDate": "2025-02-17",
+      "displayDate": "2025.02.17",
+      "datePrecision": "day",
+      "dateType": "announcement",
+      "category": "reasoning",
+      "tags": [
+        "推理",
+        "大规模训练",
+        "实时检索"
+      ],
+      "openWeights": false,
+      "architecture": "未公开（闭源）",
+      "parameters": null,
+      "contextWindow": null,
+      "capabilities": [
+        "数学与代码推理",
+        "实时联网",
+        "多步问题求解"
+      ],
+      "summary": "Grok 3 于 2025 年 2 月发布，官方强调其依托大规模 GPU 集群训练，并引入可展开的思考模式来处理数学、编码与复杂推理题。它与 X 平台的实时信息流结合，提供联网检索与即时问答，同时推出面向订阅用户的更高算力档位。",
+      "keyAdvancement": "把大规模预训练算力与可展开的思考模式结合，并用实时社交信息流作为检索底座，实时信息由此进入推理流程。",
+      "significance": "xAI 由此进入前沿竞争的第一梯队，实时信息接入成为其区别于其他实验室的差异化能力，实时性成为可被比较的能力维度。",
+      "predecessors": [],
+      "successors": [
+        "grok-4"
+      ],
+      "sources": [
+        {
+          "label": "xAI — Grok 3",
+          "url": "https://x.ai/news/grok-3",
+          "kind": "official"
+        },
+        {
+          "label": "Bloomberg — マスク氏、最新ＡＩボット「Grok 4」公開",
+          "url": "https://www.bloomberg.com/jp/news/articles/2025-07-10/SZ63V4DWRGG000",
+          "kind": "press"
+        }
+      ],
+      "verificationStatus": "partially-verified",
+      "notes": "本环境无法访问 x.ai，官方公告页 URL 保留但正文未能读取；2025-02-17 由多家权威媒体一致佐证。"
+    },
+    {
+      "id": "grok-4",
+      "name": "Grok 4",
+      "organization": "xai",
+      "countryOrRegion": "US",
+      "family": "Grok",
+      "generation": "4",
+      "announcementDate": "2025-07-09",
+      "availabilityDate": "2025-07-09",
+      "displayDate": "2025.07.09",
+      "datePrecision": "day",
+      "dateType": "announcement",
+      "category": "reasoning",
+      "tags": [
+        "推理",
+        "工具调用",
+        "多 Agent"
+      ],
+      "openWeights": false,
+      "architecture": "未公开（闭源）",
+      "parameters": null,
+      "contextWindow": null,
+      "capabilities": [
+        "深度推理",
+        "工具调用",
+        "并行子 Agent"
+      ],
+      "summary": "Grok 4 于 2025 年 7 月发布，官方称其为当时推理能力最强的模型之一，配套推出面向重负载的 Grok 4 Heavy，可在内部并行调度多个子 Agent 处理同一问题。它在数学竞赛与复杂推理基准上给出与头部实验室直接对标的结果。",
+      "keyAdvancement": "把「多子 Agent 并行推理」做成产品档位，用测试时的并行采样替代单条更长的思维链，把算力直接换算成答案质量上限。",
+      "significance": "并行推理成为提升上限的新杠杆，推理成本从「更长的链」转向「更多的副本」，推理预算的分配方式出现了新的选项。",
+      "predecessors": [
+        "grok-3"
+      ],
+      "successors": [],
+      "sources": [
+        {
+          "label": "xAI — Grok 4",
+          "url": "https://x.ai/news/grok-4",
+          "kind": "official"
+        },
+        {
+          "label": "Bloomberg — マスク氏、最新ＡＩボット「Grok 4」公開",
+          "url": "https://www.bloomberg.com/jp/news/articles/2025-07-10/SZ63V4DWRGG000",
+          "kind": "press"
+        }
+      ],
+      "verificationStatus": "partially-verified",
+      "notes": "本环境无法访问 x.ai；2025-07-09 由彭博社 2025-07-10 报道（当地时差）与多家媒体一致佐证。"
+    }
+  ],
+  "events": [
+    {
+      "id": "eu-ai-act-prohibitions-2025",
+      "date": "2025-02-02",
+      "displayDate": "2025.02.02",
+      "datePrecision": "day",
+      "dateType": "policy",
+      "title": "欧盟《人工智能法案》禁止性条款生效",
+      "titleEn": "EU AI Act: Prohibited AI Practices Take Effect",
+      "category": "policy",
+      "summary": "欧盟《人工智能法案》中关于禁止性实践的部分自 2025 年 2 月 2 日起适用，禁止在欧盟境内投放用于社会评分、无差别抓取人脸、操纵性行为推断情绪等用途的 AI 系统。同期生效的还包括 AI 素养义务，要求提供方与部署方确保相关人员具备足够理解。",
+      "significance": "全球首个按风险分级立法的 AI 监管框架开始产生实际约束力，模型能力之外合规成本第一次进入产品决策。",
+      "organizations": [
+        "eu"
+      ],
+      "people": [],
+      "relatedModels": [],
+      "chapter": 6,
+      "sources": [
+        {
+          "label": "European Commission — AI Act regulatory framework",
+          "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": null
+    },
+    {
+      "id": "stargate-project-2025",
+      "date": "2025-01-21",
+      "displayDate": "2025.01.21",
+      "datePrecision": "day",
+      "dateType": "announcement",
+      "title": "Stargate 计划公布",
+      "titleEn": "Announcing the Stargate Project",
+      "category": "hardware",
+      "summary": "OpenAI 与软银、甲骨文等合作方公布 Stargate 计划，拟在数年内投入大规模资金在美国建设 AI 数据中心与算力基础设施，首期站点落在得克萨斯州。计划把模型训练所需电力、芯片与机房作为独立议题提出，并配套成立新的实体负责建设与运营。",
+      "significance": "前沿模型的竞争要素从算法与数据扩展到电力与厂房，算力基础设施投资开始以千亿美元量级计价。",
+      "organizations": [
+        "openai"
+      ],
+      "people": [],
+      "relatedModels": [],
+      "chapter": 6,
+      "sources": [
+        {
+          "label": "OpenAI — Announcing the Stargate Project",
+          "url": "https://openai.com/index/announcing-the-stargate-project/",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": null
+    },
+    {
+      "id": "anthropic-asl3-activation-2025",
+      "date": "2025-05",
+      "displayDate": "2025.05",
+      "datePrecision": "month",
+      "dateType": "announcement",
+      "title": "Anthropic 启动 ASL-3 防护等级",
+      "titleEn": "Activating ASL-3 Protections",
+      "category": "organization",
+      "summary": "Anthropic 宣布对部分 Claude 模型启用其负责任扩展政策中的 ASL-3 级防护，理由是模型的生物相关能力达到该级别门槛。措施包括更强的分类器拦截、访问控制与部署限制。这是该公司首次实际启用高于 ASL-2 的防护等级。",
+      "significance": "分级安全政策第一次从文件走入生产部署，能力阈值触发具体工程措施，为后续 Mythos 级受控发布积累先例。",
+      "organizations": [
+        "anthropic"
+      ],
+      "people": [],
+      "relatedModels": [
+        "claude-opus-4"
+      ],
+      "chapter": 6,
+      "sources": [
+        {
+          "label": "Anthropic — Activating ASL-3 protections",
+          "url": "https://www.anthropic.com/news/activating-asl3-protections",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": "官方页面确认事件；精确日未核实，故只写到月。"
+    },
+    {
+      "id": "openai-codex-agent-2025",
+      "date": "2025-05-16",
+      "displayDate": "2025.05.16",
+      "datePrecision": "day",
+      "dateType": "product",
+      "title": "OpenAI 发布云端编码 Agent Codex",
+      "titleEn": "Introducing Codex",
+      "category": "system",
+      "summary": "OpenAI 推出 Codex，一个在云端沙箱中并行执行编码任务的 Agent：它可以读取仓库、编写与运行代码、提交拉取请求，多个任务可同时进行。产品与 CLI、IDE 插件及代码审查流程打通，标志着编码从对话式补全转向可委托的任务执行。",
+      "significance": "软件工程成为第一个被完整 Agent 化的知识工作门类，任务委派与结果审查取代逐行协作，对结果的审阅取代逐行编写指导。",
+      "organizations": [
+        "openai"
+      ],
+      "people": [],
+      "relatedModels": [
+        "gpt-5-codex"
+      ],
+      "chapter": 6,
+      "sources": [
+        {
+          "label": "OpenAI — Introducing Codex",
+          "url": "https://openai.com/index/introducing-codex/",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": null
+    },
+    {
+      "id": "openai-gpt-oss-open-weights-2025",
+      "date": "2025-08-05",
+      "displayDate": "2025.08.05",
+      "datePrecision": "day",
+      "dateType": "weights",
+      "title": "OpenAI 发布开放权重推理模型 gpt-oss",
+      "titleEn": "Introducing gpt-oss-120b and gpt-oss-20b",
+      "category": "breakthrough",
+      "summary": "OpenAI 发布两个开放权重推理模型 gpt-oss-120b 与 gpt-oss-20b，支持函数调用与结构化输出，可在自有基础设施或托管服务上运行。这是该公司自 GPT-2 之后首次发布开放权重语言模型，并附带模型卡与安全评估说明。",
+      "significance": "前沿实验室重新进入开放权重赛道，本地部署者首次获得带推理能力的官方模型，开源与闭源的边界重新划定。",
+      "organizations": [
+        "openai"
+      ],
+      "people": [],
+      "relatedModels": [
+        "gpt-oss-120b"
+      ],
+      "chapter": 6,
+      "sources": [
+        {
+          "label": "OpenAI — Model Release Notes",
+          "url": "https://help.openai.com/en/articles/9624314-model-release-notes",
+          "kind": "official"
+        },
+        {
+          "label": "OpenAI — Open models",
+          "url": "https://openai.com/open-models/",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": null
+    },
+    {
+      "id": "eu-ai-act-gpai-2025",
+      "date": "2025-08-02",
+      "displayDate": "2025.08.02",
+      "datePrecision": "day",
+      "dateType": "policy",
+      "title": "欧盟《人工智能法案》通用模型义务生效",
+      "titleEn": "EU AI Act: General-Purpose AI Obligations Apply",
+      "category": "policy",
+      "summary": "欧盟《人工智能法案》针对通用目的 AI 模型的义务自 2025 年 8 月 2 日起适用，要求提供方提交技术文档与训练数据摘要、遵守版权政策，并对被认定为具有系统性风险的模型履行额外评估与事件报告义务。配套的行为准则与执法安排同步推进。",
+      "significance": "前沿模型首次被纳入强制披露框架，训练数据与风险评估从自愿公开变成合规要求，影响所有向欧盟提供服务的实验室。",
+      "organizations": [
+        "eu"
+      ],
+      "people": [],
+      "relatedModels": [],
+      "chapter": 6,
+      "sources": [
+        {
+          "label": "European Commission — AI Act regulatory framework",
+          "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": null
+    },
+    {
+      "id": "openai-model-spec-agentic-2025",
+      "date": "2025-09-12",
+      "displayDate": "2025.09.12",
+      "datePrecision": "day",
+      "dateType": "policy",
+      "title": "OpenAI 模型规范加入 Agent 行为准则",
+      "titleEn": "OpenAI Model Spec: Agentic Principles",
+      "category": "theory",
+      "summary": "OpenAI 更新模型规范，首次系统写入 Agent 行为原则：AI 只应在与用户达成一致的自主范围内行动，并须控制与披露副作用，优先选择可逆操作、避免不可逆动作。规范同时把最高权威层级从 Platform 改为 Root，并调整人格与安全相关条款。",
+      "significance": "Agent 的行为边界第一次被写成可引用的公开规范，为「模型可自主操作世界」这一阶段提供了对齐文本基础。",
+      "organizations": [
+        "openai"
+      ],
+      "people": [],
+      "relatedModels": [],
+      "chapter": 6,
+      "sources": [
+        {
+          "label": "OpenAI — Model Release Notes (Model Spec update, September 12, 2025)",
+          "url": "https://help.openai.com/en/articles/9624314-model-release-notes",
+          "kind": "official"
+        },
+        {
+          "label": "OpenAI — Model Spec",
+          "url": "https://model-spec.openai.com/",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": null
+    },
+    {
+      "id": "openai-retire-gpt4o-2026",
+      "date": "2026-02-13",
+      "displayDate": "2026.02.13",
+      "datePrecision": "day",
+      "dateType": "product",
+      "title": "OpenAI 从 ChatGPT 下线 GPT-4o 与 GPT-5 等旧模型",
+      "titleEn": "Retiring GPT-4o and Older Models",
+      "category": "product",
+      "summary": "OpenAI 按预告从 ChatGPT 下线 GPT-4o、GPT-4.1、GPT-4.1 mini、o4-mini 以及 GPT-5 的 Instant 与 Thinking 版本，API 侧暂不受影响。官方理由是旧模型使用量有限，需要把资源集中到更新的旗舰与推理模型上，官方建议用户迁移到当前默认模型。",
+      "significance": "模型生命周期被压到一年以内，用户依赖的模型会定期消失，迁移与版本锁定成为应用层必须规划的成本。",
+      "organizations": [
+        "openai"
+      ],
+      "people": [],
+      "relatedModels": [
+        "gpt-5",
+        "gpt-4-1"
+      ],
+      "chapter": 7,
+      "sources": [
+        {
+          "label": "OpenAI — Model Release Notes",
+          "url": "https://help.openai.com/en/articles/9624314-model-release-notes",
+          "kind": "official"
+        },
+        {
+          "label": "OpenAI — Retiring GPT-4o and older models",
+          "url": "https://openai.com/index/retiring-gpt-4o-and-older-models/",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": null
+    },
+    {
+      "id": "anthropic-project-glasswing-2026",
+      "date": "2026-04",
+      "displayDate": "2026.04",
+      "datePrecision": "month",
+      "dateType": "announcement",
+      "title": "Anthropic 启动 Project Glasswing 受控发布机制",
+      "titleEn": "Project Glasswing",
+      "category": "system",
+      "summary": "Anthropic 启动 Project Glasswing，把首个 Mythos 级模型 Claude Mythos Preview 只提供给少数网络防御方与关键软件基础设施提供方，并与美国政府协作推进。官方明确表示此类模型具备真实攻击性能力，只有在防护手段足够可靠后才会扩大分发范围。",
+      "significance": "前沿能力首次出现按等级审批的分发制度，AI 治理从使用条款扩展到对合作方资质的实质审核，合作方资质成为实质性的准入门槛。",
+      "organizations": [
+        "anthropic"
+      ],
+      "people": [],
+      "relatedModels": [
+        "claude-mythos-preview",
+        "claude-mythos-5"
+      ],
+      "chapter": 7,
+      "sources": [
+        {
+          "label": "Anthropic — Project Glasswing",
+          "url": "https://www.anthropic.com/glasswing",
+          "kind": "official"
+        },
+        {
+          "label": "Anthropic — Claude Fable 5 and Claude Mythos 5",
+          "url": "https://www.anthropic.com/news/claude-fable-5-mythos-5",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": "官方页面与 Fable 5 发布页均记载该项目始于 2026 年 4 月。"
+    },
+    {
+      "id": "anthropic-fable-mythos-suspension-2026",
+      "date": "2026-06-12",
+      "displayDate": "2026.06.12",
+      "datePrecision": "day",
+      "dateType": "product",
+      "title": "Anthropic 暂停 Claude Fable 5 与 Mythos 5 访问",
+      "titleEn": "Claude Mythos 5 and Fable 5 Access Unavailable",
+      "category": "organization",
+      "summary": "Anthropic 在 Fable 5 与 Mythos 5 开放后不久宣布暂停两者的访问，向用户致歉并表示正在尽快恢复，未在公告中详述原因。此次中断发生在模型刚进入公开可用阶段的数日内，属于前沿模型发布后少见的中途撤回。",
+      "significance": "说明极高性能模型的发布不再是单向事件，运行期问题或安全评估可以导致已上线服务被整体撤回。",
+      "organizations": [
+        "anthropic"
+      ],
+      "people": [],
+      "relatedModels": [
+        "claude-fable-5",
+        "claude-mythos-5"
+      ],
+      "chapter": 7,
+      "sources": [
+        {
+          "label": "Anthropic — Claude Mythos 5 and Fable 5 access unavailable",
+          "url": "https://www.anthropic.com/news/fable-mythos-access",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": null
+    },
+    {
+      "id": "anthropic-fable-mythos-redeploy-2026",
+      "date": "2026-07-01",
+      "displayDate": "2026.07.01",
+      "datePrecision": "day",
+      "dateType": "product",
+      "title": "Claude Fable 5 与 Mythos 5 恢复上线",
+      "titleEn": "Claude Mythos 5 and Fable 5 Redeployed",
+      "category": "organization",
+      "summary": "Anthropic 宣布 Fable 5 与 Mythos 5 重新可用，结束了 6 月 12 日开始的访问中断。恢复后两者继续按原有定价与访问规则提供，Mythos 5 仍限于受信任访问计划内的机构，官方未公布中断原因的更多细节。",
+      "significance": "撤回与恢复之间不到三周，表明受控发布机制具备可回滚的操作性，安全干预可以快速执行而不必永久下线。",
+      "organizations": [
+        "anthropic"
+      ],
+      "people": [],
+      "relatedModels": [
+        "claude-fable-5",
+        "claude-mythos-5"
+      ],
+      "chapter": 7,
+      "sources": [
+        {
+          "label": "Anthropic — Claude Mythos 5 and Fable 5 redeployed",
+          "url": "https://www.anthropic.com/news/redeploying-fable-5",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": null
+    },
+    {
+      "id": "anthropic-pace-the-frontier-2026",
+      "date": "2026",
+      "displayDate": "2026",
+      "datePrecision": "year",
+      "dateType": "announcement",
+      "title": "Anthropic 提出「为前沿减速」主张",
+      "titleEn": "We Must Pace the Frontier",
+      "category": "theory",
+      "summary": "Anthropic 首席执行官发表「我们必须为前沿减速」一文，主张在能力持续提升的同时主动控制发布节奏，而非以最快速度把新能力推向市场。文中观点随后被公司用作发布政策的公开依据，Claude Opus 5.5 即被官方称为该主张提出后的首个发布。",
+      "significance": "头部实验室首次把「放慢」写成公开主张并落到发布节奏上，竞争叙事中出现了以克制为卖点的路线。",
+      "organizations": [
+        "anthropic"
+      ],
+      "people": [
+        "Dario Amodei"
+      ],
+      "relatedModels": [
+        "claude-opus-5-5"
+      ],
+      "chapter": 7,
+      "sources": [
+        {
+          "label": "Dario Amodei — We must pace the frontier",
+          "url": "https://darioamodei.com/post/we-must-pace-the-frontier",
+          "kind": "official"
+        },
+        {
+          "label": "Anthropic — Introducing Claude Opus 5.5",
+          "url": "https://www.anthropic.com/claude-opus-5-5",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": "Opus 5.5 发布页确认其为该文发表后的首个发布，但未给出文章确切日期，故只写到年。"
+    },
+    {
+      "id": "anthropic-public-benefit-fund-2026",
+      "date": "2026-10-18",
+      "displayDate": "2026.10.18",
+      "datePrecision": "day",
+      "dateType": "announcement",
+      "title": "Anthropic 设立公共利益基金",
+      "titleEn": "Investing in the Public Benefit",
+      "category": "organization",
+      "summary": "Anthropic 宣布把公司一部分股份划入新设立的 Anthropic Public Benefit Fund，并设计为随公司成长而扩大的结构。该基金被定位为与公司使命绑定的长期公益载体，用于把公司价值增长的一部分定向投入公共利益。",
+      "significance": "前沿实验室开始用股权结构而非利润捐赠来承诺公共责任，治理设计本身成为 AI 公司竞争叙事的一部分。",
+      "organizations": [
+        "anthropic"
+      ],
+      "people": [],
+      "relatedModels": [],
+      "chapter": 7,
+      "sources": [
+        {
+          "label": "Anthropic — Investing in the public benefit",
+          "url": "https://www.anthropic.com/news/public-benefit-fund",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": null
+    },
+    {
+      "id": "anthropic-s1-ipo-2026",
+      "date": "2026-10-26",
+      "displayDate": "2026.10.26",
+      "datePrecision": "day",
+      "dateType": "announcement",
+      "title": "Anthropic 向美国 SEC 提交 IPO 注册文件",
+      "titleEn": "Anthropic Files S-1 for Proposed IPO",
+      "category": "organization",
+      "summary": "Anthropic 宣布已就拟议的首次公开募股向美国证券交易委员会提交 S-1 注册声明，涉及 A 类普通股。这意味着公司从闭门的公益公司转向需要按季披露财务状况的公众公司，此前它已完成多轮超大额融资。",
+      "significance": "前沿实验室进入资本市场公开监督阶段，研发投入与安全支出的可持续性将首次接受公开财务口径的检验。",
+      "organizations": [
+        "anthropic"
+      ],
+      "people": [],
+      "relatedModels": [],
+      "chapter": 7,
+      "sources": [
+        {
+          "label": "Anthropic — Anthropic files S-1 with the SEC",
+          "url": "https://www.anthropic.com/news/s1-sec",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": null
+    },
+    {
+      "id": "anthropic-model-spec-2026-10-29",
+      "date": "2026-10-29",
+      "displayDate": "2026.10.29",
+      "datePrecision": "day",
+      "dateType": "policy",
+      "title": "OpenAI 重构模型规范为五项价值",
+      "titleEn": "Updates to the OpenAI Model Spec",
+      "category": "theory",
+      "summary": "OpenAI 改写模型规范，把指导原则重组为忠实于人类意图、最小化伤害、诚实与透明、人类能动性、关怀五项价值，并新增关于上下文、记忆、个性化、人类能动性与监督的指引。规范同时把模型统称为「GPT」而非「the assistant」，反映其使用范围已超出对话助手。",
+      "significance": "模型行为的公共文本开始围绕难以量化的价值而非规则清单组织，命名变化也承认了助手定位已被 Agent 取代。",
+      "organizations": [
+        "openai"
+      ],
+      "people": [],
+      "relatedModels": [],
+      "chapter": 7,
+      "sources": [
+        {
+          "label": "OpenAI — Model Release Notes (Model Spec update, October 29, 2026)",
+          "url": "https://help.openai.com/en/articles/9624314-model-release-notes",
+          "kind": "official"
+        },
+        {
+          "label": "OpenAI — Model Spec 2026-10-29",
+          "url": "https://model-spec.openai.com/2026-10-29.html",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": null
+    },
+    {
+      "id": "openai-gpt6-rosalind-research-2026",
+      "date": "2026-10-30",
+      "displayDate": "2026.10.30",
+      "datePrecision": "day",
+      "dateType": "product",
+      "title": "OpenAI 推出面向生命科学的 GPT-6 Rosalind Research",
+      "titleEn": "GPT-6 Rosalind Research",
+      "category": "science",
+      "summary": "OpenAI 把 GPT-6 的推理能力引入多步生命科学研究，推出受审核的 Rosalind Research 访问通道，附带为生物工作设计的安全措施。使用需通过机构审批与授权用户名单，企业工作区默认关闭并先经历管理员预览，Rosalind Discovery 仍停留在 5.5 系列。",
+      "significance": "科研场景的模型准入从个人订阅转为机构许可，同一基座按用途分壳发布开始成为前沿实验室的标准做法。",
+      "organizations": [
+        "openai"
+      ],
+      "people": [],
+      "relatedModels": [
+        "gpt-6-rosalind-research",
+        "gpt-6-astra"
+      ],
+      "chapter": 7,
+      "sources": [
+        {
+          "label": "OpenAI — Model Release Notes (GPT-6 Rosalind Research, October 30, 2026)",
+          "url": "https://help.openai.com/en/articles/9624314-model-release-notes",
+          "kind": "official"
+        }
+      ],
+      "verificationStatus": "verified",
+      "notes": null
+    }
+  ],
+  "organizations": [
+    {
+      "id": "openai",
+      "name": "OpenAI",
+      "nameZh": "OpenAI",
+      "countryOrRegion": "US",
+      "founded": "2015",
+      "focus": [
+        "前沿 LLM",
+        "推理模型",
+        "Agent",
+        "多模态"
+      ],
+      "summary": "以 GPT 与 o 系列为核心的前沿实验室，2025 至 2026 年间把推理、Agent 与编码工具整合为统一系统。",
+      "sources": [
+        {
+          "label": "OpenAI",
+          "url": "https://openai.com/",
+          "kind": "official"
+        }
+      ]
+    },
+    {
+      "id": "anthropic",
+      "name": "Anthropic",
+      "nameZh": "Anthropic",
+      "countryOrRegion": "US",
+      "founded": "2021",
+      "focus": [
+        "前沿 LLM",
+        "AI 安全",
+        "编码 Agent",
+        "受控发布"
+      ],
+      "summary": "以 Claude 家族与分级安全政策为核心，2026 年转向按能力等级审核分发的受信任访问机制。",
+      "sources": [
+        {
+          "label": "Anthropic",
+          "url": "https://www.anthropic.com/",
+          "kind": "official"
+        }
+      ]
+    },
+    {
+      "id": "google-deepmind",
+      "name": "Google DeepMind",
+      "nameZh": "Google DeepMind",
+      "countryOrRegion": "US",
+      "founded": "2010",
+      "focus": [
+        "前沿 LLM",
+        "多模态",
+        "科学计算",
+        "生成式媒体"
+      ],
+      "summary": "Alphabet 旗下 AI 研究机构，负责 Gemini、Gemma、Veo 与 Imagen 等模型家族，2025 年底以 Gemini 3 重回前列。",
+      "sources": [
+        {
+          "label": "Google DeepMind",
+          "url": "https://deepmind.google/",
+          "kind": "official"
+        }
+      ]
+    },
+    {
+      "id": "meta",
+      "name": "Meta",
+      "nameZh": "Meta",
+      "countryOrRegion": "US",
+      "founded": "2004",
+      "focus": [
+        "开放权重模型",
+        "多模态",
+        "推荐系统"
+      ],
+      "summary": "以 Llama 系列推动开放权重路线，2025 年的 Llama 4 首次把原生多模态与超长上下文带入该家族。",
+      "sources": [
+        {
+          "label": "Meta AI",
+          "url": "https://ai.meta.com/",
+          "kind": "official"
+        }
+      ]
+    },
+    {
+      "id": "xai",
+      "name": "xAI",
+      "nameZh": "xAI",
+      "countryOrRegion": "US",
+      "founded": "2023",
+      "focus": [
+        "前沿 LLM",
+        "实时检索",
+        "推理"
+      ],
+      "summary": "以 Grok 系列参与前沿竞争，依托大规模算力集群与 X 平台实时信息流形成差异化能力。",
+      "sources": [
+        {
+          "label": "xAI",
+          "url": "https://x.ai/",
+          "kind": "official"
+        }
+      ]
+    }
+  ],
+  "meta": {
+    "researcher": "frontier-2025-2026",
+    "generatedAt": "2026-11-02",
+    "cutoff": "2026-11-02"
+  }
+}
