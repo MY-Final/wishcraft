@@ -1,0 +1,161 @@
+/* GARGANTUA — base layer: reset, canvas, typography, shared atoms. */
+
+:root {
+  --bg: #000000;
+  --ink: rgba(255, 246, 235, 0.94);
+  --ink-soft: rgba(255, 246, 235, 0.72);
+  --ink-dim: rgba(255, 246, 235, 0.52);
+  --ink-faint: rgba(255, 246, 235, 0.36);
+  --line: rgba(255, 246, 235, 0.18);
+  --line-soft: rgba(255, 246, 235, 0.1);
+  --amber: #ff9a3c;
+  --amber-hot: #ffd6a0;
+  --amber-line: rgba(255, 154, 60, 0.6);
+  --danger: #ff5f45;
+  --mono: ui-monospace, "Cascadia Mono", "SF Mono", "Roboto Mono", Menlo, Consolas, monospace;
+  --sans: "Helvetica Neue", "Segoe UI", "Inter", system-ui, Arial, sans-serif;
+  --pad: clamp(18px, 2.5vw, 38px);
+  --gap: clamp(18px, 2.4vw, 40px);
+  --frame-inset: 18px;
+  --radius: 2px;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --hud-fade: 320ms;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 14px;
+  line-height: 1.5;
+  overflow: hidden;
+  overscroll-behavior: none;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+#gl {
+  position: fixed;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  touch-action: none;
+}
+
+/* Instrument type: mono for every number, label and control. */
+.mono {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 400;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.14em;
+  line-height: 1.45;
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+
+/* Subscript units (rₛ) render in the mono face instead of a fallback glyph. */
+sub {
+  position: relative;
+  bottom: -0.2em;
+  font-size: 0.72em;
+  letter-spacing: 0;
+  vertical-align: baseline;
+}
+
+/* Hairline buttons used by the overlays. */
+.ghost {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 32px;
+  padding: 7px 14px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  color: var(--ink-soft);
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  transition: color 160ms ease, border-color 160ms ease, background 160ms ease;
+}
+
+.ghost:hover,
+.ghost:focus-visible {
+  color: var(--ink);
+  border-color: rgba(255, 246, 235, 0.42);
+  background: rgba(255, 246, 235, 0.05);
+}
+
+.solid {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 32px;
+  padding: 7px 16px;
+  border: 1px solid var(--amber);
+  border-radius: var(--radius);
+  background: var(--amber);
+  color: #140a02;
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  transition: background 160ms ease, border-color 160ms ease;
+}
+
+.solid:hover,
+.solid:focus-visible {
+  background: var(--amber-hot);
+  border-color: var(--amber-hot);
+}
+
+:focus-visible {
+  outline: 1px solid var(--amber);
+  outline-offset: 3px;
+}
+
+::selection {
+  background: var(--amber);
+  color: #0a0500;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-delay: 0ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "generatedAt": "2026-11-02T16:53:26.423Z",
+  "constants": {
+    "RS": 1,
+    "MASS": 0.5,
+    "B_CRITICAL": 2.598076211353316,
+    "ISCO": 3
+  },
+  "passed": 9,
+  "failed": 0,
+  "results": [
+    {
+      "name": "Critical impact parameter b_c = 3√3 M",
+      "pass": true,
+      "detail": "measured 2.598076 r_s vs 2.598076 r_s (Δ=4.44e-15)"
+    },
+    {
+      "name": "Weak-field deflection at b = 20 r_s",
+      "pass": true,
+      "detail": "measured 108.104 mrad vs 107.363 mrad (rel 0.69%)"
+    },
+    {
+      "name": "Weak-field deflection at b = 50 r_s",
+      "pass": true,
+      "detail": "measured 41.223 mrad vs 41.178 mrad (rel 0.11%)"
+    },
+    {
+      "name": "Photon sphere r = 1.5 r_s is a circular null orbit",
+      "pass": true,
+      "detail": "u'' = 0.00e+0, drift after 0.2 rad = 0.00e+0"
+    },
+    {
+      "name": "Gravitational redshift g → 1 far from the hole",
+      "pass": true,
+      "detail": "g(10¹² r_s) = 0.999999999999"
+    },
+    {
+      "name": "ISCO face-on redshift g = 1/√2",
+      "pass": true,
+      "detail": "g = 0.707106781187"
+    },
+    {
+      "name": "Doppler asymmetry: approaching side is blueshifted",
+      "pass": true,
+      "detail": "g_approach = 1.0501, g_recede = 0.5330"
+    },
+    {
+      "name": "Disk temperature profile T ∝ r^(-3/4)",
+      "pass": true,
+      "detail": "T(r_in) = 5800.0 K, T(2r_in) = 3448.7 K, T(4r_in) = 2050.6 K"
+    },
+    {
+      "name": "RK4 conserves the null-geodesic invariant (u′)² + u² − u³",
+      "pass": true,
+      "detail": "max drift over 10 rad = 7.98e-17"
+    }
+  ]
+}

@@ -5,7 +5,7 @@
 
 **在线作品集：** https://120403.xyz/wishcraft/ （GitHub Pages；`my-final.github.io/wishcraft` 会跳转到同一站点）
 
-当前收录 **02 个作品**：
+当前收录 **03 个作品**：
 
 ## THE INTELLIGENCE ARCHIVE / 智能编年史
 
@@ -36,6 +36,22 @@
 
 ![THE INFERENCE](site/assets/covers/inference.jpg)
 
+## GARGANTUA / 卡冈图雅
+
+> 每一个像素，都是一条弯折的零测地线。
+
+全屏 Fragment Shader 实时积分 Schwarzschild 零测地线的黑洞作品。没有黑球、平面圆环、贴图或视频：事件视界、光子环、引力透镜、吸积盘背面与多次穿越，全部由每一帧、每一个像素的 Binet 方程数值积分产生。
+
+- **物理**：RK4 积分 `d²u/dφ² + u = 3Mu²`（`u = 1/r`）；`r_s = 2M = 1`，光子球 `1.5 r_s`，ISCO `3 r_s`，临界碰撞参数 `3√3 M ≈ 2.598 r_s`
+- **相对论光学**：Keplerian 吸积盘、Doppler beaming、引力红移与观测频率偏移；盘面湍流随差速旋转演化
+- **程序化天空**：程序化星场与银河带，无全景贴图；天空同样经过测地线透镜
+- **后处理**：HDR bloom、ACES、暗角、胶片颗粒、轻微色散；Standard / High / Cinematic 三档质量
+- **交互**：电影镜头循环、OrbitControls、4 个视角预设、HUD、**21 项**实时参数、`0–9` 调试视图、快捷键、可选环境音乐
+- **工程**：原生 HTML/CSS/JS + ES Modules + 本地 Three.js，**无构建步骤**；URL 截图接口、状态持久化、WebGL 上下文恢复、Retina 与移动端适配
+- **入口**：`projects/gargantua/`；项目文档见 `projects/gargantua/README.md`、`docs/PHYSICS.md`、`docs/QA_REPORT.md`
+
+![GARGANTUA](site/assets/covers/gargantua.jpg)
+
 ---
 
 ## 仓库结构
@@ -53,7 +69,8 @@ wishcraft/
 │  └─ test-site.mjs         Playwright 验收脚本
 ├─ projects/
 │  ├─ intelligence-archive/ THE INTELLIGENCE ARCHIVE / 智能编年史
-│  └─ inference/            THE INFERENCE / 推理现场
+│  ├─ inference/            THE INFERENCE / 推理现场
+│  └─ gargantua/            GARGANTUA / 卡冈图雅
 └─ .github/workflows/pages.yml
 ```
 
@@ -80,6 +97,11 @@ pnpm install
 pnpm dev          # http://127.0.0.1:5181
 pnpm build        # tsc --noEmit + vite build
 pnpm qa           # 浏览器验收（需先启动 5190 端口的 preview）
+
+# GARGANTUA 无需构建：任意静态服务器即可（不能直接 file:// 打开，ES Modules 需要 HTTP）
+cd projects/gargantua
+python -m http.server 5192 --bind 127.0.0.1   # http://127.0.0.1:5192/
+node tools/qa.mjs                              # Playwright 验收（需先启动上面的静态服务器）
 ```
 
 ## 以后如何再许一个愿
@@ -148,6 +170,7 @@ pnpm qa           # 浏览器验收（需先启动 5190 端口的 preview）
 - 1440×900、1024×768 与 390×844 排版检查：通过；
 - 智能编年史本身：`tsc` 0 error，`vite build` 通过，181/93/44 数据校验 0 硬错误；
 - 推理现场本身：`tsc` 0 error，`vite build` 通过，Playwright 验收 **33/33** 通过（桌面、移动、reduced-motion；零 console/page error），关键 3D 节点、Token 检视、深潜、模式切换、Temperature、时间轴与自由探索均有覆盖；记录见 `projects/inference/docs/QA_FINAL.json`。
+- 卡冈图雅本身：无构建静态站点，`node scripts/build-site.mjs --only=gargantua --skip-install` 通过，`/projects/gargantua/` 子路径资源零 404；物理自检 **9/9 PASS**（`projects/gargantua/tools/physics-check.mjs`）；Playwright 验收 **58/58 PASS**（0 failed / 0 skipped，零 console error / page error / console warning、零 HTTP ≥ 400），覆盖 21 参数、0–9 调试视图与确定性渲染、4 预设、3 档质量、移动端/Retina/reduced-motion、状态持久化、URL 截图确定性、WebGL 丢失/恢复、音频与静态子路径；记录见 `projects/gargantua/docs/QA_REPORT.md`、`docs/QA_FINAL.json`，验收截图见 `projects/gargantua/docs/evidence/`。
 
 ## 反馈与许愿
 
@@ -161,4 +184,4 @@ pnpm qa           # 浏览器验收（需先启动 5190 端口的 preview）
 
 ## 来源与授权
 
-智能编年史的数据来源、核实等级与无法核实项见项目内 `docs/DATA_REPORT.md`、`docs/VERIFICATION.md`、`docs/SOURCES.md`。推理现场的 tokenizer 数据来自 `Qwen/Qwen2.5-0.5B-Instruct`（revision `7ae557604adf67be50417f59c2c2f167def9a775`），来源与校验记录见项目内 `research/TOKENIZER_NOTES.md`；其余运行时数值与三维结构为模拟/概念可视化。所有第三方模型与机构名称归其各自所有者。
+智能编年史的数据来源、核实等级与无法核实项见项目内 `docs/DATA_REPORT.md`、`docs/VERIFICATION.md`、`docs/SOURCES.md`。推理现场的 tokenizer 数据来自 `Qwen/Qwen2.5-0.5B-Instruct`（revision `7ae557604adf67be50417f59c2c2f167def9a775`），来源与校验记录见项目内 `research/TOKENIZER_NOTES.md`；其余运行时数值与三维结构为模拟/概念可视化。卡冈图雅的星场、银河、吸积盘纹理与全部画面均由 GLSL 程序化实时生成，没有任何贴图、视频或截图素材；本地 Three.js 为 MIT 许可（`projects/gargantua/vendor/three/LICENSE`），环境音乐为程序化合成、以 CC0 1.0 释出（`projects/gargantua/assets/audio/README.md`）。所有第三方模型与机构名称归其各自所有者。
