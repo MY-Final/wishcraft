@@ -1,0 +1,199 @@
+{
+  "generatedAt": "2026-11-02T13:35:05.521Z",
+  "url": "http://127.0.0.1:5190/",
+  "passed": 33,
+  "failed": 0,
+  "results": [
+    {
+      "name": "Landing headline",
+      "pass": true,
+      "detail": "当你按下发送，AI的世界发生了什么？"
+    },
+    {
+      "name": "Landing has the prefilled question",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Landing start button is visible",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Landing has no horizontal overflow",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Start enters the journey",
+      "pass": true,
+      "detail": "{\"phase\":\"journey\",\"stage\":0}"
+    },
+    {
+      "name": "Journey chrome is visible",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Keyboard play/pause",
+      "pass": true,
+      "detail": "before=true, paused=false, resumed=true"
+    },
+    {
+      "name": "Direct chapter navigation",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Playback speed buttons",
+      "pass": true,
+      "detail": "2× state=2"
+    },
+    {
+      "name": "Timeline scrub",
+      "pass": true,
+      "detail": "progress=0.561"
+    },
+    {
+      "name": "Deep dive opens with content",
+      "pass": true,
+      "detail": "Prefill 与 Decode 为什么不同"
+    },
+    {
+      "name": "Escape closes deep dive",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Technical archive contains the ten answers",
+      "pass": true,
+      "detail": "qa=10"
+    },
+    {
+      "name": "Web / API mode toggle",
+      "pass": true,
+      "detail": "api"
+    },
+    {
+      "name": "Dense / MoE architecture toggle",
+      "pass": true,
+      "detail": "moe"
+    },
+    {
+      "name": "Clicking a 3D node opens its explanation",
+      "pass": true,
+      "detail": "attention-weights → 注意力矩阵"
+    },
+    {
+      "name": "Clicking an embedding vector opens token inspector",
+      "pass": true,
+      "detail": "tokenIndex=3"
+    },
+    {
+      "name": "Decode shows the probability panel",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Temperature changes the sampling experiment",
+      "pass": true,
+      "detail": "1.50"
+    },
+    {
+      "name": "Free exploration pauses and allows orbit",
+      "pass": true,
+      "detail": "cameraMoved=true"
+    },
+    {
+      "name": "Exploring removes reading furniture",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "WebGL scene reports draw calls",
+      "pass": true,
+      "detail": "drawCalls=58"
+    },
+    {
+      "name": "No console / page errors so far",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Finale appears with the closing thesis",
+      "pass": true,
+      "detail": "你看到的是一段回答， 它经历的却是一场复杂的计算旅程。"
+    },
+    {
+      "name": "Finale can be dismissed into free explore",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Mobile landing has no horizontal overflow",
+      "pass": true,
+      "detail": "scrollWidth=390"
+    },
+    {
+      "name": "Mobile journey chrome",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Mobile hides the desktop chapter rail",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Mobile chapter sheet",
+      "pass": true,
+      "detail": "entries=9"
+    },
+    {
+      "name": "Mobile direct stage jump",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Mobile has no horizontal overflow during journey",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Mobile sampling panel is reachable",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Reduced motion preference is respected without breaking the world",
+      "pass": true,
+      "detail": ""
+    }
+  ],
+  "screenshots": [
+    "docs/qa/01-landing-desktop.png",
+    "docs/qa/02-request-desktop.png",
+    "docs/qa/03-tokenizer-desktop.png",
+    "docs/qa/04-field-notes.png",
+    "docs/qa/05-transformer-moe.png",
+    "docs/qa/06-decode-desktop.png",
+    "docs/qa/07-finale-desktop.png",
+    "docs/qa/08-panorama-desktop.png",
+    "docs/qa/09-landing-mobile.png",
+    "docs/qa/10-tokenizer-mobile.png",
+    "docs/qa/11-decode-mobile.png"
+  ],
+  "errors": [],
+  "debug": {
+    "fps": 19,
+    "drawCalls": 493,
+    "triangles": 195674,
+    "stage": 8,
+    "activeScene": "client",
+    "camera": [
+      54.09329145329914,
+      31.95691927511743,
+      54.7608280426834
+    ]
+  }
+}

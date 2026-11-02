@@ -1,0 +1,20 @@
+# dependencies / builds
+node_modules/
+dist/
+.cache/
+*.tsbuildinfo
+
+# generated QA captures and temporary renders
+docs/screens*/
+docs/qa/
+docs/site-check/
+docs/renders/
+site-preview-*.png
+
+# large upstream tokenizer payload; the verified, compact payload is committed
+research/assets/qwen2.5-0.5b-instruct-tokenizer.json
+research/_tokenizer_summary.txt
+
+# OS noise
+.DS_Store
+Thumbs.db

@@ -1,0 +1,22 @@
+{
+  "id": "inference",
+  "order": 2,
+  "featured": true,
+  "title": "THE INFERENCE",
+  "titleZh": "推理现场",
+  "year": "2026",
+  "kind": "INTERACTIVE 3D FIELD STUDY",
+  "kindZh": "可交互三维科学可视化",
+  "status": "COMPLETE",
+  "tagline": "一句问题，穿过一整个计算世界。",
+  "description": "一次大语言模型请求的完整生命周期：从聊天框里的十个字符，到 HTTPS、API 网关、Tokenizer、Embedding、Transformer、Prefill、Decode，再到逐 Token 抵达屏幕。九段可自由探索的三维章节，一座可以走进的推理机器。",
+  "meta": ["9 CHAPTERS", "REAL TOKENIZER DATA", "THREE.JS"],
+  "preview": "projects/inference/",
+  "cover": "assets/covers/inference.jpg",
+  "build": {
+    "manager": "pnpm",
+    "install": "pnpm install --frozen-lockfile",
+    "command": "pnpm build",
+    "output": "dist"
+  }
+}

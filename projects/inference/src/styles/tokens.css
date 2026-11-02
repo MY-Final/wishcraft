@@ -1,0 +1,69 @@
+:root {
+  /* palette — warm white paper, graphite instrument, signal orange, quiet teal */
+  --paper: #f4f3ef;
+  --paper-deep: #ebe9e3;
+  --white: #fdfcf9;
+  --white-pure: #ffffff;
+  --ink: #141414;
+  --graphite: #292a27;
+  --graphite-soft: #484945;
+  --muted: #73736c;
+  --muted-soft: #9b9b92;
+  --hairline: #d8d5cc;
+  --hairline-soft: #e8e6de;
+  --orange: #e4572a;
+  --orange-deep: #b6421e;
+  --orange-soft: #f5cec0;
+  --teal: #287b70;
+  --teal-soft: #cfe5e0;
+  --danger: #a43820;
+  --glass: rgba(253, 252, 249, 0.68);
+  --glass-strong: rgba(253, 252, 249, 0.9);
+  --shadow-ui: 0 24px 80px rgba(30, 28, 24, 0.08);
+
+  /* type */
+  --font-sans: 'Inter Tight', 'Noto Sans SC', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+    sans-serif;
+  --font-mono: 'IBM Plex Mono', 'SFMono-Regular', Menlo, Consolas, 'Noto Sans SC', 'PingFang SC',
+    'Microsoft YaHei', monospace;
+  --font-cn: 'Noto Sans SC', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+
+  --text-display: clamp(2.8rem, 4.9vw, 5.7rem);
+  --text-hero: clamp(2.25rem, 4.2vw, 4.6rem);
+  --text-title: clamp(1.45rem, 2.2vw, 2.3rem);
+  --text-subtitle: clamp(1rem, 1.35vw, 1.25rem);
+  --text-body: clamp(0.9rem, 0.98vw, 1rem);
+  --text-small: 0.8125rem;
+  --text-micro: 0.65rem;
+  --text-meta: 0.6875rem;
+
+  /* spatial system */
+  --gutter: clamp(18px, 3.1vw, 54px);
+  --edge: clamp(16px, 2.4vw, 40px);
+  --panel-radius: 2px;
+  --max-width: 1760px;
+
+  /* motion */
+  --ease-cinema: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-sharp: cubic-bezier(0.7, 0, 0.2, 1);
+  --dur-fast: 180ms;
+  --dur: 380ms;
+  --dur-slow: 900ms;
+
+  /* layers */
+  --z-canvas: 0;
+  --z-grain: 2;
+  --z-ui: 10;
+  --z-stage-rail: 14;
+  --z-chapter: 15;
+  --z-metrics: 16;
+  --z-player: 17;
+  --z-landing: 18;
+  --z-topbar: 20;
+  --z-finale: 25;
+  --z-drawer: 60;
+  --z-modal: 80;
+  --z-loading: 100;
+
+  color-scheme: light;
+}

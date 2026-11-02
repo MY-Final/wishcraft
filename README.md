@@ -5,7 +5,7 @@
 
 **在线作品集：** https://120403.xyz/wishcraft/ （GitHub Pages；`my-final.github.io/wishcraft` 会跳转到同一站点）
 
-当前收录 **01 个作品**：
+当前收录 **02 个作品**：
 
 ## THE INTELLIGENCE ARCHIVE / 智能编年史
 
@@ -20,6 +20,21 @@
 - **入口**：`projects/intelligence-archive/`；项目内文档见 `docs/DATA_REPORT.md`、`docs/VERIFICATION.md`、`docs/SOURCES.md`
 
 ![THE INTELLIGENCE ARCHIVE](docs/portfolio.png)
+
+## THE INFERENCE / 推理现场
+
+> 当你按下发送，AI 的世界发生了什么？
+
+一次大语言模型请求的完整生命周期：从聊天框里的十个字符，到 HTTPS、API 网关、Tokenizer、Embedding、Transformer、Prefill、Decode，再到逐 Token 抵达屏幕。九段可自由探索的三维章节，一座可以走进的推理机器。
+
+- **章节**：09 段连续叙事，120 秒主时间轴，可暂停、回放、拖拽、0.5×/1×/2×、直接跳章
+- **交互**：鼠标/触控旋转与缩放、点击 3D 节点、Token 检视、公式深潜、Web/API 与 Dense/MoE 切换、Temperature 采样实验、自由探索全景
+- **真实数据**：输入问题 `为什么天空是蓝色的？` 使用 Qwen2.5-0.5B-Instruct 的**真实 tokenizer**，10 个汉字 → 6 个 Token（`100678, 101916, 20412, 105681, 9370, 11319`）；回答 55 Token 的边界来自同一 tokenizer
+- **模拟边界**：延迟、吞吐、KV Cache 占用、attention 权重、logits、三维 embedding 坐标均为**明确标注的模拟/概念可视化**，不是模型真实内部激活；不展示隐藏思维链
+- **技术**：Vite + React + TypeScript + Three.js；纯静态、无后端、无真实 API 调用；自托管字体、桌面优先、移动简化、支持 `prefers-reduced-motion`
+- **入口**：`projects/inference/`；项目文档见 `projects/inference/README.md`、`docs/QA_REPORT.md`
+
+![THE INFERENCE](site/assets/covers/inference.jpg)
 
 ---
 
@@ -37,7 +52,8 @@ wishcraft/
 │  ├─ make-covers.mjs       从构建产物生成封面
 │  └─ test-site.mjs         Playwright 验收脚本
 ├─ projects/
-│  └─ intelligence-archive/ THE INTELLIGENCE ARCHIVE / 智能编年史
+│  ├─ intelligence-archive/ THE INTELLIGENCE ARCHIVE / 智能编年史
+│  └─ inference/            THE INFERENCE / 推理现场
 └─ .github/workflows/pages.yml
 ```
 
@@ -52,12 +68,18 @@ node scripts/serve-site.mjs          # http://127.0.0.1:5180/
 node scripts/build-site.mjs
 ```
 
-单独开发智能编年史：
+单独开发某个作品：
 
 ```bash
 cd projects/intelligence-archive
 pnpm install
 pnpm dev          # http://127.0.0.1:5178
+
+cd projects/inference
+pnpm install
+pnpm dev          # http://127.0.0.1:5181
+pnpm build        # tsc --noEmit + vite build
+pnpm qa           # 浏览器验收（需先启动 5190 端口的 preview）
 ```
 
 ## 以后如何再许一个愿
@@ -70,7 +92,7 @@ pnpm dev          # http://127.0.0.1:5178
 ```json
 {
   "id": "my-wish",
-  "order": 2,
+  "order": 3,
   "title": "MY WISH",
   "titleZh": "我的愿望",
   "year": "2026",
@@ -123,8 +145,9 @@ pnpm dev          # http://127.0.0.1:5178
 - GitHub Actions 构建与部署：成功；
 - 线上作品集、智能编年史入口、封面、字体：HTTP 200；
 - 作品集详情 → 进入作品 → 返回：正常；
-- 1440×900 与 390×844 排版检查：通过；
-- 智能编年史本身：`tsc` 0 error，`vite build` 通过，181/93/44 数据校验 0 硬错误。
+- 1440×900、1024×768 与 390×844 排版检查：通过；
+- 智能编年史本身：`tsc` 0 error，`vite build` 通过，181/93/44 数据校验 0 硬错误；
+- 推理现场本身：`tsc` 0 error，`vite build` 通过，Playwright 验收 **33/33** 通过（桌面、移动、reduced-motion；零 console/page error），关键 3D 节点、Token 检视、深潜、模式切换、Temperature、时间轴与自由探索均有覆盖；记录见 `projects/inference/docs/QA_FINAL.json`。
 
 ## 反馈与许愿
 
@@ -138,4 +161,4 @@ pnpm dev          # http://127.0.0.1:5178
 
 ## 来源与授权
 
-智能编年史的数据来源、核实等级与无法核实项见项目内 `docs/DATA_REPORT.md`、`docs/VERIFICATION.md`、`docs/SOURCES.md`。所有第三方模型与机构名称归其各自所有者。
+智能编年史的数据来源、核实等级与无法核实项见项目内 `docs/DATA_REPORT.md`、`docs/VERIFICATION.md`、`docs/SOURCES.md`。推理现场的 tokenizer 数据来自 `Qwen/Qwen2.5-0.5B-Instruct`（revision `7ae557604adf67be50417f59c2c2f167def9a775`），来源与校验记录见项目内 `research/TOKENIZER_NOTES.md`；其余运行时数值与三维结构为模拟/概念可视化。所有第三方模型与机构名称归其各自所有者。
