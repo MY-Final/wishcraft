@@ -1,0 +1,106 @@
+name: 模型 / 数据补充
+description: 补录一个模型、版本或官方来源；或纠正日期、日期类型与核实等级。
+title: "[数据] "
+labels: ["data"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        智能编年史的数据规则：**不补假日期，不编造来源，不把传闻写成发布。**
+        只查到月份就写月份；官方只给季度就标季度。无法核实的型号不进入档案。
+
+  - type: dropdown
+    id: request
+    attributes:
+      label: 你想做什么
+      options:
+        - 补录一个未收录的模型
+        - 补充或替换官方来源
+        - 纠正发布日期 / 日期类型 / 日期精度
+        - 纠正模型名称、机构或版本
+        - 纠正技术描述 / 能力 / 意义
+        - 纠正模型继承关系
+        - 其他
+    validations:
+      required: true
+
+  - type: input
+    id: model
+    attributes:
+      label: 模型 / 事件
+      description: 官方名称与版本号，尽量保留大小写。
+      placeholder: "例如：GPT-6.1 Sol / Claude Opus 5.5 / DeepSeek-V4.1-Flash"
+    validations:
+      required: true
+
+  - type: input
+    id: organization
+    attributes:
+      label: 研发机构 / 国家或地区
+      placeholder: "OpenAI / 美国"
+    validations:
+      required: true
+
+  - type: input
+    id: date
+    attributes:
+      label: 首次官方公开日期
+      description: 优先使用官方公告日期。只记得年月就只写年月，不要补日。
+      placeholder: "2026-09-29 / 2026-09 / 2026"
+    validations:
+      required: false
+
+  - type: dropdown
+    id: date_type
+    attributes:
+      label: 这个日期属于哪种
+      options:
+        - 官方公告 / 新闻稿
+        - 论文预印或发表
+        - 产品上线
+        - API 开放
+        - 开放权重发布
+        - 会议现场发布
+        - 不确定
+    validations:
+      required: false
+
+  - type: textarea
+    id: source
+    attributes:
+      label: 官方来源
+      description: 至少一条可以打开的官方链接（公告、文档、论文、模型卡、权重页）。
+      placeholder: |
+        - https://…
+        - 页面中哪一行写了日期
+    validations:
+      required: true
+
+  - type: textarea
+    id: detail
+    attributes:
+      label: 需要补充或修改的内容
+      description: 技术特征、相对前代的变化、历史意义、与哪些模型存在真实继承关系。
+    validations:
+      required: false
+
+  - type: dropdown
+    id: confidence
+    attributes:
+      label: 核实状态
+      options:
+        - 已核实：官方来源且日期可读
+        - 部分核实：官方只给月份/季度，或只有权威二手来源
+        - 未核实：只有传闻或聚合站信息
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: 提交前确认
+      options:
+        - label: 我知道未核实的型号不会进入正式档案，只会记录在研究笔记里。
+          required: true
+        - label: 我提供的链接真实可访问，不是搜索页或短链。
+          required: true

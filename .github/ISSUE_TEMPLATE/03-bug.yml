@@ -1,0 +1,84 @@
+name: 站点问题 / 打不开或坏了
+description: 页面打不开、资源 404、3D 不显示、移动端错位或性能异常。
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        如果是内容或数据错误，请使用「纠错」模板。这里只处理站点本身的问题。
+
+  - type: input
+    id: url
+    attributes:
+      label: 出问题的页面
+      description: 完整 URL，包含 # 后面的路径（如果有）。
+      placeholder: "https://120403.xyz/wishcraft/projects/intelligence-archive/#/archive"
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: 复现步骤
+      description: 你做了什么，问题才出现？
+      placeholder: |
+        1. 打开…
+        2. 滚动到…
+        3. 点击…
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: 你期望发生什么
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: 实际发生了什么
+      description: 包括报错文字、空白区域、控制台错误等。
+    validations:
+      required: true
+
+  - type: input
+    id: environment
+    attributes:
+      label: 环境
+      description: 浏览器、版本、系统、设备、屏幕宽度。
+      placeholder: "Chrome 143 / Windows 11 / 1440×900"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: 严重程度
+      options:
+        - 阻断：页面完全打不开
+        - 严重：主要功能不可用
+        - 一般：局部错误或错位
+        - 轻微：视觉瑕疵
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: 截图 / 控制台 / 录屏
+      description: 图片可以直接拖进来。控制台错误请贴前 10 行。
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: 提交前确认
+      options:
+        - label: 我已经尝试刷新页面，问题仍然存在。
+          required: false
+        - label: 我已经确认这不是本地网络或代理导致的问题。
+          required: false

@@ -1,0 +1,101 @@
+name: 纠错 / 指出不对
+description: 页面、模型档案、日期、来源或交互中有错误？在这里指出。
+title: "[纠错] "
+labels: ["correction"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢你指出问题。**尽量附上可核对的官方来源**；没有来源也可以提交，我们会自己查。
+        如果是对模型/事件数据的纠正，请优先使用下面的「模型 / 数据补充」模板。
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: 问题出在哪里
+      options:
+        - 作品叙事 / 文案
+        - 模型档案
+        - 历史事件 / 年份
+        - 日期类型 / 日期精度
+        - 官方来源 / 链接
+        - 交互 / 视觉 / 排版
+        - 构建 / 部署 / 性能
+        - 其他
+    validations:
+      required: true
+
+  - type: input
+    id: location
+    attributes:
+      label: 具体位置
+      description: 章节、模型 id、页面路径或 URL，越具体越好。
+      placeholder: "例如：CH03 / Transformer 段落；或 #/archive/gpt-6-1-terra"
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: 现在哪里不对
+      description: 请描述你看到的内容，以及为什么你认为它是错的。
+      placeholder: "例如：页面写 GPT-6 Astra 发布于 2026-10，但官方模型卡写的是 2026-09-08。"
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: 你认为正确的是什么
+      description: 如果能给出正确的日期、名称、表述或来源，请写在这里。
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: 证据 / 官方来源
+      description: 官方公告、模型卡、论文、文档或权威媒体的链接。可附多条。
+      placeholder: |
+        - https://…
+        - 截图或引用原文
+    validations:
+      required: false
+
+  - type: dropdown
+    id: evidence_level
+    attributes:
+      label: 证据强度
+      description: 不影响提交，只用于我们判断核实等级。
+      options:
+        - 官方一手来源（公告 / 文档 / 论文 / 权重页）
+        - 权威二手来源（主流媒体 / 学术索引）
+        - 我的经验或判断，暂无来源
+    validations:
+      required: false
+
+  - type: input
+    id: environment
+    attributes:
+      label: 环境（交互/构建问题填写）
+      placeholder: "浏览器、版本、系统、屏幕宽度；例如 Chrome 143 / Windows / 1440px"
+    validations:
+      required: false
+
+  - type: textarea
+    id: attachments
+    attributes:
+      label: 截图 / 录屏 / 补充材料
+      description: 可以直接拖拽图片进来，或粘贴链接。
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: 提交前确认
+      options:
+        - label: 我确认这不是我的网络、缓存或浏览器插件导致的问题。
+          required: false
+        - label: 我同意维护者在需要时编辑此 issue 以补充信息。
+          required: false

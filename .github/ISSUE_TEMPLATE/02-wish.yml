@@ -1,0 +1,98 @@
+name: 新愿望 / 想加什么
+description: 提议一个新作品、新章节、模型或交互；可以直接粘贴你希望我使用的提示词。
+title: "[许愿] "
+labels: ["wish"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        这个仓库的名字就是许愿池。**愿望越具体，越容易被实现。**
+        如果你已经想好了要怎么做，可以把完整提示词直接贴在第 5 栏；它会成为实现的起点。
+
+  - type: input
+    id: wish
+    attributes:
+      label: 一句话愿望
+      description: 用一句话说清你想看到什么。
+      placeholder: "例如：给智能编年史加一个「模型家族树」视图。"
+    validations:
+      required: true
+
+  - type: textarea
+    id: why
+    attributes:
+      label: 为什么想加
+      description: 它解决什么问题，或者为什么值得存在？
+    validations:
+      required: true
+
+  - type: dropdown
+    id: kind
+    attributes:
+      label: 愿望类型
+      options:
+        - 新作品（一个新的项目）
+        - 新章节 / 新叙事段落
+        - 新模型 / 新数据
+        - 新交互 / 新可视化
+        - 视觉 / 排版 / 动效
+        - 构建 / 部署 / 工具
+        - 其他
+    validations:
+      required: true
+
+  - type: textarea
+    id: prompt
+    attributes:
+      label: 提示词（可选，但强烈建议）
+      description: 把你希望我执行的完整要求贴进来。越像可直接执行的 brief 越好：目标、结构、视觉、交互、验收标准。
+      render: text
+      placeholder: |
+        例如：
+        给 #/archive 增加一个「模型家族树」视图：
+        - 左侧按 family 分组，右侧按 generation 排列
+        - 只使用真实 predecessors/successors 边
+        - 点击节点打开现有详情抽屉
+        - 移动端折叠为列表
+        - 不新增外部依赖
+    validations:
+      required: false
+
+  - type: textarea
+    id: references
+    attributes:
+      label: 参考 / 素材
+      description: 参考作品、截图、链接、数据来源，或你已有的草稿。
+    validations:
+      required: false
+
+  - type: dropdown
+    id: size
+    attributes:
+      label: 你估计的规模
+      options:
+        - 小：一次改动能完成
+        - 中：需要几个模块配合
+        - 大：一个完整的新作品
+        - 不确定
+    validations:
+      required: false
+
+  - type: textarea
+    id: done
+    attributes:
+      label: 怎样算完成
+      description: 你心里的验收标准是什么？
+      placeholder: "例如：档案页可以切换家族树；节点可点；手机能看；构建通过。"
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: 提交前确认
+      options:
+        - label: 我愿意在实现后帮忙测试或给反馈。
+          required: false
+        - label: 这个愿望不包含必须登录、付费或私有数据才能使用的内容。
+          required: false

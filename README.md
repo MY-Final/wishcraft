@@ -126,6 +126,16 @@ pnpm dev          # http://127.0.0.1:5178
 - 1440×900 与 390×844 排版检查：通过；
 - 智能编年史本身：`tsc` 0 error，`vite build` 通过，181/93/44 数据校验 0 硬错误。
 
+## 反馈与许愿
+
+- **发现不对**：用「纠错」模板，尽量附上官方来源。
+- **想加点什么**：用「新愿望」模板；第 5 栏可以直接贴你希望我执行的提示词。
+- **打不开 / 坏了**：用「站点问题」模板，附 URL、设备和复现步骤。
+- **补模型 / 改数据**：用「模型 / 数据补充」模板，重点写清官方来源与日期类型。
+- **直接改代码或加新作品**：提 PR，模板会逐项引导填写。
+
+[打开 Issue 模板](https://github.com/MY-Final/wishcraft/issues/new/choose) · [查看 PR 模板](https://github.com/MY-Final/wishcraft/blob/main/.github/pull_request_template.md)
+
 ## 来源与授权
 
 智能编年史的数据来源、核实等级与无法核实项见项目内 `docs/DATA_REPORT.md`、`docs/VERIFICATION.md`、`docs/SOURCES.md`。所有第三方模型与机构名称归其各自所有者。

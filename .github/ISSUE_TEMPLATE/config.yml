@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: 在线作品集
+    url: https://120403.xyz/wishcraft/
+    about: 先看线上版本，确认问题是否仍然存在。
+  - name: 如何新增一个愿望
+    url: https://github.com/MY-Final/wishcraft/blob/main/README.md
+    about: wish.json 字段说明、构建命令与 Pages 发布流程。
