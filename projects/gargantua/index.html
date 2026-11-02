@@ -1,0 +1,211 @@
+<!doctype html>
+<html
+  lang="en"
+  data-ready="false"
+  data-hud="visible"
+  data-panel="open"
+  data-audio="off"
+  data-quality="high"
+  data-debug="0"
+>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#000000" />
+    <title>GARGANTUA — Schwarzschild Black Hole Raytracer</title>
+    <meta
+      name="description"
+      content="GARGANTUA is a real-time Schwarzschild black hole raytracer. Every pixel integrates a null geodesic through curved spacetime — event horizon, photon ring, lensed accretion disk, Doppler beaming and gravitational redshift."
+    />
+    <meta name="color-scheme" content="dark" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23000'/%3E%3Ccircle cx='16' cy='16' r='7' fill='%23000' stroke='%23ff9a3c' stroke-width='1.5'/%3E%3Ccircle cx='16' cy='16' r='10.5' fill='none' stroke='%23ffd9a0' stroke-width='.8'/%3E%3C/svg%3E"
+    />
+    <link rel="stylesheet" href="./styles/base.css" />
+    <link rel="stylesheet" href="./styles/hud.css" />
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "./vendor/three/three.module.js",
+          "three/addons/": "./vendor/three/addons/"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <canvas id="gl" aria-label="Real-time raytraced Schwarzschild black hole"></canvas>
+
+    <div id="hud" class="hud" role="region" aria-label="Gargantua instrument HUD">
+      <div class="frame" aria-hidden="true">
+        <span></span><span></span><span></span><span></span>
+      </div>
+
+      <header class="hud__top">
+        <div class="brand">
+          <p class="brand__kicker mono">
+            <span>WISHCRAFT</span>
+            <span class="brand__slash" aria-hidden="true">/</span>
+            <span>WISH 03</span>
+          </p>
+          <h1 class="brand__title">Gargantua</h1>
+          <p class="brand__sub mono">Schwarzschild black hole raytracer</p>
+          <span class="brand__rule" aria-hidden="true"></span>
+        </div>
+
+        <dl class="telemetry mono" id="telemetry" aria-label="Renderer telemetry">
+          <div data-metric="fps"><dt>FPS</dt><dd>—</dd></div>
+          <div data-metric="frame"><dt>Frame</dt><dd>—</dd></div>
+          <div data-metric="quality"><dt>Quality</dt><dd>—</dd></div>
+          <div data-metric="render"><dt>Render</dt><dd>—</dd></div>
+          <div data-metric="steps"><dt>Steps</dt><dd>—</dd></div>
+          <div data-metric="disk"><dt>Disk passes</dt><dd>—</dd></div>
+          <div data-metric="dpr"><dt>DPR</dt><dd>—</dd></div>
+        </dl>
+      </header>
+
+      <p class="hint mono" id="hint">
+        <span>Drag to orbit</span>
+        <span class="hint__sep" aria-hidden="true">·</span>
+        <span class="hint__fine">Scroll to zoom</span>
+        <span class="hint__coarse">Pinch to zoom</span>
+        <span class="hint__sep" aria-hidden="true">·</span>
+        <span>? Shortcuts</span>
+      </p>
+
+      <div class="hud__spacer" aria-hidden="true"></div>
+
+      <aside class="panel" id="panel" aria-label="Raytracer parameters">
+        <button
+          class="panel__toggle mono"
+          id="panel-toggle"
+          type="button"
+          aria-expanded="true"
+          aria-controls="params"
+        >
+          <span class="panel__title">Parameters</span>
+          <span class="panel__count" title="21 live parameters">21</span>
+          <span class="panel__chev" aria-hidden="true"></span>
+        </button>
+        <div class="panel__body">
+          <div class="panel__viewport">
+            <div class="panel__scroll" id="params"></div>
+            <span class="panel__more mono" aria-hidden="true">More</span>
+          </div>
+          <div class="panel__foot">
+            <button
+              type="button"
+              class="panel__reset mono"
+              id="reset-button"
+              aria-label="Reset all 21 parameters to their defaults"
+            >
+              Reset all 21 parameters
+            </button>
+          </div>
+        </div>
+      </aside>
+
+      <div class="dock">
+        <div class="dock__row">
+          <span class="dock__label mono">View</span>
+          <div class="seg" id="view-buttons" role="group" aria-label="Camera view presets"></div>
+        </div>
+        <div class="dock__row">
+          <span class="dock__label mono">Quality</span>
+          <div
+            class="seg"
+            id="quality-buttons"
+            role="group"
+            aria-label="Render quality tier"
+          ></div>
+        </div>
+        <div class="dock__row">
+          <span class="dock__label mono">Debug</span>
+          <div class="seg seg--keys" id="debug-buttons" role="group" aria-label="Debug views"></div>
+          <span class="dock__debug mono" id="debug-label">
+            <span class="dock__debug-index">0</span>
+            <span class="dock__debug-sep" aria-hidden="true">·</span>
+            <span class="dock__debug-name">Final</span>
+            <span class="dock__debug-hint">Beauty composite</span>
+          </span>
+        </div>
+      </div>
+
+      <footer class="hud__bottom">
+        <dl class="readout mono" id="camera-readout" aria-label="Camera telemetry"></dl>
+        <div class="actions">
+          <button
+            type="button"
+            class="action"
+            id="audio-button"
+            aria-pressed="false"
+            aria-label="Ambient music"
+          >
+            <span class="action__dot" aria-hidden="true"></span>
+            <span class="action__label">Music</span>
+          </button>
+          <button
+            type="button"
+            class="action"
+            id="shot-button"
+            aria-label="Save screenshot as PNG"
+          >
+            <span class="action__label">Save PNG</span>
+          </button>
+          <button
+            type="button"
+            class="action"
+            id="help-button"
+            aria-expanded="false"
+            aria-controls="help"
+            aria-label="Keyboard shortcuts"
+          >
+            <span class="action__label">? Shortcuts</span>
+          </button>
+        </div>
+      </footer>
+    </div>
+
+    <section
+      class="overlay help"
+      id="help"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="help-title"
+      hidden
+    >
+      <div class="overlay__card">
+        <p class="overlay__kicker mono">Reference</p>
+        <h2 class="help__title" id="help-title">Shortcuts</h2>
+        <p class="help__sub mono">Everything the instrument can do without a mouse.</p>
+        <div class="help__list" id="help-list"></div>
+        <div class="overlay__actions">
+          <button type="button" class="ghost mono" id="help-close">Close</button>
+        </div>
+      </div>
+    </section>
+
+    <div
+      class="overlay error"
+      id="error"
+      role="alertdialog"
+      aria-modal="true"
+      aria-labelledby="error-title"
+      aria-describedby="error-message"
+      hidden
+    >
+      <div class="overlay__card error__card">
+        <p class="overlay__kicker mono error__kicker">System stop</p>
+        <h2 class="error__title" id="error-title">Render context lost</h2>
+        <p class="error__message" id="error-message"></p>
+        <pre class="error__detail" id="error-detail" hidden></pre>
+        <div class="overlay__actions">
+          <button type="button" class="solid mono" id="error-action">Attempt restore</button>
+          <button type="button" class="ghost mono" id="error-close">Dismiss</button>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>

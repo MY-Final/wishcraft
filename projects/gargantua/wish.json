@@ -1,0 +1,36 @@
+{
+  "id": "gargantua",
+  "order": 3,
+  "title": "GARGANTUA",
+  "titleZh": "卡冈图雅",
+  "year": "2026",
+  "kind": "REALTIME GEODESIC RAYTRACER",
+  "kindZh": "实时黑洞光线追踪",
+  "status": "COMPLETE",
+  "tagline": "每一个像素，都是一条弯折的零测地线。",
+  "description": "全屏 Fragment Shader 逐像素积分 Schwarzschild 零测地线：事件视界、光子环、引力透镜、多次吸积盘穿越、Doppler 增亮与引力红移全部由方程实时产生。21 项现场参数、四组电影机位与十个调试视图，把一座黑洞变成可以亲手调校的仪器。",
+  "meta": ["SCHWARZSCHILD GEODESICS", "21 LIVE PARAMETERS", "THREE.JS + GLSL"],
+  "preview": "projects/gargantua/",
+  "cover": "assets/covers/gargantua.jpg",
+  "build": {
+    "mode": "static",
+    "source": "index.html",
+    "files": [
+      { "from": "styles/base.css", "to": "styles/base.css" },
+      { "from": "styles/hud.css", "to": "styles/hud.css" },
+      { "from": "src/main.js", "to": "src/main.js" },
+      { "from": "src/state.js", "to": "src/state.js" },
+      { "from": "src/camera.js", "to": "src/camera.js" },
+      { "from": "src/audio.js", "to": "src/audio.js" },
+      { "from": "src/ui.js", "to": "src/ui.js" },
+      { "from": "src/post.js", "to": "src/post.js" },
+      { "from": "src/shaders/blackhole.js", "to": "src/shaders/blackhole.js" },
+      { "from": "vendor/three/three.module.js", "to": "vendor/three/three.module.js" },
+      { "from": "vendor/three/three.core.js", "to": "vendor/three/three.core.js" },
+      { "from": "vendor/three/addons/OrbitControls.js", "to": "vendor/three/addons/OrbitControls.js" },
+      { "from": "vendor/three/LICENSE", "to": "vendor/three/LICENSE" },
+      { "from": "assets/audio/gargantua-ambient.ogg", "to": "assets/audio/gargantua-ambient.ogg" },
+      { "from": "assets/audio/README.md", "to": "assets/audio/README.md" }
+    ]
+  }
+}

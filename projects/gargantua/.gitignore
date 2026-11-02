@@ -1,0 +1,5 @@
+# Local QA screenshots and transient captures are not part of the artwork.
+docs/screens/
+*.log
+__pycache__/
+*.pyc
