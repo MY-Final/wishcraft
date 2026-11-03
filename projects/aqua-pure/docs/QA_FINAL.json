@@ -1,0 +1,243 @@
+{
+  "generatedAt": "2026-11-03T03:54:31.764Z",
+  "browser": "headless Chrome / SwiftShader WebGL",
+  "viewport": {
+    "desktop": "1440×900",
+    "mobile": "390×844"
+  },
+  "checks": [
+    {
+      "name": "initial: phase sealed",
+      "pass": true,
+      "detail": "sealed"
+    },
+    {
+      "name": "initial: 500 ml",
+      "pass": true,
+      "detail": "500.0 ml"
+    },
+    {
+      "name": "initial: cap on bottle",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "initial: draws geometry",
+      "pass": true,
+      "detail": "571410 tris, 77 calls"
+    },
+    {
+      "name": "initial: no console/page errors",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "initial: no failed requests",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "ui: dock visible",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "ui: status copy",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "ui: no console/page errors",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "open: phase open",
+      "pass": true,
+      "detail": "open"
+    },
+    {
+      "name": "open: cap left bottle",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "open: tamper ring stays",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "open: no console/page errors",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "pour: tilted ~68°",
+      "pass": true,
+      "detail": "68.0°"
+    },
+    {
+      "name": "pour: water decreases",
+      "pass": true,
+      "detail": "59.4%"
+    },
+    {
+      "name": "pour: stream visible",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "pour: no console/page errors",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "empty: phase empty",
+      "pass": true,
+      "detail": "empty"
+    },
+    {
+      "name": "empty: 0 ml",
+      "pass": true,
+      "detail": "0.0 ml"
+    },
+    {
+      "name": "empty: no console/page errors",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "reset: phase sealed",
+      "pass": true,
+      "detail": "sealed"
+    },
+    {
+      "name": "reset: cap back",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "reset: full again",
+      "pass": true,
+      "detail": "100%"
+    },
+    {
+      "name": "mobile: dock visible",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile: no horizontal overflow",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile: no console/page errors",
+      "pass": true,
+      "detail": ""
+    }
+  ],
+  "passed": 26,
+  "failed": 0,
+  "results": [
+    {
+      "scenario": "initial",
+      "state": {
+        "phase": "sealed",
+        "tiltDeg": 0,
+        "fill": 1,
+        "volumeMl": 500,
+        "pouredMl": 0,
+        "waterLevelY": 182.0063205063343,
+        "streaming": false,
+        "capOnBottle": true
+      },
+      "info": {
+        "frame": 63,
+        "calls": 77,
+        "triangles": 571410,
+        "points": 260,
+        "lines": 97,
+        "memory": {
+          "geometries": 23,
+          "textures": 16
+        }
+      },
+      "consoleErrors": [],
+      "consoleWarnings": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "httpErrors": []
+    },
+    {
+      "scenario": "ui",
+      "consoleErrors": [],
+      "consoleWarnings": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "httpErrors": []
+    },
+    {
+      "scenario": "open",
+      "state": {
+        "phase": "open",
+        "tiltDeg": 0,
+        "fill": 1,
+        "volumeMl": 500,
+        "pouredMl": 0,
+        "waterLevelY": 182.0063205063343,
+        "streaming": false,
+        "capOnBottle": false
+      },
+      "consoleErrors": [],
+      "consoleWarnings": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "httpErrors": []
+    },
+    {
+      "scenario": "pour",
+      "state": {
+        "phase": "pouring",
+        "tiltDeg": 68,
+        "fill": 0.5942780000042914,
+        "volumeMl": 297.13900000214574,
+        "pouredMl": 202.8609999978543,
+        "waterLevelY": 83.527413636446,
+        "streaming": true,
+        "capOnBottle": false
+      },
+      "consoleErrors": [],
+      "consoleWarnings": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "httpErrors": []
+    },
+    {
+      "scenario": "empty",
+      "state": {
+        "phase": "empty",
+        "tiltDeg": 0,
+        "fill": 0,
+        "volumeMl": 0,
+        "pouredMl": 500,
+        "waterLevelY": null,
+        "streaming": false,
+        "capOnBottle": false
+      },
+      "consoleErrors": [],
+      "consoleWarnings": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "httpErrors": []
+    },
+    {
+      "scenario": "mobile",
+      "consoleErrors": [],
+      "consoleWarnings": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "httpErrors": []
+    }
+  ]
+}

@@ -5,7 +5,7 @@
 
 **在线作品集：** https://120403.xyz/wishcraft/ （GitHub Pages；`my-final.github.io/wishcraft` 会跳转到同一站点）
 
-当前收录 **03 个作品**：
+当前收录 **04 个作品**：
 
 ![WISHCRAFT · 许愿池](docs/portfolio.png)
 
@@ -54,6 +54,22 @@
 
 ![GARGANTUA](site/assets/covers/gargantua.jpg)
 
+## AQUA PURE / 满瓶之水
+
+> 一瓶 500ml 的水，从满到空。
+
+一个用 Three.js 程序化构建的超拟真 500ml PET 矿泉水瓶，满瓶、未开封，立在蓝天白云的草地上。拧开瓶盖、倾斜瓶身，水面始终与重力保持水平，水从瓶口流出，直到空瓶。
+
+- **瓶身**：`LatheGeometry` 封闭薄壳（0.35mm 壁厚、128 径向段）、真实 3.5 圈螺旋螺纹、5 个瓶底花瓣脚、±0.15mm 顶点噪声、两侧捏痕
+- **未开封**：蓝色瓶盖 64 条防滑凸纹、8 个完整防盗环连接桥、20 个内侧卡齿；开盖时连接桥断裂，防盗环留在瓶颈
+- **水**：水体与内壁贴合，世界水平自由表面（中心上凸 0.5mm 弯月面）；倾斜时每帧重建水面，水体用世界空间裁剪面裁切
+- **倒水**：瓶口动态水柱、水花粒子、草地水洼与涟漪；可停止、可重置
+- **环境**：程序化天空/太阳光晕、15 组程序化云、26000mm 草地与 2200 株近景草叶、PMREM 户外环境反射
+- **技术**：原生 HTML/CSS/JS + ES Modules + 本地 Three.js r187；无构建步骤、无外部贴图/模型、纯静态
+- **入口**：`projects/aqua-pure/`；项目文档见 `projects/aqua-pure/README.md`
+
+![AQUA PURE](site/assets/covers/aqua-pure.jpg)
+
 ---
 
 ## 仓库结构
@@ -72,7 +88,8 @@ wishcraft/
 ├─ projects/
 │  ├─ intelligence-archive/ THE INTELLIGENCE ARCHIVE / 智能编年史
 │  ├─ inference/            THE INFERENCE / 推理现场
-│  └─ gargantua/            GARGANTUA / 卡冈图雅
+│  ├─ gargantua/            GARGANTUA / 卡冈图雅
+│  └─ aqua-pure/            AQUA PURE / 满瓶之水
 └─ .github/workflows/pages.yml
 ```
 
@@ -104,6 +121,11 @@ pnpm qa           # 浏览器验收（需先启动 5190 端口的 preview）
 cd projects/gargantua
 python -m http.server 5192 --bind 127.0.0.1   # http://127.0.0.1:5192/
 node tools/qa.mjs                              # Playwright 验收（需先启动上面的静态服务器）
+
+# AQUA PURE 无需构建：任意静态服务器即可
+cd projects/aqua-pure
+node tools/serve.mjs                           # http://127.0.0.1:5194/
+node tools/qa.mjs                              # Playwright 验收（自带临时端口）
 ```
 
 ## 以后如何再许一个愿
@@ -173,6 +195,7 @@ node tools/qa.mjs                              # Playwright 验收（需先启�
 - 智能编年史本身：`tsc` 0 error，`vite build` 通过，181/93/44 数据校验 0 硬错误；
 - 推理现场本身：`tsc` 0 error，`vite build` 通过，Playwright 验收 **33/33** 通过（桌面、移动、reduced-motion；零 console/page error），关键 3D 节点、Token 检视、深潜、模式切换、Temperature、时间轴与自由探索均有覆盖；记录见 `projects/inference/docs/QA_FINAL.json`。
 - 卡冈图雅本身：无构建静态站点，`node scripts/build-site.mjs --only=gargantua --skip-install` 通过，`/projects/gargantua/` 子路径资源零 404；物理自检 **9/9 PASS**（`projects/gargantua/tools/physics-check.mjs`）；Playwright 验收 **58/58 PASS**（0 failed / 0 skipped，零 console error / page error / console warning、零 HTTP ≥ 400），覆盖 21 参数、0–9 调试视图与确定性渲染、4 预设、3 档质量、移动端/Retina/reduced-motion、状态持久化、URL 截图确定性、WebGL 丢失/恢复、音频与静态子路径；记录见 `projects/gargantua/docs/QA_REPORT.md`、`docs/QA_FINAL.json`，验收截图见 `projects/gargantua/docs/evidence/`。
+- 满瓶之水本身：无构建静态站点，`node scripts/build-site.mjs --only=aqua-pure --skip-install` 通过；浏览器验收 **26/26 PASS**（0 failed，零 console error / page error / HTTP ≥ 400），覆盖满瓶未开封、真实按钮开盖、瓶口液面俯视、倾斜倒水、空瓶水洼、重置与 390×844 移动端；记录见 `projects/aqua-pure/docs/QA_REPORT.md`、`docs/QA_FINAL.json`，截图见 `projects/aqua-pure/docs/screens/`。
 
 ## 反馈与许愿
 

@@ -1,0 +1,39 @@
+{
+  "id": "aqua-pure",
+  "order": 4,
+  "featured": true,
+  "title": "AQUA PURE",
+  "titleZh": "满瓶之水",
+  "year": "2026",
+  "kind": "INTERACTIVE PRODUCT STUDY",
+  "kindZh": "可交互产品可视化",
+  "status": "COMPLETE",
+  "tagline": "一瓶 500ml 的水，从满到空。",
+  "description": "一瓶超拟真的 500ml PET 矿泉水，满瓶、未开封，立在蓝天白云的草地上。程序化生成的瓶身、真实螺纹、防盗环连接桥与高分辨率标签；拧开瓶盖、倾斜瓶身，水面始终与重力保持水平，水从瓶口流出，直到空瓶。所有几何与贴图均由代码生成。",
+  "meta": ["500 ML", "PROCEDURAL GEOMETRY", "THREE.JS + GLSL"],
+  "preview": "projects/aqua-pure/",
+  "cover": "assets/covers/aqua-pure.jpg",
+  "build": {
+    "mode": "static",
+    "source": "index.html",
+    "files": [
+      { "from": "styles/base.css", "to": "styles/base.css" },
+      { "from": "styles/hud.css", "to": "styles/hud.css" },
+      { "from": "src/config.js", "to": "src/config.js" },
+      { "from": "src/profile.js", "to": "src/profile.js" },
+      { "from": "src/main.js", "to": "src/main.js" },
+      { "from": "src/environment.js", "to": "src/environment.js" },
+      { "from": "src/bottle.js", "to": "src/bottle.js" },
+      { "from": "src/label.js", "to": "src/label.js" },
+      { "from": "src/water.js", "to": "src/water.js" },
+      { "from": "src/ui.js", "to": "src/ui.js" },
+      { "from": "vendor/three/three.module.js", "to": "vendor/three/three.module.js" },
+      { "from": "vendor/three/three.core.js", "to": "vendor/three/three.core.js" },
+      { "from": "vendor/three/addons/OrbitControls.js", "to": "vendor/three/addons/OrbitControls.js" },
+      { "from": "vendor/three/LICENSE", "to": "vendor/three/LICENSE" },
+      { "from": "assets/fonts/inter-tight-400-600.woff2", "to": "assets/fonts/inter-tight-400-600.woff2" },
+      { "from": "assets/fonts/ibm-plex-mono-400.woff2", "to": "assets/fonts/ibm-plex-mono-400.woff2" },
+      { "from": "assets/fonts/ibm-plex-mono-500.woff2", "to": "assets/fonts/ibm-plex-mono-500.woff2" }
+    ]
+  }
+}
