@@ -7,6 +7,8 @@
 
 当前收录 **03 个作品**：
 
+![WISHCRAFT · 许愿池](docs/portfolio.png)
+
 ## THE INTELLIGENCE ARCHIVE / 智能编年史
 
 > 从图灵的第一个问题，到能够自主执行任务的人工智能。1950—2026。
@@ -19,7 +21,7 @@
 - **技术**：Vite + React + TypeScript + Three.js；静态部署，无后端
 - **入口**：`projects/intelligence-archive/`；项目内文档见 `docs/DATA_REPORT.md`、`docs/VERIFICATION.md`、`docs/SOURCES.md`
 
-![THE INTELLIGENCE ARCHIVE](docs/portfolio.png)
+![THE INTELLIGENCE ARCHIVE](site/assets/covers/intelligence-archive.jpg)
 
 ## THE INFERENCE / 推理现场
 
