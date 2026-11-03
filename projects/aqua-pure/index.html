@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="zh-CN" data-ready="false">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#dcecf6" />
+    <title>AQUA PURE — 一瓶 500ml 的矿泉水</title>
+    <meta
+      name="description"
+      content="AQUA PURE：用 Three.js 程序化构建的超拟真 500ml PET 矿泉水瓶。满瓶、未开封，在蓝天白云草地上；拧开瓶盖、倾斜倒水，看一瓶水从满到空。"
+    />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 3C11 10 7 14.7 7 19.2A9 9 0 0 0 25 19.2C25 14.7 21 10 16 3Z' fill='%231a6fd4'/%3E%3Cpath d='M11 18c0 3.2 2 5.5 5 6' fill='none' stroke='%23ffffff' stroke-width='1.4' stroke-linecap='round' opacity='.7'/%3E%3C/svg%3E"
+    />
+    <link rel="preload" href="./assets/fonts/inter-tight-400-600.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="./assets/fonts/ibm-plex-mono-400.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="./styles/base.css" />
+    <link rel="stylesheet" href="./styles/hud.css" />
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "./vendor/three/three.module.js",
+          "three/addons/": "./vendor/three/addons/"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <canvas id="gl" aria-label="一瓶放在草地上的 500 毫升矿泉水，可旋转观察、拧开并倒水"></canvas>
+
+    <div class="vignette" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+
+    <header class="topbar">
+      <a class="brand" href="./" aria-label="AQUA PURE 首页">
+        <svg class="brand__mark" viewBox="0 0 32 32" aria-hidden="true">
+          <path d="M16 3C11 10 7 14.7 7 19.2A9 9 0 0 0 25 19.2C25 14.7 21 10 16 3Z" />
+          <path class="brand__gleam" d="M11 18c0 3.2 2 5.5 5 6" />
+        </svg>
+        <span class="brand__text">
+          <span class="brand__name">AQUA PURE</span>
+          <span class="brand__line mono">NATURAL MINERAL WATER · 500 ml</span>
+        </span>
+      </a>
+
+      <div class="topbar__meta mono" aria-hidden="true">
+        <span>WISHCRAFT</span>
+        <span class="topbar__slash">/</span>
+        <span>WISH 04</span>
+      </div>
+    </header>
+
+    <section class="panel status" id="status" aria-label="瓶身状态">
+      <p class="status__kicker mono">BOTTLE STATUS</p>
+      <div class="status__row">
+        <p class="status__title" id="status-title">满瓶 · 未开封</p>
+        <p class="status__value mono" id="status-value">500 ML</p>
+      </div>
+      <p class="status__sub mono" id="status-sub">SEALED · 100% FULL</p>
+      <div class="gauge" aria-hidden="true">
+        <div class="gauge__track"><div class="gauge__fill" id="gauge-fill"></div></div>
+        <div class="gauge__ticks mono"><span>0</span><span>250</span><span>500</span></div>
+      </div>
+    </section>
+
+    <nav class="dock" id="dock" aria-label="操作">
+      <button class="action action--primary" id="btn-open" type="button">
+        <span class="action__index mono">01</span>
+        <span class="action__label">拧开瓶盖</span>
+        <span class="action__state mono" id="open-state">SEALED</span>
+      </button>
+      <button class="action" id="btn-pour" type="button" disabled>
+        <span class="action__index mono">02</span>
+        <span class="action__label" id="pour-label">倾斜倒水</span>
+        <span class="action__state mono" id="pour-state">LOCKED</span>
+      </button>
+      <button class="action" id="btn-reset" type="button">
+        <span class="action__index mono">03</span>
+        <span class="action__label">重置</span>
+        <span class="action__state mono" id="reset-state">READY</span>
+      </button>
+      <button class="action action--icon" id="btn-settings" type="button" aria-expanded="false" aria-controls="params">
+        <span class="action__index mono">04</span>
+        <span class="action__label">画面参数</span>
+        <span class="action__state mono">ADJUST</span>
+      </button>
+    </nav>
+
+    <aside class="panel params" id="params" hidden aria-label="画面参数">
+      <div class="params__head">
+        <p class="params__title mono">SCENE PARAMETERS</p>
+        <button class="params__close" id="params-close" type="button" aria-label="关闭参数面板">×</button>
+      </div>
+      <label class="param">
+        <span class="param__row"><span>曝光</span><output class="mono" id="exposure-value">1.02</output></span>
+        <input id="exposure" type="range" min="0.6" max="1.6" step="0.01" value="1.02" />
+      </label>
+      <label class="param">
+        <span class="param__row"><span>环境反射</span><output class="mono" id="env-value">1.20</output></span>
+        <input id="environment" type="range" min="0" max="2" step="0.01" value="1.2" />
+      </label>
+      <label class="param">
+        <span class="param__row"><span>水量</span><output class="mono" id="fill-value">100%</output></span>
+        <input id="fill" type="range" min="0" max="100" step="1" value="100" />
+      </label>
+      <label class="param param--check">
+        <input id="autorotate" type="checkbox" checked />
+        <span>自动旋转</span>
+      </label>
+      <p class="params__note mono">拖动实时生效 · 仅用于预览</p>
+    </aside>
+
+    <p class="hint mono" id="hint">
+      <span class="hint__pointer">拖动旋转</span>
+      <span class="hint__sep">·</span>
+      <span class="hint__pointer">滚轮缩放</span>
+      <span class="hint__sep">·</span>
+      <span>点击瓶盖也可开瓶</span>
+    </p>
+
+    <div class="toast mono" id="toast" role="status" aria-live="polite"></div>
+
+    <div class="loader" id="loader" role="status" aria-live="polite">
+      <div class="loader__inner">
+        <svg class="loader__drop" viewBox="0 0 32 32" aria-hidden="true">
+          <path d="M16 3C11 10 7 14.7 7 19.2A9 9 0 0 0 25 19.2C25 14.7 21 10 16 3Z" />
+        </svg>
+        <p class="loader__title">AQUA PURE</p>
+        <p class="loader__line mono">正在注满 500 ml</p>
+        <div class="loader__bar"><span id="loader-bar"></span></div>
+      </div>
+    </div>
+
+    <div class="error" id="error" hidden>
+      <div class="error__card">
+        <p class="error__kicker mono">WEBGL UNAVAILABLE</p>
+        <h2>这瓶水需要 WebGL 2</h2>
+        <p>请使用近期版本的 Chrome、Edge、Firefox 或 Safari，并确认浏览器没有禁用硬件加速。</p>
+      </div>
+    </div>
+
+    <noscript><p class="noscript">请启用 JavaScript 以查看这瓶水。</p></noscript>
+
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>
